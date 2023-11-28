@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyThuVien", "QuanLyThuVien\QuanLyThuVien.csproj", "{A14B92ED-FEF8-4B85-995E-087CB56D4196}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "QuanLyThuVien\GUI.csproj", "{A14B92ED-FEF8-4B85-995E-087CB56D4196}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{9083A249-AA9C-4835-A9EA-B2516FC935C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{3C77B179-6C2A-4B07-996B-D45307DE2DB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{5310512E-A69F-4DBC-8F71-BF333F956A59}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{D11A17FC-E0F8-40AC-92E2-035A709EBBB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{5310512E-A69F-4DBC-8F71-BF333F956A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5310512E-A69F-4DBC-8F71-BF333F956A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5310512E-A69F-4DBC-8F71-BF333F956A59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D11A17FC-E0F8-40AC-92E2-035A709EBBB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D11A17FC-E0F8-40AC-92E2-035A709EBBB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D11A17FC-E0F8-40AC-92E2-035A709EBBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D11A17FC-E0F8-40AC-92E2-035A709EBBB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
