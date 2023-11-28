@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyThuVien", "QuanLyThuV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{9083A249-AA9C-4835-A9EA-B2516FC935C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{3C77B179-6C2A-4B07-996B-D45307DE2DB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9083A249-AA9C-4835-A9EA-B2516FC935C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9083A249-AA9C-4835-A9EA-B2516FC935C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9083A249-AA9C-4835-A9EA-B2516FC935C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C77B179-6C2A-4B07-996B-D45307DE2DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C77B179-6C2A-4B07-996B-D45307DE2DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C77B179-6C2A-4B07-996B-D45307DE2DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C77B179-6C2A-4B07-996B-D45307DE2DB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
