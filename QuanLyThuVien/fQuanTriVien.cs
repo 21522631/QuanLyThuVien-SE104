@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class fAdminManager : Form
+    public partial class fQuanTriVien : Form
     {
-        public fAdminManager()
+        public fQuanTriVien()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien
 {
-    partial class fAdminManager
+    partial class fQuanTriVien
     {
         /// <summary>
         /// Required designer variable.

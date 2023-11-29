@@ -46,23 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fReaderManager.cs">
+    <Compile Include="fDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fReaderManager.Designer.cs">
-      <DependentUpon>fReaderManager.cs</DependentUpon>
+    <Compile Include="fDocGia.Designer.cs">
+      <DependentUpon>fDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLibrarian.cs">
+    <Compile Include="fThuThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLibrarian.Designer.cs">
-      <DependentUpon>fLibrarian.cs</DependentUpon>
+    <Compile Include="fThuThu.Designer.cs">
+      <DependentUpon>fThuThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="fAdminManager.cs">
+    <Compile Include="fQuanTriVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fAdminManager.Designer.cs">
-      <DependentUpon>fAdminManager.cs</DependentUpon>
+    <Compile Include="fQuanTriVien.Designer.cs">
+      <DependentUpon>fQuanTriVien.cs</DependentUpon>
     </Compile>
     <Compile Include="fSetting.cs">
       <SubType>Form</SubType>
@@ -72,14 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fReaderManager.resx">
-      <DependentUpon>fReaderManager.cs</DependentUpon>
+    <EmbeddedResource Include="fDocGia.resx">
+      <DependentUpon>fDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLibrarian.resx">
-      <DependentUpon>fLibrarian.cs</DependentUpon>
+    <EmbeddedResource Include="fThuThu.resx">
+      <DependentUpon>fThuThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fAdminManager.resx">
-      <DependentUpon>fAdminManager.cs</DependentUpon>
+    <EmbeddedResource Include="fQuanTriVien.resx">
+      <DependentUpon>fQuanTriVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSetting.resx">
       <DependentUpon>fSetting.cs</DependentUpon>

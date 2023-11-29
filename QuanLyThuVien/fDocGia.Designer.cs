@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien
 {
-    partial class fReaderManager
+    partial class fDocGia
     {
         /// <summary>
         /// Required designer variable.

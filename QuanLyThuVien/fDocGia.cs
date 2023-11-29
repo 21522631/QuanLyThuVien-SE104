@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class fReaderManager : Form
+    public partial class fDocGia : Form
     {
-        public fReaderManager()
+        public fDocGia()
         {
             InitializeComponent();
         }
