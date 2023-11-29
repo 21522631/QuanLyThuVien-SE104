@@ -52,11 +52,11 @@
     <Compile Include="fReaderManager.Designer.cs">
       <DependentUpon>fReaderManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="fLibrarian.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="fLibrarian.Designer.cs">
+      <DependentUpon>fLibrarian.cs</DependentUpon>
     </Compile>
     <Compile Include="fAdminManager.cs">
       <SubType>Form</SubType>
@@ -75,8 +75,8 @@
     <EmbeddedResource Include="fReaderManager.resx">
       <DependentUpon>fReaderManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="fLibrarian.resx">
+      <DependentUpon>fLibrarian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAdminManager.resx">
       <DependentUpon>fAdminManager.cs</DependentUpon>
