@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(402, 254);
             this.Controls.Add(this.panel1);
             this.Name = "fDangNhap";
-            this.Text = "Phần mềm quản lý thư viện";
+            this.Text = "Phần Mềm Quản Lý Thư Viện";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
