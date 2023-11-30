@@ -127,7 +127,7 @@
             this.btnThongTin.Name = "btnThongTin";
             this.btnThongTin.Size = new System.Drawing.Size(109, 23);
             this.btnThongTin.TabIndex = 14;
-            this.btnThongTin.Text = "Thông tin";
+            this.btnThongTin.Text = "Thông Tin";
             this.btnThongTin.UseVisualStyleBackColor = true;
             // 
             // btnPhieuThu

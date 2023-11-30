@@ -58,6 +58,12 @@
     <Compile Include="fDocGia.Designer.cs">
       <DependentUpon>fDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fQuanLySach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLySach.Designer.cs">
+      <DependentUpon>fQuanLySach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fQuanTriVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDocGia.resx">
       <DependentUpon>fDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLySach.resx">
+      <DependentUpon>fQuanLySach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQuanTriVien.resx">
       <DependentUpon>fQuanTriVien.cs</DependentUpon>
