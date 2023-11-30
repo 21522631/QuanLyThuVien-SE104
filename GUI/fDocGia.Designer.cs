@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.btnThongTin = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,6 +37,7 @@
             this.btnSachDaMuon = new System.Windows.Forms.Button();
             this.btnSachDangMuon = new System.Windows.Forms.Button();
             this.btnTraCuuSach = new System.Windows.Forms.Button();
+            this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,15 +56,6 @@
             this.btnDangXuat.TabIndex = 10;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
-            // 
-            // lblTenNguoiDung
-            // 
-            this.lblTenNguoiDung.AutoSize = true;
-            this.lblTenNguoiDung.Location = new System.Drawing.Point(561, 17);
-            this.lblTenNguoiDung.Name = "lblTenNguoiDung";
-            this.lblTenNguoiDung.Size = new System.Drawing.Size(86, 13);
-            this.lblTenNguoiDung.TabIndex = 9;
-            this.lblTenNguoiDung.Text = "Tên Người Dùng";
             // 
             // btnThongTin
             // 
@@ -126,6 +117,15 @@
             this.btnTraCuuSach.Text = "Tra Cứu Sách";
             this.btnTraCuuSach.UseVisualStyleBackColor = true;
             // 
+            // lblTenNguoiDung
+            // 
+            this.lblTenNguoiDung.AutoSize = true;
+            this.lblTenNguoiDung.Location = new System.Drawing.Point(561, 17);
+            this.lblTenNguoiDung.Name = "lblTenNguoiDung";
+            this.lblTenNguoiDung.Size = new System.Drawing.Size(86, 13);
+            this.lblTenNguoiDung.TabIndex = 9;
+            this.lblTenNguoiDung.Text = "Tên Người Dùng";
+            // 
             // fDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +150,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Label lblTenNguoiDung;
         private System.Windows.Forms.Button btnThongTin;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
@@ -158,5 +157,6 @@
         private System.Windows.Forms.Button btnSachDaMuon;
         private System.Windows.Forms.Button btnSachDangMuon;
         private System.Windows.Forms.Button btnTraCuuSach;
+        private System.Windows.Forms.Label lblTenNguoiDung;
     }
 }
