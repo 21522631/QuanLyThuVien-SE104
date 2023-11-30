@@ -70,6 +70,12 @@
     <Compile Include="fQuanTriVien.Designer.cs">
       <DependentUpon>fQuanTriVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThemDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemDocGia.Designer.cs">
+      <DependentUpon>fThemDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThuThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fQuanTriVien.resx">
       <DependentUpon>fQuanTriVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemDocGia.resx">
+      <DependentUpon>fThemDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThuThu.resx">
       <DependentUpon>fThuThu.cs</DependentUpon>
