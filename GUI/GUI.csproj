@@ -76,6 +76,12 @@
     <Compile Include="fThemDocGia.Designer.cs">
       <DependentUpon>fThemDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThemLoaiDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemLoaiDocGia.Designer.cs">
+      <DependentUpon>fThemLoaiDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThuThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fThemDocGia.resx">
       <DependentUpon>fThemDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemLoaiDocGia.resx">
+      <DependentUpon>fThemLoaiDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThuThu.resx">
       <DependentUpon>fThuThu.cs</DependentUpon>

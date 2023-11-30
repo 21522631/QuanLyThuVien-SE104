@@ -214,9 +214,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(116, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Thông Tin Độc Giả";
+            this.label5.Text = "THÔNG TIN ĐỘC GIẢ";
             // 
             // btnLuu
             // 

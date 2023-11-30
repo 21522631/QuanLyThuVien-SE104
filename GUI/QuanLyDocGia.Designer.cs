@@ -142,21 +142,23 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(577, 198);
+            this.button4.Location = new System.Drawing.Point(564, 198);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 23);
+            this.button4.Size = new System.Drawing.Size(110, 23);
             this.button4.TabIndex = 4;
             this.button4.Text = "Thêm loại độc giả";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(675, 198);
+            this.button1.Location = new System.Drawing.Point(680, 198);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.Size = new System.Drawing.Size(110, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -471,7 +473,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(238, 26);
+            this.label12.Location = new System.Drawing.Point(234, 26);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 13);
             this.label12.TabIndex = 18;
@@ -511,7 +513,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(238, 54);
+            this.label15.Location = new System.Drawing.Point(234, 54);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 13);
             this.label15.TabIndex = 11;
