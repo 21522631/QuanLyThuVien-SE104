@@ -52,16 +52,16 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(17, 383);
+            this.panel4.Location = new System.Drawing.Point(12, 383);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(765, 55);
+            this.panel4.Size = new System.Drawing.Size(774, 55);
             this.panel4.TabIndex = 19;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(17, 120);
+            this.panel3.Location = new System.Drawing.Point(12, 120);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(767, 257);
+            this.panel3.Size = new System.Drawing.Size(774, 257);
             this.panel3.TabIndex = 18;
             // 
             // panel2
@@ -71,14 +71,14 @@
             this.panel2.Controls.Add(this.btnQLMuonTra);
             this.panel2.Controls.Add(this.btnQLSach);
             this.panel2.Controls.Add(this.btnQLDocGia);
-            this.panel2.Location = new System.Drawing.Point(17, 81);
+            this.panel2.Location = new System.Drawing.Point(12, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(767, 33);
+            this.panel2.Size = new System.Drawing.Size(774, 33);
             this.panel2.TabIndex = 17;
             // 
             // btnQLMuonTra
             // 
-            this.btnQLMuonTra.Location = new System.Drawing.Point(332, 7);
+            this.btnQLMuonTra.Location = new System.Drawing.Point(358, 3);
             this.btnQLMuonTra.Name = "btnQLMuonTra";
             this.btnQLMuonTra.Size = new System.Drawing.Size(109, 23);
             this.btnQLMuonTra.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // btnQLSach
             // 
-            this.btnQLSach.Location = new System.Drawing.Point(217, 7);
+            this.btnQLSach.Location = new System.Drawing.Point(243, 3);
             this.btnQLSach.Name = "btnQLSach";
             this.btnQLSach.Size = new System.Drawing.Size(109, 23);
             this.btnQLSach.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             // btnQLDocGia
             // 
-            this.btnQLDocGia.Location = new System.Drawing.Point(102, 7);
+            this.btnQLDocGia.Location = new System.Drawing.Point(128, 3);
             this.btnQLDocGia.Name = "btnQLDocGia";
             this.btnQLDocGia.Size = new System.Drawing.Size(109, 23);
             this.btnQLDocGia.TabIndex = 2;
@@ -132,7 +132,7 @@
             // 
             // btnPhieuThu
             // 
-            this.btnPhieuThu.Location = new System.Drawing.Point(447, 7);
+            this.btnPhieuThu.Location = new System.Drawing.Point(473, 3);
             this.btnPhieuThu.Name = "btnPhieuThu";
             this.btnPhieuThu.Size = new System.Drawing.Size(109, 23);
             this.btnPhieuThu.TabIndex = 5;
@@ -141,7 +141,7 @@
             // 
             // btnBCTK
             // 
-            this.btnBCTK.Location = new System.Drawing.Point(562, 7);
+            this.btnBCTK.Location = new System.Drawing.Point(588, 3);
             this.btnBCTK.Name = "btnBCTK";
             this.btnBCTK.Size = new System.Drawing.Size(109, 23);
             this.btnBCTK.TabIndex = 6;
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(798, 450);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
