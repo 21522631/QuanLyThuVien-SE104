@@ -99,7 +99,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -129,6 +128,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -686,7 +686,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.maskedTextBox1);
+            this.groupBox7.Controls.Add(this.dateTimePicker2);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Controls.Add(this.label20);
@@ -842,15 +842,6 @@
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(763, 193);
             this.dataGridView4.TabIndex = 0;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(331, 80);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(73, 20);
-            this.maskedTextBox1.TabIndex = 21;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // tabPage4
             // 
@@ -1133,6 +1124,15 @@
             this.dataGridView6.Size = new System.Drawing.Size(763, 193);
             this.dataGridView6.TabIndex = 0;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(329, 74);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(91, 20);
+            this.dateTimePicker2.TabIndex = 48;
+            // 
             // fQuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1253,7 +1253,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -1283,5 +1282,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
