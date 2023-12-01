@@ -36,18 +36,20 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnDangNhap);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 233);
+            this.panel1.Size = new System.Drawing.Size(381, 187);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -56,7 +58,7 @@
             this.panel2.Controls.Add(this.txtTaiKhoan);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtMatKhau);
-            this.panel2.Location = new System.Drawing.Point(38, 61);
+            this.panel2.Location = new System.Drawing.Point(38, 38);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(302, 93);
             this.panel2.TabIndex = 6;
@@ -96,7 +98,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(182, 184);
+            this.btnDangNhap.Location = new System.Drawing.Point(184, 149);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 0;
@@ -105,22 +107,32 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(265, 184);
+            this.btnThoat.Location = new System.Drawing.Point(265, 149);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Huỷ";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(143, 11);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "ĐĂNG NHẬP";
+            // 
             // fDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 257);
+            this.ClientSize = new System.Drawing.Size(405, 214);
             this.Controls.Add(this.panel1);
             this.Name = "fDangNhap";
             this.Text = "Phần Mềm Quản Lý Thư Viện";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label16;
     }
 }
 
