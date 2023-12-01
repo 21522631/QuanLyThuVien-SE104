@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,15 +42,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox1);
@@ -62,12 +66,42 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 129);
+            this.panel1.Size = new System.Drawing.Size(382, 146);
             this.panel1.TabIndex = 1;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(266, 34);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(102, 20);
+            this.textBox5.TabIndex = 65;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(266, 60);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(102, 20);
+            this.textBox3.TabIndex = 64;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(266, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(102, 20);
+            this.textBox1.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(209, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Còn lại";
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(301, 99);
+            this.btnHuy.Location = new System.Drawing.Point(301, 120);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(67, 23);
             this.btnHuy.TabIndex = 62;
@@ -76,7 +110,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(228, 99);
+            this.btnLuu.Location = new System.Drawing.Point(228, 120);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(67, 23);
             this.btnLuu.TabIndex = 61;
@@ -142,43 +176,31 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "THÔNG TIN PHIẾU THU TIỀN PHẠT";
             // 
-            // textBox1
+            // dateTimePicker2
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 63;
+            this.dateTimePicker2.CustomFormat = "";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(85, 90);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(101, 20);
+            this.dateTimePicker2.TabIndex = 68;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Còn lại";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "Ngày mượn";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(266, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(102, 20);
-            this.textBox3.TabIndex = 64;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(266, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(102, 20);
-            this.textBox5.TabIndex = 65;
-            // 
-            // fPhieuThuTienPhat
+            // fThemPhieuThuTienPhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 151);
+            this.ClientSize = new System.Drawing.Size(406, 170);
             this.Controls.Add(this.panel1);
-            this.Name = "fPhieuThuTienPhat";
+            this.Name = "fThemPhieuThuTienPhat";
             this.Text = "Thêm Phiếu Thu Tiền Phạt";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -202,5 +224,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -64,6 +64,12 @@
     <Compile Include="fPhieuMuonTra.Designer.cs">
       <DependentUpon>fPhieuMuonTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPhieuThuTienPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPhieuThuTienPhat.Designer.cs">
+      <DependentUpon>fPhieuThuTienPhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThemPhieuThuTienPhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fPhieuMuonTra.resx">
       <DependentUpon>fPhieuMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPhieuThuTienPhat.resx">
+      <DependentUpon>fPhieuThuTienPhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemPhieuThuTienPhat.resx">
       <DependentUpon>fThemPhieuThuTienPhat.cs</DependentUpon>
