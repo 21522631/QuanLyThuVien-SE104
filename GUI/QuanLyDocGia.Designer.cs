@@ -55,9 +55,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoaLoaiDocGia = new System.Windows.Forms.Button();
             this.btnSuaDocGia = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.dmtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
@@ -68,11 +70,9 @@
             this.txtTimKiemDocGia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabQuanLyDocGia = new System.Windows.Forms.TabControl();
-            this.dtmNgayHetHan = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtmNgayLapThe = new System.Windows.Forms.DateTimePicker();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.tabpgLoaiDocGia.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -213,7 +213,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 23);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Thêm loại độc giả";
+            this.button4.Text = "Thêm Loại Độc Giả";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -308,18 +308,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.maskedTextBox3);
+            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Controls.Add(this.lblMaDocGia);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnXoaLoaiDocGia);
             this.groupBox1.Controls.Add(this.btnSuaDocGia);
-            this.groupBox1.Controls.Add(this.dtmNgayHetHan);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.dtmNgayLapThe);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.dmtNgaySinh);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtHoVaTen);
@@ -367,6 +367,31 @@
             this.btnSuaDocGia.Text = "Sửa";
             this.btnSuaDocGia.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(330, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Ngày hết hạn";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(330, 83);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Ngày lập thẻ";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(403, 51);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(197, 20);
+            this.txtEmail.TabIndex = 12;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -382,13 +407,6 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(197, 20);
             this.txtDiaChi.TabIndex = 10;
-            // 
-            // dmtNgaySinh
-            // 
-            this.dmtNgaySinh.Location = new System.Drawing.Point(98, 78);
-            this.dmtNgaySinh.Name = "dmtNgaySinh";
-            this.dmtNgaySinh.Size = new System.Drawing.Size(197, 20);
-            this.dmtNgaySinh.TabIndex = 8;
             // 
             // label4
             // 
@@ -480,44 +498,32 @@
             this.tabQuanLyDocGia.Size = new System.Drawing.Size(804, 486);
             this.tabQuanLyDocGia.TabIndex = 6;
             // 
-            // dtmNgayHetHan
+            // maskedTextBox1
             // 
-            this.dtmNgayHetHan.Location = new System.Drawing.Point(403, 106);
-            this.dtmNgayHetHan.Name = "dtmNgayHetHan";
-            this.dtmNgayHetHan.Size = new System.Drawing.Size(197, 20);
-            this.dtmNgayHetHan.TabIndex = 16;
+            this.maskedTextBox1.Location = new System.Drawing.Point(98, 80);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(70, 20);
+            this.maskedTextBox1.TabIndex = 21;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
-            // label9
+            // maskedTextBox2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(330, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Ngày hết hạn";
+            this.maskedTextBox2.Location = new System.Drawing.Point(403, 77);
+            this.maskedTextBox2.Mask = "00/00/0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(70, 20);
+            this.maskedTextBox2.TabIndex = 22;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
             // 
-            // label8
+            // maskedTextBox3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(330, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Ngày lập thẻ";
-            // 
-            // dtmNgayLapThe
-            // 
-            this.dtmNgayLapThe.Location = new System.Drawing.Point(403, 77);
-            this.dtmNgayLapThe.Name = "dtmNgayLapThe";
-            this.dtmNgayLapThe.Size = new System.Drawing.Size(197, 20);
-            this.dtmNgayLapThe.TabIndex = 14;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(403, 51);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(197, 20);
-            this.txtEmail.TabIndex = 12;
+            this.maskedTextBox3.Location = new System.Drawing.Point(403, 109);
+            this.maskedTextBox3.Mask = "00/00/0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(70, 20);
+            this.maskedTextBox3.TabIndex = 23;
+            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
             // 
             // QuanLyDocGia
             // 
@@ -572,7 +578,6 @@
         private System.Windows.Forms.Button btnSuaDocGia;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.DateTimePicker dmtNgaySinh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtHoVaTen;
@@ -590,10 +595,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtTenLoaiDocGia;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dtmNgayHetHan;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtmNgayLapThe;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
