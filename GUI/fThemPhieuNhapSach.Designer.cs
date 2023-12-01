@@ -95,7 +95,7 @@
             this.groupBox2.Size = new System.Drawing.Size(210, 149);
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách sách nhập";
+            this.groupBox2.Text = "Danh Sách Sách Nhập";
             // 
             // dataGridView5
             // 
@@ -122,7 +122,7 @@
             this.groupBox1.Size = new System.Drawing.Size(318, 149);
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin sách nhập";
+            this.groupBox1.Text = "Thông Tin Sách Nhập";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label26

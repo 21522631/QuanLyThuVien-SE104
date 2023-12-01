@@ -200,7 +200,7 @@
             this.groupBox11.Size = new System.Drawing.Size(548, 55);
             this.groupBox11.TabIndex = 27;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Tìm kiếm";
+            this.groupBox11.Text = "Tìm Kiếm";
             // 
             // button19
             // 
@@ -232,17 +232,17 @@
             this.groupBox12.Controls.Add(this.dataGridView6);
             this.groupBox12.Location = new System.Drawing.Point(6, 255);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(776, 215);
+            this.groupBox12.Size = new System.Drawing.Size(776, 220);
             this.groupBox12.TabIndex = 28;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Thông tin chung";
+            this.groupBox12.Text = "Thông Tin Chung";
             // 
             // dataGridView6
             // 
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Location = new System.Drawing.Point(6, 19);
             this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(763, 193);
+            this.dataGridView6.Size = new System.Drawing.Size(763, 198);
             this.dataGridView6.TabIndex = 0;
             // 
             // groupBox10
@@ -272,7 +272,7 @@
             this.groupBox10.Size = new System.Drawing.Size(776, 159);
             this.groupBox10.TabIndex = 26;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Thông tin chi tiết";
+            this.groupBox10.Text = "Thông Tin Chi Tiết";
             // 
             // textBox10
             // 
@@ -477,17 +477,17 @@
             this.groupBox9.Controls.Add(this.dataGridView4);
             this.groupBox9.Location = new System.Drawing.Point(6, 236);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(776, 218);
+            this.groupBox9.Size = new System.Drawing.Size(776, 236);
             this.groupBox9.TabIndex = 29;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Thông tin chung";
+            this.groupBox9.Text = "Thông Tin Chung";
             // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(6, 19);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(763, 193);
+            this.dataGridView4.Size = new System.Drawing.Size(763, 214);
             this.dataGridView4.TabIndex = 0;
             // 
             // button11
@@ -518,7 +518,7 @@
             this.groupBox8.Size = new System.Drawing.Size(548, 55);
             this.groupBox8.TabIndex = 25;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Tìm kiếm";
+            this.groupBox8.Text = "Tìm Kiếm";
             // 
             // button10
             // 
@@ -560,7 +560,7 @@
             this.groupBox7.Size = new System.Drawing.Size(776, 141);
             this.groupBox7.TabIndex = 24;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Thông tin chi tiết";
+            this.groupBox7.Text = "Thông Tin Chi Tiết";
             // 
             // dateTimePicker2
             // 
@@ -681,17 +681,17 @@
             this.groupBox4.Controls.Add(this.dataGridView3);
             this.groupBox4.Location = new System.Drawing.Point(6, 238);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(776, 218);
+            this.groupBox4.Size = new System.Drawing.Size(776, 231);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin chung";
+            this.groupBox4.Text = "Thông Tin Chung";
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(6, 19);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(763, 193);
+            this.dataGridView3.Size = new System.Drawing.Size(763, 212);
             this.dataGridView3.TabIndex = 0;
             // 
             // groupBox6
@@ -704,7 +704,7 @@
             this.groupBox6.Size = new System.Drawing.Size(548, 55);
             this.groupBox6.TabIndex = 23;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Tìm kiếm";
+            this.groupBox6.Text = "Tìm Kiếm";
             // 
             // button5
             // 
@@ -746,7 +746,7 @@
             this.groupBox5.Size = new System.Drawing.Size(776, 141);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thông tin chi tiết";
+            this.groupBox5.Text = "Thông Tin Chi Tiết";
             // 
             // checkBox1
             // 
@@ -872,7 +872,7 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 159);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin chi tiết";
+            this.groupBox1.Text = "Thông Tin Chi Tiết";
             // 
             // domainUpDown1
             // 
@@ -880,7 +880,7 @@
             this.domainUpDown1.Name = "domainUpDown1";
             this.domainUpDown1.Size = new System.Drawing.Size(43, 20);
             this.domainUpDown1.TabIndex = 35;
-            this.domainUpDown1.Text = "domainUpDown1";
+            this.domainUpDown1.Text = "0";
             // 
             // textBox4
             // 
@@ -1088,7 +1088,7 @@
             this.groupBox2.Size = new System.Drawing.Size(548, 55);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tìm kiếm";
+            this.groupBox2.Text = "Tìm Kiếm";
             // 
             // btnTim
             // 
@@ -1123,14 +1123,14 @@
             this.groupBox3.Size = new System.Drawing.Size(776, 215);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông tin chung";
+            this.groupBox3.Text = "Thông Tin Chung";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(763, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 196);
             this.dataGridView1.TabIndex = 0;
             // 
             // label6
