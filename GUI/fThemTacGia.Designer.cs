@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class fThemCuonSach
+    partial class fThemTacGia
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.maskedTextBox1);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnLuu);
@@ -50,8 +50,17 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 146);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(248, 146);
+            this.panel1.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(25, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 13);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Ngày sinh";
             // 
             // btnHuy
             // 
@@ -75,7 +84,7 @@
             // 
             this.txtHoVaTen.Location = new System.Drawing.Point(105, 43);
             this.txtHoVaTen.Name = "txtHoVaTen";
-            this.txtHoVaTen.Size = new System.Drawing.Size(99, 20);
+            this.txtHoVaTen.Size = new System.Drawing.Size(124, 20);
             this.txtHoVaTen.TabIndex = 24;
             // 
             // label3
@@ -83,45 +92,36 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Mã sách";
+            this.label3.Text = "Tên tác giả";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 15);
+            this.label1.Location = new System.Drawing.Point(66, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 13);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THÔNG TIN CUỐN SÁCH";
+            this.label1.Text = "THÔNG TIN TÁC GIẢ";
             // 
-            // checkBox1
+            // maskedTextBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(105, 73);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 40;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.maskedTextBox1.Location = new System.Drawing.Point(105, 67);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(73, 20);
+            this.maskedTextBox1.TabIndex = 40;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 74);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Tình trạng";
-            // 
-            // fThemCuonSach
+            // fThemTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 171);
+            this.ClientSize = new System.Drawing.Size(273, 169);
             this.Controls.Add(this.panel1);
-            this.Name = "fThemCuonSach";
-            this.Text = "Thêm Cuốn Sách";
+            this.Name = "fThemTacGia";
+            this.Text = "Thêm Tác Giả";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -131,12 +131,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.TextBox txtHoVaTen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
