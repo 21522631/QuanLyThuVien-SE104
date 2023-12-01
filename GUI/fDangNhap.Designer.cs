@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 187);
             this.panel1.TabIndex = 3;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(143, 11);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "ĐĂNG NHẬP";
             // 
             // panel2
             // 
@@ -111,17 +120,8 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 1;
-            this.btnThoat.Text = "Huỷ";
+            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(143, 11);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 13);
-            this.label16.TabIndex = 24;
-            this.label16.Text = "ĐĂNG NHẬP";
             // 
             // fDangNhap
             // 

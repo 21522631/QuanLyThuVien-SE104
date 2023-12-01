@@ -142,6 +142,12 @@
     <Compile Include="fThemTacGia.Designer.cs">
       <DependentUpon>fThemTacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTin.Designer.cs">
+      <DependentUpon>fThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThuThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fThemTacGia.resx">
       <DependentUpon>fThemTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongTin.resx">
+      <DependentUpon>fThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThuThu.resx">
       <DependentUpon>fThuThu.cs</DependentUpon>

@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,8 +39,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,14 +61,25 @@
             this.panel1.Size = new System.Drawing.Size(382, 129);
             this.panel1.TabIndex = 0;
             // 
-            // label6
+            // btnHuy
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(107, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "THÔNG TIN PHIẾU MƯỢN TRẢ";
+            this.btnHuy.Location = new System.Drawing.Point(301, 99);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(67, 23);
+            this.btnHuy.TabIndex = 62;
+            this.btnHuy.Text = "Thoát";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(228, 99);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(67, 23);
+            this.btnLuu.TabIndex = 61;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // dateTimePicker3
             // 
@@ -140,25 +151,14 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Mã cuốn sách";
             // 
-            // btnHuy
+            // label6
             // 
-            this.btnHuy.Location = new System.Drawing.Point(301, 99);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(67, 23);
-            this.btnHuy.TabIndex = 62;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(228, 99);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(67, 23);
-            this.btnLuu.TabIndex = 61;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(107, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "THÔNG TIN PHIẾU MƯỢN TRẢ";
             // 
             // fThemPhieuMuonTra
             // 

@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -40,10 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,12 +69,44 @@
             this.panel1.Size = new System.Drawing.Size(382, 146);
             this.panel1.TabIndex = 1;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(85, 90);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(101, 20);
+            this.dateTimePicker2.TabIndex = 68;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "Ngày thu";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(266, 34);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(102, 20);
+            this.textBox5.TabIndex = 65;
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(266, 60);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(102, 20);
             this.textBox3.TabIndex = 64;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(266, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(102, 20);
+            this.textBox1.TabIndex = 63;
             // 
             // label1
             // 
@@ -91,7 +123,7 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(67, 23);
             this.btnHuy.TabIndex = 62;
-            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Text = "Thoát";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
@@ -161,38 +193,6 @@
             this.label6.Size = new System.Drawing.Size(189, 13);
             this.label6.TabIndex = 23;
             this.label6.Text = "THÔNG TIN PHIẾU THU TIỀN PHẠT";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(85, 90);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(101, 20);
-            this.dateTimePicker2.TabIndex = 68;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "Ngày thu";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(266, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 63;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(266, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(102, 20);
-            this.textBox5.TabIndex = 65;
             // 
             // fThemPhieuThuTienPhat
             // 

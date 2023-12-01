@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,13 +53,31 @@
             this.panel1.Size = new System.Drawing.Size(216, 146);
             this.panel1.TabIndex = 1;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(105, 73);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 40;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(25, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 13);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Tình trạng";
+            // 
             // btnHuy
             // 
             this.btnHuy.Location = new System.Drawing.Point(137, 108);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(67, 23);
             this.btnHuy.TabIndex = 38;
-            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Text = "Thoát";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
@@ -95,24 +113,6 @@
             this.label1.Size = new System.Drawing.Size(133, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN CUỐN SÁCH";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(105, 73);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 40;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 74);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Tình trạng";
             // 
             // fThemCuonSach
             // 

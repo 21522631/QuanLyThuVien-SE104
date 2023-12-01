@@ -88,7 +88,7 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(67, 23);
             this.btnHuy.TabIndex = 40;
-            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Text = "Thoát";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
