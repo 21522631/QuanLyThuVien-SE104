@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -44,6 +42,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,26 +69,12 @@
             this.panel1.Size = new System.Drawing.Size(382, 146);
             this.panel1.TabIndex = 1;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(266, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(102, 20);
-            this.textBox5.TabIndex = 65;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(266, 60);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(102, 20);
             this.textBox3.TabIndex = 64;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(266, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 63;
             // 
             // label1
             // 
@@ -170,7 +156,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(106, 9);
+            this.label6.Location = new System.Drawing.Point(94, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 13);
             this.label6.TabIndex = 23;
@@ -190,9 +176,23 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 67;
-            this.label2.Text = "Ngày mượn";
+            this.label2.Text = "Ngày thu";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(266, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(102, 20);
+            this.textBox1.TabIndex = 63;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(266, 34);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(102, 20);
+            this.textBox5.TabIndex = 65;
             // 
             // fThemPhieuThuTienPhat
             // 
@@ -220,11 +220,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
