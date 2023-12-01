@@ -57,8 +57,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -119,8 +117,6 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.dateTimePicker4);
-            this.groupBox11.Controls.Add(this.label7);
             this.groupBox11.Controls.Add(this.button19);
             this.groupBox11.Controls.Add(this.textBox9);
             this.groupBox11.Controls.Add(this.label29);
@@ -144,7 +140,7 @@
             // 
             this.textBox9.Location = new System.Drawing.Point(141, 23);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(175, 20);
+            this.textBox9.Size = new System.Drawing.Size(310, 20);
             this.textBox9.TabIndex = 1;
             // 
             // label29
@@ -350,25 +346,6 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(91, 20);
             this.dateTimePicker3.TabIndex = 50;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(322, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Ngày";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.CustomFormat = "";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(360, 23);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker4.TabIndex = 54;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -436,8 +413,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
     }

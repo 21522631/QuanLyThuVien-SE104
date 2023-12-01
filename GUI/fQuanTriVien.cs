@@ -46,5 +46,10 @@ namespace GUI
         {
 
         }
+
+        private void btnPhieuThu_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

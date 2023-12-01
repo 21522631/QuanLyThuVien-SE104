@@ -30,18 +30,18 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBCTK = new System.Windows.Forms.Button();
-            this.btnPhieuThu = new System.Windows.Forms.Button();
             this.btnQLMuonTra = new System.Windows.Forms.Button();
             this.btnQLSach = new System.Windows.Forms.Button();
             this.btnQLDocGia = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnQLThuThu = new System.Windows.Forms.Button();
+            this.btnQuyDinh = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.btnThongTin = new System.Windows.Forms.Button();
-            this.btnQuyDinh = new System.Windows.Forms.Button();
-            this.btnQLThuThu = new System.Windows.Forms.Button();
+            this.btnPhieuThu = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,29 +54,19 @@
             // 
             // btnBCTK
             // 
-            this.btnBCTK.Location = new System.Drawing.Point(584, 7);
+            this.btnBCTK.Location = new System.Drawing.Point(577, 7);
             this.btnBCTK.Name = "btnBCTK";
-            this.btnBCTK.Size = new System.Drawing.Size(109, 23);
+            this.btnBCTK.Size = new System.Drawing.Size(121, 23);
             this.btnBCTK.TabIndex = 6;
             this.btnBCTK.Text = "Báo Cáo Thống Kê";
             this.btnBCTK.UseVisualStyleBackColor = true;
             this.btnBCTK.Click += new System.EventHandler(this.btnBCTK_Click);
             // 
-            // btnPhieuThu
-            // 
-            this.btnPhieuThu.Location = new System.Drawing.Point(469, 7);
-            this.btnPhieuThu.Name = "btnPhieuThu";
-            this.btnPhieuThu.Size = new System.Drawing.Size(109, 23);
-            this.btnPhieuThu.TabIndex = 5;
-            this.btnPhieuThu.Text = "Phiếu Thu";
-            this.btnPhieuThu.UseVisualStyleBackColor = true;
-            this.btnPhieuThu.Click += new System.EventHandler(this.btnPhieuThu_Click);
-            // 
             // btnQLMuonTra
             // 
-            this.btnQLMuonTra.Location = new System.Drawing.Point(354, 7);
+            this.btnQLMuonTra.Location = new System.Drawing.Point(347, 7);
             this.btnQLMuonTra.Name = "btnQLMuonTra";
-            this.btnQLMuonTra.Size = new System.Drawing.Size(109, 23);
+            this.btnQLMuonTra.Size = new System.Drawing.Size(121, 23);
             this.btnQLMuonTra.TabIndex = 4;
             this.btnQLMuonTra.Text = "Quản Lý Mượn Trả";
             this.btnQLMuonTra.UseVisualStyleBackColor = true;
@@ -84,9 +74,9 @@
             // 
             // btnQLSach
             // 
-            this.btnQLSach.Location = new System.Drawing.Point(239, 7);
+            this.btnQLSach.Location = new System.Drawing.Point(232, 7);
             this.btnQLSach.Name = "btnQLSach";
-            this.btnQLSach.Size = new System.Drawing.Size(109, 23);
+            this.btnQLSach.Size = new System.Drawing.Size(121, 23);
             this.btnQLSach.TabIndex = 3;
             this.btnQLSach.Text = "Quản Lý Sách";
             this.btnQLSach.UseVisualStyleBackColor = true;
@@ -94,9 +84,9 @@
             // 
             // btnQLDocGia
             // 
-            this.btnQLDocGia.Location = new System.Drawing.Point(124, 7);
+            this.btnQLDocGia.Location = new System.Drawing.Point(117, 7);
             this.btnQLDocGia.Name = "btnQLDocGia";
-            this.btnQLDocGia.Size = new System.Drawing.Size(109, 23);
+            this.btnQLDocGia.Size = new System.Drawing.Size(121, 23);
             this.btnQLDocGia.TabIndex = 2;
             this.btnQLDocGia.Text = "Quản Lý Độc Giả";
             this.btnQLDocGia.UseVisualStyleBackColor = true;
@@ -118,9 +108,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnPhieuThu);
             this.panel2.Controls.Add(this.btnQLThuThu);
             this.panel2.Controls.Add(this.btnQuyDinh);
-            this.panel2.Controls.Add(this.btnPhieuThu);
             this.panel2.Controls.Add(this.btnBCTK);
             this.panel2.Controls.Add(this.btnQLMuonTra);
             this.panel2.Controls.Add(this.btnQLSach);
@@ -129,6 +119,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(816, 33);
             this.panel2.TabIndex = 24;
+            // 
+            // btnQLThuThu
+            // 
+            this.btnQLThuThu.Location = new System.Drawing.Point(2, 7);
+            this.btnQLThuThu.Name = "btnQLThuThu";
+            this.btnQLThuThu.Size = new System.Drawing.Size(121, 23);
+            this.btnQLThuThu.TabIndex = 3;
+            this.btnQLThuThu.Text = "Quản Lý Thủ Thư";
+            this.btnQLThuThu.UseVisualStyleBackColor = true;
+            // 
+            // btnQuyDinh
+            // 
+            this.btnQuyDinh.Location = new System.Drawing.Point(692, 7);
+            this.btnQuyDinh.Name = "btnQuyDinh";
+            this.btnQuyDinh.Size = new System.Drawing.Size(121, 23);
+            this.btnQuyDinh.TabIndex = 7;
+            this.btnQuyDinh.Text = "Quy Định";
+            this.btnQuyDinh.UseVisualStyleBackColor = true;
+            this.btnQuyDinh.Click += new System.EventHandler(this.btnQuyDinh_Click);
             // 
             // btnDangXuat
             // 
@@ -157,24 +166,15 @@
             this.btnThongTin.Text = "Thông Tin";
             this.btnThongTin.UseVisualStyleBackColor = true;
             // 
-            // btnQuyDinh
+            // btnPhieuThu
             // 
-            this.btnQuyDinh.Location = new System.Drawing.Point(699, 7);
-            this.btnQuyDinh.Name = "btnQuyDinh";
-            this.btnQuyDinh.Size = new System.Drawing.Size(109, 23);
-            this.btnQuyDinh.TabIndex = 7;
-            this.btnQuyDinh.Text = "Quy Định";
-            this.btnQuyDinh.UseVisualStyleBackColor = true;
-            this.btnQuyDinh.Click += new System.EventHandler(this.btnQuyDinh_Click);
-            // 
-            // btnQLThuThu
-            // 
-            this.btnQLThuThu.Location = new System.Drawing.Point(9, 7);
-            this.btnQLThuThu.Name = "btnQLThuThu";
-            this.btnQLThuThu.Size = new System.Drawing.Size(109, 23);
-            this.btnQLThuThu.TabIndex = 3;
-            this.btnQLThuThu.Text = "Quản Lý Thủ Thư";
-            this.btnQLThuThu.UseVisualStyleBackColor = true;
+            this.btnPhieuThu.Location = new System.Drawing.Point(462, 7);
+            this.btnPhieuThu.Name = "btnPhieuThu";
+            this.btnPhieuThu.Size = new System.Drawing.Size(121, 23);
+            this.btnPhieuThu.TabIndex = 8;
+            this.btnPhieuThu.Text = "Phiếu Thu Tiền Phạt";
+            this.btnPhieuThu.UseVisualStyleBackColor = true;
+            this.btnPhieuThu.Click += new System.EventHandler(this.btnPhieuThu_Click_1);
             // 
             // fQuanTriVien
             // 
@@ -200,7 +200,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBCTK;
-        private System.Windows.Forms.Button btnPhieuThu;
         private System.Windows.Forms.Button btnQLMuonTra;
         private System.Windows.Forms.Button btnQLSach;
         private System.Windows.Forms.Button btnQLDocGia;
@@ -212,5 +211,6 @@
         private System.Windows.Forms.Button btnThongTin;
         private System.Windows.Forms.Button btnQLThuThu;
         private System.Windows.Forms.Button btnQuyDinh;
+        private System.Windows.Forms.Button btnPhieuThu;
     }
 }

@@ -32,6 +32,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBCTK = new System.Windows.Forms.Button();
             this.btnQLMuonTra = new System.Windows.Forms.Button();
             this.btnQLSach = new System.Windows.Forms.Button();
             this.btnQLDocGia = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.btnThongTin = new System.Windows.Forms.Button();
             this.btnPhieuThu = new System.Windows.Forms.Button();
-            this.btnBCTK = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,29 +76,38 @@
             this.panel2.Size = new System.Drawing.Size(774, 33);
             this.panel2.TabIndex = 17;
             // 
+            // btnBCTK
+            // 
+            this.btnBCTK.Location = new System.Drawing.Point(557, 3);
+            this.btnBCTK.Name = "btnBCTK";
+            this.btnBCTK.Size = new System.Drawing.Size(117, 23);
+            this.btnBCTK.TabIndex = 6;
+            this.btnBCTK.Text = "Báo Cáo Thống Kê";
+            this.btnBCTK.UseVisualStyleBackColor = true;
+            // 
             // btnQLMuonTra
             // 
-            this.btnQLMuonTra.Location = new System.Drawing.Point(358, 3);
+            this.btnQLMuonTra.Location = new System.Drawing.Point(327, 3);
             this.btnQLMuonTra.Name = "btnQLMuonTra";
-            this.btnQLMuonTra.Size = new System.Drawing.Size(109, 23);
+            this.btnQLMuonTra.Size = new System.Drawing.Size(117, 23);
             this.btnQLMuonTra.TabIndex = 4;
             this.btnQLMuonTra.Text = "Quản Lý Mượn Trả";
             this.btnQLMuonTra.UseVisualStyleBackColor = true;
             // 
             // btnQLSach
             // 
-            this.btnQLSach.Location = new System.Drawing.Point(243, 3);
+            this.btnQLSach.Location = new System.Drawing.Point(212, 3);
             this.btnQLSach.Name = "btnQLSach";
-            this.btnQLSach.Size = new System.Drawing.Size(109, 23);
+            this.btnQLSach.Size = new System.Drawing.Size(117, 23);
             this.btnQLSach.TabIndex = 3;
             this.btnQLSach.Text = "Quản Lý Sách";
             this.btnQLSach.UseVisualStyleBackColor = true;
             // 
             // btnQLDocGia
             // 
-            this.btnQLDocGia.Location = new System.Drawing.Point(128, 3);
+            this.btnQLDocGia.Location = new System.Drawing.Point(97, 3);
             this.btnQLDocGia.Name = "btnQLDocGia";
-            this.btnQLDocGia.Size = new System.Drawing.Size(109, 23);
+            this.btnQLDocGia.Size = new System.Drawing.Size(117, 23);
             this.btnQLDocGia.TabIndex = 2;
             this.btnQLDocGia.Text = "Quản Lý Độc Giả";
             this.btnQLDocGia.UseVisualStyleBackColor = true;
@@ -132,21 +141,12 @@
             // 
             // btnPhieuThu
             // 
-            this.btnPhieuThu.Location = new System.Drawing.Point(473, 3);
+            this.btnPhieuThu.Location = new System.Drawing.Point(442, 3);
             this.btnPhieuThu.Name = "btnPhieuThu";
-            this.btnPhieuThu.Size = new System.Drawing.Size(109, 23);
+            this.btnPhieuThu.Size = new System.Drawing.Size(117, 23);
             this.btnPhieuThu.TabIndex = 5;
-            this.btnPhieuThu.Text = "Phiếu Thu";
+            this.btnPhieuThu.Text = "Phiếu Thu Tiền Phạt";
             this.btnPhieuThu.UseVisualStyleBackColor = true;
-            // 
-            // btnBCTK
-            // 
-            this.btnBCTK.Location = new System.Drawing.Point(588, 3);
-            this.btnBCTK.Name = "btnBCTK";
-            this.btnBCTK.Size = new System.Drawing.Size(109, 23);
-            this.btnBCTK.TabIndex = 6;
-            this.btnBCTK.Text = "Báo Cáo Thống Kê";
-            this.btnBCTK.UseVisualStyleBackColor = true;
             // 
             // fThuThu
             // 
