@@ -475,7 +475,7 @@
             this.btnThemDocGia.Name = "btnThemDocGia";
             this.btnThemDocGia.Size = new System.Drawing.Size(92, 23);
             this.btnThemDocGia.TabIndex = 4;
-            this.btnThemDocGia.Text = "Thêm độc giả";
+            this.btnThemDocGia.Text = "Thêm Độc Giả";
             this.btnThemDocGia.UseVisualStyleBackColor = true;
             // 
             // groupBox2
