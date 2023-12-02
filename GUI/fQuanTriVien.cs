@@ -51,5 +51,45 @@ namespace GUI
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTenNguoiDung_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLýĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sửaĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void sửaThôngTinTácGiảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

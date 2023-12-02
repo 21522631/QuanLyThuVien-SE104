@@ -224,6 +224,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="fQuanLyDocGia.resx">
       <DependentUpon>fQuanLyDocGia.cs</DependentUpon>
@@ -250,6 +251,9 @@
       <Project>{0201f668-fcd9-4d08-86b2-c3b9944026fe}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv_2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -181,7 +181,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 19);
+            this.textBox1.Location = new System.Drawing.Point(196, 71);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(46, 20);
             this.textBox1.TabIndex = 37;
@@ -207,7 +207,7 @@
             // 
             // domainUpDown6
             // 
-            this.domainUpDown6.Location = new System.Drawing.Point(194, 71);
+            this.domainUpDown6.Location = new System.Drawing.Point(196, 45);
             this.domainUpDown6.Name = "domainUpDown6";
             this.domainUpDown6.Size = new System.Drawing.Size(46, 20);
             this.domainUpDown6.TabIndex = 34;
@@ -215,7 +215,7 @@
             // 
             // domainUpDown5
             // 
-            this.domainUpDown5.Location = new System.Drawing.Point(194, 45);
+            this.domainUpDown5.Location = new System.Drawing.Point(196, 19);
             this.domainUpDown5.Name = "domainUpDown5";
             this.domainUpDown5.Size = new System.Drawing.Size(46, 20);
             this.domainUpDown5.TabIndex = 33;
@@ -224,17 +224,17 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 21);
+            this.label8.Location = new System.Drawing.Point(20, 78);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 13);
+            this.label8.Size = new System.Drawing.Size(141, 13);
             this.label8.TabIndex = 32;
-            this.label8.Text = "Số tiền phạt trả trễ";
+            this.label8.Text = "Số tiền phạt trả trễ trên ngày";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 125);
+            this.label7.Location = new System.Drawing.Point(19, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 13);
             this.label7.TabIndex = 31;
@@ -243,7 +243,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 99);
+            this.label6.Location = new System.Drawing.Point(20, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(168, 13);
             this.label6.TabIndex = 30;
@@ -252,7 +252,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 73);
+            this.label5.Location = new System.Drawing.Point(19, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 13);
             this.label5.TabIndex = 29;
@@ -261,7 +261,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 47);
+            this.label4.Location = new System.Drawing.Point(20, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 27;
@@ -274,7 +274,7 @@
             this.ClientSize = new System.Drawing.Size(278, 347);
             this.Controls.Add(this.panel1);
             this.Name = "fQuyDinh";
-            this.Text = "Quy Định";
+            this.Text = "d";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -155,9 +155,9 @@
             // 
             this.button13.Location = new System.Drawing.Point(235, 117);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(68, 23);
+            this.button13.Size = new System.Drawing.Size(77, 23);
             this.button13.TabIndex = 69;
-            this.button13.Text = "Xoá sách";
+            this.button13.Text = "Xoá Sách";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -182,11 +182,11 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(163, 117);
+            this.button14.Location = new System.Drawing.Point(153, 117);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(68, 23);
+            this.button14.Size = new System.Drawing.Size(78, 23);
             this.button14.TabIndex = 68;
-            this.button14.Text = "Thêm sách";
+            this.button14.Text = "Thêm Sách";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // textBox8
