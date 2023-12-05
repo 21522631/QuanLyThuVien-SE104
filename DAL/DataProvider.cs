@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DataProvider
     {
-        private string strconn = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyThuVien;Integrated Security=True;Trust Server Certificate=True";
+        private string strconn = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyThuVien;Integrated Security=True;TrustServerCertificate=True";
         
         public DataTable ExecuteQuery(string query)
         {

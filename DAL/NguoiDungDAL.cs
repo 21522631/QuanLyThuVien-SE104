@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-    public class NguoiDung : DataProvider
+    public class NguoiDungDAL : DataProvider
     {
         //DataProvider  data = new DataProvider();
         public DataTable GetAllNguoiDung()
@@ -18,7 +18,7 @@ namespace DAL
         }
         public DataTable GetNguoiDungByTaiKhoanMatKhau(string TenDangNhap, string MatKhau)
         {
-            string query = "SELECT * FROM NGUOIDUNG" +
+            string query = "SELECT * FROM NGUOIDUNG " +
                 "WHERE TENDANGNHAP = '" + TenDangNhap + "' AND MATKHAU = '" + MatKhau + "'";
             return base.ExecuteQuery(query);
         }
