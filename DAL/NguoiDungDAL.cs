@@ -26,11 +26,11 @@ namespace DAL
             string query = "SELECT * FROM NGUOIDUNG";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public object GetNguoiDungByTaiKhoanMatKhau(string TenDangNhap, string MatKhau)
+        public DataTable GetNguoiDungByTaiKhoanMatKhau(string TenDangNhap, string MatKhau)
         {
             string query = "SELECT * FROM NGUOIDUNG " +
                 "WHERE TENDANGNHAP = '" + TenDangNhap + "' AND MATKHAU = '" + MatKhau + "'";
-            return DataProvider.Instance.ExecuteScalar(query);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 
