@@ -10,6 +10,17 @@ namespace DAL
 {
     public class NguoiDungDAL
     {
+        private NguoiDungDAL instance;
+        private NguoiDungDAL() { }
+        public NguoiDungDAL Instance 
+        {
+            get
+            {
+                if (instance == null) instance = new NguoiDungDAL();
+                return instance;
+            }
+            private set => instance = value;
+        }
         public DataTable GetAllNguoiDung()
         {
             string query = "SELECT * FROM NGUOIDUNG";
