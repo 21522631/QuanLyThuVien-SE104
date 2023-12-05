@@ -37,6 +37,7 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.chkHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,13 +64,14 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.chkHienThiMatKhau);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtTenDangNhap);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Location = new System.Drawing.Point(38, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(302, 93);
+            this.panel2.Size = new System.Drawing.Size(302, 105);
             this.panel2.TabIndex = 6;
             // 
             // label1
@@ -125,6 +127,17 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // chkHienThiMatKhau
+            // 
+            this.chkHienThiMatKhau.AutoSize = true;
+            this.chkHienThiMatKhau.Location = new System.Drawing.Point(90, 85);
+            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
+            this.chkHienThiMatKhau.Size = new System.Drawing.Size(109, 17);
+            this.chkHienThiMatKhau.TabIndex = 6;
+            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
+            // 
             // fDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +165,7 @@
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox chkHienThiMatKhau;
     }
 }
 

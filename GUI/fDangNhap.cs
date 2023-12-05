@@ -39,10 +39,23 @@ namespace GUI
             }
             else 
             {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                txtTenDangNhap.Focus();
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!","Lỗi!",MessageBoxButtons.OK);
             } 
                 
             
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkHienThiMatKhau.Checked)
+                txtMatKhau.UseSystemPasswordChar = false;
+            else
+                txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }

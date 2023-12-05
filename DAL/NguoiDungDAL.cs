@@ -10,9 +10,9 @@ namespace DAL
 {
     public class NguoiDungDAL
     {
-        private NguoiDungDAL instance;
+        private static NguoiDungDAL instance;
         private NguoiDungDAL() { }
-        public NguoiDungDAL Instance 
+        public static NguoiDungDAL Instance 
         {
             get
             {
