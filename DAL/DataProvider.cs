@@ -14,13 +14,37 @@ namespace DAL
         
         public DataTable ExecuteQuery(string query)
         {
-            SqlConnection conn = new SqlConnection(strconn);
-            conn.Open();
-            SqlCommand command = new SqlCommand(query, conn);
             DataTable data = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            adapter.Fill(data);
-            conn.Close();
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+            }
+            return data;
+        }
+        public int ExecuteNonQuery(string query)
+        {
+            int data;
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                data = command.ExecuteNonQuery();
+            }
+            return data;
+        }
+        public object ExecuteScalar(string query)
+        {
+            object data;
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                data = command.ExecuteScalar();       
+            }
             return data;
         }
     }
