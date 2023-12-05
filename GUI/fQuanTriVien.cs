@@ -91,5 +91,15 @@ namespace GUI
         {
 
         }
+
+        private void thêmPhiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tìmKiếmPhiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -113,7 +113,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblMaDocGia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoaLoaiDocGia = new System.Windows.Forms.Button();
             this.btnSuaDocGia = new System.Windows.Forms.Button();
@@ -131,6 +130,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage4.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -845,6 +845,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.domainUpDown1);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -859,7 +860,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.lblMaDocGia);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnXoaLoaiDocGia);
             this.groupBox1.Controls.Add(this.btnSuaDocGia);
@@ -876,7 +876,7 @@
             // 
             // domainUpDown1
             // 
-            this.domainUpDown1.Location = new System.Drawing.Point(258, 104);
+            this.domainUpDown1.Location = new System.Drawing.Point(280, 104);
             this.domainUpDown1.Name = "domainUpDown1";
             this.domainUpDown1.Size = new System.Drawing.Size(43, 20);
             this.domainUpDown1.TabIndex = 35;
@@ -884,7 +884,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(581, 30);
+            this.textBox4.Location = new System.Drawing.Point(624, 28);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(105, 20);
             this.textBox4.TabIndex = 34;
@@ -908,7 +908,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(199, 109);
+            this.label9.Location = new System.Drawing.Point(225, 107);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 30;
@@ -916,7 +916,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(615, 59);
+            this.button2.Location = new System.Drawing.Point(658, 57);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 23);
             this.button2.TabIndex = 29;
@@ -925,7 +925,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(521, 59);
+            this.button1.Location = new System.Drawing.Point(564, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 23);
             this.button1.TabIndex = 28;
@@ -935,7 +935,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(518, 33);
+            this.label8.Location = new System.Drawing.Point(561, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 26;
@@ -944,7 +944,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(313, 25);
+            this.label7.Location = new System.Drawing.Point(329, 25);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 25;
@@ -953,9 +953,9 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(313, 41);
+            this.dataGridView2.Location = new System.Drawing.Point(332, 41);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(199, 85);
+            this.dataGridView2.Size = new System.Drawing.Size(216, 85);
             this.dataGridView2.TabIndex = 24;
             // 
             // textBox1
@@ -977,28 +977,19 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(202, 25);
+            this.comboBox1.Location = new System.Drawing.Point(248, 25);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 21);
+            this.comboBox1.Size = new System.Drawing.Size(75, 21);
             this.comboBox1.TabIndex = 21;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(140, 31);
+            this.label10.Location = new System.Drawing.Point(197, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 20;
             this.label10.Text = "Thể loại";
-            // 
-            // lblMaDocGia
-            // 
-            this.lblMaDocGia.AutoSize = true;
-            this.lblMaDocGia.Location = new System.Drawing.Point(101, 31);
-            this.lblMaDocGia.Name = "lblMaDocGia";
-            this.lblMaDocGia.Size = new System.Drawing.Size(22, 13);
-            this.lblMaDocGia.TabIndex = 19;
-            this.lblMaDocGia.Text = ".....";
             // 
             // label1
             // 
@@ -1031,7 +1022,7 @@
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(104, 78);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(197, 20);
+            this.txtDiaChi.Size = new System.Drawing.Size(219, 20);
             this.txtDiaChi.TabIndex = 10;
             // 
             // label4
@@ -1047,7 +1038,7 @@
             // 
             this.txtHoVaTen.Location = new System.Drawing.Point(104, 52);
             this.txtHoVaTen.Name = "txtHoVaTen";
-            this.txtHoVaTen.Size = new System.Drawing.Size(197, 20);
+            this.txtHoVaTen.Size = new System.Drawing.Size(219, 20);
             this.txtHoVaTen.TabIndex = 3;
             // 
             // label2
@@ -1153,6 +1144,14 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 501);
             this.tabControl1.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(104, 25);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(89, 21);
+            this.comboBox2.TabIndex = 36;
             // 
             // fQuanLySach
             // 
@@ -1288,7 +1287,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblMaDocGia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnXoaLoaiDocGia;
         private System.Windows.Forms.Button btnSuaDocGia;
@@ -1306,5 +1304,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
