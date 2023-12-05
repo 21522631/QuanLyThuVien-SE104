@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -26,28 +27,35 @@ namespace GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            DangNhapBUS dangnhapBUS = new DangNhapBUS();
             string TenDangNhap = txtTenDangNhap.Text;
             string MatKhau = txtMatKhau.Text;
 
-            if(dangnhapBUS.CheckDangNhap(TenDangNhap, MatKhau))
+            switch (DangNhapBUS.Instance.CheckDangNhap(TenDangNhap, MatKhau))
             {
-                fQuanTriVien f = new fQuanTriVien();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
+                case 0:
+                    txtTenDangNhap.Focus();
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi!", MessageBoxButtons.OK);
+                    break;
+                case 1:
+                    fQuanTriVien fQTV = new fQuanTriVien();
+                    this.Hide();
+                    fQTV.ShowDialog();
+                    this.Show();
+                    break;
+                case 2:
+                    fThuThu fTT = new fThuThu();
+                    this.Hide();
+                    fTT.ShowDialog();
+                    this.Show();
+                    break;
+                case 3:
+                    fDocGia fDG = new fDocGia();
+                    this.Hide();
+                    fDG.ShowDialog();
+                    this.Show();
+                    break;
             }
-            else 
-            {
-                txtTenDangNhap.Focus();
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!","Lỗi!",MessageBoxButtons.OK);
-            } 
                 
-            
-        }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void chkHienThiMatKhau_CheckedChanged(object sender, EventArgs e)

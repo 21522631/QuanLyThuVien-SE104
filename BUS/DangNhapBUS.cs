@@ -12,15 +12,29 @@ namespace BUS
 {
     public class DangNhapBUS
     {
-        public bool CheckDangNhap(string TenDangNhap, string MatKhau)
+        private static DangNhapBUS instance;
+        private DangNhapBUS() { }
+        public static DangNhapBUS Instance 
+        {
+            get
+            {
+                if (instance == null) instance = new DangNhapBUS();
+                return instance;
+            }
+            private set => instance = value;
+        }
+        public int CheckDangNhap(string TenDangNhap, string MatKhau)
         {
             DataTable data = NguoiDungDAL.Instance.GetNguoiDungByTaiKhoanMatKhau(TenDangNhap, MatKhau);
 
             if (data.Rows.Count > 0)
-                return true;
+            {
+                DataRow datarow = data.Rows[0];
+                return (int)datarow["IDNhomNguoiDung"];  
+            }
             else
             {
-                return false;
+                return 0;
             }
         }
     }
