@@ -64,6 +64,7 @@
             this.quyĐịnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,8 @@
             // 
             this.quảnLýNgườiDùngToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinNgườiDùngToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
+            this.đăngXuấtToolStripMenuItem,
+            this.thoátToolStripMenuItem});
             this.quảnLýNgườiDùngToolStripMenuItem1.Name = "quảnLýNgườiDùngToolStripMenuItem1";
             this.quảnLýNgườiDùngToolStripMenuItem1.Size = new System.Drawing.Size(125, 20);
             this.quảnLýNgườiDùngToolStripMenuItem1.Text = "Quản lý người dùng";
@@ -331,6 +333,12 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            // 
             // fQuanTriVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,5 +393,6 @@
         private System.Windows.Forms.ToolStripMenuItem báoCáoSáchTrảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNgườiDùngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
     }
 }
