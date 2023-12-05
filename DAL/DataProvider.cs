@@ -10,8 +10,22 @@ namespace DAL
 {
     public class DataProvider
     {
+        private static DataProvider instance;
+
+        private DataProvider() { }
+
+        public static DataProvider Instance
+        {
+            get
+            {
+                if (instance == null) instance = new DataProvider();
+                return instance;
+            }
+            private set => instance = value;
+        }
+           
         private string strconn = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyThuVien;Integrated Security=True;TrustServerCertificate=True";
-        
+
         public DataTable ExecuteQuery(string query)
         {
             DataTable data = new DataTable();
