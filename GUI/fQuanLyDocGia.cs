@@ -23,6 +23,10 @@ namespace GUI
         {
             txtMaDocGia.Enabled = false;
             txtMaLoaiDocGia.Enabled = false;
+            cboLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllTenLoaiDocGia();
+            //cboLoaiDocGia.DisplayMember = "Name";
+            cboLoaiDocGia.ValueMember = "TENLOAIDOCGIA";
+            dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
             dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
         }
         private void tabPage3_Click(object sender, EventArgs e)
@@ -56,6 +60,20 @@ namespace GUI
             fThemLoaiDocGia f = new fThemLoaiDocGia();
             f.ShowDialog();
             dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+        }
+
+        private void dgvDocGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index;
+            index = dgvDocGia.CurrentRow.Index;
+            txtMaDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[0].Value.ToString();
+            txtTenLoaiDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[1].Value.ToString();
+            cboLoaiDocGia.Text = dgvDocGia.Rows[index].Cells[2].Value.ToString();
+        }
+
+        private void cboLoaiDocGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

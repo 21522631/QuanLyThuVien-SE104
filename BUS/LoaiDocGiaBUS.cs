@@ -25,6 +25,10 @@ namespace BUS
         {
             return LoaiDocGiaDAL.Instance.GetAllLoaiDocGia();
         }
+        public DataTable GetAllTenLoaiDocGia()
+        {
+            return LoaiDocGiaDAL.Instance.GetAllTenLoaiDocGia();
+        }
         public int InsertLoaiDocGia(string TenLoaiDocGia)
         {
             return LoaiDocGiaDAL.Instance.InsertLoaiDocGia(TenLoaiDocGia);
