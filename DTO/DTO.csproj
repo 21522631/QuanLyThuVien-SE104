@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucNangDTO.cs" />
+    <Compile Include="CT_PhieuNhapSachDTO.cs" />
     <Compile Include="CT_TacGiaDTO.cs" />
     <Compile Include="CuonSachDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
