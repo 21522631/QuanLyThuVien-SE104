@@ -52,6 +52,7 @@
     <Compile Include="PhanQuyenDTO.cs" />
     <Compile Include="PhieuMuonTraDTO.cs" />
     <Compile Include="PhieuNhapSachDTO.cs" />
+    <Compile Include="PhieuThuTienPhatDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDTO.cs" />
     <Compile Include="TacGiaDTO.cs" />
