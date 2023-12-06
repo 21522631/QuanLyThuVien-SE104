@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using System.Reflection;
 
 namespace GUI
 {
@@ -36,6 +37,18 @@ namespace GUI
             txtTenLoaiDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[1].Value.ToString();    
         }
 
-       
+        private void btnSuaLoaiDocGia_Click(object sender, EventArgs e)
+        {
+            LoaiDocGiaBUS.Instance.UpdateLoaiDocGia(txtMaLoaiDocGia.Text, txtTenLoaiDocGia.Text);
+            dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+        }
+
+        private void btnXoaLoaiDocGia_Click(object sender, EventArgs e)
+        {
+            LoaiDocGiaBUS.Instance.DeleteLoaiDocGia(txtMaLoaiDocGia.Text);
+            txtMaLoaiDocGia.Text = "";
+            txtTenLoaiDocGia.Text = "";
+            dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+        }
     }
 }

@@ -26,5 +26,16 @@ namespace DAL
             string query = "SELECT MALOAIDOCGIA, TENLOAIDOCGIA FROM LOAIDOCGIA";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public int UpdateLoaiDocGia(string MaLoaiDocGia, string TenLoaiDocGia)
+        {
+            string query = "UPDATE LOAIDOCGIA SET TENLOAIDOCGIA = '" + TenLoaiDocGia +
+                           "' WHERE MALOAIDOCGIA = '" + MaLoaiDocGia + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteLoaiDocGia(string MaLoaiDocGia)
+        {
+            string query = "DELETE FROM LOAIDOCGIA WHERE MALOAIDOCGIA = '" + MaLoaiDocGia + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

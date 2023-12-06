@@ -98,6 +98,7 @@
             this.btnXoaLoaiDocGia.TabIndex = 25;
             this.btnXoaLoaiDocGia.Text = "Xoá";
             this.btnXoaLoaiDocGia.UseVisualStyleBackColor = true;
+            this.btnXoaLoaiDocGia.Click += new System.EventHandler(this.btnXoaLoaiDocGia_Click);
             // 
             // btnSuaLoaiDocGia
             // 
@@ -107,6 +108,7 @@
             this.btnSuaLoaiDocGia.TabIndex = 24;
             this.btnSuaLoaiDocGia.Text = "Sửa";
             this.btnSuaLoaiDocGia.UseVisualStyleBackColor = true;
+            this.btnSuaLoaiDocGia.Click += new System.EventHandler(this.btnSuaLoaiDocGia_Click);
             // 
             // btnThemLoaiDocGia
             // 
@@ -160,7 +162,7 @@
             // 
             // txtMaLoaiDocGia
             // 
-            this.txtMaLoaiDocGia.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMaLoaiDocGia.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtMaLoaiDocGia.Location = new System.Drawing.Point(338, 36);
             this.txtMaLoaiDocGia.Name = "txtMaLoaiDocGia";
             this.txtMaLoaiDocGia.Size = new System.Drawing.Size(84, 20);

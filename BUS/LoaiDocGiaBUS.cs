@@ -25,5 +25,13 @@ namespace BUS
         {
             return LoaiDocGiaDAL.Instance.GetAllLoaiDocGia();
         }
+        public int UpdateLoaiDocGia(string MaLoaiDocGia, string TenLoaiDocGia)
+        {
+            return LoaiDocGiaDAL.Instance.UpdateLoaiDocGia(MaLoaiDocGia, TenLoaiDocGia);
+        }
+        public int DeleteLoaiDocGia(string MaLoaiDocGia)
+        {
+            return LoaiDocGiaDAL.Instance.DeleteLoaiDocGia(MaLoaiDocGia);
+        }
     }
 }
