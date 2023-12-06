@@ -27,15 +27,15 @@ namespace DAL
             DataTable data = new DataTable();
             string query = "SELECT * FROM THAMSO";
             data = DataProvider.Instance.ExecuteQuery(query);
-            thamso.ID = Convert.ToInt32(data.Rows[0]["ID"].ToString());
-            thamso.TuoiToiThieu = Convert.ToInt32(data.Rows[0]["TUOITOITHIEU"].ToString());
-            thamso.TuoiToiDa = Convert.ToInt32(data.Rows[0]["TUOITOIDA"].ToString());
-            thamso.ThoiHanThe = Convert.ToInt32(data.Rows[0]["THOIHANTHE"].ToString());
-            thamso.KhoangCachNamXB = Convert.ToInt32(data.Rows[0]["KHOANGCACHNAMXB"].ToString());
-            thamso.SoNgayMuonToiDa = Convert.ToInt32(data.Rows[0]["SONGAYMUONTOIDA"].ToString());
-            thamso.SoSachMuonToiDa = Convert.ToInt32(data.Rows[0]["SOSACHMUONTOIDA"].ToString());
-            thamso.DonGiaPhat = Convert.ToInt32(data.Rows[0]["DONGIAPHAT"].ToString());
-            thamso.ApDungQDTienThu = Convert.ToInt32(data.Rows[0]["APDUNGQDTIENTHU"].ToString());
+            thamso.ID = Convert.ToInt32(data.Rows[0][0].ToString());
+            thamso.TuoiToiThieu = Convert.ToInt32(data.Rows[0][1].ToString());
+            thamso.TuoiToiDa = Convert.ToInt32(data.Rows[0][2].ToString());
+            thamso.ThoiHanThe = Convert.ToInt32(data.Rows[0][3].ToString());
+            thamso.KhoangCachNamXB = Convert.ToInt32(data.Rows[0][4].ToString());
+            thamso.SoNgayMuonToiDa = Convert.ToInt32(data.Rows[0][5].ToString());
+            thamso.SoSachMuonToiDa = Convert.ToInt32(data.Rows[0][6].ToString());
+            thamso.DonGiaPhat = Convert.ToInt32(data.Rows[0][7].ToString());
+            thamso.ApDungQDTienThu = Convert.ToInt32(data.Rows[0][8].ToString());
             return thamso;
         }
     }

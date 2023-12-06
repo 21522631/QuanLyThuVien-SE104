@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboLoaiDocGia = new System.Windows.Forms.ComboBox();
+            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgayLapThe = new System.Windows.Forms.DateTimePicker();
             this.dtmNgayHetHan = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -47,9 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtmNgayLapThe = new System.Windows.Forms.DateTimePicker();
-            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.cboLoaiDocGia = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(302, 326);
             this.panel1.TabIndex = 0;
+            // 
+            // cboLoaiDocGia
+            // 
+            this.cboLoaiDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboLoaiDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboLoaiDocGia.FormattingEnabled = true;
+            this.cboLoaiDocGia.Location = new System.Drawing.Point(107, 116);
+            this.cboLoaiDocGia.Name = "cboLoaiDocGia";
+            this.cboLoaiDocGia.Size = new System.Drawing.Size(91, 21);
+            this.cboLoaiDocGia.TabIndex = 56;
+            // 
+            // dtmNgaySinh
+            // 
+            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgaySinh.Location = new System.Drawing.Point(107, 144);
+            this.dtmNgaySinh.Name = "dtmNgaySinh";
+            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgaySinh.TabIndex = 50;
+            // 
+            // dtmNgayLapThe
+            // 
+            this.dtmNgayLapThe.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayLapThe.Location = new System.Drawing.Point(107, 220);
+            this.dtmNgayLapThe.Name = "dtmNgayLapThe";
+            this.dtmNgayLapThe.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayLapThe.TabIndex = 49;
+            this.dtmNgayLapThe.ValueChanged += new System.EventHandler(this.dtmNgayLapThe_ValueChanged);
             // 
             // dtmNgayHetHan
             // 
@@ -139,6 +168,7 @@
             this.btnHuy.TabIndex = 36;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -233,34 +263,6 @@
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Họ và tên";
-            // 
-            // dtmNgayLapThe
-            // 
-            this.dtmNgayLapThe.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgayLapThe.Location = new System.Drawing.Point(107, 220);
-            this.dtmNgayLapThe.Name = "dtmNgayLapThe";
-            this.dtmNgayLapThe.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgayLapThe.TabIndex = 49;
-            // 
-            // dtmNgaySinh
-            // 
-            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgaySinh.Location = new System.Drawing.Point(107, 144);
-            this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgaySinh.TabIndex = 50;
-            // 
-            // cboLoaiDocGia
-            // 
-            this.cboLoaiDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboLoaiDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboLoaiDocGia.FormattingEnabled = true;
-            this.cboLoaiDocGia.Location = new System.Drawing.Point(107, 116);
-            this.cboLoaiDocGia.Name = "cboLoaiDocGia";
-            this.cboLoaiDocGia.Size = new System.Drawing.Size(91, 21);
-            this.cboLoaiDocGia.TabIndex = 56;
             // 
             // fThemDocGia
             // 
