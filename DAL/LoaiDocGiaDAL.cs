@@ -23,7 +23,7 @@ namespace DAL
         }
         public DataTable GetAllLoaiDocGia()
         {
-            string query = "SELECT * FROM LOAIDOCGIA";
+            string query = "SELECT MALOAIDOCGIA, TENLOAIDOCGIA FROM LOAIDOCGIA";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

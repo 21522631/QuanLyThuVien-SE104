@@ -20,7 +20,9 @@ namespace GUI
         }
         private void fQuanLyDocGia_Load(object sender, EventArgs e)
         {
-
+            txtMaDocGia.Enabled = false;
+            txtMaLoaiDocGia.Enabled = false;
+            dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
         }
         private void tabPage3_Click(object sender, EventArgs e)
         {
@@ -28,7 +30,10 @@ namespace GUI
         }
         private void dgvLoaiDocGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int index;
+            index = dgvLoaiDocGia.CurrentRow.Index;
+            txtMaLoaiDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[0].Value.ToString();
+            txtTenLoaiDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[1].Value.ToString();    
         }
 
        

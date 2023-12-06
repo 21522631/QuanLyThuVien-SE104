@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.tabpgLoaiDocGia = new System.Windows.Forms.TabPage();
+            this.btnXoaLoaiDocGia = new System.Windows.Forms.Button();
+            this.btnSuaLoaiDocGia = new System.Windows.Forms.Button();
             this.btnThemLoaiDocGia = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvLoaiDocGia = new System.Windows.Forms.DataGridView();
@@ -45,7 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaDocGia = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnXoaDocGia = new System.Windows.Forms.Button();
             this.tabQuanLyDocGia = new System.Windows.Forms.TabControl();
-            this.btnSuaLoaiDocGia = new System.Windows.Forms.Button();
-            this.btnXoaLoaiDocGia = new System.Windows.Forms.Button();
             this.tabpgLoaiDocGia.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
@@ -89,6 +89,24 @@
             this.tabpgLoaiDocGia.Text = "Loại Độc Giả";
             this.tabpgLoaiDocGia.UseVisualStyleBackColor = true;
             this.tabpgLoaiDocGia.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // btnXoaLoaiDocGia
+            // 
+            this.btnXoaLoaiDocGia.Location = new System.Drawing.Point(704, 175);
+            this.btnXoaLoaiDocGia.Name = "btnXoaLoaiDocGia";
+            this.btnXoaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaLoaiDocGia.TabIndex = 25;
+            this.btnXoaLoaiDocGia.Text = "Xoá";
+            this.btnXoaLoaiDocGia.UseVisualStyleBackColor = true;
+            // 
+            // btnSuaLoaiDocGia
+            // 
+            this.btnSuaLoaiDocGia.Location = new System.Drawing.Point(623, 175);
+            this.btnSuaLoaiDocGia.Name = "btnSuaLoaiDocGia";
+            this.btnSuaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaLoaiDocGia.TabIndex = 24;
+            this.btnSuaLoaiDocGia.Text = "Sửa";
+            this.btnSuaLoaiDocGia.UseVisualStyleBackColor = true;
             // 
             // btnThemLoaiDocGia
             // 
@@ -190,7 +208,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(549, 175);
+            this.button6.Location = new System.Drawing.Point(16, 174);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 22;
@@ -227,7 +245,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtMaDocGia);
             this.groupBox1.Controls.Add(this.dateTimePicker3);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label1);
@@ -256,13 +274,13 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(91, 20);
             this.dateTimePicker2.TabIndex = 52;
             // 
-            // textBox2
+            // txtMaDocGia
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Location = new System.Drawing.Point(329, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(84, 20);
-            this.textBox2.TabIndex = 51;
+            this.txtMaDocGia.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMaDocGia.Location = new System.Drawing.Point(329, 19);
+            this.txtMaDocGia.Name = "txtMaDocGia";
+            this.txtMaDocGia.Size = new System.Drawing.Size(84, 20);
+            this.txtMaDocGia.TabIndex = 51;
             // 
             // dateTimePicker3
             // 
@@ -385,24 +403,6 @@
             this.tabQuanLyDocGia.Size = new System.Drawing.Size(804, 486);
             this.tabQuanLyDocGia.TabIndex = 6;
             // 
-            // btnSuaLoaiDocGia
-            // 
-            this.btnSuaLoaiDocGia.Location = new System.Drawing.Point(623, 175);
-            this.btnSuaLoaiDocGia.Name = "btnSuaLoaiDocGia";
-            this.btnSuaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaLoaiDocGia.TabIndex = 24;
-            this.btnSuaLoaiDocGia.Text = "Sửa";
-            this.btnSuaLoaiDocGia.UseVisualStyleBackColor = true;
-            // 
-            // btnXoaLoaiDocGia
-            // 
-            this.btnXoaLoaiDocGia.Location = new System.Drawing.Point(704, 175);
-            this.btnXoaLoaiDocGia.Name = "btnXoaLoaiDocGia";
-            this.btnXoaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaLoaiDocGia.TabIndex = 25;
-            this.btnXoaLoaiDocGia.Text = "Xoá";
-            this.btnXoaLoaiDocGia.UseVisualStyleBackColor = true;
-            // 
             // fQuanLyDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,7 +461,7 @@
         private System.Windows.Forms.Button btnThemLoaiDocGia;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtMaLoaiDocGia;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaDocGia;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnSuaLoaiDocGia;
         private System.Windows.Forms.Button btnXoaLoaiDocGia;
