@@ -41,7 +41,7 @@
             this.txtTenLoaiDocGia = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabpgDocGia = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnThemDocGia = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvThongTinChung = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,8 +60,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnXoaDocGia = new System.Windows.Forms.Button();
             this.tabQuanLyDocGia = new System.Windows.Forms.TabControl();
+            this.btnXoaDocGia = new System.Windows.Forms.Button();
+            this.btnSuaDocGia = new System.Windows.Forms.Button();
             this.tabpgLoaiDocGia.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
@@ -118,6 +119,7 @@
             this.btnThemLoaiDocGia.TabIndex = 23;
             this.btnThemLoaiDocGia.Text = "Thêm loại độc giả";
             this.btnThemLoaiDocGia.UseVisualStyleBackColor = true;
+            this.btnThemLoaiDocGia.Click += new System.EventHandler(this.btnThemLoaiDocGia_Click);
             // 
             // groupBox4
             // 
@@ -127,7 +129,7 @@
             this.groupBox4.Size = new System.Drawing.Size(776, 250);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông Tin Chung";
+            this.groupBox4.Text = "Thông tin tất cả loại độc giả";
             // 
             // dgvLoaiDocGia
             // 
@@ -158,11 +160,11 @@
             this.groupBox5.Size = new System.Drawing.Size(776, 141);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thông Tin Chi Tiết";
+            this.groupBox5.Text = "Thông tin chi tiết loại độc giả";
             // 
             // txtMaLoaiDocGia
             // 
-            this.txtMaLoaiDocGia.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtMaLoaiDocGia.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtMaLoaiDocGia.Location = new System.Drawing.Point(338, 36);
             this.txtMaLoaiDocGia.Name = "txtMaLoaiDocGia";
             this.txtMaLoaiDocGia.Size = new System.Drawing.Size(84, 20);
@@ -195,11 +197,12 @@
             // 
             // tabpgDocGia
             // 
-            this.tabpgDocGia.Controls.Add(this.button6);
+            this.tabpgDocGia.Controls.Add(this.btnXoaDocGia);
+            this.tabpgDocGia.Controls.Add(this.btnSuaDocGia);
+            this.tabpgDocGia.Controls.Add(this.btnThemDocGia);
             this.tabpgDocGia.Controls.Add(this.groupBox3);
             this.tabpgDocGia.Controls.Add(this.label6);
             this.tabpgDocGia.Controls.Add(this.groupBox1);
-            this.tabpgDocGia.Controls.Add(this.btnXoaDocGia);
             this.tabpgDocGia.Location = new System.Drawing.Point(4, 22);
             this.tabpgDocGia.Name = "tabpgDocGia";
             this.tabpgDocGia.Padding = new System.Windows.Forms.Padding(3);
@@ -208,14 +211,14 @@
             this.tabpgDocGia.Text = "Độc Giả";
             this.tabpgDocGia.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnThemDocGia
             // 
-            this.button6.Location = new System.Drawing.Point(16, 174);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnThemDocGia.Location = new System.Drawing.Point(16, 174);
+            this.btnThemDocGia.Name = "btnThemDocGia";
+            this.btnThemDocGia.Size = new System.Drawing.Size(92, 23);
+            this.btnThemDocGia.TabIndex = 22;
+            this.btnThemDocGia.Text = "Thêm độc giả";
+            this.btnThemDocGia.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -225,7 +228,7 @@
             this.groupBox3.Size = new System.Drawing.Size(776, 251);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông Tin Chung";
+            this.groupBox3.Text = "Thông tin tất cả độc giả";
             // 
             // dgvThongTinChung
             // 
@@ -265,7 +268,7 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 141);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Chi Tiết";
+            this.groupBox1.Text = "Thông tin chi tiết độc giả";
             // 
             // dateTimePicker2
             // 
@@ -278,7 +281,7 @@
             // 
             // txtMaDocGia
             // 
-            this.txtMaDocGia.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMaDocGia.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtMaDocGia.Location = new System.Drawing.Point(329, 19);
             this.txtMaDocGia.Name = "txtMaDocGia";
             this.txtMaDocGia.Size = new System.Drawing.Size(84, 20);
@@ -386,15 +389,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Họ và tên";
             // 
-            // btnXoaDocGia
-            // 
-            this.btnXoaDocGia.Location = new System.Drawing.Point(711, 174);
-            this.btnXoaDocGia.Name = "btnXoaDocGia";
-            this.btnXoaDocGia.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaDocGia.TabIndex = 17;
-            this.btnXoaDocGia.Text = "Xoá";
-            this.btnXoaDocGia.UseVisualStyleBackColor = true;
-            // 
             // tabQuanLyDocGia
             // 
             this.tabQuanLyDocGia.Controls.Add(this.tabpgDocGia);
@@ -404,6 +398,24 @@
             this.tabQuanLyDocGia.SelectedIndex = 0;
             this.tabQuanLyDocGia.Size = new System.Drawing.Size(804, 486);
             this.tabQuanLyDocGia.TabIndex = 6;
+            // 
+            // btnXoaDocGia
+            // 
+            this.btnXoaDocGia.Location = new System.Drawing.Point(711, 175);
+            this.btnXoaDocGia.Name = "btnXoaDocGia";
+            this.btnXoaDocGia.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaDocGia.TabIndex = 27;
+            this.btnXoaDocGia.Text = "Xoá";
+            this.btnXoaDocGia.UseVisualStyleBackColor = true;
+            // 
+            // btnSuaDocGia
+            // 
+            this.btnSuaDocGia.Location = new System.Drawing.Point(630, 175);
+            this.btnSuaDocGia.Name = "btnSuaDocGia";
+            this.btnSuaDocGia.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaDocGia.TabIndex = 26;
+            this.btnSuaDocGia.Text = "Sửa";
+            this.btnSuaDocGia.UseVisualStyleBackColor = true;
             // 
             // fQuanLyDocGia
             // 
@@ -449,7 +461,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnXoaDocGia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEmail;
@@ -461,11 +472,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabQuanLyDocGia;
         private System.Windows.Forms.Button btnThemLoaiDocGia;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnThemDocGia;
         private System.Windows.Forms.TextBox txtMaLoaiDocGia;
         private System.Windows.Forms.TextBox txtMaDocGia;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnSuaLoaiDocGia;
         private System.Windows.Forms.Button btnXoaLoaiDocGia;
+        private System.Windows.Forms.Button btnXoaDocGia;
+        private System.Windows.Forms.Button btnSuaDocGia;
     }
 }

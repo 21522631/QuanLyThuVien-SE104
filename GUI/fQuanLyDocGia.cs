@@ -50,5 +50,12 @@ namespace GUI
             txtTenLoaiDocGia.Text = "";
             dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
         }
+
+        private void btnThemLoaiDocGia_Click(object sender, EventArgs e)
+        {
+            fThemLoaiDocGia f = new fThemLoaiDocGia();
+            f.ShowDialog();
+            dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+        }
     }
 }

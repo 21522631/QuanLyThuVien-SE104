@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,20 +17,26 @@ namespace GUI
         {
             InitializeComponent();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void fThemLoaiDocGia_Load(object sender, EventArgs e)
         {
-
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if(LoaiDocGiaBUS.Instance.InsertLoaiDocGia(txtTenLoaiDocGia.Text) > 0)
+            {
+                MessageBox.Show("Thông tin đã được lưu!", "Thành công!", MessageBoxButtons.OK);
+                txtTenLoaiDocGia.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng thử lại!", "Thất bại!", MessageBoxButtons.OK);
+            } 
+            
         }
 
-        private void txtHoVaTen_TextChanged(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

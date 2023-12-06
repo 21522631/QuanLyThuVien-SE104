@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.txtHoVaTen = new System.Windows.Forms.TextBox();
+            this.txtTenLoaiDocGia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -41,7 +41,7 @@
             // 
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnLuu);
-            this.panel1.Controls.Add(this.txtHoVaTen);
+            this.panel1.Controls.Add(this.txtTenLoaiDocGia);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -57,6 +57,7 @@
             this.btnHuy.TabIndex = 38;
             this.btnHuy.Text = "Thoát";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -66,14 +67,14 @@
             this.btnLuu.TabIndex = 37;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtHoVaTen
+            // txtTenLoaiDocGia
             // 
-            this.txtHoVaTen.Location = new System.Drawing.Point(105, 50);
-            this.txtHoVaTen.Name = "txtHoVaTen";
-            this.txtHoVaTen.Size = new System.Drawing.Size(148, 20);
-            this.txtHoVaTen.TabIndex = 24;
-            this.txtHoVaTen.TextChanged += new System.EventHandler(this.txtHoVaTen_TextChanged);
+            this.txtTenLoaiDocGia.Location = new System.Drawing.Point(105, 50);
+            this.txtTenLoaiDocGia.Name = "txtTenLoaiDocGia";
+            this.txtTenLoaiDocGia.Size = new System.Drawing.Size(148, 20);
+            this.txtTenLoaiDocGia.TabIndex = 24;
             // 
             // label3
             // 
@@ -83,7 +84,6 @@
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Tên loại độc giả";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -114,7 +114,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtHoVaTen;
+        private System.Windows.Forms.TextBox txtTenLoaiDocGia;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
     }

@@ -26,6 +26,11 @@ namespace DAL
             string query = "SELECT MALOAIDOCGIA, TENLOAIDOCGIA FROM LOAIDOCGIA";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public int InsertLoaiDocGia(string TenLoaiDocGia)
+        {
+            string query = "INSERT INTO LOAIDOCGIA VALUES(N'" + TenLoaiDocGia + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public int UpdateLoaiDocGia(string MaLoaiDocGia, string TenLoaiDocGia)
         {
             string query = "UPDATE LOAIDOCGIA SET TENLOAIDOCGIA = '" + TenLoaiDocGia +
