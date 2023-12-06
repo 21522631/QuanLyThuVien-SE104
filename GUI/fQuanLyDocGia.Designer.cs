@@ -212,6 +212,7 @@
             this.tabpgDocGia.TabIndex = 0;
             this.tabpgDocGia.Text = "Độc Giả";
             this.tabpgDocGia.UseVisualStyleBackColor = true;
+            this.tabpgDocGia.Click += new System.EventHandler(this.tabpgDocGia_Click);
             // 
             // btnXoaDocGia
             // 

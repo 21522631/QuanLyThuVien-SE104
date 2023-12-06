@@ -15,9 +15,10 @@ namespace GUI
 {
     public partial class fQuanLyDocGia : Form
     {
-        public fQuanLyDocGia()
+        public fQuanLyDocGia(int Index)
         {
             InitializeComponent();
+            this.tabQuanLyDocGia.SelectedIndex = Index;
         }
         private void fQuanLyDocGia_Load(object sender, EventArgs e)
         {
@@ -99,6 +100,11 @@ namespace GUI
             dtmNgayLapThe.Text = DateTime.Now.ToString("dd/MM/yyyy");
             dtmNgayHetHan.Text = DateTime.Now.ToString("dd/MM/yyyy");
             dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
+        }
+
+        private void tabpgDocGia_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

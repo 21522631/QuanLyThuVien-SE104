@@ -74,7 +74,8 @@ namespace GUI
 
         private void sửaĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fQuanLyDocGia f = new fQuanLyDocGia(0);
+            f.ShowDialog();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -100,6 +101,24 @@ namespace GUI
         private void tìmKiếmPhiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void loạiĐộcGiảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fThemLoaiDocGia f = new fThemLoaiDocGia(); 
+            f.ShowDialog();
+        }
+
+        private void độcGiảToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            fQuanLyDocGia f= new fQuanLyDocGia(0);
+            f.ShowDialog();
+        }
+
+        private void loạiĐộcGiảToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            fQuanLyDocGia f = new fQuanLyDocGia(1);
+            f.ShowDialog();
         }
     }
 }
