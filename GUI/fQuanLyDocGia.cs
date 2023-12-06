@@ -17,11 +17,6 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -53,6 +48,16 @@ namespace GUI
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvLoaiDocGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fQuanLyDocGia_Load(object sender, EventArgs e)
         {
 
         }
