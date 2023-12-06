@@ -66,12 +66,21 @@ namespace GUI
         {
             int index;
             index = dgvDocGia.CurrentRow.Index;
-            txtMaDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[0].Value.ToString();
-            txtTenLoaiDocGia.Text = dgvLoaiDocGia.Rows[index].Cells[1].Value.ToString();
-            cboLoaiDocGia.Text = dgvDocGia.Rows[index].Cells[2].Value.ToString();
+            txtMaDocGia.Text = dgvDocGia.Rows[index].Cells[0].Value.ToString();
+            txtHoVaTen.Text = dgvDocGia.Rows[index].Cells[1].Value.ToString();
+            dtmNgaySinh.Text = dgvDocGia.Rows[index].Cells[2].Value.ToString();
+            txtDiaChi.Text = dgvDocGia.Rows[index].Cells[3].Value.ToString();
+            txtEmail.Text = dgvDocGia.Rows[index].Cells[4].Value.ToString();
+            cboLoaiDocGia.Text = dgvDocGia.Rows[index].Cells[5].Value.ToString();
+            dtmNgayLapThe.Text = dgvDocGia.Rows[index].Cells[6].Value.ToString();
+            dtmNgayHetHan.Text = dgvDocGia.Rows[index].Cells[7].Value.ToString();
         }
 
         private void cboLoaiDocGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSuaDocGia_Click(object sender, EventArgs e)
         {
 
         }

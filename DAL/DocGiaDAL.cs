@@ -23,7 +23,7 @@ namespace DAL
         }
         public DataTable GetAllDocGia()
         {
-            string query = "SELECT MADOCGIA, MANGUOIDUNG, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, TENLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN " +
+            string query = "SELECT MADOCGIA, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, TENLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN, MANGUOIDUNG " +
                 "FROM DOCGIA JOIN LOAIDOCGIA ON DOCGIA.IDLOAIDOCGIA = LOAIDOCGIA.ID " +
                 "JOIN NGUOIDUNG ON DOCGIA.IDNGUOIDUNG = NGUOIDUNG.ID";
             return DataProvider.Instance.ExecuteQuery(query);

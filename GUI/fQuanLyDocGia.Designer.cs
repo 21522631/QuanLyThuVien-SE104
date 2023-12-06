@@ -50,10 +50,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboLoaiDocGia = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgayLapThe = new System.Windows.Forms.DateTimePicker();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgayHetHan = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -230,6 +230,7 @@
             this.btnSuaDocGia.TabIndex = 26;
             this.btnSuaDocGia.Text = "Sửa";
             this.btnSuaDocGia.UseVisualStyleBackColor = true;
+            this.btnSuaDocGia.Click += new System.EventHandler(this.btnSuaDocGia_Click);
             // 
             // btnThemDocGia
             // 
@@ -272,10 +273,10 @@
             // 
             this.groupBox1.Controls.Add(this.cboLoaiDocGia);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dtmNgayLapThe);
             this.groupBox1.Controls.Add(this.txtMaDocGia);
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtmNgayHetHan);
+            this.groupBox1.Controls.Add(this.dtmNgaySinh);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -313,14 +314,14 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "Loại độc giả";
             // 
-            // dateTimePicker2
+            // dtmNgayLapThe
             // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(464, 80);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker2.TabIndex = 52;
+            this.dtmNgayLapThe.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayLapThe.Location = new System.Drawing.Point(464, 80);
+            this.dtmNgayLapThe.Name = "dtmNgayLapThe";
+            this.dtmNgayLapThe.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayLapThe.TabIndex = 52;
             // 
             // txtMaDocGia
             // 
@@ -330,23 +331,23 @@
             this.txtMaDocGia.Size = new System.Drawing.Size(84, 20);
             this.txtMaDocGia.TabIndex = 51;
             // 
-            // dateTimePicker3
+            // dtmNgayHetHan
             // 
-            this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(464, 106);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker3.TabIndex = 50;
+            this.dtmNgayHetHan.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayHetHan.Location = new System.Drawing.Point(464, 106);
+            this.dtmNgayHetHan.Name = "dtmNgayHetHan";
+            this.dtmNgayHetHan.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayHetHan.TabIndex = 50;
             // 
-            // dateTimePicker1
+            // dtmNgaySinh
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(159, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker1.TabIndex = 48;
+            this.dtmNgaySinh.CustomFormat = "";
+            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmNgaySinh.Location = new System.Drawing.Point(159, 80);
+            this.dtmNgaySinh.Name = "dtmNgaySinh";
+            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgaySinh.TabIndex = 48;
             // 
             // label1
             // 
@@ -483,8 +484,8 @@
         private System.Windows.Forms.DataGridView dgvDocGia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtmNgayHetHan;
+        private System.Windows.Forms.DateTimePicker dtmNgaySinh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -500,7 +501,7 @@
         private System.Windows.Forms.Button btnThemDocGia;
         private System.Windows.Forms.TextBox txtMaLoaiDocGia;
         private System.Windows.Forms.TextBox txtMaDocGia;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtmNgayLapThe;
         private System.Windows.Forms.Button btnSuaLoaiDocGia;
         private System.Windows.Forms.Button btnXoaLoaiDocGia;
         private System.Windows.Forms.Button btnXoaDocGia;
