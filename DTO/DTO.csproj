@@ -42,13 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucNangDTO.cs" />
-    <Compile Include="CT_TacGia.cs" />
-    <Compile Include="CuonSach.cs" />
+    <Compile Include="CT_TacGiaDTO.cs" />
+    <Compile Include="CuonSachDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
     <Compile Include="NhomNguoiDungDTO.cs" />
     <Compile Include="PhanQuyenDTO.cs" />
+    <Compile Include="PhieuNhapSachDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sach.cs" />
+    <Compile Include="SachDTO.cs" />
     <Compile Include="TacGiaDTO.cs" />
     <Compile Include="TheLoaiDTO.cs" />
   </ItemGroup>
