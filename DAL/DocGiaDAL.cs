@@ -37,8 +37,8 @@ namespace DAL
         }
         public int DeleteDocGia(string MaDocGia)
         {
-            string query = "";
-            return 0;
+            string query = "DELETE FROM DOCGIA WHERE MADOCGIA = '" + MaDocGia + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

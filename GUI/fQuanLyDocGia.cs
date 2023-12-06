@@ -23,6 +23,7 @@ namespace GUI
         {
             txtMaDocGia.Enabled = false;
             txtMaLoaiDocGia.Enabled = false;
+            dtmNgayHetHan.Enabled = false;
             cboLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllTenLoaiDocGia();
             //cboLoaiDocGia.DisplayMember = "Name";
             cboLoaiDocGia.ValueMember = "TENLOAIDOCGIA";
@@ -31,7 +32,6 @@ namespace GUI
         }
         private void tabPage3_Click(object sender, EventArgs e)
         {
-
         }
         private void dgvLoaiDocGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,7 +89,16 @@ namespace GUI
 
         private void btnXoaDocGia_Click(object sender, EventArgs e)
         {
-
+            DocGiaBUS.Instance.DeleteDocGia(txtMaDocGia.Text);
+            txtMaDocGia.Text = "";
+            txtHoVaTen.Text = "";
+            cboLoaiDocGia.Text = "";
+            txtDiaChi.Text = "";
+            txtEmail.Text = "";
+            dtmNgaySinh.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            dtmNgayLapThe.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            dtmNgayHetHan.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
         }
     }
 }

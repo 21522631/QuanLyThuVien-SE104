@@ -32,7 +32,7 @@ namespace BUS
         }
         public int DeleteDocGia(string MaDocGia)
         {
-            return 0;
+            return DocGiaDAL.Instance.DeleteDocGia(MaDocGia);
         }
     }
 }
