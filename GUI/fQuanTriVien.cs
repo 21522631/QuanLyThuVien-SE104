@@ -120,5 +120,11 @@ namespace GUI
             fQuanLyDocGia f = new fQuanLyDocGia(1);
             f.ShowDialog();
         }
+
+        private void độcGiảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fThemDocGia f = new fThemDocGia();
+            f.ShowDialog();
+        }
     }
 }

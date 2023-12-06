@@ -168,8 +168,9 @@
             // độcGiảToolStripMenuItem1
             // 
             this.độcGiảToolStripMenuItem1.Name = "độcGiảToolStripMenuItem1";
-            this.độcGiảToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.độcGiảToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.độcGiảToolStripMenuItem1.Text = "Độc giả";
+            this.độcGiảToolStripMenuItem1.Click += new System.EventHandler(this.độcGiảToolStripMenuItem1_Click);
             // 
             // loạiĐộcGiảToolStripMenuItem1
             // 

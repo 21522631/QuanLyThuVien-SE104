@@ -28,6 +28,7 @@ namespace GUI
             cboLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllTenLoaiDocGia();
             //cboLoaiDocGia.DisplayMember = "Name";
             cboLoaiDocGia.ValueMember = "TENLOAIDOCGIA";
+            cboLoaiDocGia.Text = "";
             dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
             dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
         }
@@ -105,6 +106,13 @@ namespace GUI
         private void tabpgDocGia_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnThemDocGia_Click(object sender, EventArgs e)
+        {
+            fThemDocGia f = new fThemDocGia();
+            f.ShowDialog();
+            dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
         }
     }
 }

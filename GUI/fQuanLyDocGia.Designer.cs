@@ -242,6 +242,7 @@
             this.btnThemDocGia.TabIndex = 22;
             this.btnThemDocGia.Text = "Thêm độc giả";
             this.btnThemDocGia.UseVisualStyleBackColor = true;
+            this.btnThemDocGia.Click += new System.EventHandler(this.btnThemDocGia_Click);
             // 
             // groupBox3
             // 

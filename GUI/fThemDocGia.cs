@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,80 +18,19 @@ namespace GUI
         {
             InitializeComponent();
         }
-
-        private void label9_Click(object sender, EventArgs e)
+        private void fThemDocGia_Load(object sender, EventArgs e)
         {
-
+            cboLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllTenLoaiDocGia();
+            cboLoaiDocGia.ValueMember = "TENLOAIDOCGIA";
+            cboLoaiDocGia.Text = "";
         }
-
-        private void dtmNgayHetHan_ValueChanged(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dmtNgaySinh_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDiaChi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtmNgayLapThe_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboLoaiDocGia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
+            string IDLoaiDocGia = LoaiDocGiaBUS.Instance.GetIDLoaiDocGiaByTenLoaiDocGia(cboLoaiDocGia.Text);
+            NguoiDungBUS.Instance.InsertNguoiDungDocGia(txtHoVaTen.Text, txtTenDangNhap.Text, txtMatKhau.Text);
+            string IDNguoiDung = NguoiDungBUS.Instance.GetIDNguoiDungByTenDangNhap(txtTenDangNhap.Text);
+            //Thêm nguoi dung//check thamso
+            DocGiaBUS.Instance.InsertDocGia(txtHoVaTen.Text, dtmNgaySinh.Text, txtDiaChi.Text, txtEmail.Text, IDLoaiDocGia, dtmNgayLapThe.Text, dtmNgayHetHan.Text, IDNguoiDung);
         }
     }
 }

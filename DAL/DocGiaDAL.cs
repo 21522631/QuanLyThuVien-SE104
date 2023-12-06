@@ -28,6 +28,12 @@ namespace DAL
                 "JOIN NGUOIDUNG ON DOCGIA.IDNGUOIDUNG = NGUOIDUNG.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public int InsertDocGia(string TenDocGia, string NgaySinh, string DiaChi, string Email, string IDLoaiDocGia, string NgayLapThe, string NgayHetHan, string IDNguoiDung)
+        {
+            string query = "INSERT INTO DOCGIA VALUES('" + IDLoaiDocGia + "', N'" + TenDocGia + "', '" + NgaySinh + "', N'" + DiaChi + "', '" +
+                           Email + "', '" + NgayLapThe + "', '" + NgayHetHan + "', 0" + ", '" + IDNguoiDung + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public int UpdateDocGia(string MaDocGia, string TenDocGia, string NgaySinh, string DiaChi, string Email, string IDLoaiDocGia, string NgayLapThe)
         {
             string query = "UPDATE DOCGIA SET TENDOCGIA = N'" + TenDocGia + "', NGAYSINH = '" + NgaySinh +
