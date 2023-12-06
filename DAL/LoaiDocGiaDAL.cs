@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -30,6 +31,12 @@ namespace DAL
         {
             string query = "SELECT TENLOAIDOCGIA FROM LOAIDOCGIA";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public string GetIDLoaiDocGiaByTenLoaiDocGia(string TenLoaiDocGia)
+        {
+            string query = "SELECT ID FROM LOAIDOCGIA " +
+                           "WHERE TENLOAIDOCGIA = N'" + TenLoaiDocGia +"'";
+            return DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString();
         }
         public int InsertLoaiDocGia(string TenLoaiDocGia)
         {

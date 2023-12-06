@@ -82,6 +82,13 @@ namespace GUI
 
         private void btnSuaDocGia_Click(object sender, EventArgs e)
         {
+            string IDLoaiDocGia = LoaiDocGiaBUS.Instance.GetIDLoaiDocGiaByTenLoaiDocGia(cboLoaiDocGia.Text);
+            DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, txtHoVaTen.Text, dtmNgaySinh.Text, txtDiaChi.Text, txtEmail.Text, IDLoaiDocGia, dtmNgayLapThe.Text);
+            dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
+        }
+
+        private void btnXoaDocGia_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -221,6 +221,7 @@
             this.btnXoaDocGia.TabIndex = 27;
             this.btnXoaDocGia.Text = "Xoá";
             this.btnXoaDocGia.UseVisualStyleBackColor = true;
+            this.btnXoaDocGia.Click += new System.EventHandler(this.btnXoaDocGia_Click);
             // 
             // btnSuaDocGia
             // 
@@ -342,8 +343,8 @@
             // 
             // dtmNgaySinh
             // 
-            this.dtmNgaySinh.CustomFormat = "";
-            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtmNgaySinh.Location = new System.Drawing.Point(159, 80);
             this.dtmNgaySinh.Name = "dtmNgaySinh";
             this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);

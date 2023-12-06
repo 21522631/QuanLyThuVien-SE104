@@ -26,5 +26,13 @@ namespace BUS
         {
             return DocGiaDAL.Instance.GetAllDocGia();
         }
+        public int UpdateDocGia(string MaDocGia, string TenDocGia, string NgaySinh, string DiaChi, string Email, string IDLoaiDocGia, string NgayLapThe)
+        {
+            return DocGiaDAL.Instance.UpdateDocGia(MaDocGia, TenDocGia, NgaySinh, DiaChi, Email, IDLoaiDocGia, NgayLapThe);
+        }
+        public int DeleteDocGia(string MaDocGia)
+        {
+            return 0;
+        }
     }
 }
