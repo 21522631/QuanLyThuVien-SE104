@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BC_SachTraTreDTO.cs" />
     <Compile Include="BC_TinhHinhMuonSachDTO.cs" />
     <Compile Include="ChucNangDTO.cs" />
     <Compile Include="CT_BC_TinhHinhMuonSachDTO.cs" />
