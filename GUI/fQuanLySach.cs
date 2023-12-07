@@ -66,5 +66,15 @@ namespace GUI
         {
 
         }
+
+        private void groupBox9_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fQuanLySach_Load(object sender, EventArgs e)
+        {
+            //dgtTacGia.DataSource = ;
+        }
     }
 }

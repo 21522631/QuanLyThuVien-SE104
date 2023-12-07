@@ -149,5 +149,11 @@ namespace GUI
             fTraCuuDocGia f = new fTraCuuDocGia(1);
             f.ShowDialog();
         }
+
+        private void sáchToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            fQuanLySach f = new fQuanLySach();
+            f.ShowDialog();
+        }
     }
 }

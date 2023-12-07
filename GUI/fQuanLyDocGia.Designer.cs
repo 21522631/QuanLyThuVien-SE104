@@ -89,7 +89,7 @@
             this.tabpgLoaiDocGia.Padding = new System.Windows.Forms.Padding(3);
             this.tabpgLoaiDocGia.Size = new System.Drawing.Size(796, 460);
             this.tabpgLoaiDocGia.TabIndex = 2;
-            this.tabpgLoaiDocGia.Text = "Loại Độc Giả";
+            this.tabpgLoaiDocGia.Text = "Loại độc giả";
             this.tabpgLoaiDocGia.UseVisualStyleBackColor = true;
             this.tabpgLoaiDocGia.Click += new System.EventHandler(this.tabPage3_Click);
             // 
@@ -210,7 +210,7 @@
             this.tabpgDocGia.Padding = new System.Windows.Forms.Padding(3);
             this.tabpgDocGia.Size = new System.Drawing.Size(796, 460);
             this.tabpgDocGia.TabIndex = 0;
-            this.tabpgDocGia.Text = "Độc Giả";
+            this.tabpgDocGia.Text = "Độc giả";
             this.tabpgDocGia.UseVisualStyleBackColor = true;
             this.tabpgDocGia.Click += new System.EventHandler(this.tabpgDocGia_Click);
             // 
@@ -266,7 +266,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 12);
+            this.label6.Location = new System.Drawing.Point(297, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(171, 13);
             this.label6.TabIndex = 20;
