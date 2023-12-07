@@ -33,6 +33,10 @@ namespace BUS
         {
             return LoaiDocGiaDAL.Instance.GetIDLoaiDocGiaByTenLoaiDocGia(TenLoaiDocGia);
         }
+        public DataTable SearchLoaiDocGia(string ThongTinTraCuu)
+        {
+            return LoaiDocGiaDAL.Instance.SearchLoaiDocGia(ThongTinTraCuu);
+        }
         public int InsertLoaiDocGia(string TenLoaiDocGia)
         {
             return LoaiDocGiaDAL.Instance.InsertLoaiDocGia(TenLoaiDocGia);

@@ -51,7 +51,7 @@ namespace GUI
             }
             else
             {
-               // dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.SearchLoaiDocGia(txtTraCuuDocGia.Text);
+                dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.SearchLoaiDocGia(txtTraCuuLoaiDocGia.Text);
             }
         }
     }
