@@ -30,9 +30,9 @@
         {
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dtmNgayLap = new System.Windows.Forms.DateTimePicker();
+            this.txtSoPNS = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtMaTacGia = new System.Windows.Forms.TextBox();
@@ -43,17 +43,17 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dgvDSSachNhap = new System.Windows.Forms.DataGridView();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuNhapSach = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThemPhieuNhap = new System.Windows.Forms.Button();
+            this.btnThemCT_PhieuNhapSach = new System.Windows.Forms.Button();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSachNhap)).BeginInit();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhapSach)).BeginInit();
             this.SuspendLayout();
@@ -69,9 +69,9 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.dtmNgaySinh);
-            this.groupBox10.Controls.Add(this.textBox4);
-            this.groupBox10.Controls.Add(this.textBox3);
+            this.groupBox10.Controls.Add(this.dtmNgayLap);
+            this.groupBox10.Controls.Add(this.txtSoPNS);
+            this.groupBox10.Controls.Add(this.txtTongTien);
             this.groupBox10.Controls.Add(this.textBox2);
             this.groupBox10.Controls.Add(this.textBox1);
             this.groupBox10.Controls.Add(this.txtMaTacGia);
@@ -82,7 +82,7 @@
             this.groupBox10.Controls.Add(this.label25);
             this.groupBox10.Controls.Add(this.label26);
             this.groupBox10.Controls.Add(this.label27);
-            this.groupBox10.Controls.Add(this.dataGridView5);
+            this.groupBox10.Controls.Add(this.dgvDSSachNhap);
             this.groupBox10.Controls.Add(this.label31);
             this.groupBox10.Controls.Add(this.label32);
             this.groupBox10.Location = new System.Drawing.Point(12, 25);
@@ -92,30 +92,30 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Thông tin chi tiết phiếu nhập";
             // 
-            // dtmNgaySinh
+            // dtmNgayLap
             // 
-            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgaySinh.Location = new System.Drawing.Point(101, 44);
-            this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgaySinh.TabIndex = 79;
+            this.dtmNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayLap.Location = new System.Drawing.Point(101, 44);
+            this.dtmNgayLap.Name = "dtmNgayLap";
+            this.dtmNgayLap.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayLap.TabIndex = 79;
             // 
-            // textBox4
+            // txtSoPNS
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox4.Location = new System.Drawing.Point(101, 18);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(91, 20);
-            this.textBox4.TabIndex = 78;
+            this.txtSoPNS.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSoPNS.Location = new System.Drawing.Point(101, 18);
+            this.txtSoPNS.Name = "txtSoPNS";
+            this.txtSoPNS.Size = new System.Drawing.Size(91, 20);
+            this.txtSoPNS.TabIndex = 78;
             // 
-            // textBox3
+            // txtTongTien
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox3.Location = new System.Drawing.Point(101, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(91, 20);
-            this.textBox3.TabIndex = 77;
+            this.txtTongTien.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtTongTien.Location = new System.Drawing.Point(101, 70);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(91, 20);
+            this.txtTongTien.TabIndex = 77;
             // 
             // textBox2
             // 
@@ -204,13 +204,13 @@
             this.label27.TabIndex = 25;
             this.label27.Text = "Danh sách sách nhập";
             // 
-            // dataGridView5
+            // dgvDSSachNhap
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(206, 33);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(341, 100);
-            this.dataGridView5.TabIndex = 24;
+            this.dgvDSSachNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSSachNhap.Location = new System.Drawing.Point(206, 33);
+            this.dgvDSSachNhap.Name = "dgvDSSachNhap";
+            this.dgvDSSachNhap.Size = new System.Drawing.Size(341, 100);
+            this.dgvDSSachNhap.TabIndex = 24;
             // 
             // label31
             // 
@@ -267,32 +267,33 @@
             this.dgvPhieuNhapSach.TabIndex = 0;
             this.dgvPhieuNhapSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhapSach_CellContentClick);
             // 
-            // button1
+            // btnThemPhieuNhap
             // 
-            this.button1.Location = new System.Drawing.Point(13, 170);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Thêm phiếu nhập";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnThemPhieuNhap.Location = new System.Drawing.Point(13, 170);
+            this.btnThemPhieuNhap.Name = "btnThemPhieuNhap";
+            this.btnThemPhieuNhap.Size = new System.Drawing.Size(139, 23);
+            this.btnThemPhieuNhap.TabIndex = 30;
+            this.btnThemPhieuNhap.Text = "Thêm phiếu nhập";
+            this.btnThemPhieuNhap.UseVisualStyleBackColor = true;
+            this.btnThemPhieuNhap.Click += new System.EventHandler(this.btnThemPhieuNhap_Click);
             // 
-            // button2
+            // btnThemCT_PhieuNhapSach
             // 
-            this.button2.Location = new System.Drawing.Point(158, 170);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Thêm chi tiết phiếu nhập";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThemCT_PhieuNhapSach.Location = new System.Drawing.Point(158, 170);
+            this.btnThemCT_PhieuNhapSach.Name = "btnThemCT_PhieuNhapSach";
+            this.btnThemCT_PhieuNhapSach.Size = new System.Drawing.Size(139, 23);
+            this.btnThemCT_PhieuNhapSach.TabIndex = 31;
+            this.btnThemCT_PhieuNhapSach.Text = "Thêm chi tiết phiếu nhập";
+            this.btnThemCT_PhieuNhapSach.UseVisualStyleBackColor = true;
+            this.btnThemCT_PhieuNhapSach.Click += new System.EventHandler(this.btnThemCT_PhieuNhapSach_Click);
             // 
             // fQuanLyPhieuNhapSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThemCT_PhieuNhapSach);
+            this.Controls.Add(this.btnThemPhieuNhap);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.groupBox10);
@@ -303,7 +304,7 @@
             this.Load += new System.EventHandler(this.fQuanLyPhieuNhapSach_Load);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSachNhap)).EndInit();
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhapSach)).EndInit();
             this.ResumeLayout(false);
@@ -322,20 +323,20 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dgvDSSachNhap;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dgvPhieuNhapSach;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSoPNS;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtMaTacGia;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dtmNgaySinh;
+        private System.Windows.Forms.Button btnThemPhieuNhap;
+        private System.Windows.Forms.Button btnThemCT_PhieuNhapSach;
+        private System.Windows.Forms.DateTimePicker dtmNgayLap;
     }
 }

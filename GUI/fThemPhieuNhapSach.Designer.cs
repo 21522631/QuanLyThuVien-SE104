@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label23 = new System.Windows.Forms.Label();
-            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label32 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -44,14 +44,14 @@
             this.label23.TabIndex = 26;
             this.label23.Text = "THÔNG TIN PHIẾU NHẬP SÁCH";
             // 
-            // dtmNgaySinh
+            // dtmNgayLap
             // 
-            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgaySinh.Location = new System.Drawing.Point(108, 37);
-            this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgaySinh.TabIndex = 51;
+            this.dtmNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayLap.Location = new System.Drawing.Point(108, 37);
+            this.dtmNgayLap.Name = "dtmNgayLap";
+            this.dtmNgayLap.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayLap.TabIndex = 51;
             // 
             // label32
             // 
@@ -70,6 +70,7 @@
             this.btnHuy.TabIndex = 54;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -79,6 +80,7 @@
             this.btnLuu.TabIndex = 53;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // fThemPhieuNhapSach
             // 
@@ -88,7 +90,7 @@
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label32);
-            this.Controls.Add(this.dtmNgaySinh);
+            this.Controls.Add(this.dtmNgayLap);
             this.Controls.Add(this.label23);
             this.Name = "fThemPhieuNhapSach";
             this.Text = "Thêm Phiếu Nhập Sách";
@@ -100,7 +102,7 @@
         #endregion
 
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DateTimePicker dtmNgaySinh;
+        private System.Windows.Forms.DateTimePicker dtmNgayLap;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;

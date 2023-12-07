@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DTO;
+using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,14 @@ namespace GUI
         public fThemPhieuNhapSach()
         {
             InitializeComponent();
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            PhieuNhapSachBUS.Instance.InsertPhieuNhapSach(dtmNgayLap.Text);
+        }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
