@@ -74,15 +74,24 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabpgTheLoai = new System.Windows.Forms.TabPage();
+            this.btnXoaTheLoai = new System.Windows.Forms.Button();
+            this.btnSuaTheLoai = new System.Windows.Forms.Button();
+            this.btnThemTheLoai = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvTheLoai = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtTenTheLoai = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabgpSach = new System.Windows.Forms.TabPage();
+            this.btnXoaSach = new System.Windows.Forms.Button();
+            this.btnSuaSach = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboTheLoai = new System.Windows.Forms.ComboBox();
+            this.cboMaTacGia = new System.Windows.Forms.ComboBox();
+            this.txtMaSach = new System.Windows.Forms.TextBox();
             this.domSoLuong = new System.Windows.Forms.DomainUpDown();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -105,15 +114,6 @@
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.tabQuanLySach = new System.Windows.Forms.TabControl();
-            this.txtMaTheLoai = new System.Windows.Forms.TextBox();
-            this.btnXoaTheLoai = new System.Windows.Forms.Button();
-            this.btnSuaTheLoai = new System.Windows.Forms.Button();
-            this.btnThemTheLoai = new System.Windows.Forms.Button();
-            this.btnXoaSach = new System.Windows.Forms.Button();
-            this.btnSuaSach = new System.Windows.Forms.Button();
-            this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.cboMaTacGia = new System.Windows.Forms.ComboBox();
-            this.cboTheLoai = new System.Windows.Forms.ComboBox();
             this.tabPage4.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -595,6 +595,36 @@
             this.tabpgTheLoai.UseVisualStyleBackColor = true;
             this.tabpgTheLoai.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // btnXoaTheLoai
+            // 
+            this.btnXoaTheLoai.Location = new System.Drawing.Point(707, 177);
+            this.btnXoaTheLoai.Name = "btnXoaTheLoai";
+            this.btnXoaTheLoai.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaTheLoai.TabIndex = 35;
+            this.btnXoaTheLoai.Text = "Xoá";
+            this.btnXoaTheLoai.UseVisualStyleBackColor = true;
+            this.btnXoaTheLoai.Click += new System.EventHandler(this.btnXoaTheLoai_Click);
+            // 
+            // btnSuaTheLoai
+            // 
+            this.btnSuaTheLoai.Location = new System.Drawing.Point(626, 177);
+            this.btnSuaTheLoai.Name = "btnSuaTheLoai";
+            this.btnSuaTheLoai.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaTheLoai.TabIndex = 34;
+            this.btnSuaTheLoai.Text = "Sửa";
+            this.btnSuaTheLoai.UseVisualStyleBackColor = true;
+            this.btnSuaTheLoai.Click += new System.EventHandler(this.btnSuaTheLoai_Click);
+            // 
+            // btnThemTheLoai
+            // 
+            this.btnThemTheLoai.Location = new System.Drawing.Point(6, 177);
+            this.btnThemTheLoai.Name = "btnThemTheLoai";
+            this.btnThemTheLoai.Size = new System.Drawing.Size(105, 23);
+            this.btnThemTheLoai.TabIndex = 33;
+            this.btnThemTheLoai.Text = "Thêm thể loại";
+            this.btnThemTheLoai.UseVisualStyleBackColor = true;
+            this.btnThemTheLoai.Click += new System.EventHandler(this.btnThemTheLoai_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dgvTheLoai);
@@ -626,6 +656,14 @@
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin chi tiết thể loại sách";
+            // 
+            // txtMaTheLoai
+            // 
+            this.txtMaTheLoai.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaTheLoai.Location = new System.Drawing.Point(346, 32);
+            this.txtMaTheLoai.Name = "txtMaTheLoai";
+            this.txtMaTheLoai.Size = new System.Drawing.Size(84, 20);
+            this.txtMaTheLoai.TabIndex = 50;
             // 
             // label13
             // 
@@ -677,6 +715,26 @@
             this.tabgpSach.Text = "Sách";
             this.tabgpSach.UseVisualStyleBackColor = true;
             // 
+            // btnXoaSach
+            // 
+            this.btnXoaSach.Location = new System.Drawing.Point(707, 193);
+            this.btnXoaSach.Name = "btnXoaSach";
+            this.btnXoaSach.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaSach.TabIndex = 37;
+            this.btnXoaSach.Text = "Xoá";
+            this.btnXoaSach.UseVisualStyleBackColor = true;
+            this.btnXoaSach.Click += new System.EventHandler(this.btnXoaSach_Click);
+            // 
+            // btnSuaSach
+            // 
+            this.btnSuaSach.Location = new System.Drawing.Point(626, 193);
+            this.btnSuaSach.Name = "btnSuaSach";
+            this.btnSuaSach.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaSach.TabIndex = 36;
+            this.btnSuaSach.Text = "Sửa";
+            this.btnSuaSach.UseVisualStyleBackColor = true;
+            this.btnSuaSach.Click += new System.EventHandler(this.btnSuaSach_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboTheLoai);
@@ -705,6 +763,34 @@
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết sách";
+            // 
+            // cboTheLoai
+            // 
+            this.cboTheLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTheLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTheLoai.FormattingEnabled = true;
+            this.cboTheLoai.Location = new System.Drawing.Point(248, 25);
+            this.cboTheLoai.Name = "cboTheLoai";
+            this.cboTheLoai.Size = new System.Drawing.Size(75, 21);
+            this.cboTheLoai.TabIndex = 57;
+            // 
+            // cboMaTacGia
+            // 
+            this.cboMaTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboMaTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboMaTacGia.FormattingEnabled = true;
+            this.cboMaTacGia.Location = new System.Drawing.Point(620, 25);
+            this.cboMaTacGia.Name = "cboMaTacGia";
+            this.cboMaTacGia.Size = new System.Drawing.Size(121, 21);
+            this.cboMaTacGia.TabIndex = 56;
+            // 
+            // txtMaSach
+            // 
+            this.txtMaSach.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaSach.Location = new System.Drawing.Point(104, 26);
+            this.txtMaSach.Name = "txtMaSach";
+            this.txtMaSach.Size = new System.Drawing.Size(84, 20);
+            this.txtMaSach.TabIndex = 51;
             // 
             // domSoLuong
             // 
@@ -749,6 +835,7 @@
             this.XoaDSTG.TabIndex = 29;
             this.XoaDSTG.Text = "Xoá Tác Giả";
             this.XoaDSTG.UseVisualStyleBackColor = true;
+            this.XoaDSTG.Click += new System.EventHandler(this.XoaDSTG_Click);
             // 
             // btnThemDSTG
             // 
@@ -758,6 +845,7 @@
             this.btnThemDSTG.TabIndex = 28;
             this.btnThemDSTG.Text = "Thêm Tác Giả";
             this.btnThemDSTG.UseVisualStyleBackColor = true;
+            this.btnThemDSTG.Click += new System.EventHandler(this.btnThemDSTG_Click);
             // 
             // label8
             // 
@@ -901,90 +989,6 @@
             this.tabQuanLySach.SelectedIndex = 0;
             this.tabQuanLySach.Size = new System.Drawing.Size(800, 501);
             this.tabQuanLySach.TabIndex = 0;
-            // 
-            // txtMaTheLoai
-            // 
-            this.txtMaTheLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaTheLoai.Location = new System.Drawing.Point(346, 32);
-            this.txtMaTheLoai.Name = "txtMaTheLoai";
-            this.txtMaTheLoai.Size = new System.Drawing.Size(84, 20);
-            this.txtMaTheLoai.TabIndex = 50;
-            // 
-            // btnXoaTheLoai
-            // 
-            this.btnXoaTheLoai.Location = new System.Drawing.Point(707, 177);
-            this.btnXoaTheLoai.Name = "btnXoaTheLoai";
-            this.btnXoaTheLoai.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaTheLoai.TabIndex = 35;
-            this.btnXoaTheLoai.Text = "Xoá";
-            this.btnXoaTheLoai.UseVisualStyleBackColor = true;
-            this.btnXoaTheLoai.Click += new System.EventHandler(this.btnXoaTheLoai_Click);
-            // 
-            // btnSuaTheLoai
-            // 
-            this.btnSuaTheLoai.Location = new System.Drawing.Point(626, 177);
-            this.btnSuaTheLoai.Name = "btnSuaTheLoai";
-            this.btnSuaTheLoai.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaTheLoai.TabIndex = 34;
-            this.btnSuaTheLoai.Text = "Sửa";
-            this.btnSuaTheLoai.UseVisualStyleBackColor = true;
-            this.btnSuaTheLoai.Click += new System.EventHandler(this.btnSuaTheLoai_Click);
-            // 
-            // btnThemTheLoai
-            // 
-            this.btnThemTheLoai.Location = new System.Drawing.Point(6, 177);
-            this.btnThemTheLoai.Name = "btnThemTheLoai";
-            this.btnThemTheLoai.Size = new System.Drawing.Size(105, 23);
-            this.btnThemTheLoai.TabIndex = 33;
-            this.btnThemTheLoai.Text = "Thêm thể loại";
-            this.btnThemTheLoai.UseVisualStyleBackColor = true;
-            this.btnThemTheLoai.Click += new System.EventHandler(this.btnThemTheLoai_Click);
-            // 
-            // btnXoaSach
-            // 
-            this.btnXoaSach.Location = new System.Drawing.Point(707, 193);
-            this.btnXoaSach.Name = "btnXoaSach";
-            this.btnXoaSach.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaSach.TabIndex = 37;
-            this.btnXoaSach.Text = "Xoá";
-            this.btnXoaSach.UseVisualStyleBackColor = true;
-            // 
-            // btnSuaSach
-            // 
-            this.btnSuaSach.Location = new System.Drawing.Point(626, 193);
-            this.btnSuaSach.Name = "btnSuaSach";
-            this.btnSuaSach.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaSach.TabIndex = 36;
-            this.btnSuaSach.Text = "Sửa";
-            this.btnSuaSach.UseVisualStyleBackColor = true;
-            // 
-            // txtMaSach
-            // 
-            this.txtMaSach.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaSach.Location = new System.Drawing.Point(104, 26);
-            this.txtMaSach.Name = "txtMaSach";
-            this.txtMaSach.Size = new System.Drawing.Size(84, 20);
-            this.txtMaSach.TabIndex = 51;
-            // 
-            // cboMaTacGia
-            // 
-            this.cboMaTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboMaTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboMaTacGia.FormattingEnabled = true;
-            this.cboMaTacGia.Location = new System.Drawing.Point(620, 25);
-            this.cboMaTacGia.Name = "cboMaTacGia";
-            this.cboMaTacGia.Size = new System.Drawing.Size(121, 21);
-            this.cboMaTacGia.TabIndex = 56;
-            // 
-            // cboTheLoai
-            // 
-            this.cboTheLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboTheLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboTheLoai.FormattingEnabled = true;
-            this.cboTheLoai.Location = new System.Drawing.Point(248, 25);
-            this.cboTheLoai.Name = "cboTheLoai";
-            this.cboTheLoai.Size = new System.Drawing.Size(75, 21);
-            this.cboTheLoai.TabIndex = 57;
             // 
             // fQuanLySach
             // 

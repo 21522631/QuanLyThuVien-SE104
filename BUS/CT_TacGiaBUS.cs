@@ -32,7 +32,7 @@ namespace BUS
         }
         public int DeleteCT_TacGia(CT_TacGia ct_tacgia)
         {
-            return CT_TacGiaBUS.Instance.DeleteCT_TacGia(ct_tacgia);
+            return CT_TacGiaDAL.Instance.DeleteCT_TacGia(ct_tacgia);
         }
     }
 }

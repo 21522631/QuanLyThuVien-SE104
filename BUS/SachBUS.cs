@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -24,6 +25,14 @@ namespace BUS
         public DataTable GetAllSach()
         {
             return SachDAL.Instance.GetAllSach();
-        }    
+        }   
+        public int UpdateSach(Sach sach)
+        {
+            return SachDAL.Instance.UpdateSach(sach);
+        }
+        public int DeleteSach(string MaSach) 
+        {
+            return SachDAL.Instance.DeleteSach(MaSach);
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace DAL
         }
         public int DeleteCT_TacGia(CT_TacGia ct_tacgia)
         {
-            string query = "DELETE FROM DOCGIA WHERE IDSACH = '" + ct_tacgia.IDSach + "' AND IDTACGIA = '" +ct_tacgia.IDTacGia + "'";
+            string query = "DELETE FROM CT_TACGIA WHERE IDSACH = '" + ct_tacgia.IDSach + "' AND IDTACGIA = '" +ct_tacgia.IDTacGia + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }

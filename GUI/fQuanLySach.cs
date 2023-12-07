@@ -180,7 +180,52 @@ namespace GUI
 
         private void dgvCT_TacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int index = dgvCT_TacGia.CurrentRow.Index;
+            cboMaTacGia.Text = dgvCT_TacGia.Rows[index].Cells[0].Value.ToString();
+        }
 
+        private void btnThemDSTG_Click(object sender, EventArgs e)
+        {
+            CT_TacGia ct_tacgia = new CT_TacGia();
+            ct_tacgia.IDSach = Convert.ToInt32(txtMaSach.Text.Replace("SA", "00"));
+            ct_tacgia.IDTacGia = Convert.ToInt32(cboMaTacGia.Text.Replace("TG", "00"));
+            CT_TacGiaBUS.Instance.InsertCT_TacGia(ct_tacgia);
+            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+        }
+
+        private void XoaDSTG_Click(object sender, EventArgs e)
+        {
+            CT_TacGia ct_tacgia = new CT_TacGia();
+            ct_tacgia.IDSach = Convert.ToInt32(txtMaSach.Text.Replace("SA", "00"));
+            ct_tacgia.IDTacGia = Convert.ToInt32(cboMaTacGia.Text.Replace("TG", "00"));
+            CT_TacGiaBUS.Instance.DeleteCT_TacGia(ct_tacgia);
+            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+        }
+
+        private void btnSuaSach_Click(object sender, EventArgs e)
+        {
+            Sach sach = new Sach();
+            sach.MaSach = txtMaSach.Text;
+            sach.TenSach = txtTenSach.Text;
+            sach.IDTheLoai = cboTheLoai.SelectedValue.ToString().Replace("TL", "00");
+            sach.NhaXuatBan = txtNhaXuatBan.Text;
+            sach.NamXuatBan = Convert.ToInt32(txtNamXuatBan.Text);
+            SachBUS.Instance.UpdateSach(sach);
+            dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+        }
+
+        private void btnXoaSach_Click(object sender, EventArgs e)
+        {
+            SachBUS.Instance.DeleteSach(txtMaSach.Text);
+            dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+            txtMaSach.Text = "";
+            txtTenSach.Text = "";
+            cboTheLoai.Text = "";
+            txtNhaXuatBan.Text = "";
+            txtNamXuatBan.Text = "";
+            domSoLuong.Text = "";
+            txtGiaTien.Text = "";
+            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
         }
     }
 }
