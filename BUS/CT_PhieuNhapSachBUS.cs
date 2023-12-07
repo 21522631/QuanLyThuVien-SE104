@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -25,6 +26,14 @@ namespace BUS
         public DataTable GetCT_PhieuNhapSachByIDPNS(string IDPNS)
         {
             return CT_PhieuNhapSachDAL.Instance.GetCT_PhieuNhapSachByIDPNS(IDPNS);
+        }
+        public int InsertCT_PhieuNhapSach(CT_PhieuNhapSach ct_PNS)
+        {
+            return CT_PhieuNhapSachDAL.Instance.InsertCT_PhieuNhapSach(ct_PNS);
+        }
+        public int DeleteCT_PhieuNhapSach(string IDPNS, string IDSach) 
+        {
+            return CT_PhieuNhapSachDAL.Instance.DeleteCT_PhieuNhapSach(IDPNS, IDSach);
         }
     }
 }

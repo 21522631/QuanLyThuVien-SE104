@@ -35,7 +35,7 @@ namespace DAL
         public int UpdatePhieuNhapSach(string SoPNS, string NgayLap)
         {
             string query = "UPDATE PHIEUNHAPSACH SET NGAYLAP = '" + NgayLap +
-                           "' WHERE SOPNS = '" + SoPNS + "'";
+                           "'.. WHERE SOPNS = '" + SoPNS + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int DeletePhieuNhapSach(string SoPNS)

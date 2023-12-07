@@ -10,7 +10,7 @@ namespace DTO
     {
         public int IDPNS { get; set; }
         public int IDSach { get; set; }
-        public int SoLuongSach { get; set; }
+        public int SoLuongNhap { get; set; }
         public int DonGia {  get; set; }
         public int ThanhTien { get; set; }
     }

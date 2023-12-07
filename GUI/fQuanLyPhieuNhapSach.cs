@@ -56,5 +56,17 @@ namespace GUI
             txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[3].Value.ToString();
             txtThanhTien.Text = dgvDSSachNhap.Rows[index].Cells[4].Value.ToString();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            PhieuNhapSachBUS.Instance.DeletePhieuNhapSach(txtSoPNS.Text);
+            dgvPhieuNhapSach.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            PhieuNhapSachBUS.Instance.UpdatePhieuNhapSach(txtSoPNS.Text, dtmNgayLap.Text);
+            dgvPhieuNhapSach.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
+        }
     }
 }
