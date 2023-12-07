@@ -1,6 +1,7 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace BUS
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetAllTheLoai()
+        {
+            return TheLoaiDAL.Instance.GetAllTheLoai();
+        }
+        public int InsertTheLoai(string TenTheLoai)
+        {
+            return TheLoaiDAL.Instance.InsertTheLoai(TenTheLoai);
         }
     }
 }

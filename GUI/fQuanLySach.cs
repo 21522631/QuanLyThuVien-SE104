@@ -77,16 +77,17 @@ namespace GUI
         private void fQuanLySach_Load(object sender, EventArgs e)
         {
             txtMaTacGia.Enabled = false;
-            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
 
         private void dgtTacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index;
-            index = dgtTacGia.CurrentRow.Index;
-            txtMaTacGia.Text = dgtTacGia.Rows[index].Cells[0].Value.ToString();
-            txtTenTacGia.Text = dgtTacGia.Rows[index].Cells[1].Value.ToString();
-            dtmNgaySinh.Text = dgtTacGia.Rows[index].Cells[2].Value.ToString();
+            index = dgvTacGia.CurrentRow.Index;
+            txtMaTacGia.Text = dgvTacGia.Rows[index].Cells[0].Value.ToString();
+            txtTenTacGia.Text = dgvTacGia.Rows[index].Cells[1].Value.ToString();
+            dtmNgaySinh.Text = dgvTacGia.Rows[index].Cells[2].Value.ToString();
         }
 
         private void btnSuaTacGia_Click(object sender, EventArgs e)
@@ -96,14 +97,14 @@ namespace GUI
             tacgia.TenTacGia = txtTenTacGia.Text;
             tacgia.NgaySinh = dtmNgaySinh.Text;
             TacGiaBUS.Instance.UpdateTacGia(tacgia);
-            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
 
         private void btnThemTacGia_Click(object sender, EventArgs e)
         {
             fThemTacGia f = new fThemTacGia();
             f.ShowDialog();
-            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
 
         private void btnXoaTacGia_Click(object sender, EventArgs e)
@@ -112,7 +113,19 @@ namespace GUI
             txtMaTacGia.Text = "";
             txtTenTacGia.Text = "";
             dtmNgaySinh.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+        }
+
+        private void txtMaTacGia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemTheLoai_Click(object sender, EventArgs e)
+        {
+            fThemTheLoai f = new fThemTheLoai();
+            f.ShowDialog();
+            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
         }
     }
 }
