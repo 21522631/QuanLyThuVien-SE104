@@ -78,7 +78,7 @@
             this.dgvTheLoai = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtTenLoaiDocGia = new System.Windows.Forms.TextBox();
+            this.txtTenTheLoai = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabgpSach = new System.Windows.Forms.TabPage();
@@ -115,7 +115,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.tabQuanLySach = new System.Windows.Forms.TabControl();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.btnXoaTheLoai = new System.Windows.Forms.Button();
             this.btnSuaTheLoai = new System.Windows.Forms.Button();
             this.btnThemTheLoai = new System.Windows.Forms.Button();
@@ -618,12 +618,13 @@
             this.dgvTheLoai.Name = "dgvTheLoai";
             this.dgvTheLoai.Size = new System.Drawing.Size(763, 238);
             this.dgvTheLoai.TabIndex = 0;
+            this.dgvTheLoai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTheLoai_CellContentClick);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.txtMaTheLoai);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.txtTenLoaiDocGia);
+            this.groupBox5.Controls.Add(this.txtTenTheLoai);
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Location = new System.Drawing.Point(6, 30);
             this.groupBox5.Name = "groupBox5";
@@ -641,12 +642,12 @@
             this.label13.TabIndex = 18;
             this.label13.Text = "Mã thể loại";
             // 
-            // txtTenLoaiDocGia
+            // txtTenTheLoai
             // 
-            this.txtTenLoaiDocGia.Location = new System.Drawing.Point(346, 64);
-            this.txtTenLoaiDocGia.Name = "txtTenLoaiDocGia";
-            this.txtTenLoaiDocGia.Size = new System.Drawing.Size(124, 20);
-            this.txtTenLoaiDocGia.TabIndex = 12;
+            this.txtTenTheLoai.Location = new System.Drawing.Point(346, 64);
+            this.txtTenTheLoai.Name = "txtTenTheLoai";
+            this.txtTenTheLoai.Size = new System.Drawing.Size(124, 20);
+            this.txtTenTheLoai.TabIndex = 12;
             // 
             // label15
             // 
@@ -992,13 +993,13 @@
             this.tabQuanLySach.Size = new System.Drawing.Size(800, 501);
             this.tabQuanLySach.TabIndex = 0;
             // 
-            // textBox2
+            // txtMaTheLoai
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox2.Location = new System.Drawing.Point(346, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(84, 20);
-            this.textBox2.TabIndex = 50;
+            this.txtMaTheLoai.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaTheLoai.Location = new System.Drawing.Point(346, 32);
+            this.txtMaTheLoai.Name = "txtMaTheLoai";
+            this.txtMaTheLoai.Size = new System.Drawing.Size(84, 20);
+            this.txtMaTheLoai.TabIndex = 50;
             // 
             // btnXoaTheLoai
             // 
@@ -1008,6 +1009,7 @@
             this.btnXoaTheLoai.TabIndex = 35;
             this.btnXoaTheLoai.Text = "Xoá";
             this.btnXoaTheLoai.UseVisualStyleBackColor = true;
+            this.btnXoaTheLoai.Click += new System.EventHandler(this.btnXoaTheLoai_Click);
             // 
             // btnSuaTheLoai
             // 
@@ -1017,6 +1019,7 @@
             this.btnSuaTheLoai.TabIndex = 34;
             this.btnSuaTheLoai.Text = "Sửa";
             this.btnSuaTheLoai.UseVisualStyleBackColor = true;
+            this.btnSuaTheLoai.Click += new System.EventHandler(this.btnSuaTheLoai_Click);
             // 
             // btnThemTheLoai
             // 
@@ -1119,7 +1122,7 @@
         private System.Windows.Forms.DataGridView dgvTheLoai;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtTenLoaiDocGia;
+        private System.Windows.Forms.TextBox txtTenTheLoai;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage tabgpSach;
@@ -1164,6 +1167,6 @@
         private System.Windows.Forms.Button btnXoaTheLoai;
         private System.Windows.Forms.Button btnSuaTheLoai;
         private System.Windows.Forms.Button btnThemTheLoai;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaTheLoai;
     }
 }

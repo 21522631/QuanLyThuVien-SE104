@@ -31,5 +31,16 @@ namespace DAL
             string query = "INSERT INTO THELOAI VALUES(N'" + TenTheLoai + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int UpdateTheLoai(TheLoai theloai)
+        {
+            string query = "UPDATE THELOAI SET TENTHELOAI = N'" + theloai.TenTheLoai +
+                           "' WHERE MATHELOAI = '" + theloai.MaTheLoai + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteTheLoai(string MaTheLoai)
+        {
+            string query = "DELETE FROM THELOAI WHERE MATHELOAI = '" + MaTheLoai + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

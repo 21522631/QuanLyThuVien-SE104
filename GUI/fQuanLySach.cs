@@ -77,14 +77,14 @@ namespace GUI
         private void fQuanLySach_Load(object sender, EventArgs e)
         {
             txtMaTacGia.Enabled = false;
+            txtMaTheLoai.Enabled = false;
             dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
             dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
 
         private void dgtTacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index;
-            index = dgvTacGia.CurrentRow.Index;
+            int index = dgvTacGia.CurrentRow.Index;
             txtMaTacGia.Text = dgvTacGia.Rows[index].Cells[0].Value.ToString();
             txtTenTacGia.Text = dgvTacGia.Rows[index].Cells[1].Value.ToString();
             dtmNgaySinh.Text = dgvTacGia.Rows[index].Cells[2].Value.ToString();
@@ -125,6 +125,31 @@ namespace GUI
         {
             fThemTheLoai f = new fThemTheLoai();
             f.ShowDialog();
+            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+        }
+
+        private void btnSuaTheLoai_Click(object sender, EventArgs e)
+        {
+            TheLoai theloai = new TheLoai();
+            theloai.MaTheLoai = txtMaTheLoai.Text;
+            theloai.TenTheLoai = txtTenTheLoai.Text;
+            TheLoaiBUS.Instance.UpdateTheLoai(theloai);
+            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+        }
+
+        private void dgvTheLoai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvTheLoai.CurrentRow.Index;
+            txtMaTheLoai.Text = dgvTheLoai.Rows[index].Cells[0].Value.ToString();
+            txtTenTheLoai.Text = dgvTheLoai.Rows[index].Cells[1].Value.ToString();
+            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+        }
+
+        private void btnXoaTheLoai_Click(object sender, EventArgs e)
+        {
+            TheLoaiBUS.Instance.DeleteTheLoai(txtMaTheLoai.Text);
+            txtMaTheLoai.Text = "";
+            txtTenTheLoai.Text = "";
             dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
         }
     }

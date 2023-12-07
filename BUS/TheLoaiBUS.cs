@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,6 +30,14 @@ namespace BUS
         public int InsertTheLoai(string TenTheLoai)
         {
             return TheLoaiDAL.Instance.InsertTheLoai(TenTheLoai);
+        }
+        public int UpdateTheLoai(TheLoai theloai)
+        {
+            return TheLoaiDAL.Instance.UpdateTheLoai(theloai);
+        }
+        public int DeleteTheLoai(string MaTheLoai)
+        {
+            return TheLoaiDAL.Instance.DeleteTheLoai(MaTheLoai);
         }
     }
 }
