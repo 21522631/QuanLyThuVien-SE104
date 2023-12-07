@@ -34,7 +34,7 @@ namespace DAL
         public int UpdateTacGia(TacGia tacgia)
         {
             string query = "UPDATE TACGIA SET TENTACGIA = N'" + tacgia.TenTacGia + "', NGAYSINH = '" + tacgia.NgaySinh +
-                           "' WHERE MATACCGIA = '" + tacgia.MaTacGia + "'";
+                           "' WHERE MATACGIA = '" + tacgia.MaTacGia + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
