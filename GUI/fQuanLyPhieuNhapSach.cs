@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class fThemPhieuNhapSach : Form
+    public partial class fQuanLyPhieuNhapSach : Form
     {
-        public fThemPhieuNhapSach()
+        public fQuanLyPhieuNhapSach()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fThemPhieuNhapSach f = new fThemPhieuNhapSach();
+            f.ShowDialog();
         }
     }
 }

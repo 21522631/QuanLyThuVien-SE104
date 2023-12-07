@@ -76,11 +76,23 @@
     <Compile Include="fPhieuThuTienPhat.Designer.cs">
       <DependentUpon>fPhieuThuTienPhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="fQuanLyPhieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyPhieuNhapSach.Designer.cs">
+      <DependentUpon>fQuanLyPhieuNhapSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fQuyDinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fQuyDinh.Designer.cs">
       <DependentUpon>fQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemPhieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemPhieuNhapSach.Designer.cs">
+      <DependentUpon>fThemPhieuNhapSach.cs</DependentUpon>
     </Compile>
     <Compile Include="fThemPhieuThuTienPhat.cs">
       <SubType>Form</SubType>
@@ -124,11 +136,11 @@
     <Compile Include="fThemPhieuMuonTra.Designer.cs">
       <DependentUpon>fThemPhieuMuonTra.cs</DependentUpon>
     </Compile>
-    <Compile Include="fThemPhieuNhapSach.cs">
+    <Compile Include="fThemChiTietPhieuNhapSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fThemPhieuNhapSach.Designer.cs">
-      <DependentUpon>fThemPhieuNhapSach.cs</DependentUpon>
+    <Compile Include="fThemChiTietPhieuNhapSach.Designer.cs">
+      <DependentUpon>fThemChiTietPhieuNhapSach.cs</DependentUpon>
     </Compile>
     <Compile Include="fThemSach.cs">
       <SubType>Form</SubType>
@@ -189,8 +201,14 @@
     <EmbeddedResource Include="fPhieuThuTienPhat.resx">
       <DependentUpon>fPhieuThuTienPhat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyPhieuNhapSach.resx">
+      <DependentUpon>fQuanLyPhieuNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fQuyDinh.resx">
       <DependentUpon>fQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemPhieuNhapSach.resx">
+      <DependentUpon>fThemPhieuNhapSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemPhieuThuTienPhat.resx">
       <DependentUpon>fThemPhieuThuTienPhat.cs</DependentUpon>
@@ -213,8 +231,8 @@
     <EmbeddedResource Include="fThemPhieuMuonTra.resx">
       <DependentUpon>fThemPhieuMuonTra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fThemPhieuNhapSach.resx">
-      <DependentUpon>fThemPhieuNhapSach.cs</DependentUpon>
+    <EmbeddedResource Include="fThemChiTietPhieuNhapSach.resx">
+      <DependentUpon>fThemChiTietPhieuNhapSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemSach.resx">
       <DependentUpon>fThemSach.cs</DependentUpon>
