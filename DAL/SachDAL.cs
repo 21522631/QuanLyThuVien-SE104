@@ -28,6 +28,11 @@ namespace DAL
                            "FROM SACH JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public int InsertSach(Sach sach)
+        {
+            string query = "INSERT INTO SACH VALUES(N'" + sach.TenSach + "', '" + sach.IDTheLoai + "', '" + sach.NhaXuatBan + "', '" + sach.NamXuatBan + "', '0', '0')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public int UpdateSach(Sach sach)
         {
             string query = "UPDATE SACH SET TENSACH = N'" + sach.TenSach + "', IDTHELOAI = '" + sach.IDTheLoai +

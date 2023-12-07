@@ -39,10 +39,6 @@ namespace GUI
 
         }
 
-        private void btnThemDocGia_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -226,6 +222,13 @@ namespace GUI
             domSoLuong.Text = "";
             txtGiaTien.Text = "";
             dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+        }
+
+        private void btnThemSach_Click(object sender, EventArgs e)
+        {
+            fThemSach f = new fThemSach();
+            f.ShowDialog();
+            dgvSach.DataSource = SachBUS.Instance.GetAllSach();
         }
     }
 }

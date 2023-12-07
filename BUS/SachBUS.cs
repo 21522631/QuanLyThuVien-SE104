@@ -26,6 +26,10 @@ namespace BUS
         {
             return SachDAL.Instance.GetAllSach();
         }   
+        public int InsertSach(Sach sach)
+        {
+            return SachDAL.Instance.InsertSach(sach);
+        }
         public int UpdateSach(Sach sach)
         {
             return SachDAL.Instance.UpdateSach(sach);

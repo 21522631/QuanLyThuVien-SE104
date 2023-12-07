@@ -97,7 +97,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.XoaDSTG = new System.Windows.Forms.Button();
-            this.btnThemDSTG = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvCT_TacGia = new System.Windows.Forms.DataGridView();
@@ -114,6 +113,7 @@
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.tabQuanLySach = new System.Windows.Forms.TabControl();
+            this.btnThemDSTG = new System.Windows.Forms.Button();
             this.tabPage4.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -779,7 +779,7 @@
             this.cboMaTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboMaTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboMaTacGia.FormattingEnabled = true;
-            this.cboMaTacGia.Location = new System.Drawing.Point(620, 25);
+            this.cboMaTacGia.Location = new System.Drawing.Point(627, 25);
             this.cboMaTacGia.Name = "cboMaTacGia";
             this.cboMaTacGia.Size = new System.Drawing.Size(121, 21);
             this.cboMaTacGia.TabIndex = 56;
@@ -837,20 +837,10 @@
             this.XoaDSTG.UseVisualStyleBackColor = true;
             this.XoaDSTG.Click += new System.EventHandler(this.XoaDSTG_Click);
             // 
-            // btnThemDSTG
-            // 
-            this.btnThemDSTG.Location = new System.Drawing.Point(587, 57);
-            this.btnThemDSTG.Name = "btnThemDSTG";
-            this.btnThemDSTG.Size = new System.Drawing.Size(88, 23);
-            this.btnThemDSTG.TabIndex = 28;
-            this.btnThemDSTG.Text = "Thêm Tác Giả";
-            this.btnThemDSTG.UseVisualStyleBackColor = true;
-            this.btnThemDSTG.Click += new System.EventHandler(this.btnThemDSTG_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(561, 31);
+            this.label8.Location = new System.Drawing.Point(564, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 26;
@@ -948,7 +938,7 @@
             this.btnThemSach.TabIndex = 23;
             this.btnThemSach.Text = "Thêm Sách";
             this.btnThemSach.UseVisualStyleBackColor = true;
-            this.btnThemSach.Click += new System.EventHandler(this.btnThemDocGia_Click);
+            this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
             // groupBox3
             // 
@@ -989,6 +979,16 @@
             this.tabQuanLySach.SelectedIndex = 0;
             this.tabQuanLySach.Size = new System.Drawing.Size(800, 501);
             this.tabQuanLySach.TabIndex = 0;
+            // 
+            // btnThemDSTG
+            // 
+            this.btnThemDSTG.Location = new System.Drawing.Point(587, 57);
+            this.btnThemDSTG.Name = "btnThemDSTG";
+            this.btnThemDSTG.Size = new System.Drawing.Size(88, 23);
+            this.btnThemDSTG.TabIndex = 28;
+            this.btnThemDSTG.Text = "Thêm Tác Giả";
+            this.btnThemDSTG.UseVisualStyleBackColor = true;
+            this.btnThemDSTG.Click += new System.EventHandler(this.btnThemDSTG_Click);
             // 
             // fQuanLySach
             // 
@@ -1089,7 +1089,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button XoaDSTG;
-        private System.Windows.Forms.Button btnThemDSTG;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvCT_TacGia;
@@ -1120,5 +1119,6 @@
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.ComboBox cboTheLoai;
         private System.Windows.Forms.ComboBox cboMaTacGia;
+        private System.Windows.Forms.Button btnThemDSTG;
     }
 }
