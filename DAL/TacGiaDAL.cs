@@ -37,5 +37,10 @@ namespace DAL
                            "' WHERE MATACGIA = '" + tacgia.MaTacGia + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int DeleteTacGia(string MaTacGia)
+        {
+            string query = "DELETE FROM TACGIA WHERE MATACGIA = '" + MaTacGia + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -34,5 +34,9 @@ namespace BUS
         {
             return TacGiaDAL.Instance.UpdateTacGia(tacgia);
         }
+        public int DeleteTacGia(string MaTacGia)
+        {
+            return TacGiaDAL.Instance.DeleteTacGia(MaTacGia);
+        }
     }
 }

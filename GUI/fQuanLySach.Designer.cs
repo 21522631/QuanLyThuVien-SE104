@@ -474,6 +474,7 @@
             this.btnXoaTacGia.TabIndex = 32;
             this.btnXoaTacGia.Text = "Xoá";
             this.btnXoaTacGia.UseVisualStyleBackColor = true;
+            this.btnXoaTacGia.Click += new System.EventHandler(this.btnXoaTacGia_Click);
             // 
             // btnSuaTacGia
             // 

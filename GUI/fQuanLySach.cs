@@ -105,5 +105,14 @@ namespace GUI
             f.ShowDialog();
             dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
+
+        private void btnXoaTacGia_Click(object sender, EventArgs e)
+        {
+            TacGiaBUS.Instance.DeleteTacGia(txtMaTacGia.Text);
+            txtMaTacGia.Text = "";
+            txtTenTacGia.Text = "";
+            dtmNgaySinh.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+        }
     }
 }
