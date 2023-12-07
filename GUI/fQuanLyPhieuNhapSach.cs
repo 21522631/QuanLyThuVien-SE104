@@ -24,10 +24,13 @@ namespace GUI
             txtSoPNS.Text = dgvPhieuNhapSach.Rows[index].Cells[0].Value.ToString();
             dtmNgayLap.Text = dgvPhieuNhapSach.Rows[index].Cells[1].Value.ToString();
             txtTongTien.Text = dgvPhieuNhapSach.Rows[index].Cells[2].Value.ToString();
+            dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(txtSoPNS.Text.Replace("PNS", "000"));
         }
 
         private void fQuanLyPhieuNhapSach_Load(object sender, EventArgs e)
         {
+            txtSoPNS.Enabled = false;
+            txtTongTien.Enabled = false;
             dgvPhieuNhapSach.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
         }
 
@@ -42,6 +45,16 @@ namespace GUI
         {
             fThemChiTietPhieuNhapSach f = new fThemChiTietPhieuNhapSach();
             f.ShowDialog();
+        }
+
+        private void dgvDSSachNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvDSSachNhap.CurrentRow.Index;
+            txtMaSach.Text = dgvDSSachNhap.Rows[index].Cells[0].Value.ToString();
+            txtTenSach.Text = dgvDSSachNhap.Rows[index].Cells[1].Value.ToString();
+            domSoLuongNhap.Text = dgvDSSachNhap.Rows[index].Cells[2].Value.ToString();
+            txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[3].Value.ToString();
+            txtThanhTien.Text = dgvDSSachNhap.Rows[index].Cells[4].Value.ToString();
         }
     }
 }
