@@ -32,6 +32,12 @@ namespace DAL
             string query = "INSERT INTO PHIEUNHAPSACH VALUES('" + NgayLap + "', 0)";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int UpdatePhieuNhapSach(string SoPNS, string NgayLap)
+        {
+            string query = "UPDATE PHIEUNHAPSACH SET NGAYLAP = '" + NgayLap +
+                           "' WHERE SOPNS = '" + SoPNS + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public int DeletePhieuNhapSach(string SoPNS)
         {
             string query = "DELETE FROM PHIEUNHAPSACH WHERE SOPNS = '" + SoPNS + "'";

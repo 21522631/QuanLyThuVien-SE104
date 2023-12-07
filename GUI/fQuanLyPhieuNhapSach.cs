@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,16 @@ namespace GUI
         {
             fThemPhieuNhapSach f = new fThemPhieuNhapSach();
             f.ShowDialog();
+        }
+
+        private void dgvPhieuNhapSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fQuanLyPhieuNhapSach_Load(object sender, EventArgs e)
+        {
+            dgvPhieuNhapSach.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
         }
     }
 }
