@@ -26,6 +26,10 @@ namespace BUS
         {
             return DocGiaDAL.Instance.GetAllDocGia();
         }
+        public DataTable SearchDocGia(string ThongTinTimKiem)
+        {
+            return DocGiaDAL.Instance.SearchDocGia(ThongTinTimKiem);
+        }
         public int InsertDocGia(string TenDocGia, string NgaySinh, string DiaChi, string Email, string IDLoaiDocGia, string NgayLapThe, string NgayHetHan, string IDNguoiDung)
         {
             return DocGiaDAL.Instance.InsertDocGia(TenDocGia, NgaySinh, DiaChi, Email, IDLoaiDocGia, NgayLapThe, NgayHetHan, IDNguoiDung);

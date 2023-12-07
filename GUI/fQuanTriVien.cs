@@ -126,5 +126,28 @@ namespace GUI
             fThemDocGia f = new fThemDocGia();
             f.ShowDialog();
         }
+
+        private void fQuanTriVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tìmKiếmĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuDocGia f = new fTraCuuDocGia(0);
+            f.ShowDialog();
+        }
+
+        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuDocGia f = new fTraCuuDocGia(0);
+            f.ShowDialog();
+        }
+
+        private void loạiĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuDocGia f = new fTraCuuDocGia(1);
+            f.ShowDialog();
+        }
     }
 }

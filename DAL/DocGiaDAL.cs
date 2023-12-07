@@ -28,6 +28,14 @@ namespace DAL
                 "JOIN NGUOIDUNG ON DOCGIA.IDNGUOIDUNG = NGUOIDUNG.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable SearchDocGia(string ThongTinTraCuu)
+        {
+            string query = "SELECT MADOCGIA, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, MALOAIDOCGIA, TENLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN, MANGUOIDUNG " +
+                "FROM DOCGIA JOIN LOAIDOCGIA ON DOCGIA.IDLOAIDOCGIA = LOAIDOCGIA.ID " +
+                "JOIN NGUOIDUNG ON DOCGIA.IDNGUOIDUNG = NGUOIDUNG.ID " +
+                "WHERE MADOCGIA LIKE '%" + ThongTinTraCuu + "%' OR TENDOCGIA LIKE N'%" + ThongTinTraCuu + "%' OR MALOAIDOCGIA LIKE '%" + ThongTinTraCuu + "%' OR TENLOAIDOCGIA LIKE '%" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertDocGia(string TenDocGia, string NgaySinh, string DiaChi, string Email, string IDLoaiDocGia, string NgayLapThe, string NgayHetHan, string IDNguoiDung)
         {
             string query = "INSERT INTO DOCGIA VALUES('" + IDLoaiDocGia + "', N'" + TenDocGia + "', '" + NgaySinh + "', N'" + DiaChi + "', '" +
