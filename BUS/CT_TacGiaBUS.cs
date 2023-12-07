@@ -1,6 +1,8 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,18 @@ namespace BUS
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetCT_TacGiaByIDSach(string IDSach)
+        {
+            return CT_TacGiaDAL.Instance.GetCT_TacGiaByIDSach(IDSach);
+        }
+        public int InsertCT_TacGia(CT_TacGia ct_tacgia) 
+        {
+            return CT_TacGiaDAL.Instance.InsertCT_TacGia(ct_tacgia);
+        }
+        public int DeleteCT_TacGia(CT_TacGia ct_tacgia)
+        {
+            return CT_TacGiaBUS.Instance.DeleteCT_TacGia(ct_tacgia);
         }
     }
 }

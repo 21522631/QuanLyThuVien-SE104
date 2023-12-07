@@ -76,8 +76,20 @@ namespace GUI
 
         private void fQuanLySach_Load(object sender, EventArgs e)
         {
+            txtMaSach.Enabled = false;
             txtMaTacGia.Enabled = false;
+            txtGiaTien.Enabled = false;
+            domSoLuong.Enabled = false;
+            cboTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            cboTheLoai.DisplayMember = "TENTHELOAI";
+            cboTheLoai.ValueMember = "MATHELOAI";
+            cboTheLoai.Text = "";
+            cboMaTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            cboMaTacGia.DisplayMember = "MATACGIA";
+            cboMaTacGia.ValueMember = "MATACGIA";
+            cboMaTacGia.Text = "";
             txtMaTheLoai.Enabled = false;
+            dgvSach.DataSource = SachBUS.Instance.GetAllSach();
             dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
             dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
@@ -151,6 +163,24 @@ namespace GUI
             txtMaTheLoai.Text = "";
             txtTenTheLoai.Text = "";
             dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+        }
+
+        private void dgvSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvSach.CurrentRow.Index;
+            txtMaSach.Text = dgvSach.Rows[index].Cells[0].Value.ToString();
+            txtTenSach.Text = dgvSach.Rows[index].Cells[1].Value.ToString();
+            cboTheLoai.Text = dgvSach.Rows[index].Cells[3].Value.ToString();
+            txtNhaXuatBan.Text = dgvSach.Rows[index].Cells[4].Value.ToString();
+            txtNamXuatBan.Text = dgvSach.Rows[index].Cells[5].Value.ToString();
+            domSoLuong.Text = dgvSach.Rows[index].Cells[6].Value.ToString();
+            txtGiaTien.Text = dgvSach.Rows[index].Cells[7].Value.ToString();
+            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+        }
+
+        private void dgvCT_TacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
