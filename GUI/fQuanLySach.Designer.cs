@@ -60,12 +60,17 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnXoaTacGia = new System.Windows.Forms.Button();
+            this.btnSuaTacGia = new System.Windows.Forms.Button();
+            this.btnThemTacGia = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgtTacGia = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.txtMaTacGia = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textTenTacGia = new System.Windows.Forms.TextBox();
+            this.txtTenTacGia = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabpgTheLoai = new System.Windows.Forms.TabPage();
@@ -121,11 +126,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.tabQuanLySach = new System.Windows.Forms.TabControl();
-            this.txtMaTacGia = new System.Windows.Forms.TextBox();
-            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.btnXoaTacGia = new System.Windows.Forms.Button();
-            this.btnSuaTacGia = new System.Windows.Forms.Button();
-            this.btnThemTacGia = new System.Windows.Forms.Button();
             this.tabPage4.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -466,6 +466,35 @@
             this.tabPage3.Text = "Tác Giả";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnXoaTacGia
+            // 
+            this.btnXoaTacGia.Location = new System.Drawing.Point(707, 175);
+            this.btnXoaTacGia.Name = "btnXoaTacGia";
+            this.btnXoaTacGia.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaTacGia.TabIndex = 32;
+            this.btnXoaTacGia.Text = "Xoá";
+            this.btnXoaTacGia.UseVisualStyleBackColor = true;
+            // 
+            // btnSuaTacGia
+            // 
+            this.btnSuaTacGia.Location = new System.Drawing.Point(626, 175);
+            this.btnSuaTacGia.Name = "btnSuaTacGia";
+            this.btnSuaTacGia.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaTacGia.TabIndex = 31;
+            this.btnSuaTacGia.Text = "Sửa";
+            this.btnSuaTacGia.UseVisualStyleBackColor = true;
+            this.btnSuaTacGia.Click += new System.EventHandler(this.btnSuaTacGia_Click);
+            // 
+            // btnThemTacGia
+            // 
+            this.btnThemTacGia.Location = new System.Drawing.Point(6, 175);
+            this.btnThemTacGia.Name = "btnThemTacGia";
+            this.btnThemTacGia.Size = new System.Drawing.Size(105, 23);
+            this.btnThemTacGia.TabIndex = 30;
+            this.btnThemTacGia.Text = "Thêm tác giả";
+            this.btnThemTacGia.UseVisualStyleBackColor = true;
+            this.btnThemTacGia.Click += new System.EventHandler(this.btnThemTacGia_Click);
+            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.dgtTacGia);
@@ -484,6 +513,7 @@
             this.dgtTacGia.Name = "dgtTacGia";
             this.dgtTacGia.Size = new System.Drawing.Size(763, 243);
             this.dgtTacGia.TabIndex = 0;
+            this.dgtTacGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtTacGia_CellContentClick);
             // 
             // groupBox7
             // 
@@ -491,7 +521,7 @@
             this.groupBox7.Controls.Add(this.txtMaTacGia);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Controls.Add(this.textTenTacGia);
+            this.groupBox7.Controls.Add(this.txtTenTacGia);
             this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Location = new System.Drawing.Point(6, 28);
             this.groupBox7.Name = "groupBox7";
@@ -499,6 +529,23 @@
             this.groupBox7.TabIndex = 24;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Thông Tin Chi Tiết";
+            // 
+            // dtmNgaySinh
+            // 
+            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgaySinh.Location = new System.Drawing.Point(329, 80);
+            this.dtmNgaySinh.Name = "dtmNgaySinh";
+            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgaySinh.TabIndex = 50;
+            // 
+            // txtMaTacGia
+            // 
+            this.txtMaTacGia.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaTacGia.Location = new System.Drawing.Point(329, 21);
+            this.txtMaTacGia.Name = "txtMaTacGia";
+            this.txtMaTacGia.Size = new System.Drawing.Size(84, 20);
+            this.txtMaTacGia.TabIndex = 49;
             // 
             // label17
             // 
@@ -518,12 +565,12 @@
             this.label20.TabIndex = 18;
             this.label20.Text = "Mã tác giả";
             // 
-            // textTenTacGia
+            // txtTenTacGia
             // 
-            this.textTenTacGia.Location = new System.Drawing.Point(329, 47);
-            this.textTenTacGia.Name = "textTenTacGia";
-            this.textTenTacGia.Size = new System.Drawing.Size(142, 20);
-            this.textTenTacGia.TabIndex = 12;
+            this.txtTenTacGia.Location = new System.Drawing.Point(329, 47);
+            this.txtTenTacGia.Name = "txtTenTacGia";
+            this.txtTenTacGia.Size = new System.Drawing.Size(142, 20);
+            this.txtTenTacGia.TabIndex = 12;
             // 
             // label21
             // 
@@ -1055,50 +1102,6 @@
             this.tabQuanLySach.Size = new System.Drawing.Size(800, 501);
             this.tabQuanLySach.TabIndex = 0;
             // 
-            // txtMaTacGia
-            // 
-            this.txtMaTacGia.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaTacGia.Location = new System.Drawing.Point(329, 21);
-            this.txtMaTacGia.Name = "txtMaTacGia";
-            this.txtMaTacGia.Size = new System.Drawing.Size(84, 20);
-            this.txtMaTacGia.TabIndex = 49;
-            // 
-            // dtmNgaySinh
-            // 
-            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgaySinh.Location = new System.Drawing.Point(329, 80);
-            this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgaySinh.TabIndex = 50;
-            // 
-            // btnXoaTacGia
-            // 
-            this.btnXoaTacGia.Location = new System.Drawing.Point(707, 175);
-            this.btnXoaTacGia.Name = "btnXoaTacGia";
-            this.btnXoaTacGia.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaTacGia.TabIndex = 32;
-            this.btnXoaTacGia.Text = "Xoá";
-            this.btnXoaTacGia.UseVisualStyleBackColor = true;
-            // 
-            // btnSuaTacGia
-            // 
-            this.btnSuaTacGia.Location = new System.Drawing.Point(626, 175);
-            this.btnSuaTacGia.Name = "btnSuaTacGia";
-            this.btnSuaTacGia.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaTacGia.TabIndex = 31;
-            this.btnSuaTacGia.Text = "Sửa";
-            this.btnSuaTacGia.UseVisualStyleBackColor = true;
-            // 
-            // btnThemTacGia
-            // 
-            this.btnThemTacGia.Location = new System.Drawing.Point(6, 175);
-            this.btnThemTacGia.Name = "btnThemTacGia";
-            this.btnThemTacGia.Size = new System.Drawing.Size(105, 23);
-            this.btnThemTacGia.TabIndex = 30;
-            this.btnThemTacGia.Text = "Thêm tác giả";
-            this.btnThemTacGia.UseVisualStyleBackColor = true;
-            // 
             // fQuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1184,7 +1187,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textTenTacGia;
+        private System.Windows.Forms.TextBox txtTenTacGia;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tabpgTheLoai;

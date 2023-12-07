@@ -11,5 +11,6 @@ namespace DTO
         public int ID {  get; set; }
         public string MaTacGia { get; set; }
         public string TenTacGia { get; set; }
+        public string NgaySinh { get; set; }
     }
 }

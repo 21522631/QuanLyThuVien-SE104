@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,7 +76,34 @@ namespace GUI
 
         private void fQuanLySach_Load(object sender, EventArgs e)
         {
-            //dgtTacGia.DataSource = ;
+            txtMaTacGia.Enabled = false;
+            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+        }
+
+        private void dgtTacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index;
+            index = dgtTacGia.CurrentRow.Index;
+            txtMaTacGia.Text = dgtTacGia.Rows[index].Cells[0].Value.ToString();
+            txtTenTacGia.Text = dgtTacGia.Rows[index].Cells[1].Value.ToString();
+            dtmNgaySinh.Text = dgtTacGia.Rows[index].Cells[2].Value.ToString();
+        }
+
+        private void btnSuaTacGia_Click(object sender, EventArgs e)
+        {
+            TacGia tacgia = new TacGia();
+            tacgia.MaTacGia = txtMaTacGia.Text;
+            tacgia.TenTacGia = txtTenTacGia.Text;
+            tacgia.NgaySinh = dtmNgaySinh.Text;
+            TacGiaBUS.Instance.UpdateTacGia(tacgia);
+            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+        }
+
+        private void btnThemTacGia_Click(object sender, EventArgs e)
+        {
+            fThemTacGia f = new fThemTacGia();
+            f.ShowDialog();
+            dgtTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
     }
 }

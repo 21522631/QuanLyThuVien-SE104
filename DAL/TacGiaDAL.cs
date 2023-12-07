@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,6 +25,17 @@ namespace DAL
         {
             string query = "SELECT MATACGIA, TENTACGIA, NGAYSINH FROM TACGIA";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public int InsertTacGia(TacGia tacgia)
+        {
+            string query = "INSERT INTO TACGIA VALUES(N'" + tacgia.TenTacGia + "', '" + tacgia.NgaySinh + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateTacGia(TacGia tacgia)
+        {
+            string query = "UPDATE TACGIA SET TENTACGIA = N'" + tacgia.TenTacGia + "', NGAYSINH = '" + tacgia.NgaySinh +
+                           "' WHERE MATACCGIA = '" + tacgia.MaTacGia + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

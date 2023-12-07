@@ -29,38 +29,29 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.txtHoVaTen = new System.Windows.Forms.TextBox();
+            this.txtTenTacGia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtmNgaySinh);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnLuu);
-            this.panel1.Controls.Add(this.txtHoVaTen);
+            this.panel1.Controls.Add(this.txtTenTacGia);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 146);
             this.panel1.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 68);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker1.TabIndex = 48;
             // 
             // label14
             // 
@@ -77,8 +68,9 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(67, 23);
             this.btnHuy.TabIndex = 38;
-            this.btnHuy.Text = "Thoát";
+            this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -88,13 +80,14 @@
             this.btnLuu.TabIndex = 37;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtHoVaTen
+            // txtTenTacGia
             // 
-            this.txtHoVaTen.Location = new System.Drawing.Point(105, 43);
-            this.txtHoVaTen.Name = "txtHoVaTen";
-            this.txtHoVaTen.Size = new System.Drawing.Size(124, 20);
-            this.txtHoVaTen.TabIndex = 24;
+            this.txtTenTacGia.Location = new System.Drawing.Point(105, 43);
+            this.txtTenTacGia.Name = "txtTenTacGia";
+            this.txtTenTacGia.Size = new System.Drawing.Size(124, 20);
+            this.txtTenTacGia.TabIndex = 24;
             // 
             // label3
             // 
@@ -113,6 +106,15 @@
             this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN TÁC GIẢ";
+            // 
+            // dtmNgaySinh
+            // 
+            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgaySinh.Location = new System.Drawing.Point(105, 69);
+            this.dtmNgaySinh.Name = "dtmNgaySinh";
+            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgaySinh.TabIndex = 51;
             // 
             // fThemTacGia
             // 
@@ -134,9 +136,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.TextBox txtHoVaTen;
+        private System.Windows.Forms.TextBox txtTenTacGia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtmNgaySinh;
     }
 }
