@@ -119,6 +119,15 @@ namespace GUI
             PNS.SoPNS = cboSoPhieuNhap.Text;
             PNS.TongTien = Convert.ToInt32(txtTongTien.Text.ToString());
             PhieuNhapSachBUS.Instance.UpdatePhieuNhapSach(PNS);
+            for (int i = 0; i < dgvDSSachNhap.Rows.Count - 1; i++)
+            {
+               // TongTien = TongTien + Convert.ToInt32(dgvDSSachNhap.Rows[i].Cells[4].Value);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
