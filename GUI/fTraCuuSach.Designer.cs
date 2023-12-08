@@ -46,13 +46,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabpbTraCuuTacGia = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dgvTacGia = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTraCuuTacGia = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dgvTacGia = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabpgTraCuuCuonSach = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dgvCuonSach = new System.Windows.Forms.DataGridView();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtTraCuuCuonSach = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabTraCuuSach.SuspendLayout();
             this.tabpgTracCuuSach.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -63,9 +72,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabpbTraCuuTacGia.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.tabpgTraCuuCuonSach.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuonSach)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabTraCuuSach
@@ -73,6 +86,7 @@
             this.tabTraCuuSach.Controls.Add(this.tabpgTracCuuSach);
             this.tabTraCuuSach.Controls.Add(this.tabpgTraCuuTheLoai);
             this.tabTraCuuSach.Controls.Add(this.tabpbTraCuuTacGia);
+            this.tabTraCuuSach.Controls.Add(this.tabpgTraCuuCuonSach);
             this.tabTraCuuSach.Location = new System.Drawing.Point(12, 19);
             this.tabTraCuuSach.Name = "tabTraCuuSach";
             this.tabTraCuuSach.SelectedIndex = 0;
@@ -251,14 +265,23 @@
             this.tabpbTraCuuTacGia.Text = "Tra cứu tác giả";
             this.tabpbTraCuuTacGia.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // groupBox6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(277, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 13);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "TRA CỨU THÔNG TIN TÁC GIẢ";
+            this.groupBox6.Controls.Add(this.dgvTacGia);
+            this.groupBox6.Location = new System.Drawing.Point(6, 111);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(756, 274);
+            this.groupBox6.TabIndex = 26;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Thông tin tra cứu";
+            // 
+            // dgvTacGia
+            // 
+            this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTacGia.Location = new System.Drawing.Point(6, 19);
+            this.dgvTacGia.Name = "dgvTacGia";
+            this.dgvTacGia.Size = new System.Drawing.Size(752, 249);
+            this.dgvTacGia.TabIndex = 1;
             // 
             // groupBox5
             // 
@@ -299,23 +322,104 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Nhập thông tin tra cứu";
             // 
-            // groupBox6
+            // label7
             // 
-            this.groupBox6.Controls.Add(this.dgvTacGia);
-            this.groupBox6.Location = new System.Drawing.Point(6, 111);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(756, 274);
-            this.groupBox6.TabIndex = 26;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Thông tin tra cứu";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(277, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(163, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "TRA CỨU THÔNG TIN TÁC GIẢ";
             // 
-            // dgvTacGia
+            // tabpgTraCuuCuonSach
             // 
-            this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTacGia.Location = new System.Drawing.Point(6, 19);
-            this.dgvTacGia.Name = "dgvTacGia";
-            this.dgvTacGia.Size = new System.Drawing.Size(752, 249);
-            this.dgvTacGia.TabIndex = 1;
+            this.tabpgTraCuuCuonSach.Controls.Add(this.groupBox8);
+            this.tabpgTraCuuCuonSach.Controls.Add(this.groupBox7);
+            this.tabpgTraCuuCuonSach.Controls.Add(this.label12);
+            this.tabpgTraCuuCuonSach.Location = new System.Drawing.Point(4, 22);
+            this.tabpgTraCuuCuonSach.Name = "tabpgTraCuuCuonSach";
+            this.tabpgTraCuuCuonSach.Padding = new System.Windows.Forms.Padding(3);
+            this.tabpgTraCuuCuonSach.Size = new System.Drawing.Size(768, 387);
+            this.tabpgTraCuuCuonSach.TabIndex = 3;
+            this.tabpgTraCuuCuonSach.Text = "Tra cứu cuốn sách";
+            this.tabpgTraCuuCuonSach.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.dgvCuonSach);
+            this.groupBox8.Location = new System.Drawing.Point(6, 107);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(756, 274);
+            this.groupBox8.TabIndex = 29;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Thông tin tra cứu";
+            // 
+            // dgvCuonSach
+            // 
+            this.dgvCuonSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuonSach.Location = new System.Drawing.Point(6, 19);
+            this.dgvCuonSach.Name = "dgvCuonSach";
+            this.dgvCuonSach.Size = new System.Drawing.Size(752, 249);
+            this.dgvCuonSach.TabIndex = 1;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label13);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Controls.Add(this.txtTraCuuCuonSach);
+            this.groupBox7.Controls.Add(this.label11);
+            this.groupBox7.Location = new System.Drawing.Point(6, 29);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(756, 73);
+            this.groupBox7.TabIndex = 28;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Tra cứu";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label10.Location = new System.Drawing.Point(241, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(276, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "(Nhập mã sách, tên sách, mã cuốn sách hoặc tình trạng)";
+            // 
+            // txtTraCuuCuonSach
+            // 
+            this.txtTraCuuCuonSach.Location = new System.Drawing.Point(233, 16);
+            this.txtTraCuuCuonSach.Name = "txtTraCuuCuonSach";
+            this.txtTraCuuCuonSach.Size = new System.Drawing.Size(296, 20);
+            this.txtTraCuuCuonSach.TabIndex = 1;
+            this.txtTraCuuCuonSach.TextChanged += new System.EventHandler(this.txtTraCuuCuonSach_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(105, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Nhập thông tin tra cứu";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(282, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(184, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "TRA CỨU THÔNG TIN CUỐN SÁCH";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(17, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(218, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "* Chú ý: tình trạng 1 : còn, 0 : đã được mượn";
             // 
             // fTraCuuSach
             // 
@@ -341,10 +445,16 @@
             this.groupBox3.PerformLayout();
             this.tabpbTraCuuTacGia.ResumeLayout(false);
             this.tabpbTraCuuTacGia.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.tabpgTraCuuCuonSach.ResumeLayout(false);
+            this.tabpgTraCuuCuonSach.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuonSach)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +486,14 @@
         private System.Windows.Forms.TextBox txtTraCuuTacGia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tabpgTraCuuCuonSach;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtTraCuuCuonSach;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.DataGridView dgvCuonSach;
+        private System.Windows.Forms.Label label13;
     }
 }

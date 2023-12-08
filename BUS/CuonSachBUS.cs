@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace BUS
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetAllCuonSach()
+        {
+            return CuonSachDAL.Instance.GetAllCuonSach();
+        }
+        public DataTable SearchCuonSach(string ThongTinTraCuu)
+        {
+            return CuonSachDAL.Instance.SearchCuonSach(ThongTinTraCuu);
         }
         public int InsertCuonSach(string IDSach)
         {
