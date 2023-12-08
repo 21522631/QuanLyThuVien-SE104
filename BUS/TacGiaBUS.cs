@@ -22,6 +22,10 @@ namespace BUS
             }
             private set => instance = value;
         }
+        public DataTable SearchTacGia(string ThongTinTraCuu)
+        {
+            return TacGiaDAL.Instance.SearchTacGia(ThongTinTraCuu);
+        }
         public DataTable GetAllTacGia()
         {
             return TacGiaDAL.Instance.GetAllTacGia();

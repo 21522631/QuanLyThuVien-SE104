@@ -26,6 +26,12 @@ namespace DAL
             string query = "SELECT MATACGIA, TENTACGIA, NGAYSINH FROM TACGIA";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable SearchTacGia(string ThongTinTraCuu)
+        {
+            string query = "SELECT MATACGIA, TENTACGIA, NGAYSINH FROM TACGIA " +
+                           "WHERE MATACGIA LIKE '%" + ThongTinTraCuu + "%' OR TENTACGIA LIKE N'%" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertTacGia(TacGia tacgia)
         {
             string query = "INSERT INTO TACGIA VALUES(N'" + tacgia.TenTacGia + "', '" + tacgia.NgaySinh + "')";

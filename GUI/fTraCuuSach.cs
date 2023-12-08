@@ -22,6 +22,7 @@ namespace GUI
         {
             dgvSach.DataSource = SachBUS.Instance.GetAllSach();
             dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
         }
 
         private void txtTraCuuSach_TextChanged(object sender, EventArgs e)
@@ -45,6 +46,18 @@ namespace GUI
             else
             {
                 dgvTheLoai.DataSource = TheLoaiBUS.Instance.SearchTheLoai(txtTraCuuTheLoai.Text);
+            }
+        }
+
+        private void txtTraCuuTacGia_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTraCuuTacGia.Text == "")
+            {
+                dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            }
+            else
+            {
+                dgvTacGia.DataSource = TacGiaBUS.Instance.SearchTacGia(txtTraCuuTacGia.Text);
             }
         }
     }
