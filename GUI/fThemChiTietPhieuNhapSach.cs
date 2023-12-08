@@ -119,9 +119,11 @@ namespace GUI
             PNS.SoPNS = cboSoPhieuNhap.Text;
             PNS.TongTien = Convert.ToInt32(txtTongTien.Text.ToString());
             PhieuNhapSachBUS.Instance.UpdatePhieuNhapSach(PNS);
+            CuonSach cuonsach = new CuonSach();
             for (int i = 0; i < dgvDSSachNhap.Rows.Count - 1; i++)
             {
-               // TongTien = TongTien + Convert.ToInt32(dgvDSSachNhap.Rows[i].Cells[4].Value);
+                for(int j = 0; j < Convert.ToInt32(dgvDSSachNhap.Rows[i].Cells[2].Value.ToString()); j++)
+                    CuonSachBUS.Instance.InsertCuonSach(dgvDSSachNhap.Rows[i].Cells[0].Value.ToString().Replace("SA", "00"));//0 ma sah//2 la so luong
             }
         }
 

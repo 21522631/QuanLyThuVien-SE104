@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CT_PhieuNhapSachBUS.cs" />
     <Compile Include="CT_TacGiaBUS.cs" />
+    <Compile Include="CuonSachBUS.cs" />
     <Compile Include="DangNhapBUS.cs" />
     <Compile Include="DocGiaBUS.cs" />
     <Compile Include="LoaiDocGiaBUS.cs" />
