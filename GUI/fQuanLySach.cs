@@ -14,62 +14,11 @@ namespace GUI
 {
     public partial class fQuanLySach : Form
     {
-        public fQuanLySach()
+        public fQuanLySach(int Index)
         {
             InitializeComponent();
+            this.tabQuanLySach.SelectedIndex = Index;
         }
-
-        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox9_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void fQuanLySach_Load(object sender, EventArgs e)
         {
             txtMaSach.Enabled = false;

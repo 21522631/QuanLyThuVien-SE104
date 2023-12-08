@@ -69,7 +69,8 @@ namespace GUI
 
         private void quảnLýĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fQuanLyDocGia f = new fQuanLyDocGia(0);
+            f.ShowDialog();
         }
 
         private void sửaĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,7 +96,8 @@ namespace GUI
 
         private void thêmPhiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fThemPhieuNhapSach f = new fThemPhieuNhapSach();
+            f.ShowDialog();
         }
 
         private void tìmKiếmPhiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -152,7 +154,72 @@ namespace GUI
 
         private void sáchToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            fQuanLySach f = new fQuanLySach();
+            fQuanLySach f = new fQuanLySach(0);
+            f.ShowDialog();
+        }
+
+        private void thêmSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLySach f = new fQuanLySach(0);
+            f.ShowDialog();
+        }
+
+        private void tácGiảToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            fQuanLySach f = new fQuanLySach(1);
+            f.ShowDialog();
+        }
+
+        private void thểLoạiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fQuanLySach f = new fQuanLySach(2);
+            f.ShowDialog();
+        }
+
+        private void thẻLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sáchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fThemSach f = new fThemSach();
+            f.ShowDialog();
+        }
+
+        private void tácGiảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fThemTheLoai f = new fThemTheLoai();
+            f.ShowDialog();
+        }
+
+        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThemTacGia f = new fThemTacGia();
+            f.ShowDialog();
+        }
+
+        private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLySach f = new fQuanLySach(0);
+            f.ShowDialog();
+        }
+
+        private void quảnLýPhiếuNhậpSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuNhapSach f = new fQuanLyPhieuNhapSach();
+            f.ShowDialog();
+        }
+
+        private void cậpNhậpThôngTinPhiếuNhâpkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuNhapSach f = new fQuanLyPhieuNhapSach();
+            f.ShowDialog();
+        }
+
+        private void tìmKiếmSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuSach f = new fTraCuuSach();
             f.ShowDialog();
         }
     }

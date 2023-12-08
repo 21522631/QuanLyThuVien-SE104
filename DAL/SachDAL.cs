@@ -28,6 +28,14 @@ namespace DAL
                            "FROM SACH JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable SearchSach(string ThongTinTraCuu)
+        {
+            string query = "SELECT MASACH, TENSACH, MATHELOAI, TENTHELOAI, NHAXUATBAN, NAMXUATBAN, SOLUONG, GIATIEN " +
+                           "FROM SACH JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID " +
+                           "WHERE MASACH LIKE '%" + ThongTinTraCuu + "%' OR TENSACH LIKE N'%" + ThongTinTraCuu + "%' OR MATHELOAI LIKE '%" + ThongTinTraCuu + "%' OR TENTHELOAI LIKE N'%" + ThongTinTraCuu +
+                           "%' OR NHAXUATBAN LIKE '%" + ThongTinTraCuu + "%' OR NAMXUATBAN LIKE '%" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertSach(Sach sach)
         {
             string query = "INSERT INTO SACH VALUES(N'" + sach.TenSach + "', '" + sach.IDTheLoai + "', '" + sach.NhaXuatBan + "', '" + sach.NamXuatBan + "', '0', '0')";
@@ -51,5 +59,6 @@ namespace DAL
             string query = "DELETE FROM SACH WHERE MASACH = '" + MaSach + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        
     }
 }
