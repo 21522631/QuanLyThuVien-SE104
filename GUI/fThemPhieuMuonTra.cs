@@ -42,6 +42,7 @@ namespace GUI
                 MessageBox.Show("Số lượng sách mượn đã vượt quy định", "Không hợp lệ!",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cboMaCuonSach.DataSource = CuonSachBUS.Instance.GetAllCuonSachConTrong();
+            cboMaCuonSach.Text = "";
 
         }
 
