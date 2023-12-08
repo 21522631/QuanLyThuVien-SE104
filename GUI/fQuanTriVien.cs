@@ -247,5 +247,11 @@ namespace GUI
             fThemPhieuMuonTra f = new fThemPhieuMuonTra();
             f.ShowDialog();
         }
+
+        private void sửaPhiếuMượnTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuMuonTra f = new fQuanLyPhieuMuonTra();
+            f.ShowDialog();
+        }
     }
 }

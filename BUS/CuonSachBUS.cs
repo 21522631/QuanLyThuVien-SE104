@@ -30,6 +30,10 @@ namespace BUS
         {
             return CuonSachDAL.Instance.GetAllCuonSachConTrong();
         }
+        public DataTable GetAllCuonSachByMaCuonSach(string MaCuonSach)
+        {
+            return CuonSachDAL.Instance.GetAllCuonSachByMaCuonSach(MaCuonSach);
+        }
         public DataTable SearchCuonSach(string ThongTinTraCuu)
         {
             return CuonSachDAL.Instance.SearchCuonSach(ThongTinTraCuu);

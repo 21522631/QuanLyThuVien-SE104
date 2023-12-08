@@ -26,6 +26,10 @@ namespace BUS
         {
             return DocGiaDAL.Instance.GetAllDocGia();
         }
+        public DataTable GetDocGiaByMaDocGia(string MaDocGia)
+        {
+            return DocGiaDAL.Instance.GetDocGiaByMaDocGia(MaDocGia);
+        }
         public DataTable SearchDocGia(string ThongTinTimKiem)
         {
             return DocGiaDAL.Instance.SearchDocGia(ThongTinTimKiem);
@@ -37,6 +41,10 @@ namespace BUS
         public int UpdateDocGia(string MaDocGia, string TenDocGia, string NgaySinh, string DiaChi, string Email, string IDLoaiDocGia, string NgayLapThe)
         {
             return DocGiaDAL.Instance.UpdateDocGia(MaDocGia, TenDocGia, NgaySinh, DiaChi, Email, IDLoaiDocGia, NgayLapThe);
+        }
+        public int UpdateDocGia(string MaDocGia, string TongNo)
+        {
+            return DocGiaDAL.Instance.UpdateDocGia(MaDocGia, TongNo);
         }
         public int DeleteDocGia(string MaDocGia)
         {

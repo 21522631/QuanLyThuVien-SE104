@@ -13,7 +13,7 @@ namespace BUS
     {
         private static PhieuMuonTraBUS instance;
         private PhieuMuonTraBUS() { }
-        public static PhieuMuonTraBUS Instance 
+        public static PhieuMuonTraBUS Instance
         {
             get
             {
@@ -22,6 +22,10 @@ namespace BUS
             }
             private set => instance = value;
         }
+        public DataTable GetAllPhieuMuonTra()
+        {
+            return PhieuMuonTraDAL.Instance.GetAllPhieuMuonTra();
+        }
         public DataTable GetSoLuongSachDangMuon(string IDdocGia)
         {
             return PhieuMuonTraDAL.Instance.GetSoLuongSachDangMuon(IDdocGia);
@@ -29,6 +33,18 @@ namespace BUS
         public int InsertPhieuMuonTraBUS(PhieuMuonTra PMT)
         {
             return PhieuMuonTraDAL.Instance.InsertPhieuMuonTra(PMT);
+        }
+        public int UpdatePhieuMuonTra(PhieuMuonTra PMT)
+        {
+            return PhieuMuonTraDAL.Instance.UpdatePhieuMuonTra(PMT);
+        }
+        public int UpdatePhieuMuonTraVoiNull(PhieuMuonTra PMT)
+        {
+            return PhieuMuonTraDAL.Instance.UpdatePhieuMuonTraVoiNull(PMT);
+        }
+        public int DeletePhieuMuonTra(string SoPMT)
+        {
+            return PhieuMuonTraDAL.Instance.DeletePhieuMuonTra(SoPMT);
         }
     }
 }

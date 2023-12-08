@@ -64,17 +64,17 @@
     <Compile Include="fDocGia.Designer.cs">
       <DependentUpon>fDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="fPhieuMuonTra.cs">
+    <Compile Include="fQuanLyPhieuMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fPhieuMuonTra.Designer.cs">
-      <DependentUpon>fPhieuMuonTra.cs</DependentUpon>
+    <Compile Include="fQuanLyPhieuMuonTra.Designer.cs">
+      <DependentUpon>fQuanLyPhieuMuonTra.cs</DependentUpon>
     </Compile>
-    <Compile Include="fPhieuThuTienPhat.cs">
+    <Compile Include="fQuanLyPhieuThuTienPhat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fPhieuThuTienPhat.Designer.cs">
-      <DependentUpon>fPhieuThuTienPhat.cs</DependentUpon>
+    <Compile Include="fQuanLyPhieuThuTienPhat.Designer.cs">
+      <DependentUpon>fQuanLyPhieuThuTienPhat.cs</DependentUpon>
     </Compile>
     <Compile Include="fQuanLyPhieuNhapSach.cs">
       <SubType>Form</SubType>
@@ -201,11 +201,11 @@
     <EmbeddedResource Include="fDocGia.resx">
       <DependentUpon>fDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fPhieuMuonTra.resx">
-      <DependentUpon>fPhieuMuonTra.cs</DependentUpon>
+    <EmbeddedResource Include="fQuanLyPhieuMuonTra.resx">
+      <DependentUpon>fQuanLyPhieuMuonTra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fPhieuThuTienPhat.resx">
-      <DependentUpon>fPhieuThuTienPhat.cs</DependentUpon>
+    <EmbeddedResource Include="fQuanLyPhieuThuTienPhat.resx">
+      <DependentUpon>fQuanLyPhieuThuTienPhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQuanLyPhieuNhapSach.resx">
       <DependentUpon>fQuanLyPhieuNhapSach.cs</DependentUpon>

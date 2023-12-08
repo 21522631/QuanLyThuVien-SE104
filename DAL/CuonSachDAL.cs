@@ -36,6 +36,11 @@ namespace DAL
                            "WHERE TINHTRANG = 1";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetAllCuonSachByMaCuonSach(string MaCuonSach)
+        {
+            string query = "SELECT TINHTRANG FROM CUONSACH WHERE MACUONSACH = '" + MaCuonSach + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchCuonSach(string ThongTinTraCuu)
         {
             string query = "SELECT MACUONSACH, MASACH, TENSACH, TINHTRANG " +

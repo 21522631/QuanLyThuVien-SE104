@@ -15,7 +15,6 @@ namespace GUI
 {
     public partial class fThemChiTietPhieuNhapSach : Form
     {
-        int Count = 0;
         public fThemChiTietPhieuNhapSach()
         {
             InitializeComponent();
@@ -34,7 +33,6 @@ namespace GUI
             txtTenSach.Enabled = false;
             txtTenSach.Text = "";
             txtDonGia.Text = "0";
-            Count = 1;
             txtTongTien.Enabled = false;
             txtThanhTien.Enabled = false;
         }

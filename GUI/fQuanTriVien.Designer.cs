@@ -223,35 +223,35 @@
             this.thẻLoạiToolStripMenuItem,
             this.cuốnSáchToolStripMenuItem});
             this.tìmKiếmSáchToolStripMenuItem.Name = "tìmKiếmSáchToolStripMenuItem";
-            this.tìmKiếmSáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìmKiếmSáchToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.tìmKiếmSáchToolStripMenuItem.Text = "Tra cứu tthông tin";
             this.tìmKiếmSáchToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmSáchToolStripMenuItem_Click);
             // 
             // sáchToolStripMenuItem
             // 
             this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
-            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.sáchToolStripMenuItem.Text = "Sách";
             this.sáchToolStripMenuItem.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
             // 
             // tácGiảToolStripMenuItem
             // 
             this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
-            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.tácGiảToolStripMenuItem.Text = "Thể loại";
             this.tácGiảToolStripMenuItem.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
             // 
             // thẻLoạiToolStripMenuItem
             // 
             this.thẻLoạiToolStripMenuItem.Name = "thẻLoạiToolStripMenuItem";
-            this.thẻLoạiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thẻLoạiToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.thẻLoạiToolStripMenuItem.Text = "Tác giả";
             this.thẻLoạiToolStripMenuItem.Click += new System.EventHandler(this.thẻLoạiToolStripMenuItem_Click);
             // 
             // cuốnSáchToolStripMenuItem
             // 
             this.cuốnSáchToolStripMenuItem.Name = "cuốnSáchToolStripMenuItem";
-            this.cuốnSáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuốnSáchToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.cuốnSáchToolStripMenuItem.Text = "Cuốn sách";
             this.cuốnSáchToolStripMenuItem.Click += new System.EventHandler(this.cuốnSáchToolStripMenuItem_Click);
             // 
@@ -262,7 +262,7 @@
             this.tácGiảToolStripMenuItem1,
             this.thểLoạiToolStripMenuItem});
             this.sửaThôngTinSáchToolStripMenuItem.Name = "sửaThôngTinSáchToolStripMenuItem";
-            this.sửaThôngTinSáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sửaThôngTinSáchToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.sửaThôngTinSáchToolStripMenuItem.Text = "Thêm thông tin";
             // 
             // sáchToolStripMenuItem1
@@ -293,7 +293,7 @@
             this.tácGiảToolStripMenuItem2,
             this.thểLoạiToolStripMenuItem1});
             this.thêmSáchToolStripMenuItem.Name = "thêmSáchToolStripMenuItem";
-            this.thêmSáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thêmSáchToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.thêmSáchToolStripMenuItem.Text = "Cập nhập thông tin";
             this.thêmSáchToolStripMenuItem.Click += new System.EventHandler(this.thêmSáchToolStripMenuItem_Click);
             // 
@@ -346,6 +346,7 @@
             this.sửaPhiếuMượnTrảToolStripMenuItem.Name = "sửaPhiếuMượnTrảToolStripMenuItem";
             this.sửaPhiếuMượnTrảToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.sửaPhiếuMượnTrảToolStripMenuItem.Text = "Cập nhập  phiếu mượn trả";
+            this.sửaPhiếuMượnTrảToolStripMenuItem.Click += new System.EventHandler(this.sửaPhiếuMượnTrảToolStripMenuItem_Click);
             // 
             // quảnLýPhiếuNhậpSáchToolStripMenuItem
             // 

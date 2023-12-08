@@ -24,8 +24,14 @@ namespace DAL
         public DataTable GetAllDocGia()
         {
             string query = "SELECT MADOCGIA, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, TENLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN, TONGNO, MANGUOIDUNG " +
-                "FROM DOCGIA JOIN LOAIDOCGIA ON DOCGIA.IDLOAIDOCGIA = LOAIDOCGIA.ID " +
-                "JOIN NGUOIDUNG ON DOCGIA.IDNGUOIDUNG = NGUOIDUNG.ID";
+                           "FROM DOCGIA JOIN LOAIDOCGIA ON DOCGIA.IDLOAIDOCGIA = LOAIDOCGIA.ID " +
+                           "JOIN NGUOIDUNG ON DOCGIA.IDNGUOIDUNG = NGUOIDUNG.ID";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetDocGiaByMaDocGia(string MaDocGia) 
+        {
+            string query = "SELECT MADOCGIA, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, IDLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN, TONGNO, IDNGUOIDUNG " +
+                           "FROM DOCGIA WHERE MADOCGIA = '" + MaDocGia + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable SearchDocGia(string ThongTinTraCuu)
@@ -47,6 +53,11 @@ namespace DAL
             string query = "UPDATE DOCGIA SET TENDOCGIA = N'" + TenDocGia + "', NGAYSINH = '" + NgaySinh +
                            "', DIACHI = N'" + DiaChi + "', EMAIL = '" + Email + "', IDLoaiDocGia = '" + IDLoaiDocGia + "', NGAYLAPTHE = '" + NgayLapThe +
                            "' WHERE MADOCGIA = '" + MaDocGia + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateDocGia(string MaDocGia, string TongNo)
+        {
+            string query = "UPDATE DOCGIA SET TONGNO = '" + TongNo + "' WHERE MADOCGIA = '" + MaDocGia + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int DeleteDocGia(string MaDocGia)

@@ -22,6 +22,13 @@ namespace DAL
             }
             private set => instance = value;
         }
+        public DataTable GetAllPhieuMuonTra()
+        {
+            string query = "SELECT SOPMT, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, " +
+                           "CAST('CS' + RIGHT('0000' + CAST(IDCUONSACH AS VARCHAR(4)), 4) AS CHAR(6)) AS MACUONSACH, " +
+                           "NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable GetSoLuongSachDangMuon(string IDdocGia)
         {
             string query = "SELECT IDDOCGIA, COUNT(IDCUONSACH) AS SOLUONGSACHMUON " +
@@ -33,6 +40,24 @@ namespace DAL
         public int InsertPhieuMuonTra(PhieuMuonTra PMT)
         {
             string query = "INSERT INTO PHIEUMUONTRA VALUES('" + PMT.IDDocGia + "', '" + PMT.IDCuonSach + "', '" + PMT.NgayMuon + "', '" + PMT.NgayPhaiTra + "', NULL, '0')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdatePhieuMuonTra(PhieuMuonTra PMT)
+        {
+            string query = "UPDATE PHIEUMUONTRA SET NGAYMUON = '" + PMT.NgayMuon + "', NGAYPHAITRA = '" + PMT.NgayPhaiTra +
+                           "', NGAYTRA = '" + PMT.NgayTra + "', TIENPHAT = '" + PMT.TienPhat +
+                           "' WHERE SOPMT = '" + PMT.SoPMT + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdatePhieuMuonTraVoiNull(PhieuMuonTra PMT)
+        {
+            string query = "UPDATE PHIEUMUONTRA SET NGAYMUON = '" + PMT.NgayMuon + "', NGAYPHAITRA = '" + PMT.NgayPhaiTra +
+                           "' WHERE SOPMT = '" + PMT.SoPMT + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeletePhieuMuonTra(string SoPMT)
+        {
+            string query = "DELETE FROM PHIEUMUONTRA WHERE SOPMT = '" + SoPMT + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         

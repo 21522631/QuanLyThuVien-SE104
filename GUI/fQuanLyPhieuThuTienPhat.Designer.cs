@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class fPhieuThuTienPhat
+    partial class fQuanLyPhieuThuTienPhat
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -56,35 +51,25 @@
             this.panel1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            this.groupBox11.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.button18);
             this.panel1.Controls.Add(this.groupBox12);
-            this.panel1.Controls.Add(this.groupBox11);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.btnXoaLoaiDocGia);
+            this.panel1.Controls.Add(this.btnSuaDocGia);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(783, 480);
             this.panel1.TabIndex = 1;
             // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(668, 221);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(104, 24);
-            this.button17.TabIndex = 32;
-            this.button17.Text = "Thoát";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(558, 221);
+            this.button18.Location = new System.Drawing.Point(9, 198);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(104, 24);
             this.button18.TabIndex = 31;
@@ -94,9 +79,9 @@
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.dataGridView6);
-            this.groupBox12.Location = new System.Drawing.Point(3, 259);
+            this.groupBox12.Location = new System.Drawing.Point(3, 228);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(776, 215);
+            this.groupBox12.Size = new System.Drawing.Size(776, 246);
             this.groupBox12.TabIndex = 29;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Thông Tin Chung";
@@ -106,45 +91,8 @@
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Location = new System.Drawing.Point(6, 19);
             this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(763, 193);
+            this.dataGridView6.Size = new System.Drawing.Size(763, 221);
             this.dataGridView6.TabIndex = 0;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.button19);
-            this.groupBox11.Controls.Add(this.textBox9);
-            this.groupBox11.Controls.Add(this.label29);
-            this.groupBox11.Location = new System.Drawing.Point(3, 198);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(548, 55);
-            this.groupBox11.TabIndex = 28;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Tìm Kiếm";
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(457, 23);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 2;
-            this.button19.Text = "Tìm";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(141, 23);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(310, 20);
-            this.textBox9.TabIndex = 1;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(17, 26);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(118, 13);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Nhập thông tin tìm kiếm";
             // 
             // groupBox1
             // 
@@ -160,8 +108,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblMaDocGia);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnXoaLoaiDocGia);
-            this.groupBox1.Controls.Add(this.btnSuaDocGia);
             this.groupBox1.Location = new System.Drawing.Point(3, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 159);
@@ -271,7 +217,7 @@
             // 
             // btnXoaLoaiDocGia
             // 
-            this.btnXoaLoaiDocGia.Location = new System.Drawing.Point(695, 130);
+            this.btnXoaLoaiDocGia.Location = new System.Drawing.Point(705, 198);
             this.btnXoaLoaiDocGia.Name = "btnXoaLoaiDocGia";
             this.btnXoaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
             this.btnXoaLoaiDocGia.TabIndex = 17;
@@ -280,7 +226,7 @@
             // 
             // btnSuaDocGia
             // 
-            this.btnSuaDocGia.Location = new System.Drawing.Point(614, 130);
+            this.btnSuaDocGia.Location = new System.Drawing.Point(624, 198);
             this.btnSuaDocGia.Name = "btnSuaDocGia";
             this.btnSuaDocGia.Size = new System.Drawing.Size(75, 23);
             this.btnSuaDocGia.TabIndex = 6;
@@ -296,20 +242,18 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "THÔNG TIN PHIẾU THU TIỀN PHẠT";
             // 
-            // fPhieuThuTienPhat
+            // fQuanLyPhieuThuTienPhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 498);
             this.Controls.Add(this.panel1);
-            this.Name = "fPhieuThuTienPhat";
+            this.Name = "fQuanLyPhieuThuTienPhat";
             this.Text = "Phiếu Thu Tiền Phạt";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -319,14 +263,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
