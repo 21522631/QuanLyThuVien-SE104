@@ -29,6 +29,13 @@ namespace DAL
                            "FROM CUONSACH JOIN SACH ON CUONSACH.IDSACH = SACH.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetAllCuonSachConTrong()
+        {
+            string query = "SELECT MACUONSACH, MASACH, TENSACH, TINHTRANG " +
+                           "FROM CUONSACH JOIN SACH ON CUONSACH.IDSACH = SACH.ID " +
+                           "WHERE TINHTRANG = 1";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchCuonSach(string ThongTinTraCuu)
         {
             string query = "SELECT MACUONSACH, MASACH, TENSACH, TINHTRANG " +
@@ -39,6 +46,11 @@ namespace DAL
         public int InsertCuonSach(string IDSach)
         {
             string query = "INSERT INTO CUONSACH VALUES('" + IDSach + "', 1)";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateCuonSach(string MaCuonSach, string TinhTrang)
+        {
+            string query = "UPDATE CUONSACH SET TINHTRANG = '" +TinhTrang + "' WHERE MACUONSACH = '" + MaCuonSach + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }

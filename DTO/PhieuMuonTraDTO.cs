@@ -10,11 +10,11 @@ namespace DTO
     {
         public int ID { get; set; }
         public string SoPMT { get; set; }
-        public int IDDocGia { get; set; }
-        public int IDCuonSach { get; set; }
-        public DateTime NgayMuon { get; set; }
-        public DateTime NgayPhaiTra { get; set; }
-        public DateTime NgayTra { get; set; }
-        public int TienPhat { get; set; }
+        public string IDDocGia { get; set; }
+        public string IDCuonSach { get; set; }
+        public string NgayMuon { get; set; }
+        public string NgayPhaiTra { get; set; }
+        public string NgayTra { get; set; }
+        public string TienPhat { get; set; }
     }
 }

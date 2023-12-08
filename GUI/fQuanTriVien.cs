@@ -178,7 +178,8 @@ namespace GUI
 
         private void thẻLoạiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fTraCuuSach f = new fTraCuuSach(2);
+            f.ShowDialog();
         }
 
         private void sáchToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -219,7 +220,31 @@ namespace GUI
 
         private void tìmKiếmSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fTraCuuSach f = new fTraCuuSach();
+            fTraCuuSach f = new fTraCuuSach(0);
+            f.ShowDialog();
+        }
+
+        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuSach f = new fTraCuuSach(0);
+            f.ShowDialog();
+        }
+
+        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuSach f = new fTraCuuSach(1);
+            f.ShowDialog();
+        }
+
+        private void cuốnSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuSach f = new fTraCuuSach(3);
+            f.ShowDialog();
+        }
+
+        private void thêmPhiếuMượnTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThemPhieuMuonTra f = new fThemPhieuMuonTra();
             f.ShowDialog();
         }
     }

@@ -24,7 +24,6 @@ namespace GUI
         private void fThemChiTietPhieuNhapSach_Load(object sender, EventArgs e)
         {
             cboSoPhieuNhap.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
-            cboSoPhieuNhap.Text = "";
             cboSoPhieuNhap.DisplayMember = "SOPNS";
             cboSoPhieuNhap.ValueMember = "SOPNS";
             cboSoPhieuNhap.Text = "";

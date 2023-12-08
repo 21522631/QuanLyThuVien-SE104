@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,10 @@ namespace GUI
 {
     public partial class fTraCuuSach : Form
     {
-        public fTraCuuSach()
+        public fTraCuuSach(int Index)
         {
             InitializeComponent();
+            this.tabTraCuuSach.SelectedIndex = Index;
         }
 
         private void fTraCuuSach_Load(object sender, EventArgs e)
