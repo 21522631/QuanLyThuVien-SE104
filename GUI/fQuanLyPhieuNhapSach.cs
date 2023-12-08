@@ -45,6 +45,7 @@ namespace GUI
         {
             fThemChiTietPhieuNhapSach f = new fThemChiTietPhieuNhapSach();
             f.ShowDialog();
+            dgvPhieuNhapSach.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
         }
 
         private void dgvDSSachNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)

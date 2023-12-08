@@ -36,16 +36,19 @@ namespace GUI
             txtTenSach.Text = "";
             txtDonGia.Text = "0";
             Count = 1;
+            txtTongTien.Enabled = false;
+            txtThanhTien.Enabled = false;
         }
 
         private void cboMaSach_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtTenSach.Text = cboMaSach.SelectedValue.ToString();
+
         }
 
         private void txtDonGia_TextChanged(object sender, EventArgs e)
         {
-            txtThanhTien.Text =Convert.ToString(Convert.ToInt32(txtDonGia.Text.ToString()) * Convert.ToInt32(domSoLuong.Text.ToString()));
+            txtThanhTien.Text = Convert.ToString(Convert.ToInt32(txtDonGia.Text.ToString()) * Convert.ToInt32(domSoLuong.Text.ToString()));
         }
 
         private void domSoLuong_SelectedItemChanged(object sender, EventArgs e)
@@ -60,10 +63,10 @@ namespace GUI
             ct_PNS.IDSach = Convert.ToInt32(cboMaSach.Text.Replace("SA", "00"));
             ct_PNS.DonGia = Convert.ToInt32(txtDonGia.Text);
             ct_PNS.SoLuongNhap = Convert.ToInt32(domSoLuong.Text);
-            ct_PNS.ThanhTien = Convert.ToInt32(txtDonGia.Text);
+            ct_PNS.ThanhTien = (Convert.ToInt32(txtThanhTien.Text.ToString()));
             CT_PhieuNhapSachBUS.Instance.InsertCT_PhieuNhapSach(ct_PNS);
             dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(ct_PNS.IDPNS.ToString());
-            txtTongTien.Text = (Convert.ToInt32(txtTongTien.Text) + ct_PNS.ThanhTien).ToString();
+            txtTongTien.Text = ((Convert.ToInt32(txtTongTien.Text.ToString())) + ct_PNS.ThanhTien).ToString();
         }
 
         private void cboSoPhieuNhap_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,8 +75,8 @@ namespace GUI
             {
                 dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(cboSoPhieuNhap.Text.Replace("PNS", "000"));
                 int TongTien = 0;
-                for(int i = 0; i < dgvDSSachNhap.Rows.Count - 1; i++) 
-                { 
+                for (int i = 0; i < dgvDSSachNhap.Rows.Count - 1; i++)
+                {
                     TongTien = TongTien + Convert.ToInt32(dgvDSSachNhap.Rows[i].Cells[4].Value);
                 }
                 txtTongTien.Text = TongTien.ToString();
@@ -82,6 +85,40 @@ namespace GUI
             {
                 MessageBox.Show("Cuốn sách sẽ được thêm tự động khi lưu!");
             }
+        }
+
+        private void dgvDSSachNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvDSSachNhap.CurrentRow.Index;
+            cboMaSach.Text = dgvDSSachNhap.Rows[index].Cells[0].Value.ToString();
+            domSoLuong.Text = dgvDSSachNhap.Rows[index].Cells[2].Value.ToString();
+            txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[3].Value.ToString();
+            txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[4].Value.ToString();
+        }
+
+        private void btnXoaSachNhap_Click(object sender, EventArgs e)
+        {
+            CT_PhieuNhapSachBUS.Instance.DeleteCT_PhieuNhapSach(cboSoPhieuNhap.Text.Replace("PNS", "000"), cboMaSach.Text.Replace("SA", "00"));
+            dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(cboSoPhieuNhap.Text.Replace("PNS", "000"));
+            cboMaSach.Text = "";
+            txtTenSach.Text = "";
+            txtDonGia.Text = "0";
+            txtThanhTien.Text = "0";
+            domSoLuong.Text = "00";
+            int TongTien = 0;
+            for (int i = 0; i < dgvDSSachNhap.Rows.Count - 1; i++)
+            {
+                TongTien = TongTien + Convert.ToInt32(dgvDSSachNhap.Rows[i].Cells[4].Value);
+            }
+            txtTongTien.Text = TongTien.ToString();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            PhieuNhapSach PNS = new PhieuNhapSach();
+            PNS.SoPNS = cboSoPhieuNhap.Text;
+            PNS.TongTien = Convert.ToInt32(txtTongTien.Text.ToString());
+            PhieuNhapSachBUS.Instance.UpdatePhieuNhapSach(PNS);
         }
     }
 }

@@ -90,6 +90,7 @@
             this.btnLuu.TabIndex = 75;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // cboSoPhieuNhap
             // 
@@ -136,6 +137,7 @@
             this.dgvDSSachNhap.Name = "dgvDSSachNhap";
             this.dgvDSSachNhap.Size = new System.Drawing.Size(313, 167);
             this.dgvDSSachNhap.TabIndex = 60;
+            this.dgvDSSachNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSSachNhap_CellContentClick);
             // 
             // groupBox1
             // 
@@ -220,6 +222,7 @@
             this.btnXoaSachNhap.TabIndex = 69;
             this.btnXoaSachNhap.Text = "Xoá sách nhập";
             this.btnXoaSachNhap.UseVisualStyleBackColor = true;
+            this.btnXoaSachNhap.Click += new System.EventHandler(this.btnXoaSachNhap_Click);
             // 
             // label25
             // 

@@ -34,6 +34,10 @@ namespace BUS
         {
             return PhieuNhapSachDAL.Instance.UpdatePhieuNhapSach(SoPNS, NgayLap);
         }
+        public int UpdatePhieuNhapSach(PhieuNhapSach PNS)
+        {
+            return PhieuNhapSachDAL.Instance.UpdatePhieuNhapSach(PNS);
+        }
         public int DeletePhieuNhapSach(string SoPNS)
         {
             return PhieuNhapSachDAL.Instance.DeletePhieuNhapSach(SoPNS);
