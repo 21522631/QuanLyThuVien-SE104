@@ -37,29 +37,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTraCuuSach = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tabpgTraCuuLoaiDocGia = new System.Windows.Forms.TabPage();
+            this.tabpgTraCuuTheLoai = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgvLoaiDocGia = new System.Windows.Forms.DataGridView();
+            this.dgvTheLoai = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTraCuuLoaiDocGia = new System.Windows.Forms.TextBox();
+            this.txtTraCuuTheLoai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabpbTraCuuTacGia = new System.Windows.Forms.TabPage();
             this.tabTraCuuSach.SuspendLayout();
             this.tabpgTracCuuSach.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tabpgTraCuuLoaiDocGia.SuspendLayout();
+            this.tabpgTraCuuTheLoai.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabTraCuuSach
             // 
             this.tabTraCuuSach.Controls.Add(this.tabpgTracCuuSach);
-            this.tabTraCuuSach.Controls.Add(this.tabpgTraCuuLoaiDocGia);
+            this.tabTraCuuSach.Controls.Add(this.tabpgTraCuuTheLoai);
+            this.tabTraCuuSach.Controls.Add(this.tabpbTraCuuTacGia);
             this.tabTraCuuSach.Location = new System.Drawing.Point(12, 19);
             this.tabTraCuuSach.Name = "tabTraCuuSach";
             this.tabTraCuuSach.SelectedIndex = 0;
@@ -146,22 +148,22 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Nhập thông tin tra cứu";
             // 
-            // tabpgTraCuuLoaiDocGia
+            // tabpgTraCuuTheLoai
             // 
-            this.tabpgTraCuuLoaiDocGia.Controls.Add(this.groupBox4);
-            this.tabpgTraCuuLoaiDocGia.Controls.Add(this.groupBox3);
-            this.tabpgTraCuuLoaiDocGia.Controls.Add(this.label2);
-            this.tabpgTraCuuLoaiDocGia.Location = new System.Drawing.Point(4, 22);
-            this.tabpgTraCuuLoaiDocGia.Name = "tabpgTraCuuLoaiDocGia";
-            this.tabpgTraCuuLoaiDocGia.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpgTraCuuLoaiDocGia.Size = new System.Drawing.Size(768, 387);
-            this.tabpgTraCuuLoaiDocGia.TabIndex = 1;
-            this.tabpgTraCuuLoaiDocGia.Text = "Tra cứu loại độc giả";
-            this.tabpgTraCuuLoaiDocGia.UseVisualStyleBackColor = true;
+            this.tabpgTraCuuTheLoai.Controls.Add(this.groupBox4);
+            this.tabpgTraCuuTheLoai.Controls.Add(this.groupBox3);
+            this.tabpgTraCuuTheLoai.Controls.Add(this.label2);
+            this.tabpgTraCuuTheLoai.Location = new System.Drawing.Point(4, 22);
+            this.tabpgTraCuuTheLoai.Name = "tabpgTraCuuTheLoai";
+            this.tabpgTraCuuTheLoai.Padding = new System.Windows.Forms.Padding(3);
+            this.tabpgTraCuuTheLoai.Size = new System.Drawing.Size(768, 387);
+            this.tabpgTraCuuTheLoai.TabIndex = 1;
+            this.tabpgTraCuuTheLoai.Text = "Tra cứu thể loại";
+            this.tabpgTraCuuTheLoai.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dgvLoaiDocGia);
+            this.groupBox4.Controls.Add(this.dgvTheLoai);
             this.groupBox4.Location = new System.Drawing.Point(6, 107);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(756, 274);
@@ -169,18 +171,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin tra cứu";
             // 
-            // dgvLoaiDocGia
+            // dgvTheLoai
             // 
-            this.dgvLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoaiDocGia.Location = new System.Drawing.Point(6, 19);
-            this.dgvLoaiDocGia.Name = "dgvLoaiDocGia";
-            this.dgvLoaiDocGia.Size = new System.Drawing.Size(752, 249);
-            this.dgvLoaiDocGia.TabIndex = 1;
+            this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheLoai.Location = new System.Drawing.Point(6, 19);
+            this.dgvTheLoai.Name = "dgvTheLoai";
+            this.dgvTheLoai.Size = new System.Drawing.Size(752, 249);
+            this.dgvTheLoai.TabIndex = 1;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.txtTraCuuLoaiDocGia);
+            this.groupBox3.Controls.Add(this.txtTraCuuTheLoai);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(6, 30);
             this.groupBox3.Name = "groupBox3";
@@ -193,18 +195,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(221, 39);
+            this.label3.Location = new System.Drawing.Point(288, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(318, 13);
+            this.label3.Size = new System.Drawing.Size(175, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "(Nhập mã độc giả, tên độc giả, mã loại độc giả hoặc loại độc giả)";
+            this.label3.Text = "(Nhập mã thể loại hoặc tên thể loại)";
             // 
-            // txtTraCuuLoaiDocGia
+            // txtTraCuuTheLoai
             // 
-            this.txtTraCuuLoaiDocGia.Location = new System.Drawing.Point(233, 16);
-            this.txtTraCuuLoaiDocGia.Name = "txtTraCuuLoaiDocGia";
-            this.txtTraCuuLoaiDocGia.Size = new System.Drawing.Size(296, 20);
-            this.txtTraCuuLoaiDocGia.TabIndex = 1;
+            this.txtTraCuuTheLoai.Location = new System.Drawing.Point(233, 16);
+            this.txtTraCuuTheLoai.Name = "txtTraCuuTheLoai";
+            this.txtTraCuuTheLoai.Size = new System.Drawing.Size(296, 20);
+            this.txtTraCuuTheLoai.TabIndex = 1;
+            this.txtTraCuuTheLoai.TextChanged += new System.EventHandler(this.txtTraCuuTheLoai_TextChanged);
             // 
             // label4
             // 
@@ -220,9 +223,19 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(275, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 13);
+            this.label2.Size = new System.Drawing.Size(170, 13);
             this.label2.TabIndex = 23;
-            this.label2.Text = "TRA CỨU THÔNG TIN LOẠI ĐỘC GỈA";
+            this.label2.Text = "TRA CỨU THÔNG TIN THỂ LOẠI";
+            // 
+            // tabpbTraCuuTacGia
+            // 
+            this.tabpbTraCuuTacGia.Location = new System.Drawing.Point(4, 22);
+            this.tabpbTraCuuTacGia.Name = "tabpbTraCuuTacGia";
+            this.tabpbTraCuuTacGia.Padding = new System.Windows.Forms.Padding(3);
+            this.tabpbTraCuuTacGia.Size = new System.Drawing.Size(768, 387);
+            this.tabpbTraCuuTacGia.TabIndex = 2;
+            this.tabpbTraCuuTacGia.Text = "tabPage1";
+            this.tabpbTraCuuTacGia.UseVisualStyleBackColor = true;
             // 
             // fTraCuuSach
             // 
@@ -240,10 +253,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabpgTraCuuLoaiDocGia.ResumeLayout(false);
-            this.tabpgTraCuuLoaiDocGia.PerformLayout();
+            this.tabpgTraCuuTheLoai.ResumeLayout(false);
+            this.tabpgTraCuuTheLoai.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -261,13 +274,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTraCuuSach;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage tabpgTraCuuLoaiDocGia;
+        private System.Windows.Forms.TabPage tabpgTraCuuTheLoai;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dgvLoaiDocGia;
+        private System.Windows.Forms.DataGridView dgvTheLoai;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTraCuuLoaiDocGia;
+        private System.Windows.Forms.TextBox txtTraCuuTheLoai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabpbTraCuuTacGia;
     }
 }

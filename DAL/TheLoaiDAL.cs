@@ -26,6 +26,12 @@ namespace DAL
             string query = "SELECT MATHELOAI, TENTHELOAI FROM THELOAI";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable SearchTheLoai(string ThongTinTraCuu)
+        {
+            string query = "SELECT MATHELOAI, TENTHELOAI FROM THELOAI " +
+                           "WHERE MATHELOAI LIKE '%" + ThongTinTraCuu + "%' OR TENTHELOAI LIKE N'%" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertTheLoai(string TenTheLoai)
         {
             string query = "INSERT INTO THELOAI VALUES(N'" + TenTheLoai + "')";

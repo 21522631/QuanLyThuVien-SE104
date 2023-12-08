@@ -21,6 +21,7 @@ namespace GUI
         private void fTraCuuSach_Load(object sender, EventArgs e)
         {
             dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
         }
 
         private void txtTraCuuSach_TextChanged(object sender, EventArgs e)
@@ -32,6 +33,18 @@ namespace GUI
             else
             {
                 dgvSach.DataSource = SachBUS.Instance.SearchSach(txtTraCuuSach.Text);
+            }
+        }
+
+        private void txtTraCuuTheLoai_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTraCuuTheLoai.Text == "")
+            {
+                dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            }
+            else
+            {
+                dgvTheLoai.DataSource = TheLoaiBUS.Instance.SearchTheLoai(txtTraCuuTheLoai.Text);
             }
         }
     }
