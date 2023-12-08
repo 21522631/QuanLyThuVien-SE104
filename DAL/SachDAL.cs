@@ -33,6 +33,12 @@ namespace DAL
             string query = "INSERT INTO SACH VALUES(N'" + sach.TenSach + "', '" + sach.IDTheLoai + "', '" + sach.NhaXuatBan + "', '" + sach.NamXuatBan + "', '0', '0')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int UpdateSach(int SoLuong, string GiaTien, string MaSach)
+        {
+            string query = "UPDATE SACH SET SOLUONG = (SELECT SOLUONG FROM SACH WHERE MASACH = '" + MaSach + "')  + " + SoLuong + ", GIATIEN = '" + GiaTien +
+                           "' WHERE MASACH = '" + MaSach + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public int UpdateSach(Sach sach)
         {
             string query = "UPDATE SACH SET TENSACH = N'" + sach.TenSach + "', IDTHELOAI = '" + sach.IDTheLoai +

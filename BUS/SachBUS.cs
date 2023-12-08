@@ -25,7 +25,11 @@ namespace BUS
         public DataTable GetAllSach()
         {
             return SachDAL.Instance.GetAllSach();
-        }   
+        }
+        public int UpdateSach(int SoLuong, string GiaTien, string MaSach)
+        {
+            return SachDAL.Instance.UpdateSach(SoLuong, GiaTien, MaSach);
+        }
         public int InsertSach(Sach sach)
         {
             return SachDAL.Instance.InsertSach(sach);
