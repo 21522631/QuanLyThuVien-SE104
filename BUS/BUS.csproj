@@ -50,6 +50,7 @@
     <Compile Include="LoaiDocGiaBUS.cs" />
     <Compile Include="NguoiDungBUS.cs" />
     <Compile Include="PhieuNhapSachBUS.cs" />
+    <Compile Include="PhieuThuTienPhatBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachBUS.cs" />
     <Compile Include="TacGiaBUS.cs" />
