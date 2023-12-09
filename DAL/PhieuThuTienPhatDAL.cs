@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace DAL
             string query = "SELECT SOPTTP, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, NGAYTHU, TONGNO, SOTIENTHU, CONLAI " +
                            "FROM PHIEUTHUTIENPHAT";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public int InsertPhieuThuTienPhat(PhieuThuTienPhat PTTP)
+        {
+            string query = "INSERT INTO PHIEUTHUTIENPHAT VALUES('" + PTTP.IDDocGia + "', '" + PTTP.NgayThu + "', '" + PTTP.TongNo + "', '" +
+                           PTTP.SoTienThu + "', '" + PTTP.ConLai +  "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

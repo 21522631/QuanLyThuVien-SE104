@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,7 +13,7 @@ namespace BUS
     {
         private static PhieuThuTienPhatBUS instance;
         private PhieuThuTienPhatBUS() { }
-        public static PhieuThuTienPhatBUS Instance 
+        public static PhieuThuTienPhatBUS Instance
         {
             get
             {
@@ -24,6 +25,10 @@ namespace BUS
         public DataTable GetAllPhieuThuTienPhat()
         {
             return PhieuThuTienPhatDAL.Instance.GetAllPhieuThuTienPhat();
+        }
+        public int InsertPhieuThuTienPhat(PhieuThuTienPhat PTTP)
+        {
+            return PhieuThuTienPhatDAL.Instance.InsertPhieuThuTienPhat(PTTP);
         }
     }
 }

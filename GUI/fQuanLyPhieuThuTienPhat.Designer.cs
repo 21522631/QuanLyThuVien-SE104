@@ -46,8 +46,8 @@
             this.txtTongNo = new System.Windows.Forms.TextBox();
             this.txtConLai = new System.Windows.Forms.TextBox();
             this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
-            this.cboDocGia = new System.Windows.Forms.ComboBox();
             this.txtSoPhieuThu = new System.Windows.Forms.TextBox();
+            this.txtMaDocGia = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPTTP)).BeginInit();
@@ -75,6 +75,7 @@
             this.btnThemPhieuThu.TabIndex = 31;
             this.btnThemPhieuThu.Text = "Thêm phiếu thu";
             this.btnThemPhieuThu.UseVisualStyleBackColor = true;
+            this.btnThemPhieuThu.Click += new System.EventHandler(this.btnThemPhieuThu_Click);
             // 
             // groupBox12
             // 
@@ -93,11 +94,12 @@
             this.dgvPTTP.Name = "dgvPTTP";
             this.dgvPTTP.Size = new System.Drawing.Size(763, 221);
             this.dgvPTTP.TabIndex = 0;
+            this.dgvPTTP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPTTP_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtMaDocGia);
             this.groupBox1.Controls.Add(this.txtSoPhieuThu);
-            this.groupBox1.Controls.Add(this.cboDocGia);
             this.groupBox1.Controls.Add(this.dtmNgayThu);
             this.groupBox1.Controls.Add(this.txtConLai);
             this.groupBox1.Controls.Add(this.txtTongNo);
@@ -228,16 +230,6 @@
             this.dtmNgayThu.Size = new System.Drawing.Size(91, 20);
             this.dtmNgayThu.TabIndex = 88;
             // 
-            // cboDocGia
-            // 
-            this.cboDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboDocGia.FormattingEnabled = true;
-            this.cboDocGia.Location = new System.Drawing.Point(289, 39);
-            this.cboDocGia.Name = "cboDocGia";
-            this.cboDocGia.Size = new System.Drawing.Size(91, 21);
-            this.cboDocGia.TabIndex = 89;
-            // 
             // txtSoPhieuThu
             // 
             this.txtSoPhieuThu.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -245,6 +237,14 @@
             this.txtSoPhieuThu.Name = "txtSoPhieuThu";
             this.txtSoPhieuThu.Size = new System.Drawing.Size(91, 20);
             this.txtSoPhieuThu.TabIndex = 90;
+            // 
+            // txtMaDocGia
+            // 
+            this.txtMaDocGia.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaDocGia.Location = new System.Drawing.Point(289, 40);
+            this.txtMaDocGia.Name = "txtMaDocGia";
+            this.txtMaDocGia.Size = new System.Drawing.Size(91, 20);
+            this.txtMaDocGia.TabIndex = 91;
             // 
             // fQuanLyPhieuThuTienPhat
             // 
@@ -285,7 +285,7 @@
         private System.Windows.Forms.TextBox txtTongNo;
         private System.Windows.Forms.TextBox txtConLai;
         private System.Windows.Forms.DateTimePicker dtmNgayThu;
-        private System.Windows.Forms.ComboBox cboDocGia;
         private System.Windows.Forms.TextBox txtSoPhieuThu;
+        private System.Windows.Forms.TextBox txtMaDocGia;
     }
 }
