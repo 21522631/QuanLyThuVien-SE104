@@ -33,7 +33,6 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dgvPTTP = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSoTienThu = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
             this.txtSoPhieuThu = new System.Windows.Forms.TextBox();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
+            this.txtSoTienThu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPTTP)).BeginInit();
@@ -98,12 +98,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSoTienThu);
             this.groupBox1.Controls.Add(this.txtMaDocGia);
             this.groupBox1.Controls.Add(this.txtSoPhieuThu);
             this.groupBox1.Controls.Add(this.dtmNgayThu);
             this.groupBox1.Controls.Add(this.txtConLai);
             this.groupBox1.Controls.Add(this.txtTongNo);
-            this.groupBox1.Controls.Add(this.txtSoTienThu);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
@@ -116,13 +116,6 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết phiếu thu tiền phạt";
-            // 
-            // txtSoTienThu
-            // 
-            this.txtSoTienThu.Location = new System.Drawing.Point(495, 65);
-            this.txtSoTienThu.Name = "txtSoTienThu";
-            this.txtSoTienThu.Size = new System.Drawing.Size(92, 20);
-            this.txtSoTienThu.TabIndex = 55;
             // 
             // label10
             // 
@@ -195,6 +188,7 @@
             this.btnXoa.TabIndex = 17;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -204,6 +198,7 @@
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtTongNo
             // 
@@ -246,6 +241,14 @@
             this.txtMaDocGia.Size = new System.Drawing.Size(91, 20);
             this.txtMaDocGia.TabIndex = 91;
             // 
+            // txtSoTienThu
+            // 
+            this.txtSoTienThu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSoTienThu.Location = new System.Drawing.Point(495, 66);
+            this.txtSoTienThu.Name = "txtSoTienThu";
+            this.txtSoTienThu.Size = new System.Drawing.Size(91, 20);
+            this.txtSoTienThu.TabIndex = 92;
+            // 
             // fQuanLyPhieuThuTienPhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,7 +275,6 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dgvPTTP;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtSoTienThu;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
@@ -287,5 +289,6 @@
         private System.Windows.Forms.DateTimePicker dtmNgayThu;
         private System.Windows.Forms.TextBox txtSoPhieuThu;
         private System.Windows.Forms.TextBox txtMaDocGia;
+        private System.Windows.Forms.TextBox txtSoTienThu;
     }
 }

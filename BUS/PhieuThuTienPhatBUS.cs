@@ -30,5 +30,13 @@ namespace BUS
         {
             return PhieuThuTienPhatDAL.Instance.InsertPhieuThuTienPhat(PTTP);
         }
+        public int UpdatePhieuThuTienPhat(string SoPTTN, string NgayThu)
+        {
+            return PhieuThuTienPhatDAL.Instance.UpdatePhieuThuTienPhat(SoPTTN, NgayThu);
+        }
+        public int DeletePhieuThuTienPhat(string SoPTTP)
+        {
+            return PhieuThuTienPhatBUS.Instance.DeletePhieuThuTienPhat(SoPTTP);
+        }
     }
 }

@@ -40,6 +40,23 @@ namespace GUI
             txtMaDocGia.Text = dgvPTTP.Rows[index].Cells[1].Value.ToString();
             dtmNgayThu.Text = dgvPTTP.Rows[index].Cells[2].Value.ToString();
             txtTongNo.Text = dgvPTTP.Rows[index].Cells[3].Value.ToString();
+            txtSoTienThu.Text = dgvPTTP.Rows[index].Cells[4].Value.ToString();
+            txtConLai.Text = dgvPTTP.Rows[index].Cells[5].Value.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            PhieuThuTienPhatBUS.Instance.UpdatePhieuThuTienPhat(txtSoPhieuThu.Text.ToString(), dtmNgayThu.Text.ToString());
+            dgvPTTP.DataSource = PhieuThuTienPhatBUS.Instance.GetAllPhieuThuTienPhat();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            PhieuThuTienPhatBUS.Instance.DeletePhieuThuTienPhat(txtSoPhieuThu.Text.ToString());
+            //int TongNo = Convert.ToInt32(txtSoTienThu.Text.ToString()) + Convert.ToInt32(DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text.ToString()).Rows[0]["TONGNO"].ToString());
+            // DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text.ToString(), TongNo.ToString());
+            dgvPTTP.DataSource = PhieuThuTienPhatBUS.Instance.GetAllPhieuThuTienPhat();
+
         }
     }
 }

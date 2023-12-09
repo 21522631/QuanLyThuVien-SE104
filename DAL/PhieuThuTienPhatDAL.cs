@@ -33,5 +33,15 @@ namespace DAL
                            PTTP.SoTienThu + "', '" + PTTP.ConLai +  "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int UpdatePhieuThuTienPhat(string SoPTTP, string NgayThu)
+        {
+            string query = "UPDATE PHIEUTHUTIENPHAT SET NGAYTHU = '" + NgayThu + "' WHERE SOPTTP = '" + SoPTTP + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeletePhieuThuTienPhat(string SoPTTP)
+        {
+            string query = "DELETE FROM PHIEUTHUTIENPHAT WHERE SOPTTP = '" + SoPTTP + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }
