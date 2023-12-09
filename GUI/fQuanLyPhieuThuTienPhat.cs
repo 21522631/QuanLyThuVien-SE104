@@ -53,8 +53,8 @@ namespace GUI
         private void btnXoa_Click(object sender, EventArgs e)
         {
             PhieuThuTienPhatBUS.Instance.DeletePhieuThuTienPhat(txtSoPhieuThu.Text.ToString());
-            //int TongNo = Convert.ToInt32(txtSoTienThu.Text.ToString()) + Convert.ToInt32(DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text.ToString()).Rows[0]["TONGNO"].ToString());
-            // DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text.ToString(), TongNo.ToString());
+            int TongNo = Convert.ToInt32(txtSoTienThu.Text.ToString()) + Convert.ToInt32(DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text.ToString()).Rows[0]["TONGNO"].ToString());
+            DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text.ToString(), TongNo.ToString());
             dgvPTTP.DataSource = PhieuThuTienPhatBUS.Instance.GetAllPhieuThuTienPhat();
 
         }

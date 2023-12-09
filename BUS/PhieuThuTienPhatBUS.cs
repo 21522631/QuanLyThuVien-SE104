@@ -36,7 +36,7 @@ namespace BUS
         }
         public int DeletePhieuThuTienPhat(string SoPTTP)
         {
-            return PhieuThuTienPhatBUS.Instance.DeletePhieuThuTienPhat(SoPTTP);
+            return PhieuThuTienPhatDAL.Instance.DeletePhieuThuTienPhat(SoPTTP);
         }
     }
 }
