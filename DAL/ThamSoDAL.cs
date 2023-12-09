@@ -38,5 +38,12 @@ namespace DAL
             thamso.ApDungQDTienThu = Convert.ToInt32(data.Rows[0][8].ToString());
             return thamso;
         }
+        public int UpdateThamSo(ThamSo thamso)
+        {
+            string query = "UPDATE THAMSO SET TUOITOITHIEU = '" + thamso.TuoiToiThieu + "', TUOITOIDA = '" + thamso.TuoiToiDa + "', DONGIAPHAT = '" + thamso.DonGiaPhat + "', APDUNGQDTIENTHU = '" + thamso.ApDungQDTienThu +
+                           "', THOIHANTHE = '" + thamso.ThoiHanThe + "', KHOANGCACHNAMXB = '" + thamso.KhoangCachNamXB + "', SONGAYMUONTOIDA = '" + thamso.SoNgayMuonToiDa + "', SOSACHMUONTOIDA = '" + thamso.SoSachMuonToiDa +
+                           "' WHERE ID = 1";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

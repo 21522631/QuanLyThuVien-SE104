@@ -12,7 +12,7 @@ namespace BUS
     {
         private static ThamSoBUS instance;
         private ThamSoBUS() { }
-        public static ThamSoBUS Instance 
+        public static ThamSoBUS Instance
         {
             get
             {
@@ -24,6 +24,10 @@ namespace BUS
         public ThamSo GetThamSo()
         {
             return ThamSoDAL.Instance.GetThamSo();
+        }
+        public int UpdateThamSo(ThamSo thamso)
+        {
+            return ThamSoDAL.Instance.UpdateThamSo(thamso);
         }
     }
 }
