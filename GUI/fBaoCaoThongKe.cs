@@ -26,7 +26,7 @@ namespace GUI
 
         private void fBaoCaoThongKe_Load(object sender, EventArgs e)
         {
-
+            if 
         }
     }
 }
