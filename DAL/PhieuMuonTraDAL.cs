@@ -37,6 +37,12 @@ namespace DAL
                            "GROUP BY IDDOCGIA";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetCuonSachTraTre(string Ngay)
+        {
+            string query = "SELECT IDCUONSACH, NGAYMUON, NGAYPHAITRA FROM PHIEUMUONTRA " +
+                           "WHERE NGAYTRA IS NULL AND NGAYPHAITRA < '" + Ngay + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertPhieuMuonTra(PhieuMuonTra PMT)
         {
             string query = "INSERT INTO PHIEUMUONTRA VALUES('" + PMT.IDDocGia + "', '" + PMT.IDCuonSach + "', '" + PMT.NgayMuon + "', '" + PMT.NgayPhaiTra + "', NULL, '0')";

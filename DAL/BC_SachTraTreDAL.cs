@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -25,6 +26,11 @@ namespace DAL
         {
             string query = "SELECT * FROM BC_SACHTRATRE WHERE NGAY = '" + Ngay + "'";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public int InsertBC_SachTraTre(BC_SachTraTre BC)
+        {
+            string query = "INSERT BC_SACHTRATRE VALUES('" + BC.Ngay + "', '" + BC.IDCuonSach + "', '" + BC.NgayMuon + "', '" + BC.SoNgayTraTre + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

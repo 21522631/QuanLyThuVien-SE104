@@ -78,9 +78,8 @@ namespace GUI
                 }
                 txtTongTien.Text = TongTien.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Cuốn sách sẽ được thêm tự động khi lưu!");
             }
         }
 

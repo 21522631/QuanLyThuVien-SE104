@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DTO;
+using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,15 +20,72 @@ namespace GUI
             InitializeComponent();
             this.tabBaoCaoThongKe.SelectedIndex = Index;
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void fBaoCaoThongKe_Load(object sender, EventArgs e)
         {
-            if 
+            string Ngay = DateTime.Now.ToString("dd/MM/yyyy");
+            DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
+            int SoLuongSachTraTre = data.Rows.Count;
+            if(SoLuongSachTraTre > 0) 
+            {
+                dgvBCSachTraTre.DataSource = data;
+            }
+            else
+            {
+                BC_SachTraTre BC = new BC_SachTraTre();
+                BC.Ngay = Ngay;
+                DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
+                if (SachTraTre.Rows.Count > 0)
+                    for (int i  = 0; i < SachTraTre.Rows.Count; i++) 
+                    {
+                        BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
+                        BC.NgayMuon = SachTraTre.Rows[i][1].ToString();
+                        string NgayTra = SachTraTre.Rows[i][2].ToString();
+                        BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
+                        BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
+                    }
+                dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
+            }    
+        }
+
+        private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnTKSachTraTre_Click(object sender, EventArgs e)
+        {
+            string Ngay = dtmTGBCSachTraTre.Text;
+            DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
+            int SoLuongSachTraTre = data.Rows.Count;
+            if (SoLuongSachTraTre > 0)
+            {
+                dgvBCSachTraTre.DataSource = data;
+            }
+            else
+            {
+                BC_SachTraTre BC = new BC_SachTraTre();
+
+                try
+                {
+                    BC_SachTraTre BC = new BC_SachTraTre();
+                    BC.Ngay = Ngay;
+                    DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
+                    if (SachTraTre.Rows.Count > 0)
+                        for (int i = 0; i < SachTraTre.Rows.Count; i++)
+                        {
+                            BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
+                            BC.NgayMuon = SachTraTre.Rows[i][1].ToString();
+                            string NgayTra = SachTraTre.Rows[i][2].ToString();
+                            BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
+                            BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
+                        }
+                    dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
+                }
+                catch (Exception)
+                {
+                    BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
+                    dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
+                }
+            }
         }
     }
 }

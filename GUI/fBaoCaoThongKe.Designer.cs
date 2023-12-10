@@ -101,7 +101,7 @@
             // 
             // dtmTGBCSachTraTre
             // 
-            this.dtmTGBCSachTraTre.CustomFormat = "MM/yyyy";
+            this.dtmTGBCSachTraTre.CustomFormat = "dd/MM/yyyy";
             this.dtmTGBCSachTraTre.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtmTGBCSachTraTre.Location = new System.Drawing.Point(363, 24);
             this.dtmTGBCSachTraTre.Name = "dtmTGBCSachTraTre";
@@ -116,6 +116,7 @@
             this.btnTKSachTraTre.TabIndex = 2;
             this.btnTKSachTraTre.Text = "Thống Kê";
             this.btnTKSachTraTre.UseVisualStyleBackColor = true;
+            this.btnTKSachTraTre.Click += new System.EventHandler(this.btnTKSachTraTre_Click);
             // 
             // label1
             // 
@@ -195,6 +196,7 @@
             this.btnTKTinhHinhMuon.TabIndex = 2;
             this.btnTKTinhHinhMuon.Text = "Thống Kê";
             this.btnTKTinhHinhMuon.UseVisualStyleBackColor = true;
+            this.btnTKTinhHinhMuon.Click += new System.EventHandler(this.btnTKTinhHinhMuon_Click);
             // 
             // label19
             // 
