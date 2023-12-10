@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace DAL
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetBC_SachTraTre(string Ngay)
+        {
+            string query = "SELECT * FROM BC_SACHTRATRE WHERE NGAY = '" + Ngay + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }
