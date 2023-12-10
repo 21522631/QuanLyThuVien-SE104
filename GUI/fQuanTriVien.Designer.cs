@@ -401,12 +401,14 @@
             this.thêmPhiếuThuToolStripMenuItem.Name = "thêmPhiếuThuToolStripMenuItem";
             this.thêmPhiếuThuToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.thêmPhiếuThuToolStripMenuItem.Text = "Thêm phiếu thu tiền phạt";
+            this.thêmPhiếuThuToolStripMenuItem.Click += new System.EventHandler(this.thêmPhiếuThuToolStripMenuItem_Click);
             // 
             // xoáPhiếuThuToolStripMenuItem
             // 
             this.xoáPhiếuThuToolStripMenuItem.Name = "xoáPhiếuThuToolStripMenuItem";
             this.xoáPhiếuThuToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.xoáPhiếuThuToolStripMenuItem.Text = "Cập nhập phiếu thu tiền phạt";
+            this.xoáPhiếuThuToolStripMenuItem.Click += new System.EventHandler(this.xoáPhiếuThuToolStripMenuItem_Click);
             // 
             // báoCáoThốngKêToolStripMenuItem
             // 
@@ -434,6 +436,7 @@
             this.quyĐịnhToolStripMenuItem.Name = "quyĐịnhToolStripMenuItem";
             this.quyĐịnhToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.quyĐịnhToolStripMenuItem.Text = "Quy định";
+            this.quyĐịnhToolStripMenuItem.Click += new System.EventHandler(this.quyĐịnhToolStripMenuItem_Click);
             // 
             // fQuanTriVien
             // 

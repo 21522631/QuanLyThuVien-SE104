@@ -253,5 +253,23 @@ namespace GUI
             fQuanLyPhieuMuonTra f = new fQuanLyPhieuMuonTra();
             f.ShowDialog();
         }
+
+        private void thêmPhiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThemPhieuThuTienPhat f = new fThemPhieuThuTienPhat();
+            f.ShowDialog();
+        }
+
+        private void xoáPhiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuThuTienPhat f = new fQuanLyPhieuThuTienPhat();
+            f.ShowDialog();
+        }
+
+        private void quyĐịnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuyDinh f = new fQuyDinh();
+            f.ShowDialog();
+        }
     }
 }
