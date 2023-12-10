@@ -418,18 +418,21 @@
             this.báoCáoThốngKêToolStripMenuItem.Name = "báoCáoThốngKêToolStripMenuItem";
             this.báoCáoThốngKêToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.báoCáoThốngKêToolStripMenuItem.Text = "Báo cáo thống kê";
+            this.báoCáoThốngKêToolStripMenuItem.Click += new System.EventHandler(this.báoCáoThốngKêToolStripMenuItem_Click);
             // 
             // báoCáoMượnTheoThểLoạiSáchToolStripMenuItem
             // 
             this.báoCáoMượnTheoThểLoạiSáchToolStripMenuItem.Name = "báoCáoMượnTheoThểLoạiSáchToolStripMenuItem";
             this.báoCáoMượnTheoThểLoạiSáchToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.báoCáoMượnTheoThểLoạiSáchToolStripMenuItem.Text = "Mượn theo thể loại sách";
+            this.báoCáoMượnTheoThểLoạiSáchToolStripMenuItem.Click += new System.EventHandler(this.báoCáoMượnTheoThểLoạiSáchToolStripMenuItem_Click);
             // 
             // báoCáoSáchTrảToolStripMenuItem
             // 
             this.báoCáoSáchTrảToolStripMenuItem.Name = "báoCáoSáchTrảToolStripMenuItem";
             this.báoCáoSáchTrảToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.báoCáoSáchTrảToolStripMenuItem.Text = "Sách trả trễ";
+            this.báoCáoSáchTrảToolStripMenuItem.Click += new System.EventHandler(this.báoCáoSáchTrảToolStripMenuItem_Click);
             // 
             // quyĐịnhToolStripMenuItem
             // 
