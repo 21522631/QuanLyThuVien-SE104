@@ -32,7 +32,6 @@ namespace DAL
             using (SqlConnection conn = new SqlConnection(strconn))
             {
                 conn.Open();
-                query = "SET DATEFORMAT DMY " + query;
                 SqlCommand command = new SqlCommand(query, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);
@@ -58,7 +57,7 @@ namespace DAL
             using (SqlConnection conn = new SqlConnection(strconn))
             {
                 conn.Open();
-                query = "SET DATEFORMAT DMY " + query;
+               // query = "SET DATEFORMAT DMY " + query;
                 SqlCommand command = new SqlCommand(query, conn);
                 data = command.ExecuteScalar();       
             }

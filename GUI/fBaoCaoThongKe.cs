@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace GUI
 {
@@ -22,7 +23,7 @@ namespace GUI
         }
         private void fBaoCaoThongKe_Load(object sender, EventArgs e)
         {
-            string Ngay = DateTime.Now.ToString("dd/MM/yyyy");
+            string Ngay = DateTime.Now.ToString("MM/dd/yyyy");
             DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             int SoLuongSachTraTre = data.Rows.Count;
             if(SoLuongSachTraTre > 0) 
@@ -32,13 +33,13 @@ namespace GUI
             else
             {
                 BC_SachTraTre BC = new BC_SachTraTre();
-                BC.Ngay = Ngay;
+                BC.Ngay = DateTime.Now.ToString("dd/MM/YYYY");
                 DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
                 if (SachTraTre.Rows.Count > 0)
                     for (int i  = 0; i < SachTraTre.Rows.Count; i++) 
                     {
                         BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
-                        BC.NgayMuon = SachTraTre.Rows[i][1].ToString();
+                        BC.NgayMuon = Convert.ToDateTime(SachTraTre.Rows[i][1]).ToString("dd/MM/yyyy");
                         string NgayTra = SachTraTre.Rows[i][2].ToString();
                         BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
                         BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
@@ -53,7 +54,8 @@ namespace GUI
 
         private void btnTKSachTraTre_Click(object sender, EventArgs e)
         {
-            string Ngay = dtmTGBCSachTraTre.Text;
+            string[] formats = { "dd/MM/yyyy" };
+            string Ngay = DateTime.ParseExact(dtmTGBCSachTraTre.Text.ToString(), formats, new CultureInfo("en-US"), DateTimeStyles.None).ToString();
             DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             int SoLuongSachTraTre = data.Rows.Count;
             if (SoLuongSachTraTre > 0)
@@ -62,29 +64,20 @@ namespace GUI
             }
             else
             {
-                BC_SachTraTre BC = new BC_SachTraTre();
 
-                try
-                {
-                    BC_SachTraTre BC = new BC_SachTraTre();
-                    BC.Ngay = Ngay;
-                    DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
-                    if (SachTraTre.Rows.Count > 0)
-                        for (int i = 0; i < SachTraTre.Rows.Count; i++)
-                        {
-                            BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
-                            BC.NgayMuon = SachTraTre.Rows[i][1].ToString();
-                            string NgayTra = SachTraTre.Rows[i][2].ToString();
-                            BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
-                            BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
-                        }
-                    dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
-                }
-                catch (Exception)
-                {
-                    BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
-                    dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
-                }
+                BC_SachTraTre BC = new BC_SachTraTre();
+                BC.Ngay = dtmTGBCSachTraTre.Text.ToString();
+                DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
+                if (SachTraTre.Rows.Count > 0)
+                    for (int i = 0; i < SachTraTre.Rows.Count; i++)
+                    {
+                        BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
+                        BC.NgayMuon = Convert.ToDateTime(SachTraTre.Rows[i][1]).ToString("dd/MM/yyyy");
+                        string NgayTra = SachTraTre.Rows[i][2].ToString();
+                        BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
+                        BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
+                    }
+                dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             }
         }
     }
