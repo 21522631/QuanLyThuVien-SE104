@@ -43,6 +43,15 @@ namespace DAL
                            "WHERE NGAYTRA IS NULL AND NGAYPHAITRA < '" + Ngay + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable SearchPhieuMuonTra(string ThongTinTraCuu)
+        {
+            string query = "SELECT SOPMT, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, " +
+                           "CAST('CS' + RIGHT('0000' + CAST(IDCUONSACH AS VARCHAR(4)), 4) AS CHAR(6)) AS MACUONSACH, " +
+                           "NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA " +
+                           "WHERE SOPMT LIKE '%" + ThongTinTraCuu + "%' OR NGAYMUON LIKE '%" + ThongTinTraCuu + "%' OR NGAYPHAITRA LIKE '%" + ThongTinTraCuu + "%' OR NGAYTRA LIKE '%" + ThongTinTraCuu +
+                           "%' OR IDDOCGIA LIKE '%" + ThongTinTraCuu + "%' OR IDCUONSACH LIKE '%" + ThongTinTraCuu + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertPhieuMuonTra(PhieuMuonTra PMT)
         {
             string query = "INSERT INTO PHIEUMUONTRA VALUES('" + PMT.IDDocGia + "', '" + PMT.IDCuonSach + "', '" + PMT.NgayMuon + "', '" + PMT.NgayPhaiTra + "', NULL, '0')";

@@ -57,11 +57,11 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dgvCuonSach = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTraCuuCuonSach = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabTraCuuSach.SuspendLayout();
             this.tabpgTracCuuSach.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -123,7 +123,6 @@
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.Size = new System.Drawing.Size(752, 249);
             this.dgvSach.TabIndex = 1;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -375,6 +374,16 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Tra cứu";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(17, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(218, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "* Chú ý: tình trạng 1 : còn, 0 : đã được mượn";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -410,16 +419,6 @@
             this.label12.Size = new System.Drawing.Size(184, 13);
             this.label12.TabIndex = 27;
             this.label12.Text = "TRA CỨU THÔNG TIN CUỐN SÁCH";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(17, 52);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(218, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "* Chú ý: tình trạng 1 : còn, 0 : đã được mượn";
             // 
             // fTraCuuSach
             // 

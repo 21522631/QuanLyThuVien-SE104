@@ -327,12 +327,14 @@
             this.quảnLýMượnTrảToolStripMenuItem.Name = "quảnLýMượnTrảToolStripMenuItem";
             this.quảnLýMượnTrảToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.quảnLýMượnTrảToolStripMenuItem.Text = "Quản lý mượn trả";
+            this.quảnLýMượnTrảToolStripMenuItem.Click += new System.EventHandler(this.quảnLýMượnTrảToolStripMenuItem_Click);
             // 
             // tìmKiếmPhiếuMượnTrảToolStripMenuItem
             // 
             this.tìmKiếmPhiếuMượnTrảToolStripMenuItem.Name = "tìmKiếmPhiếuMượnTrảToolStripMenuItem";
             this.tìmKiếmPhiếuMượnTrảToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.tìmKiếmPhiếuMượnTrảToolStripMenuItem.Text = "Tra cứu phiếu mượn trả";
+            this.tìmKiếmPhiếuMượnTrảToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmPhiếuMượnTrảToolStripMenuItem_Click);
             // 
             // thêmPhiếuMượnTrảToolStripMenuItem
             // 
@@ -388,6 +390,7 @@
             this.quảnLýPhiếuThuTiềnPhạtToolStripMenuItem.Name = "quảnLýPhiếuThuTiềnPhạtToolStripMenuItem";
             this.quảnLýPhiếuThuTiềnPhạtToolStripMenuItem.Size = new System.Drawing.Size(164, 20);
             this.quảnLýPhiếuThuTiềnPhạtToolStripMenuItem.Text = "Quản lý phiếu thu tiền phạt";
+            this.quảnLýPhiếuThuTiềnPhạtToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuThuTiềnPhạtToolStripMenuItem_Click);
             // 
             // tìmKiếmPhiếuThuToolStripMenuItem
             // 
