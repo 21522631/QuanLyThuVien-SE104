@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,15 @@ namespace DAL
         public DataTable GetAllPhieuNhapSach()
         {
             string query = "SELECT SOPNS, NGAYLAP, TONGTIEN FROM PHIEUNHAPSACH";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable SearchPhieuNhapSach(string ThongTinTraCuu)
+        {
+            //DateTime dt;
+            //DateTime.TryParseExact(ThongTinTraCuu,"dd-MM-yyyy",CultureInfo.InvariantCulture,DateTimeStyles.None,out dt);
+            string Ngay = ThongTinTraCuu.ToString().Replace("\\", "-");
+            string query = "SELECT SOPNS, NGAYLAP, TONGTIEN FROM PHIEUNHAPSACH " + 
+                           "WHERE SOPNS LIKE '%" + ThongTinTraCuu + "%' OR NGAYLAP LIKE '%" + Ngay + "%' OR TONGTIEN LIKE '%" + ThongTinTraCuu + "%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertPhieuNhapSach(string NgayLap)

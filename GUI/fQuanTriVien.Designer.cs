@@ -366,6 +366,7 @@
             this.traCứuThôngTinPhiếuNhậpToolStripMenuItem.Name = "traCứuThôngTinPhiếuNhậpToolStripMenuItem";
             this.traCứuThôngTinPhiếuNhậpToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.traCứuThôngTinPhiếuNhậpToolStripMenuItem.Text = "Tra cứu phiếu nhập sách";
+            this.traCứuThôngTinPhiếuNhậpToolStripMenuItem.Click += new System.EventHandler(this.traCứuThôngTinPhiếuNhậpToolStripMenuItem_Click);
             // 
             // thêmPhiếuNhậpToolStripMenuItem
             // 

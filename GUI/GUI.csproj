@@ -184,6 +184,12 @@
     <Compile Include="fTraCuuPhieuMuonTra.Designer.cs">
       <DependentUpon>fTraCuuPhieuMuonTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTraCuuPhieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTraCuuPhieuNhapSach.Designer.cs">
+      <DependentUpon>fTraCuuPhieuNhapSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTraCuuSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fTraCuuPhieuMuonTra.resx">
       <DependentUpon>fTraCuuPhieuMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTraCuuPhieuNhapSach.resx">
+      <DependentUpon>fTraCuuPhieuNhapSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTraCuuSach.resx">
       <DependentUpon>fTraCuuSach.cs</DependentUpon>

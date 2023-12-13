@@ -307,5 +307,11 @@ namespace GUI
             fTraCuuPhieuMuonTra f = new fTraCuuPhieuMuonTra();
             f.ShowDialog();
         }
+
+        private void traCứuThôngTinPhiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuPhieuNhapSach f = new fTraCuuPhieuNhapSach();
+            f.ShowDialog();
+        }
     }
 }
