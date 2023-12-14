@@ -42,7 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BC_SachTraTreDAL.cs" />
-    <Compile Include="BC_TinhHinhMuonSach.cs" />
+    <Compile Include="BC_TinhHinhMuonSachDAL.cs" />
+    <Compile Include="CT_BC_TìnhHinhMuonTraDAL.cs" />
     <Compile Include="PhieuMuonTraDAL.cs" />
     <Compile Include="CT_PhieuNhapSachDAL.cs" />
     <Compile Include="CT_TacGiaDAL.cs" />

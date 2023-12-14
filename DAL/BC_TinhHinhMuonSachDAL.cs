@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class BC_TinhHinhMuonSach
+    public class BC_TinhHinhMuonSachDAL
     {
-        private static BC_TinhHinhMuonSach instance;
-        private BC_TinhHinhMuonSach() { }
-        public static BC_TinhHinhMuonSach Instance 
+        private static BC_TinhHinhMuonSachDAL instance;
+        private BC_TinhHinhMuonSachDAL() { }
+        public static BC_TinhHinhMuonSachDAL Instance 
         {
             get
             {
-                if (instance == null) instance = new BC_TinhHinhMuonSach();
+                if (instance == null) instance = new BC_TinhHinhMuonSachDAL();
                 return instance;
             }
             private set => instance = value;
