@@ -26,6 +26,10 @@ namespace BUS
         {
             return PhieuThuTienPhatDAL.Instance.GetAllPhieuThuTienPhat();
         }
+        public DataTable SearchPhieuThuTienPhat(string ThongTinTraCuu)
+        {
+            return PhieuThuTienPhatDAL.Instance.SearchPhieuThuTienPhat(ThongTinTraCuu);
+        }
         public int InsertPhieuThuTienPhat(PhieuThuTienPhat PTTP)
         {
             return PhieuThuTienPhatDAL.Instance.InsertPhieuThuTienPhat(PTTP);

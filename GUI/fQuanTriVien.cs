@@ -102,7 +102,8 @@ namespace GUI
 
         private void tìmKiếmPhiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fTraCuuPhieuThuTienPhat f = new fTraCuuPhieuThuTienPhat();
+            f.ShowDialog();
         }
 
         private void loạiĐộcGiảToolStripMenuItem1_Click(object sender, EventArgs e)
