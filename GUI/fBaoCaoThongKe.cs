@@ -50,6 +50,8 @@ namespace GUI
 
         private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)
         {
+            int Nam = dtmTGBCTinhHinhMuon.Value.Year;
+            int Thang = dtmTGBCTinhHinhMuon.Value.Month;
         }
 
         private void btnTKSachTraTre_Click(object sender, EventArgs e)
