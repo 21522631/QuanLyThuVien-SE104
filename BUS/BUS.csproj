@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BC_SachTraTreBUS.cs" />
+    <Compile Include="CT_BC_TinhHinhMuonTraBUS.cs" />
     <Compile Include="PhieuMuonTraBUS.cs" />
     <Compile Include="CT_PhieuNhapSachBUS.cs" />
     <Compile Include="CT_TacGiaBUS.cs" />
