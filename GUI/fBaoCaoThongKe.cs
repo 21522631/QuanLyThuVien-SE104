@@ -33,7 +33,7 @@ namespace GUI
             else
             {
                 BC_SachTraTre BC = new BC_SachTraTre();
-                BC.Ngay = DateTime.Now.ToString("dd/MM/YYYY");
+                BC.Ngay = DateTime.Now.ToString("dd/MM/yyyy");
                 DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
                 if (SachTraTre.Rows.Count > 0)
                     for (int i  = 0; i < SachTraTre.Rows.Count; i++) 
