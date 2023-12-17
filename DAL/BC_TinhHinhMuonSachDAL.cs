@@ -22,23 +22,23 @@ namespace DAL
             }
             private set => instance = value;
         }
-        public DataTable GetAllBC_TinhHinhMuonTra()
+        public DataTable GetAllBC_TinhHinhMuonSach()
         {
             string query = "SELECT MABCTHMS, THANG, NAM FROM BC_TINHHINHMUONSACH ";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetBC_TinhHinhMuonTraByNgay(int Thang, int Nam)
+        public DataTable GetBC_TinhHinhMuonSachByNgay(int Thang, int Nam)
         {
             string query = "SELECT MABCTHMS, THANG, NAM FROM BC_TINHHINHMUONSACH " +
                            "WHERE THANG = '" + Thang + "' AND NAM = '" + Nam + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public int InsertBC_TinhHinhMuonTra(BC_TinhHinhMuonSach BC)
+        public int InsertBC_TinhHinhMuonSach(BC_TinhHinhMuonSach BC)
         {
             string query = "INSERT INTO BC_TINHHINHMUONSACH VALUES('" + BC.Thang + "', '" + BC.Nam + "', '" + BC.TongSoLuotMuon + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public int UpdateBC_TinhHinhMuonTra(BC_TinhHinhMuonSach BC)
+        public int UpdateBC_TinhHinhMuonSach(BC_TinhHinhMuonSach BC)
         {
             string query = "UPDATE BC_TINHHINHMUONSACH SET TONGSOLUOTMUON = N'" + BC.TongSoLuotMuon +
                            "' WHERE THANG = '" + BC.Thang + "' AND NAM = '" + BC.Nam + "'";
