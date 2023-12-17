@@ -1,6 +1,9 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +21,28 @@ namespace DAL
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetAllBC_TinhHinhMuonTra()
+        {
+            string query = "SELECT MABCTHMS, THANG, NAM FROM BC_TINHHINHMUONSACH ";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetBC_TinhHinhMuonTraByNgay(int Thang, int Nam)
+        {
+            string query = "SELECT MABCTHMS, THANG, NAM FROM BC_TINHHINHMUONSACH " +
+                           "WHERE THANG = '" + Thang + "' AND NAM = '" + Nam + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public int InsertBC_TinhHinhMuonTra(BC_TinhHinhMuonSach BC)
+        {
+            string query = "INSERT INTO BC_TINHHINHMUONSACH VALUES('" + BC.Thang + "', '" + BC.Nam + "', '" + BC.TongSoLuotMuon + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateBC_TinhHinhMuonTra(BC_TinhHinhMuonSach BC)
+        {
+            string query = "UPDATE BC_TINHHINHMUONSACH SET TONGSOLUOTMUON = N'" + BC.TongSoLuotMuon +
+                           "' WHERE THANG = '" + BC.Thang + "' AND NAM = '" + BC.Nam + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }
