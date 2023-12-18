@@ -23,6 +23,33 @@ namespace GUI
         }
         private void fBaoCaoThongKe_Load(object sender, EventArgs e)
         {
+            int Thang = dtmTGBCTinhHinhMuon.Value.Month;
+            int Nam = dtmTGBCTinhHinhMuon.Value.Year;
+            DataTable data1 = BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam);
+            if(data1.Rows.Count > 0)
+            {
+                int IDBC = Convert.ToInt32(data1.Rows[0][0].ToString());
+                dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(IDBC);
+            }
+            else
+            {
+                DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);
+                BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
+                BC.Thang = Thang;
+                BC.Nam = Nam;
+                BC.TongSoLuotMuon = Convert.ToInt32(dt.Compute("SUM(SOLUOTMUON)", string.Empty));
+                BC_TinhHinhMuonSachBUS.Instance.InsertBC_TinhHinhMuonSach(BC);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
+                    CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
+                    CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
+                    CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
+                    CTBC.TiLe = CTBC.SoLuotMuon / BC.TongSoLuotMuon;
+                    CT_BC_TinhHinhMuonSachBUS.Instance.InsertCT_BCTinhHinhMuonSach(CTBC);
+                }
+                dgvBCTinhHinhMuon.DataSource = dt;
+            }    
             string Ngay = DateTime.Now.ToString("MM/dd/yyyy");
             DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             int SoLuongSachTraTre = data.Rows.Count;
@@ -45,7 +72,7 @@ namespace GUI
                         BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
                     }
                 dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
-            }    
+            }
         }
 
         private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)

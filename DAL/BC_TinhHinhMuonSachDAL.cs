@@ -24,12 +24,12 @@ namespace DAL
         }
         public DataTable GetAllBC_TinhHinhMuonSach()
         {
-            string query = "SELECT MABCTHMS, THANG, NAM FROM BC_TINHHINHMUONSACH ";
+            string query = "SELECT ID, MABCTHMS, THANG, NAM, TONGSOLUOTMUON FROM BC_TINHHINHMUONSACH ";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable GetBC_TinhHinhMuonSachByNgay(int Thang, int Nam)
         {
-            string query = "SELECT MABCTHMS, THANG, NAM FROM BC_TINHHINHMUONSACH " +
+            string query = "SELECT ID, MABCTHMS, THANG, NAM, TONGSOLUOTMUON FROM BC_TINHHINHMUONSACH " +
                            "WHERE THANG = '" + Thang + "' AND NAM = '" + Nam + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }

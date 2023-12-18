@@ -43,6 +43,16 @@ namespace DAL
                            "WHERE NGAYTRA IS NULL AND NGAYPHAITRA < '" + Ngay + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetTongSoLuotMuonTheoTheLoaiByNgay(int Thang, int Nam)
+        {
+            string query = "SELECT THELOAI.ID, THELOAI.TENTHELOAI, COUNT(SOPMT) AS SOLUOTMUON " +
+                           "FROM PHIEUMUONTRA JOIN CUONSACH ON PHIEUMUONTRA.IDCUONSACH = CUONSACH.ID " +
+                           "JOIN SACH ON SACH.ID = CUONSACH.IDSACH " +
+                           "JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID " +
+                           "WHERE NGAYMUON LIKE '" + Nam + "-" + Thang + "%'" +
+                           "GROUP BY THELOAI.ID, THELOAI.TENTHELOAI";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchPhieuMuonTra(string ThongTinTraCuu)
         {
             string query = "SELECT SOPMT, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, " +

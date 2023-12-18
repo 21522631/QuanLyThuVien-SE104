@@ -34,6 +34,10 @@ namespace BUS
         {
             return PhieuMuonTraDAL.Instance.GetCuonSachTraTre(Ngay);
         }
+        public DataTable GetTongSoLuotMuonTheoTheLoaiByNgay(int Thang, int Nam)
+        {
+            return PhieuMuonTraDAL.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);
+        }
         public DataTable SearchPhieuMuonTra(string ThongTinTraCuu)
         {
             return PhieuMuonTraDAL.Instance.SearchPhieuMuonTra(ThongTinTraCuu);
