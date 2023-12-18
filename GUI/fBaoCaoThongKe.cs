@@ -45,7 +45,7 @@ namespace GUI
                     CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
                     CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
                     CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
-                    CTBC.TiLe = CTBC.SoLuotMuon / BC.TongSoLuotMuon;
+                    CTBC.TiLe = float.Parse(CTBC.SoLuotMuon.ToString()) / BC.TongSoLuotMuon;
                     CT_BC_TinhHinhMuonSachBUS.Instance.InsertCT_BCTinhHinhMuonSach(CTBC);
                 }
                 dgvBCTinhHinhMuon.DataSource = dt;
