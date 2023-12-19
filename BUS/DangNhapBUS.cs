@@ -23,18 +23,24 @@ namespace BUS
             }
             private set => instance = value;
         }
-        public int CheckDangNhap(string TenDangNhap, string MatKhau)
+        public NguoiDung CheckDangNhap(string TenDangNhap, string MatKhau)
         {
             DataTable data = NguoiDungDAL.Instance.GetNguoiDungByTaiKhoanMatKhau(TenDangNhap, MatKhau);
 
             if (data.Rows.Count > 0)
             {
-                DataRow datarow = data.Rows[0];
-                return (int)datarow["IDNhomNguoiDung"];  
+                NguoiDung nguoidung = new NguoiDung();
+                nguoidung.ID = Convert.ToInt32(data.Rows[0][0].ToString());
+                nguoidung.MaNguoiDung = data.Rows[0][1].ToString();
+                nguoidung.TenNguoiDung = data.Rows[0][2].ToString();
+                nguoidung.TenDangNhap = TenDangNhap;
+                nguoidung.MatKhau = MatKhau;
+                nguoidung.IDNhomNguoiDung = Convert.ToInt32(data.Rows[0][5].ToString());
+                return nguoidung;
             }
             else
             {
-                return 0;
+                return null;
             }
         }
     }

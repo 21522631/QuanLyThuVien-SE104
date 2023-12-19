@@ -29,32 +29,35 @@ namespace GUI
         {
             string TenDangNhap = txtTenDangNhap.Text;
             string MatKhau = txtMatKhau.Text;
-
-            switch (DangNhapBUS.Instance.CheckDangNhap(TenDangNhap, MatKhau))
+            NguoiDung nguoidung = new NguoiDung();
+            nguoidung = DangNhapBUS.Instance.CheckDangNhap(TenDangNhap, MatKhau);
+            if (nguoidung == null)
             {
-                case 0:
-                    txtTenDangNhap.Focus();
-                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi!", MessageBoxButtons.OK);
-                    break;
-                case 1:
-                    fQuanTriVien fQTV = new fQuanTriVien();
-                    this.Hide();
-                    fQTV.ShowDialog();
-                    this.Show();
-                    break;
-                case 2:
-                    fThuThu fTT = new fThuThu();
-                    this.Hide();
-                    fTT.ShowDialog();
-                    this.Show();
-                    break;
-                case 3:
-                    fDocGia fDG = new fDocGia();
-                    this.Hide();
-                    fDG.ShowDialog();
-                    this.Show();
-                    break;
+                txtTenDangNhap.Focus();
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi!", MessageBoxButtons.OK);
             }
+            else
+                switch (nguoidung.IDNhomNguoiDung)
+                {
+                    case 1:
+                        fQuanTriVien fQTV = new fQuanTriVien();
+                        this.Hide();
+                        fQTV.ShowDialog();
+                        this.Show();
+                        break;
+                    case 2:
+                        fThuThu fTT = new fThuThu();
+                        this.Hide();
+                        fTT.ShowDialog();
+                        this.Show();
+                        break;
+                    case 3:
+                        fDocGia fDG = new fDocGia();
+                        this.Hide();
+                        fDG.ShowDialog();
+                        this.Show();
+                        break;
+                }
                 
         }
 
@@ -64,6 +67,11 @@ namespace GUI
                 txtMatKhau.UseSystemPasswordChar = false;
             else
                 txtMatKhau.UseSystemPasswordChar = true;
+        }
+
+        private void fDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

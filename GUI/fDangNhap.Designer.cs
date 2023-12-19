@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chkHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.chkHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(302, 105);
             this.panel2.TabIndex = 6;
+            // 
+            // chkHienThiMatKhau
+            // 
+            this.chkHienThiMatKhau.AutoSize = true;
+            this.chkHienThiMatKhau.Location = new System.Drawing.Point(90, 85);
+            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
+            this.chkHienThiMatKhau.Size = new System.Drawing.Size(109, 17);
+            this.chkHienThiMatKhau.TabIndex = 6;
+            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
             // 
             // label1
             // 
@@ -127,17 +138,6 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // chkHienThiMatKhau
-            // 
-            this.chkHienThiMatKhau.AutoSize = true;
-            this.chkHienThiMatKhau.Location = new System.Drawing.Point(90, 85);
-            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
-            this.chkHienThiMatKhau.Size = new System.Drawing.Size(109, 17);
-            this.chkHienThiMatKhau.TabIndex = 6;
-            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
-            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
-            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
-            // 
             // fDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fDangNhap";
             this.Text = "Phần Mềm Quản Lý Thư Viện";
+            this.Load += new System.EventHandler(this.fDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
