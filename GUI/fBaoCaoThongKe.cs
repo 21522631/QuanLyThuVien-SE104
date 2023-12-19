@@ -39,16 +39,16 @@ namespace GUI
                 BC.Nam = Nam;
                 BC.TongSoLuotMuon = Convert.ToInt32(dt.Compute("SUM(SOLUOTMUON)", string.Empty));
                 BC_TinhHinhMuonSachBUS.Instance.InsertBC_TinhHinhMuonSach(BC);
+                CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
+                CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
-                    CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
                     CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
                     CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
                     CTBC.TiLe = float.Parse(CTBC.SoLuotMuon.ToString()) / BC.TongSoLuotMuon;
                     CT_BC_TinhHinhMuonSachBUS.Instance.InsertCT_BCTinhHinhMuonSach(CTBC);
                 }
-                dgvBCTinhHinhMuon.DataSource = dt;
+                dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(CTBC.IDBCTHMS);
             }    
             string Ngay = DateTime.Now.ToString("MM/dd/yyyy");
             DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
