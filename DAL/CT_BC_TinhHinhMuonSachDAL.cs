@@ -34,5 +34,11 @@ namespace DAL
             string query = "INSERT INTO CT_BC_TINHHINHMUONSACH VALUES('" + CTBC.IDBCTHMS + "', '" + CTBC.IDTheLoai + "', '" + CTBC.SoLuotMuon + "', '" + CTBC.TiLe + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int UpdateCT_BCTinhHinhMuonSach(CT_BC_TinhHinhMuonSach CTBC)
+        {
+            string query = "UPDATE CT_BC_TINHHINHMUONSACH SET SOLUOTMUON = '" + CTBC.SoLuotMuon + "', TILE = '" + CTBC.TiLe + "' " +
+                           "'WHERE IDBCTHMS = '" + CTBC.IDBCTHMS + "' AND IDTHELOAI = '" + CTBC.IDTheLoai + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

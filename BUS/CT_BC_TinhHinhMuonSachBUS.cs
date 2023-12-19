@@ -31,5 +31,9 @@ namespace BUS
         {
             return CT_BC_TinhHinhMuonSachDAL.Instance.InsertCT_BCTinhHinhMuonSach(CTBC);
         }
+        public int UpdateCT_BCTinhHinhMuonSach(CT_BC_TinhHinhMuonSach CTBC)
+        {
+            return CT_BC_TinhHinhMuonSachDAL.Instance.UpdateCT_BCTinhHinhMuonSach(CTBC);
+        }
     }
 }
