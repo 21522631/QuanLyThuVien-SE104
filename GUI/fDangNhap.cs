@@ -40,7 +40,7 @@ namespace GUI
                 switch (nguoidung.IDNhomNguoiDung)
                 {
                     case 1:
-                        fQuanTriVien fQTV = new fQuanTriVien();
+                        fQuanTriVien fQTV = new fQuanTriVien(nguoidung);
                         this.Hide();
                         fQTV.ShowDialog();
                         this.Show();
