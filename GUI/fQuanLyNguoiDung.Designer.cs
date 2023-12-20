@@ -84,6 +84,7 @@
             this.dgvNguoiDung.Name = "dgvNguoiDung";
             this.dgvNguoiDung.Size = new System.Drawing.Size(764, 226);
             this.dgvNguoiDung.TabIndex = 0;
+            this.dgvNguoiDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguoiDung_CellContentClick);
             // 
             // tabQuanNguoiDung
             // 
@@ -135,7 +136,7 @@
             this.btnThemDocGia.Name = "btnThemDocGia";
             this.btnThemDocGia.Size = new System.Drawing.Size(103, 23);
             this.btnThemDocGia.TabIndex = 22;
-            this.btnThemDocGia.Text = " ";
+            this.btnThemDocGia.Text = " Thêm người dùng";
             this.btnThemDocGia.UseVisualStyleBackColor = true;
             // 
             // groupBox3

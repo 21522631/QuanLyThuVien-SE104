@@ -22,5 +22,14 @@ namespace GUI
         {
             dgvNguoiDung.DataSource = NguoiDungBUS.Instance.GetAllNguoiDung();
         }
+
+        private void dgvNguoiDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvNguoiDung.CurrentRow.Index;
+            txtMaNguoiDung.Text = dgvNguoiDung.Rows[index].Cells[0].Value.ToString();
+            txtTenNguoiDung.Text = dgvNguoiDung.Rows[index].Cells[1].Value.ToString();
+            txtTenDangNhap.Text = dgvNguoiDung.Rows[index].Cells[2].Value.ToString();
+            cboNhomNguoiDung.Text = dgvNguoiDung.Rows[index].Cells[3].Value.ToString();
+        }
     }
 }
