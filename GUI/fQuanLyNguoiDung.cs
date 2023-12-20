@@ -82,7 +82,13 @@ namespace GUI
         {
             NhomNguoiDungBUS.Instance.DeleteNhomNguoiDung(txtMaNhomNguoiDung.Text);
             dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+        }
 
+        private void btnThemNhomNguoiDung_Click(object sender, EventArgs e)
+        {
+            fThemNhomNguoiDung f = new fThemNhomNguoiDung();
+            f.ShowDialog();
+            dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
         }
     }
 }

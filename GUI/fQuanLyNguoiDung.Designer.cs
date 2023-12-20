@@ -282,6 +282,7 @@
             this.btnThemNhomNguoiDung.TabIndex = 23;
             this.btnThemNhomNguoiDung.Text = "Thêm nhóm người dùng";
             this.btnThemNhomNguoiDung.UseVisualStyleBackColor = true;
+            this.btnThemNhomNguoiDung.Click += new System.EventHandler(this.btnThemNhomNguoiDung_Click);
             // 
             // groupBox4
             // 
