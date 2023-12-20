@@ -46,16 +46,16 @@
             this.txtTenNguoiDung = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabpgNhomNguoiDung = new System.Windows.Forms.TabPage();
-            this.btnXoaLoaiDocGia = new System.Windows.Forms.Button();
-            this.btnSuaLoaiDocGia = new System.Windows.Forms.Button();
-            this.btnThemLoaiDocGia = new System.Windows.Forms.Button();
+            this.btnXoaNhomNguoiDung = new System.Windows.Forms.Button();
+            this.btnSuaNhomNguoiDung = new System.Windows.Forms.Button();
+            this.btnThemNhomNguoiDung = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgvLoaiDocGia = new System.Windows.Forms.DataGridView();
+            this.dgvNhomNguoiDung = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtMaLoaiDocGia = new System.Windows.Forms.TextBox();
+            this.txtMaNhomNguoiDung = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtTenLoaiDocGia = new System.Windows.Forms.TextBox();
+            this.txtTenNhomNguoiDung = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             this.tabQuanNguoiDung.SuspendLayout();
@@ -64,7 +64,7 @@
             this.groupBox1.SuspendLayout();
             this.tabpgNhomNguoiDung.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiDung)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,7 +150,7 @@
             this.groupBox3.Size = new System.Drawing.Size(776, 251);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông tin tất cả độc giả";
+            this.groupBox3.Text = "Thông tin tất cả người dùng";
             // 
             // groupBox1
             // 
@@ -167,7 +167,7 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 141);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin chi tiết độc giả";
+            this.groupBox1.Text = "Thông tin chi tiết người dùng";
             // 
             // txtTenDangNhap
             // 
@@ -240,9 +240,9 @@
             // 
             // tabpgNhomNguoiDung
             // 
-            this.tabpgNhomNguoiDung.Controls.Add(this.btnXoaLoaiDocGia);
-            this.tabpgNhomNguoiDung.Controls.Add(this.btnSuaLoaiDocGia);
-            this.tabpgNhomNguoiDung.Controls.Add(this.btnThemLoaiDocGia);
+            this.tabpgNhomNguoiDung.Controls.Add(this.btnXoaNhomNguoiDung);
+            this.tabpgNhomNguoiDung.Controls.Add(this.btnSuaNhomNguoiDung);
+            this.tabpgNhomNguoiDung.Controls.Add(this.btnThemNhomNguoiDung);
             this.tabpgNhomNguoiDung.Controls.Add(this.groupBox4);
             this.tabpgNhomNguoiDung.Controls.Add(this.label10);
             this.tabpgNhomNguoiDung.Controls.Add(this.groupBox5);
@@ -254,50 +254,53 @@
             this.tabpgNhomNguoiDung.Text = "Nhóm người dùng";
             this.tabpgNhomNguoiDung.UseVisualStyleBackColor = true;
             // 
-            // btnXoaLoaiDocGia
+            // btnXoaNhomNguoiDung
             // 
-            this.btnXoaLoaiDocGia.Location = new System.Drawing.Point(704, 175);
-            this.btnXoaLoaiDocGia.Name = "btnXoaLoaiDocGia";
-            this.btnXoaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaLoaiDocGia.TabIndex = 25;
-            this.btnXoaLoaiDocGia.Text = "Xoá";
-            this.btnXoaLoaiDocGia.UseVisualStyleBackColor = true;
+            this.btnXoaNhomNguoiDung.Location = new System.Drawing.Point(704, 175);
+            this.btnXoaNhomNguoiDung.Name = "btnXoaNhomNguoiDung";
+            this.btnXoaNhomNguoiDung.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaNhomNguoiDung.TabIndex = 25;
+            this.btnXoaNhomNguoiDung.Text = "Xoá";
+            this.btnXoaNhomNguoiDung.UseVisualStyleBackColor = true;
+            this.btnXoaNhomNguoiDung.Click += new System.EventHandler(this.btnXoaNhomNguoiDung_Click);
             // 
-            // btnSuaLoaiDocGia
+            // btnSuaNhomNguoiDung
             // 
-            this.btnSuaLoaiDocGia.Location = new System.Drawing.Point(623, 175);
-            this.btnSuaLoaiDocGia.Name = "btnSuaLoaiDocGia";
-            this.btnSuaLoaiDocGia.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaLoaiDocGia.TabIndex = 24;
-            this.btnSuaLoaiDocGia.Text = "Sửa";
-            this.btnSuaLoaiDocGia.UseVisualStyleBackColor = true;
+            this.btnSuaNhomNguoiDung.Location = new System.Drawing.Point(623, 175);
+            this.btnSuaNhomNguoiDung.Name = "btnSuaNhomNguoiDung";
+            this.btnSuaNhomNguoiDung.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaNhomNguoiDung.TabIndex = 24;
+            this.btnSuaNhomNguoiDung.Text = "Sửa";
+            this.btnSuaNhomNguoiDung.UseVisualStyleBackColor = true;
+            this.btnSuaNhomNguoiDung.Click += new System.EventHandler(this.btnSuaNhomNguoiDung_Click);
             // 
-            // btnThemLoaiDocGia
+            // btnThemNhomNguoiDung
             // 
-            this.btnThemLoaiDocGia.Location = new System.Drawing.Point(10, 175);
-            this.btnThemLoaiDocGia.Name = "btnThemLoaiDocGia";
-            this.btnThemLoaiDocGia.Size = new System.Drawing.Size(105, 23);
-            this.btnThemLoaiDocGia.TabIndex = 23;
-            this.btnThemLoaiDocGia.Text = "Thêm loại độc giả";
-            this.btnThemLoaiDocGia.UseVisualStyleBackColor = true;
+            this.btnThemNhomNguoiDung.Location = new System.Drawing.Point(10, 175);
+            this.btnThemNhomNguoiDung.Name = "btnThemNhomNguoiDung";
+            this.btnThemNhomNguoiDung.Size = new System.Drawing.Size(128, 23);
+            this.btnThemNhomNguoiDung.TabIndex = 23;
+            this.btnThemNhomNguoiDung.Text = "Thêm nhóm người dùng";
+            this.btnThemNhomNguoiDung.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dgvLoaiDocGia);
+            this.groupBox4.Controls.Add(this.dgvNhomNguoiDung);
             this.groupBox4.Location = new System.Drawing.Point(10, 204);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(776, 250);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin tất cả loại độc giả";
+            this.groupBox4.Text = "Thông tin tất cả nhóm người dùng";
             // 
-            // dgvLoaiDocGia
+            // dgvNhomNguoiDung
             // 
-            this.dgvLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoaiDocGia.Location = new System.Drawing.Point(6, 19);
-            this.dgvLoaiDocGia.Name = "dgvLoaiDocGia";
-            this.dgvLoaiDocGia.Size = new System.Drawing.Size(763, 225);
-            this.dgvLoaiDocGia.TabIndex = 0;
+            this.dgvNhomNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhomNguoiDung.Location = new System.Drawing.Point(6, 19);
+            this.dgvNhomNguoiDung.Name = "dgvNhomNguoiDung";
+            this.dgvNhomNguoiDung.Size = new System.Drawing.Size(763, 225);
+            this.dgvNhomNguoiDung.TabIndex = 0;
+            this.dgvNhomNguoiDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhomNguoiDung_CellContentClick);
             // 
             // label10
             // 
@@ -310,49 +313,49 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.txtMaLoaiDocGia);
+            this.groupBox5.Controls.Add(this.txtMaNhomNguoiDung);
             this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.txtTenLoaiDocGia);
+            this.groupBox5.Controls.Add(this.txtTenNhomNguoiDung);
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Location = new System.Drawing.Point(10, 28);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(776, 141);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thông tin chi tiết loại độc giả";
+            this.groupBox5.Text = "Thông tin chi tiết nhóm người dùng";
             // 
-            // txtMaLoaiDocGia
+            // txtMaNhomNguoiDung
             // 
-            this.txtMaLoaiDocGia.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaLoaiDocGia.Location = new System.Drawing.Point(338, 36);
-            this.txtMaLoaiDocGia.Name = "txtMaLoaiDocGia";
-            this.txtMaLoaiDocGia.Size = new System.Drawing.Size(84, 20);
-            this.txtMaLoaiDocGia.TabIndex = 19;
+            this.txtMaNhomNguoiDung.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaNhomNguoiDung.Location = new System.Drawing.Point(342, 36);
+            this.txtMaNhomNguoiDung.Name = "txtMaNhomNguoiDung";
+            this.txtMaNhomNguoiDung.Size = new System.Drawing.Size(84, 20);
+            this.txtMaNhomNguoiDung.TabIndex = 19;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(234, 39);
+            this.label12.Location = new System.Drawing.Point(225, 39);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 13);
+            this.label12.Size = new System.Drawing.Size(107, 13);
             this.label12.TabIndex = 18;
-            this.label12.Text = "Mã loại độc giả";
+            this.label12.Text = "Mã nhóm người dùng";
             // 
-            // txtTenLoaiDocGia
+            // txtTenNhomNguoiDung
             // 
-            this.txtTenLoaiDocGia.Location = new System.Drawing.Point(338, 65);
-            this.txtTenLoaiDocGia.Name = "txtTenLoaiDocGia";
-            this.txtTenLoaiDocGia.Size = new System.Drawing.Size(197, 20);
-            this.txtTenLoaiDocGia.TabIndex = 12;
+            this.txtTenNhomNguoiDung.Location = new System.Drawing.Point(342, 69);
+            this.txtTenNhomNguoiDung.Name = "txtTenNhomNguoiDung";
+            this.txtTenNhomNguoiDung.Size = new System.Drawing.Size(164, 20);
+            this.txtTenNhomNguoiDung.TabIndex = 12;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(234, 72);
+            this.label15.Location = new System.Drawing.Point(225, 72);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(84, 13);
+            this.label15.Size = new System.Drawing.Size(111, 13);
             this.label15.TabIndex = 11;
-            this.label15.Text = "Tên loại độc giả";
+            this.label15.Text = "Tên nhóm người dùng";
             // 
             // fQuanLyNguoiDung
             // 
@@ -373,7 +376,7 @@
             this.tabpgNhomNguoiDung.ResumeLayout(false);
             this.tabpgNhomNguoiDung.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiDung)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -390,16 +393,16 @@
         private System.Windows.Forms.Button btnThemDocGia;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TabPage tabpgNhomNguoiDung;
-        private System.Windows.Forms.Button btnXoaLoaiDocGia;
-        private System.Windows.Forms.Button btnSuaLoaiDocGia;
-        private System.Windows.Forms.Button btnThemLoaiDocGia;
+        private System.Windows.Forms.Button btnXoaNhomNguoiDung;
+        private System.Windows.Forms.Button btnSuaNhomNguoiDung;
+        private System.Windows.Forms.Button btnThemNhomNguoiDung;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dgvLoaiDocGia;
+        private System.Windows.Forms.DataGridView dgvNhomNguoiDung;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtMaLoaiDocGia;
+        private System.Windows.Forms.TextBox txtMaNhomNguoiDung;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTenLoaiDocGia;
+        private System.Windows.Forms.TextBox txtTenNhomNguoiDung;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;

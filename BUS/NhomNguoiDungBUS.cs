@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -25,6 +26,18 @@ namespace BUS
         public DataTable GetAllNhomNguoiDung()
         {
             return NhomNguoiDungDAL.Instance.GetAllNhomNguoiDung();
+        }
+        public int InsertNhomNguoiDung(string TenNhom)
+        {
+            return NhomNguoiDungDAL.Instance.InsertNhomNguoiDung(TenNhom);
+        }
+        public int UpdateNhomNguoiDung(NhomNguoiDung NND)
+        {
+            return NhomNguoiDungDAL.Instance.UpdateNhomNguoiDung(NND);
+        }
+        public int DeleteNhomNguoiDung(string MaNhom)
+        {
+            return NhomNguoiDungDAL.Instance.DeleteNhomNguoiDung(MaNhom);
         }
     }
 }

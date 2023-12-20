@@ -27,6 +27,9 @@ namespace GUI
             cboNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
             cboNhomNguoiDung.DisplayMember = "TENNHOM";
             cboNhomNguoiDung.ValueMember = "ID";
+            txtMaNhomNguoiDung.Enabled = false;
+            dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+            dgvNhomNguoiDung.Columns["ID"].Visible = false;
         }
 
         private void dgvNguoiDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,6 +60,29 @@ namespace GUI
             fThemNguoiDung f = new fThemNguoiDung();
             f.ShowDialog();
             dgvNguoiDung.DataSource = NguoiDungBUS.Instance.GetAllNguoiDung();
+        }
+
+        private void dgvNhomNguoiDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvNhomNguoiDung.CurrentRow.Index;
+            txtMaNhomNguoiDung.Text = dgvNhomNguoiDung.Rows[index].Cells[1].Value.ToString();
+            txtTenNhomNguoiDung.Text = dgvNhomNguoiDung.Rows[index].Cells[2].Value.ToString();
+        }
+
+        private void btnSuaNhomNguoiDung_Click(object sender, EventArgs e)
+        {
+            NhomNguoiDung NND = new NhomNguoiDung();
+            NND.MaNhom = txtMaNhomNguoiDung.Text;
+            NND.TenNhom = txtTenNhomNguoiDung.Text;
+            NhomNguoiDungBUS.Instance.UpdateNhomNguoiDung(NND);
+            dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+        }
+
+        private void btnXoaNhomNguoiDung_Click(object sender, EventArgs e)
+        {
+            NhomNguoiDungBUS.Instance.DeleteNhomNguoiDung(txtMaNhomNguoiDung.Text);
+            dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+
         }
     }
 }
