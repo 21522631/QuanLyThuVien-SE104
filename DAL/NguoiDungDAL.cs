@@ -23,7 +23,8 @@ namespace DAL
         }
         public DataTable GetAllNguoiDung()
         {
-            string query = "SELECT * FROM NGUOIDUNG";
+            string query = "SELECT MANGUOIDUNG, TENNGUOIDUNG, TENDANGNHAP, TENNHOM " +
+                "FROM NGUOIDUNG JOIN NHOMNGUOIDUNG ON NGUOIDUNG.IDNHOMNGUOIDUNG = NHOMNGUOIDUNG.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable GetNguoiDungByTaiKhoanMatKhau(string TenDangNhap, string MatKhau)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace BUS
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetAllNguoiDung()
+        {
+            return NguoiDungDAL.Instance.GetAllNguoiDung();
+        }
+        public DataTable GetNguoiDungByTaiKhoanMatKhau(string TenDangNhap, string MatKhau)
+        {
+            return NguoiDungDAL.Instance.GetNguoiDungByTaiKhoanMatKhau(TenDangNhap, MatKhau);
         }
         public string GetIDNguoiDungByTenDangNhap(string TenDangNhap)
         {
