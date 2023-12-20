@@ -44,6 +44,7 @@
     <Compile Include="BC_SachTraTreBUS.cs" />
     <Compile Include="BC_TinhHinhMuonSachBUS.cs" />
     <Compile Include="CT_BC_TinhHinhMuonSachBUS.cs" />
+    <Compile Include="NhomNguoiDungBUS.cs" />
     <Compile Include="PhieuMuonTraBUS.cs" />
     <Compile Include="CT_PhieuNhapSachBUS.cs" />
     <Compile Include="CT_TacGiaBUS.cs" />
