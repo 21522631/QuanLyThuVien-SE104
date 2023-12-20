@@ -256,5 +256,11 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void cậpNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung();
+            f.ShowDialog();
+        }
     }
 }

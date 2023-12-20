@@ -22,7 +22,7 @@ namespace DAL
         }
         public DataTable GetAllNhomNguoiDung()
         {
-            string query = "SELECT MANHOM, TENNHOM FROM NHOMNGUOIDUNG";
+            string query = "SELECT ID, MANHOM, TENNHOM FROM NHOMNGUOIDUNG";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

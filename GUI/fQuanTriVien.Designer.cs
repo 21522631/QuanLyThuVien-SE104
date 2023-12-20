@@ -72,6 +72,7 @@
             this.báoCáoMượnTheoThểLoạiSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoSáchTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quyĐịnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cậpNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +96,7 @@
             // quảnLýNgườiDùngToolStripMenuItem1
             // 
             this.quảnLýNgườiDùngToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cậpNhậpToolStripMenuItem,
             this.thôngTinNgườiDùngToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.quảnLýNgườiDùngToolStripMenuItem1.Name = "quảnLýNgườiDùngToolStripMenuItem1";
@@ -437,6 +439,13 @@
             this.quyĐịnhToolStripMenuItem.Text = "Quy định";
             this.quyĐịnhToolStripMenuItem.Click += new System.EventHandler(this.quyĐịnhToolStripMenuItem_Click);
             // 
+            // cậpNhậpToolStripMenuItem
+            // 
+            this.cậpNhậpToolStripMenuItem.Name = "cậpNhậpToolStripMenuItem";
+            this.cậpNhậpToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.cậpNhậpToolStripMenuItem.Text = "Cập nhập người dùng";
+            this.cậpNhậpToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậpToolStripMenuItem_Click);
+            // 
             // fQuanTriVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,5 +510,6 @@
         private System.Windows.Forms.ToolStripMenuItem thểLoạiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem thểLoạiToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cậpNhậpToolStripMenuItem;
     }
 }

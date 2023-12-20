@@ -44,6 +44,22 @@ namespace DAL
             string query = "INSERT INTO NGUOIDUNG VALUES(N'" + TenNguoiDung + "', '" + TenDangNhap + "', '" + MatKhau + "', 3)";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int InsertNguoiDung(NguoiDung nguoidung)
+        {
+            string query = "INSERT INTO NGUOIDUNG VALUES(N'" + nguoidung.TenNguoiDung + "', '" + nguoidung.TenDangNhap + "', '" + nguoidung.MatKhau + "', '" + nguoidung.IDNhomNguoiDung + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateNguoiDung(NguoiDung nguoidung)
+        {
+            string query = "UPDATE NGUOIDUNG SET TENNGUOIDUNG = N'" + nguoidung.TenNguoiDung + "', IDNHOMNGUOIDUNG = '" + nguoidung.IDNhomNguoiDung + "' " +
+                           "WHERE MANGUOIDUNG = '" + nguoidung.MaNguoiDung + "' " ;
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteNguoiDung(string MaNguoiDung)
+        {
+            string query = "DELETE FROM NGUOIDUNG WHERE MANGUOIDUNG = '" + MaNguoiDung + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 
 }

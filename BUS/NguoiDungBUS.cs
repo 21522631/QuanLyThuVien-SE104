@@ -13,7 +13,7 @@ namespace BUS
     {
         private static NguoiDungBUS instance;
         private NguoiDungBUS() { }
-        public static NguoiDungBUS Instance 
+        public static NguoiDungBUS Instance
         {
             get
             {
@@ -34,9 +34,21 @@ namespace BUS
         {
             return NguoiDungDAL.Instance.GetIDNguoiDungByTenDangNhap(TenDangNhap);
         }
-        public int InsertNguoiDungDocGia(string TenNguoiDung, string TenDangNhap, string MatKhau) 
+        public int InsertNguoiDungDocGia(string TenNguoiDung, string TenDangNhap, string MatKhau)
         {
             return NguoiDungDAL.Instance.InsertNguoiDungDocGia(TenNguoiDung, TenDangNhap, MatKhau);
+        }
+        public int InsertNguoiDung(NguoiDung nguoidung)
+        {
+            return NguoiDungDAL.Instance.InsertNguoiDung(nguoidung);
+        }
+        public int UpdateNguoiDung(NguoiDung nguoidung)
+        {
+            return NguoiDungDAL.Instance.UpdateNguoiDung(nguoidung);
+        }
+        public int DeleteNguoiDung(string MaNguoiDung)
+        {
+            return NguoiDungDAL.Instance.DeleteNguoiDung(MaNguoiDung);
         }
     }
 }
