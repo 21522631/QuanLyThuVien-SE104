@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="BC_SachTraTreDAL.cs" />
     <Compile Include="BC_TinhHinhMuonSachDAL.cs" />
+    <Compile Include="ChucNangDAL.cs" />
     <Compile Include="CT_BC_TinhHinhMuonSachDAL.cs" />
     <Compile Include="NhomNguoiDungDAL.cs" />
+    <Compile Include="PhanQuyenDAL.cs" />
     <Compile Include="PhieuMuonTraDAL.cs" />
     <Compile Include="CT_PhieuNhapSachDAL.cs" />
     <Compile Include="CT_TacGiaDAL.cs" />

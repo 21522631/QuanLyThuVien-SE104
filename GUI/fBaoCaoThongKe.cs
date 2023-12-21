@@ -33,6 +33,7 @@ namespace GUI
             }
             else
             {
+                //Check trh chưa có phiếu mượn nào
                 DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);
                 BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
                 BC.Thang = Thang;
