@@ -32,7 +32,13 @@ namespace DAL
             string query = "INSERT INTO CHUCNANG VALUES(N'" + chucnang.TenChucNang + "', N'" + chucnang.TenManHinhDuocLoad + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public int DeleteChucNang(int MaChucNang)
+        public int UpdateChucNang(ChucNang chucnang)
+        {
+            string query = "UPDATE CHUCNANG SET TENCHUCNANG = N'" + chucnang.TenChucNang + "', TENMANHINHDUOCLOAD = N'" + chucnang.TenManHinhDuocLoad +
+                           "' WHERE MACHUCNANG = '" + chucnang.MaChucNang + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteChucNang(string MaChucNang)
         {
             string query = "DELETE FROM CHUCNANG WHERE MACHUCNANG = '" + MaChucNang + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);

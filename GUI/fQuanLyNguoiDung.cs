@@ -30,6 +30,9 @@ namespace GUI
             txtMaNhomNguoiDung.Enabled = false;
             dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
             dgvNhomNguoiDung.Columns["ID"].Visible = false;
+            txtMaChucNang.Enabled = false;
+            dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
+            dgvChucNang.Columns["ID"].Visible = false;
         }
 
         private void dgvNguoiDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,6 +92,37 @@ namespace GUI
             fThemNhomNguoiDung f = new fThemNhomNguoiDung();
             f.ShowDialog();
             dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+        }
+
+        private void dgvChucNang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvChucNang.CurrentRow.Index;
+            txtMaChucNang.Text = dgvChucNang.Rows[index].Cells[1].Value.ToString();
+            txtTenChucNang.Text = dgvChucNang.Rows[index].Cells[2].Value.ToString();
+            txtTenManHinhDuocLoad.Text = dgvChucNang.Rows[index].Cells[3].Value.ToString();
+        }
+
+        private void btnSuaChucNang_Click(object sender, EventArgs e)
+        {
+            ChucNang chucnang = new ChucNang();
+            chucnang.MaChucNang = txtMaChucNang.Text;
+            chucnang.TenChucNang = txtTenChucNang.Text;
+            chucnang.TenManHinhDuocLoad = txtTenManHinhDuocLoad.Text;
+            ChucNangBUS.Instance.UpdateChucNang(chucnang);
+            dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
+        }
+
+        private void btnXoaChucNang_Click(object sender, EventArgs e)
+        {
+            ChucNangBUS.Instance.DeleteChucNang(txtMaChucNang.Text);
+            dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
+        }
+
+        private void btnThemChucNang_Click(object sender, EventArgs e)
+        {
+            fThemChucNang f = new fThemChucNang();
+            f.ShowDialog();
+            dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
         }
     }
 }
