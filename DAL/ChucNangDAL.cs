@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,21 @@ namespace DAL
                 return instance;
             }
             private set => instance = value;
+        }
+        public DataTable GetAllChucNang()
+        {
+            string query = "SELECT ID, MACHUCNANG, TENCHUCNANG, TENMANHINHDUOCLOAD FROM CHUCNANG";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public int InsertChucNang(ChucNang chucnang)
+        {
+            string query = "INSERT INTO CHUCNANG VALUES(N'" + chucnang.TenChucNang + "', N'" + chucnang.TenManHinhDuocLoad + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteChucNang(int MaChucNang)
+        {
+            string query = "DELETE FROM CHUCNANG WHERE MACHUCNANG = '" + MaChucNang + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }
