@@ -179,10 +179,5 @@ namespace GUI
             f.ShowDialog();
             dgvSach.DataSource = SachBUS.Instance.GetAllSach();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

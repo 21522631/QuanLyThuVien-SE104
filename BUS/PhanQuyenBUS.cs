@@ -31,9 +31,9 @@ namespace BUS
         {
             return PhanQuyenDAL.Instance.InsertPhanQuyen(phanquyen);
         }
-        public int DeletePhanQuyen(int IDNND) 
+        public int DeletePhanQuyen(PhanQuyen phanquyen) 
         {
-            return PhanQuyenDAL.Instance.DeletePhanQuyen(IDNND);
+            return PhanQuyenDAL.Instance.DeletePhanQuyen(phanquyen);
         }
     }
 }

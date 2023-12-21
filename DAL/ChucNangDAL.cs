@@ -27,6 +27,11 @@ namespace DAL
             string query = "SELECT ID, MACHUCNANG, TENCHUCNANG, TENMANHINHDUOCLOAD FROM CHUCNANG";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetChucNangByID(int ID)
+        {
+            string query = "SELECT ID, MACHUCNANG, TENCHUCNANG, TENMANHINHDUOCLOAD FROM CHUCNANG WHERE ID = '" + ID + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertChucNang(ChucNang chucnang)
         {
             string query = "INSERT INTO CHUCNANG VALUES(N'" + chucnang.TenChucNang + "', N'" + chucnang.TenManHinhDuocLoad + "')";

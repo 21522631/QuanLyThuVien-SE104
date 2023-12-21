@@ -26,6 +26,11 @@ namespace DAL
             string query = "SELECT ID, MANHOM, TENNHOM FROM NHOMNGUOIDUNG";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetNhomNguoiDungByID(int ID)
+        {
+            string query = "SELECT ID, MANHOM, TENNHOM FROM NHOMNGUOIDUNG WHERE ID = '" + ID + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertNhomNguoiDung(string TenNhom)
         {
             string query = "INSERT INTO NHOMNGUOIDUNG VALUES(N'" + TenNhom + "')";

@@ -14,7 +14,7 @@ namespace BUS
         private static ChucNangBUS instance;
         ChucNangBUS() { }
 
-        public static ChucNangBUS Instance 
+        public static ChucNangBUS Instance
         {
             get
             {
@@ -26,6 +26,10 @@ namespace BUS
         public DataTable GetAllChucNang()
         {
             return ChucNangDAL.Instance.GetAllChucNang();
+        }
+        public DataTable GetChucNangByID(int ID)
+        {
+            return ChucNangDAL.Instance.GetChucNangByID(ID);
         }
         public int InsertChucNang(ChucNang chucnang)
         {

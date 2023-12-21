@@ -33,6 +33,15 @@ namespace GUI
             txtMaChucNang.Enabled = false;
             dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
             dgvChucNang.Columns["ID"].Visible = false;
+            cboMaNhomNguoiDungPQ.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+            cboMaNhomNguoiDungPQ.DisplayMember = "MANHOM";
+            cboMaNhomNguoiDungPQ.ValueMember = "ID";
+            cboMaNhomNguoiDungPQ.SelectedItem = null;
+            cboChucNangPQ.DataSource = ChucNangBUS.Instance.GetAllChucNang();
+            cboChucNangPQ.DisplayMember = "MACHUCNANG";
+            cboChucNangPQ.ValueMember = "ID";
+            cboChucNangPQ.SelectedItem = null;
+
         }
 
         private void dgvNguoiDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -123,6 +132,75 @@ namespace GUI
             fThemChucNang f = new fThemChucNang();
             f.ShowDialog();
             dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
+        }
+
+        private void cboMaNhomNguoiDungPQ_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboMaNhomNguoiDungPQ.SelectedItem != null)
+            {
+                try
+                { 
+                    int ID = Convert.ToInt32(cboMaNhomNguoiDungPQ.SelectedValue.ToString());
+                    txtTenNhomNguoiDungPQ.Text = NhomNguoiDungBUS.Instance.GetNhomNguoiDungByID(ID).Rows[0][2].ToString();
+                    dgvPhanQuyen.DataSource = PhanQuyenBUS.Instance.GetAllPhanQuyenByIDNhomNguoiDung(ID);
+                }
+                catch { }
+            }
+            else
+            {
+                txtTenNhomNguoiDungPQ.Text = "";
+            }    
+        }
+
+        private void dgvPhanQuyen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvPhanQuyen.CurrentRow.Index;
+            cboChucNangPQ.Text = dgvPhanQuyen.Rows[index].Cells[0].Value.ToString();
+            txtTenChucNangPQ.Text = dgvPhanQuyen.Rows[index].Cells[1].Value.ToString();
+            txtTenManHinhDuocLoad.Text = dgvPhanQuyen.Rows[index].Cells[2].Value.ToString();
+        }
+
+        private void btnXoaPhanQuyen_Click(object sender, EventArgs e)
+        {
+            PhanQuyen phanquyen = new PhanQuyen();
+            phanquyen.IDNhomNguoiDung = Convert.ToInt32(cboMaNhomNguoiDungPQ.SelectedValue.ToString());
+            phanquyen.IDChucNang = Convert.ToInt32(cboChucNangPQ.SelectedValue.ToString());
+            PhanQuyenBUS.Instance.DeletePhanQuyen(phanquyen);
+            dgvPhanQuyen.DataSource = PhanQuyenBUS.Instance.GetAllPhanQuyenByIDNhomNguoiDung(phanquyen.IDNhomNguoiDung);
+            cboChucNangPQ.Text = "";
+            txtTenChucNangPQ.Text = "";
+            txtTenManHinhDuocLoadPQ.Text = "";
+        }
+
+        private void btnThemPhanQuyen_Click(object sender, EventArgs e)
+        {
+            PhanQuyen phanquyen = new PhanQuyen();
+            phanquyen.IDNhomNguoiDung = Convert.ToInt32(cboMaNhomNguoiDungPQ.SelectedValue.ToString());
+            phanquyen.IDChucNang = Convert.ToInt32(cboChucNangPQ.SelectedValue.ToString());
+            PhanQuyenBUS.Instance.InsertPhanQuyen(phanquyen);
+            dgvPhanQuyen.DataSource = PhanQuyenBUS.Instance.GetAllPhanQuyenByIDNhomNguoiDung(phanquyen.IDNhomNguoiDung);
+            cboChucNangPQ.Text = "";
+            txtTenChucNangPQ.Text = "";
+            txtTenManHinhDuocLoadPQ.Text = "";
+        }
+
+        private void cboChucNangPQ_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboChucNangPQ.SelectedItem != null)
+            {
+                try
+                {
+                    int ID = Convert.ToInt32(cboChucNangPQ.SelectedValue.ToString());
+                    txtTenChucNangPQ.Text = ChucNangBUS.Instance.GetChucNangByID(ID).Rows[0][2].ToString();
+                    txtTenManHinhDuocLoadPQ.Text = ChucNangBUS.Instance.GetChucNangByID(ID).Rows[0][3].ToString();
+                }
+                catch { }
+            }
+            else
+            {
+                txtTenChucNangPQ.Text = "";
+                txtTenManHinhDuocLoadPQ.Text = "";
+            }
         }
     }
 }

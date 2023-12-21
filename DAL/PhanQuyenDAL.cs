@@ -25,7 +25,8 @@ namespace DAL
         }
         public DataTable GetAllPhanQuyenByIDNhomNguoiDung(int IDNND)
         {
-            string query = "SELECT IDCHUCNANG FROM PHANQUYEN";
+            string query = "SELECT MACHUCNANG, TENCHUCNANG, TENMANHINHDUOCLOAD FROM PHANQUYEN JOIN CHUCNANG ON PHANQUYEN.IDCHUCNANG = CHUCNANG.ID " +
+                           "WHERE IDNHOMNGUOIDUNG = '" + IDNND + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertPhanQuyen(PhanQuyen phanquyen)
@@ -33,9 +34,9 @@ namespace DAL
             string query = "INSERT INTO PHANQUYEN VALUES('" + phanquyen.IDNhomNguoiDung + "', '" + phanquyen.IDChucNang + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public int DeletePhanQuyen(int IDNND) 
+        public int DeletePhanQuyen(PhanQuyen phanquyen) 
         {
-            string query = "DELETE FROM PHANQUYEN WHERE IDNHOMNGUOIDUNG = '" + IDNND + "'";
+            string query = "DELETE FROM PHANQUYEN WHERE IDNHOMNGUOIDUNG = '" + phanquyen.IDNhomNguoiDung + "' AND IDCHUCNANG = '" + phanquyen.IDChucNang + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
