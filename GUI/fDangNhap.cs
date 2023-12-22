@@ -22,45 +22,64 @@ namespace GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+                Application.Exit();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string TenDangNhap = txtTenDangNhap.Text;
-            string MatKhau = txtMatKhau.Text;
-            NguoiDung nguoidung = new NguoiDung();
-            nguoidung = DangNhapBUS.Instance.CheckDangNhap(TenDangNhap, MatKhau);
-            if (nguoidung == null)
+            if (txtTenDangNhap.Text == "" && txtMatKhau.Text == "")
             {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTenDangNhap.Focus();
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi!", MessageBoxButtons.OK);
+            }
+            else if (txtTenDangNhap.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenDangNhap.Focus();
+            }
+            else if (txtMatKhau.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMatKhau.Focus();
             }
             else
             {
-                switch (nguoidung.IDNhomNguoiDung)
+                string TenDangNhap = txtTenDangNhap.Text;
+                string MatKhau = txtMatKhau.Text;
+                NguoiDung nguoidung = new NguoiDung();
+                nguoidung = DangNhapBUS.Instance.CheckDangNhap(TenDangNhap, MatKhau);
+                if (nguoidung == null)
                 {
-                    case 1:
-                        fQuanTriVien fQTV = new fQuanTriVien(nguoidung);
-                        this.Hide();
-                        fQTV.ShowDialog();
-                        this.Show();
-                        break;
-                    case 2:
-                        fThuThu fTT = new fThuThu(nguoidung);
-                        this.Hide();
-                        fTT.ShowDialog();
-                        this.Show();
-                        break;
-                    case 3:
-                        fDocGia fDG = new fDocGia();
-                        this.Hide();
-                        fDG.ShowDialog();
-                        this.Show();
-                        break;
+                    txtTenDangNhap.Focus();
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                txtTenDangNhap.Text = "";
-                txtMatKhau.Text = "";
+                else
+                {
+                    switch (nguoidung.IDNhomNguoiDung)
+                    {
+                        case 1:
+                            fQuanTriVien fQTV = new fQuanTriVien(nguoidung);
+                            this.Hide();
+                            fQTV.ShowDialog();
+                            this.Show();
+                            break;
+                        case 2:
+                            fThuThu fTT = new fThuThu(nguoidung);
+                            this.Hide();
+                            fTT.ShowDialog();
+                            this.Show();
+                            break;
+                        case 3:
+                            fDocGia fDG = new fDocGia();
+                            this.Hide();
+                            fDG.ShowDialog();
+                            this.Show();
+                            break;
+                    }
+                    txtTenDangNhap.Text = "";
+                    txtMatKhau.Text = "";
+                }
             }
         }
 
@@ -74,7 +93,15 @@ namespace GUI
 
         private void fDangNhap_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = txtTenDangNhap;
+        }
 
+        private void fDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn thực sự có muốn thoát chương trình!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }    
         }
     }
 }

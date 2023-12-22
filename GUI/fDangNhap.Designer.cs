@@ -50,13 +50,13 @@
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 187);
+            this.panel1.Size = new System.Drawing.Size(312, 153);
             this.panel1.TabIndex = 3;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(143, 11);
+            this.label16.Location = new System.Drawing.Point(90, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 13);
             this.label16.TabIndex = 24;
@@ -69,9 +69,9 @@
             this.panel2.Controls.Add(this.txtTenDangNhap);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtMatKhau);
-            this.panel2.Location = new System.Drawing.Point(38, 38);
+            this.panel2.Location = new System.Drawing.Point(3, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(302, 105);
+            this.panel2.Size = new System.Drawing.Size(306, 105);
             this.panel2.TabIndex = 6;
             // 
             // chkHienThiMatKhau
@@ -80,7 +80,7 @@
             this.chkHienThiMatKhau.Location = new System.Drawing.Point(90, 85);
             this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
             this.chkHienThiMatKhau.Size = new System.Drawing.Size(109, 17);
-            this.chkHienThiMatKhau.TabIndex = 6;
+            this.chkHienThiMatKhau.TabIndex = 2;
             this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
             this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
             this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
@@ -99,7 +99,7 @@
             this.txtTenDangNhap.Location = new System.Drawing.Point(90, 20);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(177, 20);
-            this.txtTenDangNhap.TabIndex = 3;
+            this.txtTenDangNhap.TabIndex = 0;
             // 
             // label2
             // 
@@ -115,25 +115,25 @@
             this.txtMatKhau.Location = new System.Drawing.Point(90, 59);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(177, 20);
-            this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(184, 149);
+            this.btnDangNhap.Location = new System.Drawing.Point(153, 127);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
-            this.btnDangNhap.TabIndex = 0;
+            this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(265, 149);
+            this.btnThoat.Location = new System.Drawing.Point(234, 127);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -142,10 +142,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 214);
+            this.ClientSize = new System.Drawing.Size(336, 175);
             this.Controls.Add(this.panel1);
             this.Name = "fDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần Mềm Quản Lý Thư Viện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fDangNhap_FormClosing);
             this.Load += new System.EventHandler(this.fDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

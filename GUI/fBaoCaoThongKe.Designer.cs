@@ -262,7 +262,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabControl tabBaoCaoThongKe;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox2;

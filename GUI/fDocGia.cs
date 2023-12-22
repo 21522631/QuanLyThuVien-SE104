@@ -17,7 +17,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void fDocGia_Load(object sender, EventArgs e)
+        private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
