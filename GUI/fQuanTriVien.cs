@@ -246,12 +246,6 @@ namespace GUI
             fTraCuuPhieuNhapSach f = new fTraCuuPhieuNhapSach();
             f.ShowDialog();
         }
-
-        private void fQuanTriVien_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -259,7 +253,66 @@ namespace GUI
 
         private void cậpNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fQuanLyNguoiDung f = new fQuanLyNguoiDung();
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung(0);
+            f.ShowDialog();
+        }
+
+        private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongTin f = new fThongTin(ref nguoidung);
+            f.ShowDialog();
+        }
+        private void ngườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThemNguoiDung f = new fThemNguoiDung();
+            f.ShowDialog();
+        }
+
+        private void nhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThemNhomNguoiDung f = new fThemNhomNguoiDung();
+            f.ShowDialog();
+        }
+
+        private void chứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThemChucNang f = new fThemChucNang();
+            f.ShowDialog();
+        }
+
+        private void ngườiDùngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung(0);
+            f.ShowDialog();
+        }
+
+        private void nhómNgườiDùngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung(1);
+            f.ShowDialog();
+        }
+
+        private void chứcNăngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung(2);
+            f.ShowDialog();
+        }
+
+        private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung(3);
+            f.ShowDialog();
+        }
+
+        private void thayĐổiThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongTin f = new fThongTin(ref nguoidung);
+            f.ShowDialog();
+        }
+
+        private void thayĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDoiMatKhau f = new fDoiMatKhau(ref nguoidung);
             f.ShowDialog();
         }
     }

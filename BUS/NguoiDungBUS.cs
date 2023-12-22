@@ -46,6 +46,14 @@ namespace BUS
         {
             return NguoiDungDAL.Instance.UpdateNguoiDung(nguoidung);
         }
+        public int UpdateTenNguoiDung(string MaNguoiDung, string TenNguoiDung)
+        {
+            return NguoiDungDAL.Instance.UpdateTenNguoiDung(MaNguoiDung, TenNguoiDung);
+        }
+        public int UpdateMatKhauNguoiDung(string MaNguoiDung, string MatKhau)
+        {
+            return NguoiDungDAL.Instance.UpdateMatKhauNguoiDung(MaNguoiDung, MatKhau);
+        }
         public int DeleteNguoiDung(string MaNguoiDung)
         {
             return NguoiDungDAL.Instance.DeleteNguoiDung(MaNguoiDung);

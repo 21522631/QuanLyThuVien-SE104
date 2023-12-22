@@ -55,6 +55,16 @@ namespace DAL
                            "WHERE MANGUOIDUNG = '" + nguoidung.MaNguoiDung + "' " ;
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int UpdateTenNguoiDung(string MaNguoiDung, string TenNguoiDung)
+        {
+            string query = "UPDATE NGUOIDUNG SET TENNGUOIDUNG = N'" + TenNguoiDung + "' WHERE MANGUOIDUNG = '" + MaNguoiDung + "' ";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateMatKhauNguoiDung(string MaNguoiDung, string MatKhau)
+        {
+            string query = "UPDATE NGUOIDUNG SET MATKHAU = N'" + MatKhau + "' WHERE MANGUOIDUNG = '" + MaNguoiDung + "' ";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public int DeleteNguoiDung(string MaNguoiDung)
         {
             string query = "DELETE FROM NGUOIDUNG WHERE MANGUOIDUNG = '" + MaNguoiDung + "'";

@@ -14,9 +14,11 @@ namespace GUI
 {
     public partial class fQuanLyNguoiDung : Form
     {
-        public fQuanLyNguoiDung()
+        public fQuanLyNguoiDung(int Index)
         {
             InitializeComponent();
+            this.tabQuanNguoiDung.SelectedIndex = Index;
+
         }
 
         private void fQuanLyNguoiDung_Load(object sender, EventArgs e)
