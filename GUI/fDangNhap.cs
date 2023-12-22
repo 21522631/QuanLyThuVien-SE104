@@ -37,6 +37,7 @@ namespace GUI
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Lỗi!", MessageBoxButtons.OK);
             }
             else
+            {
                 switch (nguoidung.IDNhomNguoiDung)
                 {
                     case 1:
@@ -46,7 +47,7 @@ namespace GUI
                         this.Show();
                         break;
                     case 2:
-                        fThuThu fTT = new fThuThu();
+                        fThuThu fTT = new fThuThu(nguoidung);
                         this.Hide();
                         fTT.ShowDialog();
                         this.Show();
@@ -58,7 +59,9 @@ namespace GUI
                         this.Show();
                         break;
                 }
-                
+                txtTenDangNhap.Text = "";
+                txtMatKhau.Text = "";
+            }
         }
 
         private void chkHienThiMatKhau_CheckedChanged(object sender, EventArgs e)

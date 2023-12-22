@@ -199,12 +199,6 @@ namespace GUI
             f.ShowDialog();
         }
 
-        private void quyĐịnhToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fQuyDinh f = new fQuyDinh();
-            f.ShowDialog();
-        }
-
         private void báoCáoThốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fBaoCaoThongKe f = new fBaoCaoThongKe(0);
@@ -313,6 +307,12 @@ namespace GUI
         private void thayĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fDoiMatKhau f = new fDoiMatKhau(ref nguoidung);
+            f.ShowDialog();
+        }
+
+        private void quyĐịnhToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fQuyDinh f = new fQuyDinh();
             f.ShowDialog();
         }
     }
