@@ -23,16 +23,39 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (nguoidung.MatKhau == txtMatKhauHienTai.Text)
+            if (txtMatKhauHienTai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu hiện tại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMatKhauHienTai.Focus();
+            }
+            else if (txtMatKhauMoi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu mới!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMatKhauMoi.Focus();
+            }
+            else if (txtNhapLaiMatKhau.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu lại mật khẩu mới!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNhapLaiMatKhau .Focus();
+            }    
+            else if (nguoidung.MatKhau == txtMatKhauHienTai.Text)
             {
                 if (txtMatKhauMoi.Text == txtNhapLaiMatKhau.Text)
                 {
-                    nguoidung.MatKhau = txtMatKhauMoi.Text;
-                    NguoiDungBUS.Instance.UpdateMatKhauNguoiDung(nguoidung.MaNguoiDung, nguoidung.MatKhau);
-                    MessageBox.Show("Thay đổi mật khẩu thành công", "Thong tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMatKhauHienTai.Text = "";
-                    txtMatKhauMoi.Text = "";
-                    txtNhapLaiMatKhau.Text = "";
+                    if(txtMatKhauMoi.Text == txtMatKhauHienTai.Text)
+                    {
+                        MessageBox.Show("Mật khẩu mới phải khác mật khẩu hiện tại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtMatKhauMoi.Focus();
+                    }    
+                    else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        nguoidung.MatKhau = txtMatKhauMoi.Text;
+                        NguoiDungBUS.Instance.UpdateMatKhauNguoiDung(nguoidung.MaNguoiDung, nguoidung.MatKhau);
+                        MessageBox.Show("Thay đổi mật khẩu thành công", "Thong tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtMatKhauHienTai.Text = "";
+                        txtMatKhauMoi.Text = "";
+                        txtNhapLaiMatKhau.Text = "";
+                    }
                 }
                 else
                 {

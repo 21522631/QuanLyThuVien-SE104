@@ -27,13 +27,13 @@ namespace GUI
 
         private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fThongTin f = new fThongTin(ref nguoidung);
+            fThongTinNguoiDung f = new fThongTinNguoiDung(ref nguoidung);
             f.ShowDialog();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fThongTin f = new fThongTin(ref nguoidung);
+            fThongTinNguoiDung f = new fThongTinNguoiDung(ref nguoidung);
             f.ShowDialog();
         }
 

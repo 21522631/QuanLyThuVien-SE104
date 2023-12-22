@@ -253,7 +253,7 @@ namespace GUI
 
         private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fThongTin f = new fThongTin(ref nguoidung);
+            fThongTinNguoiDung f = new fThongTinNguoiDung(ref nguoidung);
             f.ShowDialog();
         }
         private void ngườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -300,7 +300,7 @@ namespace GUI
 
         private void thayĐổiThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fThongTin f = new fThongTin(ref nguoidung);
+            fThongTinNguoiDung f = new fThongTinNguoiDung(ref nguoidung);
             f.ShowDialog();
         }
 

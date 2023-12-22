@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class fThongTin : Form
+    public partial class fThongTinNguoiDung : Form
     {
         private NguoiDung nguoidung;
-        public fThongTin(ref NguoiDung nguoidung)
+        public fThongTinNguoiDung(ref NguoiDung nguoidung)
         {
             InitializeComponent();
             this.nguoidung = nguoidung;
@@ -46,8 +46,19 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            NguoiDungBUS.Instance.UpdateTenNguoiDung(txtMaNguoiDung.Text, txtTenNguoiDung.Text);
-            nguoidung.TenNguoiDung = txtTenNguoiDung.Text;
+            if (txtTenNguoiDung.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập lại tên người dùng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    NguoiDungBUS.Instance.UpdateTenNguoiDung(txtMaNguoiDung.Text, txtTenNguoiDung.Text);
+                    nguoidung.TenNguoiDung = txtTenNguoiDung.Text;
+                    MessageBox.Show("Thông tin đã được thay đổi!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)

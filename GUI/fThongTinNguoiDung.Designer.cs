@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class fThongTin
+    partial class fThongTinNguoiDung
     {
         /// <summary>
         /// Required designer variable.
@@ -215,13 +215,14 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // fThongTin
+            // fThongTinNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 287);
             this.Controls.Add(this.panel1);
-            this.Name = "fThongTin";
+            this.Name = "fThongTinNguoiDung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin";
             this.Load += new System.EventHandler(this.fThongTin_Load);
             this.panel1.ResumeLayout(false);
