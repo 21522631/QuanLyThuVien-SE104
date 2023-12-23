@@ -26,17 +26,30 @@ namespace GUI
         {
             txtMaNguoiDung.Enabled = false;
             txtTenDangNhap.Enabled = false;
+            dgvNguoiDung.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNguoiDung.DataSource = NguoiDungBUS.Instance.GetAllNguoiDung();
+            dgvNguoiDung.Columns[0].HeaderCell.Value = "Mã người dùng";
+            dgvNguoiDung.Columns[1].HeaderCell.Value = "Tên người dùng";
+            dgvNguoiDung.Columns[2].HeaderCell.Value = "Tên đăng nhập";
+            dgvNguoiDung.Columns[3].HeaderCell.Value = "Tên nhóm người dùng";
             cboNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
             cboNhomNguoiDung.DisplayMember = "TENNHOM";
             cboNhomNguoiDung.ValueMember = "ID";
             cboNhomNguoiDung.Text = "";
             txtMaNhomNguoiDung.Enabled = false;
+            dgvNhomNguoiDung.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
+            dgvNhomNguoiDung.Columns[0].HeaderCell.Value = "Mã nhóm người dùng";
+            dgvNhomNguoiDung.Columns[1].HeaderCell.Value = "Tên nhóm người dùng";
             dgvNhomNguoiDung.Columns["ID"].Visible = false;
             txtMaChucNang.Enabled = false;
+            dgvChucNang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvChucNang.DataSource = ChucNangBUS.Instance.GetAllChucNang();
+            dgvChucNang.Columns[1].HeaderCell.Value = "Mã chức năng";
+            dgvChucNang.Columns[2].HeaderCell.Value = "Tên chức năng";
+            dgvChucNang.Columns[3].HeaderCell.Value = "Tên màn hình được load";
             dgvChucNang.Columns["ID"].Visible = false;
+            dgvPhanQuyen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             cboMaNhomNguoiDungPQ.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
             cboMaNhomNguoiDungPQ.DisplayMember = "MANHOM";
             cboMaNhomNguoiDungPQ.ValueMember = "ID";
@@ -45,7 +58,6 @@ namespace GUI
             cboChucNangPQ.DisplayMember = "MACHUCNANG";
             cboChucNangPQ.ValueMember = "ID";
             cboChucNangPQ.SelectedItem = null;
-
         }
 
         private void dgvNguoiDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -245,6 +257,9 @@ namespace GUI
                     int ID = Convert.ToInt32(cboMaNhomNguoiDungPQ.SelectedValue.ToString());
                     txtTenNhomNguoiDungPQ.Text = NhomNguoiDungBUS.Instance.GetNhomNguoiDungByID(ID).Rows[0][2].ToString();
                     dgvPhanQuyen.DataSource = PhanQuyenBUS.Instance.GetAllPhanQuyenByIDNhomNguoiDung(ID);
+                    dgvPhanQuyen.Columns[0].HeaderCell.Value = "Mã chức năng";
+                    dgvPhanQuyen.Columns[1].HeaderCell.Value = "Tên chức năng";
+                    dgvPhanQuyen.Columns[2].HeaderCell.Value = "Tên màn hình được load";
                     cboChucNangPQ.Text = "";
                     txtTenChucNangPQ.Text = "";
                     txtTenManHinhDuocLoadPQ.Text = "";
@@ -269,12 +284,12 @@ namespace GUI
         {
             if (cboMaNhomNguoiDungPQ.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng chọn mã nhóm để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã nhóm không hợp lệ. Vui lòng chọn mã nhóm để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboMaNhomNguoiDungPQ.Focus();
             }
             else if (cboChucNangPQ.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng chọn mã chức năng để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã chức năng không hợp lệ. Vui lòng chọn mã chức năng để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboChucNangPQ.Focus();
             }
             else
@@ -306,12 +321,12 @@ namespace GUI
         {
             if (cboMaNhomNguoiDungPQ.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng chọn mã nhóm để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã nhóm không hợp lệ. Vui lòng chọn mã nhóm để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboMaNhomNguoiDungPQ.Focus();
             }
             else if (cboChucNangPQ.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng chọn mã chức năng để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã nhóm không hợp lệ. Vui lòng chọn mã chức năng để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboChucNangPQ.Focus();
             }
             else

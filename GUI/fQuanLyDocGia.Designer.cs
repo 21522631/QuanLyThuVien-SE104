@@ -453,6 +453,7 @@
             this.ClientSize = new System.Drawing.Size(827, 508);
             this.Controls.Add(this.tabQuanLyDocGia);
             this.Name = "fQuanLyDocGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Độc Giả";
             this.Load += new System.EventHandler(this.fQuanLyDocGia_Load);
             this.tabpgLoaiDocGia.ResumeLayout(false);

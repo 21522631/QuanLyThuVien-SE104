@@ -101,10 +101,11 @@
             // 
             // dgvNguoiDung
             // 
+            this.dgvNguoiDung.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNguoiDung.Location = new System.Drawing.Point(6, 19);
             this.dgvNguoiDung.Name = "dgvNguoiDung";
-            this.dgvNguoiDung.Size = new System.Drawing.Size(752, 249);
+            this.dgvNguoiDung.Size = new System.Drawing.Size(744, 249);
             this.dgvNguoiDung.TabIndex = 1;
             // 
             // fTraCuuNguoiDung
@@ -116,6 +117,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Name = "fTraCuuNguoiDung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra Cứu Người Dùng";
             this.Load += new System.EventHandler(this.fTraCuuNguoiDung_Load);
             this.groupBox2.ResumeLayout(false);

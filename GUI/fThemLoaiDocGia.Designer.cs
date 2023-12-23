@@ -101,6 +101,7 @@
             this.ClientSize = new System.Drawing.Size(290, 143);
             this.Controls.Add(this.panel1);
             this.Name = "fThemLoaiDocGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Loại Độc Giả";
             this.Load += new System.EventHandler(this.fThemLoaiDocGia_Load);
             this.panel1.ResumeLayout(false);

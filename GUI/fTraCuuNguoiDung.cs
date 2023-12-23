@@ -20,7 +20,12 @@ namespace GUI
 
         private void fTraCuuNguoiDung_Load(object sender, EventArgs e)
         {
+            dgvNguoiDung.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNguoiDung.DataSource = NguoiDungBUS.Instance.GetAllNguoiDung();
+            dgvNguoiDung.Columns[0].HeaderCell.Value = "Mã người dùng";
+            dgvNguoiDung.Columns[1].HeaderCell.Value = "Tên người dùng";
+            dgvNguoiDung.Columns[2].HeaderCell.Value = "Tên đăng nhập";
+            dgvNguoiDung.Columns[3].HeaderCell.Value = "Tên nhóm người dùng";
         }
 
         private void txtTraCuu_TextChanged(object sender, EventArgs e)

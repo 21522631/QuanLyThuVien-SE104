@@ -120,6 +120,7 @@
             // 
             // dgvNguoiDung
             // 
+            this.dgvNguoiDung.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNguoiDung.Location = new System.Drawing.Point(6, 19);
             this.dgvNguoiDung.Name = "dgvNguoiDung";
@@ -339,6 +340,7 @@
             // 
             // dgvNhomNguoiDung
             // 
+            this.dgvNhomNguoiDung.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNhomNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhomNguoiDung.Location = new System.Drawing.Point(6, 19);
             this.dgvNhomNguoiDung.Name = "dgvNhomNguoiDung";
@@ -459,6 +461,7 @@
             // 
             // dgvChucNang
             // 
+            this.dgvChucNang.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvChucNang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChucNang.Location = new System.Drawing.Point(6, 19);
             this.dgvChucNang.Name = "dgvChucNang";
@@ -656,6 +659,7 @@
             // 
             // dgvPhanQuyen
             // 
+            this.dgvPhanQuyen.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPhanQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhanQuyen.Location = new System.Drawing.Point(6, 19);
             this.dgvPhanQuyen.Name = "dgvPhanQuyen";

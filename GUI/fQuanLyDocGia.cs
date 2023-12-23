@@ -24,11 +24,11 @@ namespace GUI
         {
             txtMaDocGia.Enabled = false;
             txtMaLoaiDocGia.Enabled = false;
+            dtmNgayLapThe.Enabled = false;
             dtmNgayHetHan.Enabled = false;
             cboLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllTenLoaiDocGia();
-            //cboLoaiDocGia.DisplayMember = "Name";
             cboLoaiDocGia.ValueMember = "TENLOAIDOCGIA";
-            cboLoaiDocGia.Text = "";
+            cboLoaiDocGia.SelectedIndex = -1;
             dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
             dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
         }
@@ -45,16 +45,42 @@ namespace GUI
 
         private void btnSuaLoaiDocGia_Click(object sender, EventArgs e)
         {
-            LoaiDocGiaBUS.Instance.UpdateLoaiDocGia(txtMaLoaiDocGia.Text, txtTenLoaiDocGia.Text);
-            dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+            if (txtMaLoaiDocGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtTenLoaiDocGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên loại độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenLoaiDocGia.Focus();
+            }
+            else if (LoaiDocGiaBUS.Instance.GetLoaiDocGiaByTenLoaiDocGia(txtTenLoaiDocGia.Text).Rows.Count > 0)
+            {
+                MessageBox.Show("Loại độc giả này đã tồn tại. Vui lòng nhập lại tên loại độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenLoaiDocGia.Focus();
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                LoaiDocGiaBUS.Instance.UpdateLoaiDocGia(txtMaLoaiDocGia.Text, txtTenLoaiDocGia.Text);
+                dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+                MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
 
         private void btnXoaLoaiDocGia_Click(object sender, EventArgs e)
         {
-            LoaiDocGiaBUS.Instance.DeleteLoaiDocGia(txtMaLoaiDocGia.Text);
-            txtMaLoaiDocGia.Text = "";
-            txtTenLoaiDocGia.Text = "";
-            dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+            if (txtMaLoaiDocGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                LoaiDocGiaBUS.Instance.DeleteLoaiDocGia(txtMaLoaiDocGia.Text);
+                txtMaLoaiDocGia.Text = "";
+                txtTenLoaiDocGia.Text = "";
+                dgvLoaiDocGia.DataSource = LoaiDocGiaBUS.Instance.GetAllLoaiDocGia();
+                MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }     
         }
 
         private void btnThemLoaiDocGia_Click(object sender, EventArgs e)
@@ -80,27 +106,80 @@ namespace GUI
 
         private void cboLoaiDocGia_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
         }
 
         private void btnSuaDocGia_Click(object sender, EventArgs e)
         {
-            string IDLoaiDocGia = LoaiDocGiaBUS.Instance.GetIDLoaiDocGiaByTenLoaiDocGia(cboLoaiDocGia.Text);
-            DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, txtHoVaTen.Text, dtmNgaySinh.Text, txtDiaChi.Text, txtEmail.Text, IDLoaiDocGia, dtmNgayLapThe.Text);
-            dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
+            if (txtMaDocGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtHoVaTen.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập họ và tên độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtHoVaTen.Focus();
+            }
+            else if (cboLoaiDocGia.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn lại loại độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboLoaiDocGia.Focus();
+            }
+            else if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDiaChi.Focus();
+            }
+            else if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập email!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+            }
+            else
+            {
+                ThamSo thamso = ThamSoBUS.Instance.GetThamSo();
+                int Tuoi = DateTime.Now.Year - dtmNgaySinh.Value.Year;
+
+                if (Tuoi < thamso.TuoiToiThieu)
+                {
+                    MessageBox.Show("Tuổi phải lớn hơn " + thamso.TuoiToiThieu, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtmNgaySinh.Focus();
+                }
+                else if (Tuoi > thamso.TuoiToiDa)
+                {
+                    MessageBox.Show("Tuổi phải nhỏ hơn " + thamso.TuoiToiDa, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtmNgaySinh.Focus();
+                }
+                else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    string IDLoaiDocGia = LoaiDocGiaBUS.Instance.GetIDLoaiDocGiaByTenLoaiDocGia(cboLoaiDocGia.Text);
+                    DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, txtHoVaTen.Text, dtmNgaySinh.Text, txtDiaChi.Text, txtEmail.Text, IDLoaiDocGia, dtmNgayLapThe.Text);
+                    dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
+                    MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }              
+            }      
         }
 
         private void btnXoaDocGia_Click(object sender, EventArgs e)
         {
-            DocGiaBUS.Instance.DeleteDocGia(txtMaDocGia.Text);
-            txtMaDocGia.Text = "";
-            txtHoVaTen.Text = "";
-            cboLoaiDocGia.Text = "";
-            txtDiaChi.Text = "";
-            txtEmail.Text = "";
-            dtmNgaySinh.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            dtmNgayLapThe.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            dtmNgayHetHan.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
+            if (txtMaDocGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                DocGiaBUS.Instance.DeleteDocGia(txtMaDocGia.Text);
+                txtMaDocGia.Text = "";
+                txtHoVaTen.Text = "";
+                cboLoaiDocGia.Text = "";
+                txtDiaChi.Text = "";
+                txtEmail.Text = "";
+                dtmNgaySinh.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                dtmNgayLapThe.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                dtmNgayHetHan.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                dgvDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
+                MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void tabpgDocGia_Click(object sender, EventArgs e)

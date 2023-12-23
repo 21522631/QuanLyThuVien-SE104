@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,16 +23,22 @@ namespace GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(LoaiDocGiaBUS.Instance.InsertLoaiDocGia(txtTenLoaiDocGia.Text) > 0)
+            if (txtTenLoaiDocGia.Text == "")
             {
-                MessageBox.Show("Thông tin đã được lưu!", "Thành công!", MessageBoxButtons.OK);
-                txtTenLoaiDocGia.Text = "";
+                MessageBox.Show("Vui lòng nhập tên loại độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenLoaiDocGia.Focus();
+            }
+            else if (LoaiDocGiaBUS.Instance.GetLoaiDocGiaByTenLoaiDocGia(txtTenLoaiDocGia.Text).Rows.Count > 0)
+            {
+                MessageBox.Show("Loại độc giả này đã tồn tại. Vui lòng nhập lại tên loại độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenLoaiDocGia.Focus();
             }
             else
             {
-                MessageBox.Show("Vui lòng thử lại!", "Thất bại!", MessageBoxButtons.OK);
-            } 
-            
+                LoaiDocGiaBUS.Instance.InsertLoaiDocGia(txtTenLoaiDocGia.Text);
+                MessageBox.Show("Thêm mới loại độc giả thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenLoaiDocGia.Text = "";
+            }    
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
