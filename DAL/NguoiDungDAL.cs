@@ -37,7 +37,10 @@ namespace DAL
         {
             string query = "SELECT ID FROM NGUOIDUNG " +
                 "WHERE TENDANGNHAP = '" + TenDangNhap + "'";
-            return DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString();
+            if (DataProvider.Instance.ExecuteQuery(query).Rows.Count > 0)
+                return DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString();
+            else 
+                return null;
         }
         public DataTable SearchNguoiDung(string ThongTinTraCuu)
         {
