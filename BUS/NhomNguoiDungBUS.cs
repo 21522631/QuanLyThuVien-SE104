@@ -31,6 +31,10 @@ namespace BUS
         {
             return NhomNguoiDungDAL.Instance.GetNhomNguoiDungByID(ID);
         }
+        public DataTable GetNhomNguoiDungByTenNhom(string TenNhomNguoiDung)
+        {
+            return NhomNguoiDungDAL.Instance.GetNhomNguoiDungByTenNhom(TenNhomNguoiDung);
+        }
         public int InsertNhomNguoiDung(string TenNhom)
         {
             return NhomNguoiDungDAL.Instance.InsertNhomNguoiDung(TenNhom);

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTenNhom = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.txtTenNhom = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 127);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "Tên nhóm người dùng";
+            // 
+            // txtTenNhom
+            // 
+            this.txtTenNhom.Location = new System.Drawing.Point(131, 50);
+            this.txtTenNhom.Name = "txtTenNhom";
+            this.txtTenNhom.Size = new System.Drawing.Size(145, 20);
+            this.txtTenNhom.TabIndex = 77;
             // 
             // label6
             // 
@@ -78,22 +94,6 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtTenNhom
-            // 
-            this.txtTenNhom.Location = new System.Drawing.Point(131, 50);
-            this.txtTenNhom.Name = "txtTenNhom";
-            this.txtTenNhom.Size = new System.Drawing.Size(145, 20);
-            this.txtTenNhom.TabIndex = 77;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "Tên nhóm người dùng";
-            // 
             // fThemNhomNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,7 +101,8 @@
             this.ClientSize = new System.Drawing.Size(322, 154);
             this.Controls.Add(this.panel1);
             this.Name = "fThemNhomNguoiDung";
-            this.Text = "fThemNhomNguoiDung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thêm Nhóm Người Dùng";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

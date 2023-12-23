@@ -121,6 +121,7 @@
             this.ClientSize = new System.Drawing.Size(238, 171);
             this.Controls.Add(this.panel1);
             this.Name = "fThemCuonSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Cuốn Sách";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

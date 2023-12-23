@@ -195,6 +195,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "fThemNguoiDung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Người Dùng";
             this.Load += new System.EventHandler(this.fThemNguoiDung_Load);
             this.panel1.ResumeLayout(false);

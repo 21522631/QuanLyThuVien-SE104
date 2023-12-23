@@ -51,7 +51,7 @@ namespace GUI
                     {
                         nguoidung.MatKhau = txtMatKhauMoi.Text;
                         NguoiDungBUS.Instance.UpdateMatKhauNguoiDung(nguoidung.MaNguoiDung, nguoidung.MatKhau);
-                        MessageBox.Show("Thay đổi mật khẩu thành công", "Thong tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thay đổi mật khẩu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtMatKhauHienTai.Text = "";
                         txtMatKhauMoi.Text = "";
                         txtNhapLaiMatKhau.Text = "";

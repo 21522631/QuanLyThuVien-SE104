@@ -29,6 +29,11 @@ namespace DAL
                            "WHERE IDNHOMNGUOIDUNG = '" + IDNND + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetAllPhanQuyenByPhanQuyen(PhanQuyen phanquyen)
+        {
+            string query = "SELECT * FROM PHANQUYEN WHERE IDNHOMNGUOIDUNG = '" + phanquyen.IDNhomNguoiDung + "' AND IDCHUCNANG = '" + phanquyen.IDChucNang + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertPhanQuyen(PhanQuyen phanquyen)
         {
             string query = "INSERT INTO PHANQUYEN VALUES('" + phanquyen.IDNhomNguoiDung + "', '" + phanquyen.IDChucNang + "')";

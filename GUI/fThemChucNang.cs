@@ -21,12 +21,35 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            ChucNang chucnang = new ChucNang();
-            chucnang.TenChucNang = txtTenChucNang.Text;
-            chucnang.TenManHinhDuocLoad = txtTenManHinhDuocLoad.Text;
-            ChucNangBUS.Instance.InsertChucNang(chucnang);
-            chucnang.TenChucNang = "";
-            chucnang.TenManHinhDuocLoad = "";
+            if (txtTenChucNang.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên chức năng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenChucNang.Focus();
+            }
+            else if (txtTenManHinhDuocLoad.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên màn hình được load!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenManHinhDuocLoad.Focus();
+            }
+            else
+            {
+               
+                ChucNang chucnang = new ChucNang();
+                chucnang.TenChucNang = txtTenChucNang.Text;
+                chucnang.TenManHinhDuocLoad = txtTenManHinhDuocLoad.Text;
+                if (ChucNangBUS.Instance.GetChucNangByTenChucNang(chucnang).Rows.Count > 0 )
+                {
+                    MessageBox.Show("Chức năng đã tồn tại. Vui lòng nhập chức năng khác!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtTenChucNang.Focus();
+                }
+                else
+                {
+                    ChucNangBUS.Instance.InsertChucNang(chucnang);
+                    MessageBox.Show("Thêm mới chức năng thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    chucnang.TenChucNang = "";
+                    chucnang.TenManHinhDuocLoad = "";
+                }                  
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

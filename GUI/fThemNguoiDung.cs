@@ -69,6 +69,7 @@ namespace GUI
                 {
                     nguoidung.IDNhomNguoiDung = Convert.ToInt32(cboNhomNguoiDung.SelectedValue.ToString());
                     NguoiDungBUS.Instance.InsertNguoiDung(nguoidung);
+                    MessageBox.Show("Thêm mới người dùng thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtTenNguoiDung.Text = "";
                     txtTenDangNhap.Text = "";
                     txtMatKhau.Text = "";

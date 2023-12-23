@@ -31,6 +31,10 @@ namespace BUS
         {
             return ChucNangDAL.Instance.GetChucNangByID(ID);
         }
+        public DataTable GetChucNangByTenChucNang(ChucNang chucnang)
+        {
+            return ChucNangDAL.Instance.GetChucNangByTenChucNang(chucnang);
+        }
         public int InsertChucNang(ChucNang chucnang)
         {
             return ChucNangDAL.Instance.InsertChucNang(chucnang);

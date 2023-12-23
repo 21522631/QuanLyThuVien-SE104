@@ -27,6 +27,10 @@ namespace BUS
         {
             return PhanQuyenDAL.Instance.GetAllPhanQuyenByIDNhomNguoiDung(IDNND);
         }
+        public DataTable GetAllPhanQuyenByPhanQuyen(PhanQuyen phanquyen)
+        {
+            return PhanQuyenDAL.Instance.GetAllPhanQuyenByPhanQuyen(phanquyen);
+        }
         public int InsertPhanQuyen(PhanQuyen phanquyen)
         {
             return PhanQuyenDAL.Instance.InsertPhanQuyen(phanquyen);
