@@ -208,6 +208,12 @@
     <Compile Include="fTraCuuDocGia.Designer.cs">
       <DependentUpon>fTraCuuDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTraCuuNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTraCuuNguoiDung.Designer.cs">
+      <DependentUpon>fTraCuuNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTraCuuPhieuMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fTraCuuDocGia.resx">
       <DependentUpon>fTraCuuDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTraCuuNguoiDung.resx">
+      <DependentUpon>fTraCuuNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTraCuuPhieuMuonTra.resx">
       <DependentUpon>fTraCuuPhieuMuonTra.cs</DependentUpon>

@@ -34,6 +34,10 @@ namespace BUS
         {
             return NguoiDungDAL.Instance.GetIDNguoiDungByTenDangNhap(TenDangNhap);
         }
+        public DataTable SearchNguoiDung(string ThongTinTraCuu)
+        {
+            return NguoiDungDAL.Instance.SearchNguoiDung(ThongTinTraCuu);
+        }
         public int InsertNguoiDungDocGia(string TenNguoiDung, string TenDangNhap, string MatKhau)
         {
             return NguoiDungDAL.Instance.InsertNguoiDungDocGia(TenNguoiDung, TenDangNhap, MatKhau);

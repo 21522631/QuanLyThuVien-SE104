@@ -315,5 +315,11 @@ namespace GUI
             fQuyDinh f = new fQuyDinh();
             f.ShowDialog();
         }
+
+        private void traCứuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTraCuuNguoiDung f = new fTraCuuNguoiDung();
+            f.ShowDialog();
+        }
     }
 }

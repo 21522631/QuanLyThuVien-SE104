@@ -39,6 +39,13 @@ namespace DAL
                 "WHERE TENDANGNHAP = '" + TenDangNhap + "'";
             return DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString();
         }
+        public DataTable SearchNguoiDung(string ThongTinTraCuu)
+        {
+            string query = "SELECT MANGUOIDUNG, TENNGUOIDUNG, TENDANGNHAP, TENNHOM " +
+                "FROM NGUOIDUNG JOIN NHOMNGUOIDUNG ON NGUOIDUNG.IDNHOMNGUOIDUNG = NHOMNGUOIDUNG.ID " +
+                "WHERE MANGUOIDUNG LIKE '%" + ThongTinTraCuu + "%' OR TENNGUOIDUNG LIKE N'%" + ThongTinTraCuu + "%' OR MANHOM LIKE '%" + ThongTinTraCuu + "%' OR TENNHOM LIKE N'%" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertNguoiDungDocGia(string TenNguoiDung, string TenDangNhap, string MatKhau)
         {
             string query = "INSERT INTO NGUOIDUNG VALUES(N'" + TenNguoiDung + "', '" + TenDangNhap + "', '" + MatKhau + "', 3)";
