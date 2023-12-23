@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboTheLoai = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtNamXuatBan = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.cboTheLoai = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(332, 176);
             this.panel1.TabIndex = 0;
+            // 
+            // cboTheLoai
+            // 
+            this.cboTheLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTheLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTheLoai.FormattingEnabled = true;
+            this.cboTheLoai.Location = new System.Drawing.Point(100, 33);
+            this.cboTheLoai.Name = "cboTheLoai";
+            this.cboTheLoai.Size = new System.Drawing.Size(79, 21);
+            this.cboTheLoai.TabIndex = 58;
             // 
             // btnHuy
             // 
@@ -147,16 +157,6 @@
             this.label23.TabIndex = 25;
             this.label23.Text = "THÔNG TIN SÁCH";
             // 
-            // cboTheLoai
-            // 
-            this.cboTheLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboTheLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboTheLoai.FormattingEnabled = true;
-            this.cboTheLoai.Location = new System.Drawing.Point(100, 33);
-            this.cboTheLoai.Name = "cboTheLoai";
-            this.cboTheLoai.Size = new System.Drawing.Size(79, 21);
-            this.cboTheLoai.TabIndex = 58;
-            // 
             // fThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +164,7 @@
             this.ClientSize = new System.Drawing.Size(355, 197);
             this.Controls.Add(this.panel1);
             this.Name = "fThemSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Sách";
             this.Load += new System.EventHandler(this.fThemSach_Load);
             this.panel1.ResumeLayout(false);

@@ -26,6 +26,10 @@ namespace BUS
         {
             return CT_TacGiaDAL.Instance.GetCT_TacGiaByIDSach(IDSach);
         }
+        public DataTable GetCT_TacGiaByCT_TacGia(CT_TacGia CTTG)
+        {
+            return CT_TacGiaDAL.Instance.GetCT_TacGiaByCT_TacGia(CTTG);
+        }
         public int InsertCT_TacGia(CT_TacGia ct_tacgia) 
         {
             return CT_TacGiaDAL.Instance.InsertCT_TacGia(ct_tacgia);

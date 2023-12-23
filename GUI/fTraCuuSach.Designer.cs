@@ -118,11 +118,13 @@
             // 
             // dgvSach
             // 
+            this.dgvSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSach.Location = new System.Drawing.Point(6, 19);
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.Size = new System.Drawing.Size(752, 249);
             this.dgvSach.TabIndex = 1;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -197,6 +199,7 @@
             // 
             // dgvTheLoai
             // 
+            this.dgvTheLoai.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTheLoai.Location = new System.Drawing.Point(6, 19);
             this.dgvTheLoai.Name = "dgvTheLoai";
@@ -276,6 +279,7 @@
             // 
             // dgvTacGia
             // 
+            this.dgvTacGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTacGia.Location = new System.Drawing.Point(6, 19);
             this.dgvTacGia.Name = "dgvTacGia";
@@ -355,6 +359,7 @@
             // 
             // dgvCuonSach
             // 
+            this.dgvCuonSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCuonSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCuonSach.Location = new System.Drawing.Point(6, 19);
             this.dgvCuonSach.Name = "dgvCuonSach";
@@ -427,6 +432,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabTraCuuSach);
             this.Name = "fTraCuuSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra Cứu Thông Tin Sách";
             this.Load += new System.EventHandler(this.fTraCuuSach_Load);
             this.tabTraCuuSach.ResumeLayout(false);

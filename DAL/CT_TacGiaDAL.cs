@@ -28,6 +28,12 @@ namespace DAL
                            "WHERE IDSACH = '" + IDSach + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetCT_TacGiaByCT_TacGia(CT_TacGia CTTG)
+        {
+            string query = "SELECT * FROM CT_TACGIA " +
+                           "WHERE IDTACGIA = '" + CTTG.IDTacGia + "' AND IDSACH = '" + CTTG.IDSach + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertCT_TacGia(CT_TacGia ct_tacgia)
         {
             string query = "INSERT INTO CT_TACGIA VALUES('" + ct_tacgia.IDSach + "', '" + ct_tacgia.IDTacGia + "')";

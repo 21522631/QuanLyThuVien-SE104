@@ -27,6 +27,10 @@ namespace BUS
         {
             return TheLoaiDAL.Instance.GetAllTheLoai();
         }
+        public DataTable GetTheLoaiByTenTheLoai(string TenTheLoai)
+        {
+            return TheLoaiDAL.Instance.GetTheLoaiByTenTheLoai(TenTheLoai);
+        }
         public DataTable SearchTheLoai(string ThongTinTraCuu)
         {
             return TheLoaiDAL.Instance.SearchTheLoai(ThongTinTraCuu);

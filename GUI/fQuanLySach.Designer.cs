@@ -157,6 +157,7 @@
             // 
             // dgvTacGia
             // 
+            this.dgvTacGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTacGia.Location = new System.Drawing.Point(6, 19);
             this.dgvTacGia.Name = "dgvTacGia";
@@ -298,6 +299,7 @@
             // 
             // dgvTheLoai
             // 
+            this.dgvTheLoai.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTheLoai.Location = new System.Drawing.Point(6, 19);
             this.dgvTheLoai.Name = "dgvTheLoai";
@@ -430,7 +432,7 @@
             this.cboTheLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboTheLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboTheLoai.FormattingEnabled = true;
-            this.cboTheLoai.Location = new System.Drawing.Point(248, 25);
+            this.cboTheLoai.Location = new System.Drawing.Point(227, 22);
             this.cboTheLoai.Name = "cboTheLoai";
             this.cboTheLoai.Size = new System.Drawing.Size(75, 21);
             this.cboTheLoai.TabIndex = 57;
@@ -440,7 +442,7 @@
             this.cboMaTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboMaTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboMaTacGia.FormattingEnabled = true;
-            this.cboMaTacGia.Location = new System.Drawing.Point(627, 25);
+            this.cboMaTacGia.Location = new System.Drawing.Point(649, 25);
             this.cboMaTacGia.Name = "cboMaTacGia";
             this.cboMaTacGia.Size = new System.Drawing.Size(121, 21);
             this.cboMaTacGia.TabIndex = 56;
@@ -448,7 +450,7 @@
             // txtMaSach
             // 
             this.txtMaSach.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaSach.Location = new System.Drawing.Point(104, 26);
+            this.txtMaSach.Location = new System.Drawing.Point(83, 23);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(84, 20);
             this.txtMaSach.TabIndex = 51;
@@ -456,7 +458,7 @@
             // domSoLuong
             // 
             this.domSoLuong.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.domSoLuong.Location = new System.Drawing.Point(280, 104);
+            this.domSoLuong.Location = new System.Drawing.Point(259, 101);
             this.domSoLuong.Name = "domSoLuong";
             this.domSoLuong.Size = new System.Drawing.Size(43, 20);
             this.domSoLuong.TabIndex = 35;
@@ -465,7 +467,7 @@
             // txtGiaTien
             // 
             this.txtGiaTien.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtGiaTien.Location = new System.Drawing.Point(104, 130);
+            this.txtGiaTien.Location = new System.Drawing.Point(83, 127);
             this.txtGiaTien.Name = "txtGiaTien";
             this.txtGiaTien.Size = new System.Drawing.Size(89, 20);
             this.txtGiaTien.TabIndex = 33;
@@ -473,7 +475,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(31, 133);
+            this.label11.Location = new System.Drawing.Point(10, 130);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 32;
@@ -482,7 +484,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(225, 107);
+            this.label9.Location = new System.Drawing.Point(204, 104);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 30;
@@ -511,7 +513,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(564, 29);
+            this.label8.Location = new System.Drawing.Point(584, 28);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 26;
@@ -520,7 +522,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(339, 25);
+            this.label7.Location = new System.Drawing.Point(318, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 25;
@@ -528,16 +530,17 @@
             // 
             // dgvCT_TacGia
             // 
+            this.dgvCT_TacGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCT_TacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCT_TacGia.Location = new System.Drawing.Point(342, 41);
+            this.dgvCT_TacGia.Location = new System.Drawing.Point(321, 41);
             this.dgvCT_TacGia.Name = "dgvCT_TacGia";
-            this.dgvCT_TacGia.Size = new System.Drawing.Size(216, 85);
+            this.dgvCT_TacGia.Size = new System.Drawing.Size(257, 105);
             this.dgvCT_TacGia.TabIndex = 24;
             this.dgvCT_TacGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCT_TacGia_CellContentClick);
             // 
             // txtNamXuatBan
             // 
-            this.txtNamXuatBan.Location = new System.Drawing.Point(104, 104);
+            this.txtNamXuatBan.Location = new System.Drawing.Point(83, 101);
             this.txtNamXuatBan.Name = "txtNamXuatBan";
             this.txtNamXuatBan.Size = new System.Drawing.Size(89, 20);
             this.txtNamXuatBan.TabIndex = 23;
@@ -545,7 +548,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 109);
+            this.label3.Location = new System.Drawing.Point(10, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 22;
@@ -554,7 +557,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(194, 31);
+            this.label10.Location = new System.Drawing.Point(173, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 20;
@@ -563,7 +566,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 31);
+            this.label1.Location = new System.Drawing.Point(10, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 18;
@@ -571,7 +574,7 @@
             // 
             // txtNhaXuatBan
             // 
-            this.txtNhaXuatBan.Location = new System.Drawing.Point(104, 78);
+            this.txtNhaXuatBan.Location = new System.Drawing.Point(83, 75);
             this.txtNhaXuatBan.Name = "txtNhaXuatBan";
             this.txtNhaXuatBan.Size = new System.Drawing.Size(219, 20);
             this.txtNhaXuatBan.TabIndex = 10;
@@ -579,7 +582,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 85);
+            this.label4.Location = new System.Drawing.Point(10, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 7;
@@ -587,7 +590,7 @@
             // 
             // txtTenSach
             // 
-            this.txtTenSach.Location = new System.Drawing.Point(104, 52);
+            this.txtTenSach.Location = new System.Drawing.Point(83, 49);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(219, 20);
             this.txtTenSach.TabIndex = 3;
@@ -595,7 +598,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 59);
+            this.label2.Location = new System.Drawing.Point(10, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -607,7 +610,7 @@
             this.btnThemSach.Name = "btnThemSach";
             this.btnThemSach.Size = new System.Drawing.Size(92, 23);
             this.btnThemSach.TabIndex = 23;
-            this.btnThemSach.Text = "Thêm Sách";
+            this.btnThemSach.Text = "Thêm sách";
             this.btnThemSach.UseVisualStyleBackColor = true;
             this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
@@ -623,6 +626,7 @@
             // 
             // dgvSach
             // 
+            this.dgvSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSach.Location = new System.Drawing.Point(6, 19);
             this.dgvSach.Name = "dgvSach";
@@ -657,6 +661,7 @@
             this.ClientSize = new System.Drawing.Size(821, 522);
             this.Controls.Add(this.tabQuanLySach);
             this.Name = "fQuanLySach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sách";
             this.Load += new System.EventHandler(this.fQuanLySach_Load);
             this.tabPage3.ResumeLayout(false);

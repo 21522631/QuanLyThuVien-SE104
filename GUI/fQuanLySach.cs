@@ -34,9 +34,26 @@ namespace GUI
             cboMaTacGia.ValueMember = "MATACGIA";
             cboMaTacGia.Text = "";
             txtMaTheLoai.Enabled = false;
+            dgvSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+            dgvSach.Columns[0].HeaderCell.Value = "Mã sách";
+            dgvSach.Columns[1].HeaderCell.Value = "Tên sách";
+            dgvSach.Columns[2].HeaderCell.Value = "Mã thể loại";
+            dgvSach.Columns[3].HeaderCell.Value = "Tên thể loại";
+            dgvSach.Columns[4].HeaderCell.Value = "Nhà xuất bản";
+            dgvSach.Columns[5].HeaderCell.Value = "Năm xuất bản";
+            dgvSach.Columns[6].HeaderCell.Value = "Số lượng";
+            dgvSach.Columns[7].HeaderCell.Value = "Giá tiền";
+            dgvTheLoai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            dgvTheLoai.Columns[0].HeaderCell.Value = "Mã thể loại";
+            dgvTheLoai.Columns[1].HeaderCell.Value = "Tên thể loại";
+            dgvTacGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            dgvTacGia.Columns[0].HeaderCell.Value = "Mã tác giả";
+            dgvTacGia.Columns[1].HeaderCell.Value = "Tên tác giả";
+            dgvTacGia.Columns[2].HeaderCell.Value = "Ngày sinh";
+            dgvTacGia.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void dgtTacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -120,7 +137,11 @@ namespace GUI
             txtNamXuatBan.Text = dgvSach.Rows[index].Cells[5].Value.ToString();
             domSoLuong.Text = dgvSach.Rows[index].Cells[6].Value.ToString();
             txtGiaTien.Text = dgvSach.Rows[index].Cells[7].Value.ToString();
+            dgvCT_TacGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+            dgvCT_TacGia.Columns[0].HeaderCell.Value = "Mã tác giả";
+            dgvCT_TacGia.Columns[1].HeaderCell.Value = "Tên tác giả";
+            cboMaTacGia.SelectedIndex = -1;
         }
 
         private void dgvCT_TacGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -131,20 +152,68 @@ namespace GUI
 
         private void btnThemDSTG_Click(object sender, EventArgs e)
         {
-            CT_TacGia ct_tacgia = new CT_TacGia();
-            ct_tacgia.IDSach = Convert.ToInt32(txtMaSach.Text.Replace("SA", "00"));
-            ct_tacgia.IDTacGia = Convert.ToInt32(cboMaTacGia.Text.Replace("TG", "00"));
-            CT_TacGiaBUS.Instance.InsertCT_TacGia(ct_tacgia);
-            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+            if(txtMaSach.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+            else if(cboMaTacGia.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn lại mã tác giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboMaTacGia.Focus();
+            }
+            else
+            {
+                CT_TacGia ct_tacgia = new CT_TacGia();
+                ct_tacgia.IDSach = Convert.ToInt32(txtMaSach.Text.Replace("SA", "00"));
+                ct_tacgia.IDTacGia = Convert.ToInt32(cboMaTacGia.Text.Replace("TG", "00"));
+                if (CT_TacGiaBUS.Instance.GetCT_TacGiaByCT_TacGia(ct_tacgia).Rows.Count > 0)
+                {
+                    MessageBox.Show("Đã tồn tại tác giả. Vui lòng chọn lại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cboMaTacGia.Focus();
+                }
+                else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    CT_TacGiaBUS.Instance.InsertCT_TacGia(ct_tacgia);
+                    dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+                    MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboMaTacGia.SelectedIndex = -1;
+                }
+            }    
         }
 
         private void XoaDSTG_Click(object sender, EventArgs e)
         {
-            CT_TacGia ct_tacgia = new CT_TacGia();
-            ct_tacgia.IDSach = Convert.ToInt32(txtMaSach.Text.Replace("SA", "00"));
-            ct_tacgia.IDTacGia = Convert.ToInt32(cboMaTacGia.Text.Replace("TG", "00"));
-            CT_TacGiaBUS.Instance.DeleteCT_TacGia(ct_tacgia);
-            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+            if (txtMaSach.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cboMaTacGia.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn lại mã tác giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboMaTacGia.Focus();
+            }
+            else
+            {
+                CT_TacGia ct_tacgia = new CT_TacGia();
+                ct_tacgia.IDSach = Convert.ToInt32(txtMaSach.Text.Replace("SA", "00"));
+                ct_tacgia.IDTacGia = Convert.ToInt32(cboMaTacGia.Text.Replace("TG", "00"));
+                if (CT_TacGiaBUS.Instance.GetCT_TacGiaByCT_TacGia(ct_tacgia).Rows.Count > 0)
+                {
+                    if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        CT_TacGiaBUS.Instance.DeleteCT_TacGia(ct_tacgia);
+                        dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+                        MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cboMaTacGia.SelectedIndex = -1;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Không tồn tại tác giả trong danh sách. Vui lòng chọn lại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cboMaTacGia.Focus();
+                }    
+            }    
         }
 
         private void btnSuaSach_Click(object sender, EventArgs e)

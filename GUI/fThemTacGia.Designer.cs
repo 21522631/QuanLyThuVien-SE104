@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtTenTacGia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 146);
             this.panel1.TabIndex = 2;
+            // 
+            // dtmNgaySinh
+            // 
+            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgaySinh.Location = new System.Drawing.Point(105, 69);
+            this.dtmNgaySinh.Name = "dtmNgaySinh";
+            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgaySinh.TabIndex = 51;
             // 
             // label14
             // 
@@ -107,15 +116,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN TÁC GIẢ";
             // 
-            // dtmNgaySinh
-            // 
-            this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgaySinh.Location = new System.Drawing.Point(105, 69);
-            this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgaySinh.TabIndex = 51;
-            // 
             // fThemTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +123,7 @@
             this.ClientSize = new System.Drawing.Size(273, 169);
             this.Controls.Add(this.panel1);
             this.Name = "fThemTacGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Tác Giả";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

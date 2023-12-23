@@ -43,9 +43,11 @@ namespace DAL
         }
         public DataTable SearchCuonSach(string ThongTinTraCuu)
         {
+            int TinhTrang;
+            Int32.TryParse(ThongTinTraCuu, out TinhTrang);    
             string query = "SELECT MACUONSACH, MASACH, TENSACH, TINHTRANG " +
                            "FROM CUONSACH JOIN SACH ON CUONSACH.IDSACH = SACH.ID " +
-                           "WHERE MACUONSACH LIKE '" + ThongTinTraCuu + "%' OR MASACH LIKE '" + ThongTinTraCuu + "%' OR TENSACH LIKE N'%" + ThongTinTraCuu + "%' OR TINHTRANG = '" + ThongTinTraCuu + "'";
+                           "WHERE MACUONSACH LIKE '" + ThongTinTraCuu + "%' OR MASACH LIKE '" + ThongTinTraCuu + "%' OR TENSACH LIKE N'%" + ThongTinTraCuu + "%' OR TINHTRANG = '" + TinhTrang + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertCuonSach(string IDSach)
