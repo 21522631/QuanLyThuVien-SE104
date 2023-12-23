@@ -42,6 +42,10 @@ namespace BUS
         {
             return DocGiaDAL.Instance.UpdateDocGia(MaDocGia, TenDocGia, NgaySinh, DiaChi, Email, IDLoaiDocGia, NgayLapThe);
         }
+        public int UpdateThoiHanTheDocGia(string MaDocGia, string NgayHetHan)
+        {
+            return DocGiaDAL.Instance.UpdateThoiHanTheDocGia(MaDocGia, NgayHetHan);
+        }
         public int UpdateDocGia(string MaDocGia, string TongNo)
         {
             return DocGiaDAL.Instance.UpdateDocGia(MaDocGia, TongNo);

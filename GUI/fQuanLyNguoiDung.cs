@@ -39,8 +39,8 @@ namespace GUI
             txtMaNhomNguoiDung.Enabled = false;
             dgvNhomNguoiDung.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNhomNguoiDung.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
-            dgvNhomNguoiDung.Columns[0].HeaderCell.Value = "Mã nhóm người dùng";
-            dgvNhomNguoiDung.Columns[1].HeaderCell.Value = "Tên nhóm người dùng";
+            dgvNhomNguoiDung.Columns[1].HeaderCell.Value = "Mã nhóm người dùng";
+            dgvNhomNguoiDung.Columns[2].HeaderCell.Value = "Tên nhóm người dùng";
             dgvNhomNguoiDung.Columns["ID"].Visible = false;
             txtMaChucNang.Enabled = false;
             dgvChucNang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

@@ -65,6 +65,7 @@
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabQuanLyDocGia = new System.Windows.Forms.TabControl();
+            this.btnGiaHanThe = new System.Windows.Forms.Button();
             this.tabpgLoaiDocGia.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
@@ -135,6 +136,7 @@
             // 
             // dgvLoaiDocGia
             // 
+            this.dgvLoaiDocGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiDocGia.Location = new System.Drawing.Point(6, 19);
             this.dgvLoaiDocGia.Name = "dgvLoaiDocGia";
@@ -199,6 +201,7 @@
             // 
             // tabpgDocGia
             // 
+            this.tabpgDocGia.Controls.Add(this.btnGiaHanThe);
             this.tabpgDocGia.Controls.Add(this.btnXoaDocGia);
             this.tabpgDocGia.Controls.Add(this.btnSuaDocGia);
             this.tabpgDocGia.Controls.Add(this.btnThemDocGia);
@@ -256,6 +259,7 @@
             // 
             // dgvDocGia
             // 
+            this.dgvDocGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDocGia.Location = new System.Drawing.Point(6, 19);
             this.dgvDocGia.Name = "dgvDocGia";
@@ -446,6 +450,16 @@
             this.tabQuanLyDocGia.Size = new System.Drawing.Size(804, 486);
             this.tabQuanLyDocGia.TabIndex = 6;
             // 
+            // btnGiaHanThe
+            // 
+            this.btnGiaHanThe.Location = new System.Drawing.Point(114, 174);
+            this.btnGiaHanThe.Name = "btnGiaHanThe";
+            this.btnGiaHanThe.Size = new System.Drawing.Size(92, 23);
+            this.btnGiaHanThe.TabIndex = 28;
+            this.btnGiaHanThe.Text = "Gia hạn thẻ";
+            this.btnGiaHanThe.UseVisualStyleBackColor = true;
+            this.btnGiaHanThe.Click += new System.EventHandler(this.btnGiaHanThe_Click);
+            // 
             // fQuanLyDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,5 +526,6 @@
         private System.Windows.Forms.Button btnSuaDocGia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboLoaiDocGia;
+        private System.Windows.Forms.Button btnGiaHanThe;
     }
 }

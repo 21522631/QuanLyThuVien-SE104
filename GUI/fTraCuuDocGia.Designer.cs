@@ -92,6 +92,7 @@
             // 
             // dgvDocGia
             // 
+            this.dgvDocGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDocGia.Location = new System.Drawing.Point(6, 19);
             this.dgvDocGia.Name = "dgvDocGia";
@@ -171,6 +172,7 @@
             // 
             // dgvLoaiDocGia
             // 
+            this.dgvLoaiDocGia.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiDocGia.Location = new System.Drawing.Point(6, 19);
             this.dgvLoaiDocGia.Name = "dgvLoaiDocGia";
