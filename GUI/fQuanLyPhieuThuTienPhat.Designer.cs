@@ -33,6 +33,12 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dgvPTTP = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSoTienThu = new System.Windows.Forms.TextBox();
+            this.txtMaDocGia = new System.Windows.Forms.TextBox();
+            this.txtSoPhieuThu = new System.Windows.Forms.TextBox();
+            this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
+            this.txtConLai = new System.Windows.Forms.TextBox();
+            this.txtTongNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -42,12 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.txtTongNo = new System.Windows.Forms.TextBox();
-            this.txtConLai = new System.Windows.Forms.TextBox();
-            this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
-            this.txtSoPhieuThu = new System.Windows.Forms.TextBox();
-            this.txtMaDocGia = new System.Windows.Forms.TextBox();
-            this.txtSoTienThu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPTTP)).BeginInit();
@@ -89,6 +89,7 @@
             // 
             // dgvPTTP
             // 
+            this.dgvPTTP.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPTTP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPTTP.Location = new System.Drawing.Point(6, 19);
             this.dgvPTTP.Name = "dgvPTTP";
@@ -116,6 +117,55 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết phiếu thu tiền phạt";
+            // 
+            // txtSoTienThu
+            // 
+            this.txtSoTienThu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSoTienThu.Location = new System.Drawing.Point(495, 66);
+            this.txtSoTienThu.Name = "txtSoTienThu";
+            this.txtSoTienThu.Size = new System.Drawing.Size(91, 20);
+            this.txtSoTienThu.TabIndex = 92;
+            // 
+            // txtMaDocGia
+            // 
+            this.txtMaDocGia.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtMaDocGia.Location = new System.Drawing.Point(289, 40);
+            this.txtMaDocGia.Name = "txtMaDocGia";
+            this.txtMaDocGia.Size = new System.Drawing.Size(91, 20);
+            this.txtMaDocGia.TabIndex = 91;
+            // 
+            // txtSoPhieuThu
+            // 
+            this.txtSoPhieuThu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSoPhieuThu.Location = new System.Drawing.Point(373, 13);
+            this.txtSoPhieuThu.Name = "txtSoPhieuThu";
+            this.txtSoPhieuThu.Size = new System.Drawing.Size(91, 20);
+            this.txtSoPhieuThu.TabIndex = 90;
+            // 
+            // dtmNgayThu
+            // 
+            this.dtmNgayThu.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayThu.Location = new System.Drawing.Point(289, 66);
+            this.dtmNgayThu.Name = "dtmNgayThu";
+            this.dtmNgayThu.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayThu.TabIndex = 88;
+            // 
+            // txtConLai
+            // 
+            this.txtConLai.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtConLai.Location = new System.Drawing.Point(495, 91);
+            this.txtConLai.Name = "txtConLai";
+            this.txtConLai.Size = new System.Drawing.Size(91, 20);
+            this.txtConLai.TabIndex = 82;
+            // 
+            // txtTongNo
+            // 
+            this.txtTongNo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtTongNo.Location = new System.Drawing.Point(495, 39);
+            this.txtTongNo.Name = "txtTongNo";
+            this.txtTongNo.Size = new System.Drawing.Size(91, 20);
+            this.txtTongNo.TabIndex = 81;
             // 
             // label10
             // 
@@ -200,55 +250,6 @@
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // txtTongNo
-            // 
-            this.txtTongNo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtTongNo.Location = new System.Drawing.Point(495, 39);
-            this.txtTongNo.Name = "txtTongNo";
-            this.txtTongNo.Size = new System.Drawing.Size(91, 20);
-            this.txtTongNo.TabIndex = 81;
-            // 
-            // txtConLai
-            // 
-            this.txtConLai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtConLai.Location = new System.Drawing.Point(495, 91);
-            this.txtConLai.Name = "txtConLai";
-            this.txtConLai.Size = new System.Drawing.Size(91, 20);
-            this.txtConLai.TabIndex = 82;
-            // 
-            // dtmNgayThu
-            // 
-            this.dtmNgayThu.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgayThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgayThu.Location = new System.Drawing.Point(289, 66);
-            this.dtmNgayThu.Name = "dtmNgayThu";
-            this.dtmNgayThu.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgayThu.TabIndex = 88;
-            // 
-            // txtSoPhieuThu
-            // 
-            this.txtSoPhieuThu.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtSoPhieuThu.Location = new System.Drawing.Point(373, 13);
-            this.txtSoPhieuThu.Name = "txtSoPhieuThu";
-            this.txtSoPhieuThu.Size = new System.Drawing.Size(91, 20);
-            this.txtSoPhieuThu.TabIndex = 90;
-            // 
-            // txtMaDocGia
-            // 
-            this.txtMaDocGia.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaDocGia.Location = new System.Drawing.Point(289, 40);
-            this.txtMaDocGia.Name = "txtMaDocGia";
-            this.txtMaDocGia.Size = new System.Drawing.Size(91, 20);
-            this.txtMaDocGia.TabIndex = 91;
-            // 
-            // txtSoTienThu
-            // 
-            this.txtSoTienThu.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtSoTienThu.Location = new System.Drawing.Point(495, 66);
-            this.txtSoTienThu.Name = "txtSoTienThu";
-            this.txtSoTienThu.Size = new System.Drawing.Size(91, 20);
-            this.txtSoTienThu.TabIndex = 92;
-            // 
             // fQuanLyPhieuThuTienPhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +257,7 @@
             this.ClientSize = new System.Drawing.Size(807, 498);
             this.Controls.Add(this.panel1);
             this.Name = "fQuanLyPhieuThuTienPhat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu Thu Tiền Phạt";
             this.Load += new System.EventHandler(this.fQuanLyPhieuThuTienPhat_Load);
             this.panel1.ResumeLayout(false);

@@ -90,10 +90,11 @@
             // 
             // dgvPhieuThuTien
             // 
+            this.dgvPhieuThuTien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPhieuThuTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuThuTien.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuThuTien.Name = "dgvPhieuThuTien";
-            this.dgvPhieuThuTien.Size = new System.Drawing.Size(752, 249);
+            this.dgvPhieuThuTien.Size = new System.Drawing.Size(744, 249);
             this.dgvPhieuThuTien.TabIndex = 1;
             // 
             // groupBox1

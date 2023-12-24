@@ -29,62 +29,53 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.domTuoiToiThieu = new System.Windows.Forms.DomainUpDown();
-            this.domTuoiToiDa = new System.Windows.Forms.DomainUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.domThoiHanTheDocGia = new System.Windows.Forms.DomainUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSoTienPhatTraTre = new System.Windows.Forms.TextBox();
             this.chkApDungQDTienThu = new System.Windows.Forms.CheckBox();
-            this.domKhoangCachNamXuatBan = new System.Windows.Forms.DomainUpDown();
-            this.domSoSachMuonToiDa = new System.Windows.Forms.DomainUpDown();
-            this.domSoNgayMuonToiDa = new System.Windows.Forms.DomainUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.domThoiHanTheDocGia = new System.Windows.Forms.NumericUpDown();
+            this.domTuoiToiDa = new System.Windows.Forms.NumericUpDown();
+            this.domTuoiToiThieu = new System.Windows.Forms.NumericUpDown();
+            this.domSoNgayMuonToiDa = new System.Windows.Forms.NumericUpDown();
+            this.domSoSachMuonToiDa = new System.Windows.Forms.NumericUpDown();
+            this.domSoTienPhatTraTre = new System.Windows.Forms.NumericUpDown();
+            this.domKhoangCachNamXuatBan = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.domThoiHanTheDocGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiDa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiThieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoNgayMuonToiDa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoSachMuonToiDa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoTienPhatTraTre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domKhoangCachNamXuatBan)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.domTuoiToiThieu);
             this.groupBox1.Controls.Add(this.domTuoiToiDa);
+            this.groupBox1.Controls.Add(this.domThoiHanTheDocGia);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.domThoiHanTheDocGia);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 104);
+            this.groupBox1.Size = new System.Drawing.Size(263, 104);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy Định Độc Giả";
-            // 
-            // domTuoiToiThieu
-            // 
-            this.domTuoiToiThieu.Location = new System.Drawing.Point(194, 75);
-            this.domTuoiToiThieu.Name = "domTuoiToiThieu";
-            this.domTuoiToiThieu.Size = new System.Drawing.Size(46, 20);
-            this.domTuoiToiThieu.TabIndex = 31;
-            this.domTuoiToiThieu.Text = "18";
-            // 
-            // domTuoiToiDa
-            // 
-            this.domTuoiToiDa.Location = new System.Drawing.Point(194, 49);
-            this.domTuoiToiDa.Name = "domTuoiToiDa";
-            this.domTuoiToiDa.Size = new System.Drawing.Size(46, 20);
-            this.domTuoiToiDa.TabIndex = 30;
-            this.domTuoiToiDa.Text = "60";
             // 
             // label3
             // 
@@ -104,14 +95,6 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Tuổi tối thiểu của độc giả";
             // 
-            // domThoiHanTheDocGia
-            // 
-            this.domThoiHanTheDocGia.Location = new System.Drawing.Point(194, 23);
-            this.domThoiHanTheDocGia.Name = "domThoiHanTheDocGia";
-            this.domThoiHanTheDocGia.Size = new System.Drawing.Size(46, 20);
-            this.domThoiHanTheDocGia.TabIndex = 27;
-            this.domThoiHanTheDocGia.Text = "6";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -124,7 +107,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(56, 12);
+            this.label16.Location = new System.Drawing.Point(82, 12);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(123, 13);
             this.label16.TabIndex = 24;
@@ -139,7 +122,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(254, 325);
+            this.panel1.Size = new System.Drawing.Size(275, 325);
             this.panel1.TabIndex = 25;
             // 
             // btnHuy
@@ -164,11 +147,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtSoTienPhatTraTre);
-            this.groupBox2.Controls.Add(this.chkApDungQDTienThu);
             this.groupBox2.Controls.Add(this.domKhoangCachNamXuatBan);
+            this.groupBox2.Controls.Add(this.domSoTienPhatTraTre);
             this.groupBox2.Controls.Add(this.domSoSachMuonToiDa);
             this.groupBox2.Controls.Add(this.domSoNgayMuonToiDa);
+            this.groupBox2.Controls.Add(this.chkApDungQDTienThu);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
@@ -176,18 +159,10 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(3, 138);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(248, 148);
+            this.groupBox2.Size = new System.Drawing.Size(263, 148);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Quy Định Mượn Trả Sách";
-            // 
-            // txtSoTienPhatTraTre
-            // 
-            this.txtSoTienPhatTraTre.Location = new System.Drawing.Point(196, 71);
-            this.txtSoTienPhatTraTre.Name = "txtSoTienPhatTraTre";
-            this.txtSoTienPhatTraTre.Size = new System.Drawing.Size(46, 20);
-            this.txtSoTienPhatTraTre.TabIndex = 37;
-            this.txtSoTienPhatTraTre.Text = "1000";
+            this.groupBox2.Text = "Quy Định Mượn Trả  Và Nhập Sách";
             // 
             // chkApDungQDTienThu
             // 
@@ -197,30 +172,6 @@
             this.chkApDungQDTienThu.Size = new System.Drawing.Size(15, 14);
             this.chkApDungQDTienThu.TabIndex = 36;
             this.chkApDungQDTienThu.UseVisualStyleBackColor = true;
-            // 
-            // domKhoangCachNamXuatBan
-            // 
-            this.domKhoangCachNamXuatBan.Location = new System.Drawing.Point(194, 97);
-            this.domKhoangCachNamXuatBan.Name = "domKhoangCachNamXuatBan";
-            this.domKhoangCachNamXuatBan.Size = new System.Drawing.Size(46, 20);
-            this.domKhoangCachNamXuatBan.TabIndex = 35;
-            this.domKhoangCachNamXuatBan.Text = "8";
-            // 
-            // domSoSachMuonToiDa
-            // 
-            this.domSoSachMuonToiDa.Location = new System.Drawing.Point(196, 45);
-            this.domSoSachMuonToiDa.Name = "domSoSachMuonToiDa";
-            this.domSoSachMuonToiDa.Size = new System.Drawing.Size(46, 20);
-            this.domSoSachMuonToiDa.TabIndex = 34;
-            this.domSoSachMuonToiDa.Text = "5";
-            // 
-            // domSoNgayMuonToiDa
-            // 
-            this.domSoNgayMuonToiDa.Location = new System.Drawing.Point(196, 19);
-            this.domSoNgayMuonToiDa.Name = "domSoNgayMuonToiDa";
-            this.domSoNgayMuonToiDa.Size = new System.Drawing.Size(46, 20);
-            this.domSoNgayMuonToiDa.TabIndex = 33;
-            this.domSoNgayMuonToiDa.Text = "4";
             // 
             // label8
             // 
@@ -267,13 +218,73 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Số ngày mượn tối đa";
             // 
+            // domThoiHanTheDocGia
+            // 
+            this.domThoiHanTheDocGia.Location = new System.Drawing.Point(194, 23);
+            this.domThoiHanTheDocGia.Name = "domThoiHanTheDocGia";
+            this.domThoiHanTheDocGia.Size = new System.Drawing.Size(57, 20);
+            this.domThoiHanTheDocGia.TabIndex = 32;
+            // 
+            // domTuoiToiDa
+            // 
+            this.domTuoiToiDa.Location = new System.Drawing.Point(194, 49);
+            this.domTuoiToiDa.Name = "domTuoiToiDa";
+            this.domTuoiToiDa.Size = new System.Drawing.Size(57, 20);
+            this.domTuoiToiDa.TabIndex = 33;
+            // 
+            // domTuoiToiThieu
+            // 
+            this.domTuoiToiThieu.Location = new System.Drawing.Point(194, 75);
+            this.domTuoiToiThieu.Name = "domTuoiToiThieu";
+            this.domTuoiToiThieu.Size = new System.Drawing.Size(57, 20);
+            this.domTuoiToiThieu.TabIndex = 34;
+            // 
+            // domSoNgayMuonToiDa
+            // 
+            this.domSoNgayMuonToiDa.Location = new System.Drawing.Point(194, 19);
+            this.domSoNgayMuonToiDa.Name = "domSoNgayMuonToiDa";
+            this.domSoNgayMuonToiDa.Size = new System.Drawing.Size(57, 20);
+            this.domSoNgayMuonToiDa.TabIndex = 35;
+            // 
+            // domSoSachMuonToiDa
+            // 
+            this.domSoSachMuonToiDa.Location = new System.Drawing.Point(194, 45);
+            this.domSoSachMuonToiDa.Name = "domSoSachMuonToiDa";
+            this.domSoSachMuonToiDa.Size = new System.Drawing.Size(57, 20);
+            this.domSoSachMuonToiDa.TabIndex = 38;
+            // 
+            // domSoTienPhatTraTre
+            // 
+            this.domSoTienPhatTraTre.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.domSoTienPhatTraTre.Location = new System.Drawing.Point(194, 71);
+            this.domSoTienPhatTraTre.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.domSoTienPhatTraTre.Name = "domSoTienPhatTraTre";
+            this.domSoTienPhatTraTre.Size = new System.Drawing.Size(57, 20);
+            this.domSoTienPhatTraTre.TabIndex = 39;
+            // 
+            // domKhoangCachNamXuatBan
+            // 
+            this.domKhoangCachNamXuatBan.Location = new System.Drawing.Point(194, 97);
+            this.domKhoangCachNamXuatBan.Name = "domKhoangCachNamXuatBan";
+            this.domKhoangCachNamXuatBan.Size = new System.Drawing.Size(57, 20);
+            this.domKhoangCachNamXuatBan.TabIndex = 40;
+            // 
             // fQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 347);
+            this.ClientSize = new System.Drawing.Size(299, 347);
             this.Controls.Add(this.panel1);
             this.Name = "fQuyDinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quy Định";
             this.Load += new System.EventHandler(this.fQuyDinh_Load);
             this.groupBox1.ResumeLayout(false);
@@ -282,6 +293,13 @@
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.domThoiHanTheDocGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiDa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiThieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoNgayMuonToiDa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoSachMuonToiDa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoTienPhatTraTre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domKhoangCachNamXuatBan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,22 +311,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DomainUpDown domTuoiToiThieu;
-        private System.Windows.Forms.DomainUpDown domTuoiToiDa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DomainUpDown domThoiHanTheDocGia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DomainUpDown domKhoangCachNamXuatBan;
-        private System.Windows.Forms.DomainUpDown domSoSachMuonToiDa;
-        private System.Windows.Forms.DomainUpDown domSoNgayMuonToiDa;
         private System.Windows.Forms.CheckBox chkApDungQDTienThu;
-        private System.Windows.Forms.TextBox txtSoTienPhatTraTre;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.NumericUpDown domThoiHanTheDocGia;
+        private System.Windows.Forms.NumericUpDown domTuoiToiDa;
+        private System.Windows.Forms.NumericUpDown domTuoiToiThieu;
+        private System.Windows.Forms.NumericUpDown domSoSachMuonToiDa;
+        private System.Windows.Forms.NumericUpDown domSoNgayMuonToiDa;
+        private System.Windows.Forms.NumericUpDown domKhoangCachNamXuatBan;
+        private System.Windows.Forms.NumericUpDown domSoTienPhatTraTre;
     }
 }
