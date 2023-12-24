@@ -21,6 +21,7 @@ namespace GUI
         private void fQuanLyPhieuThuTienPhat_Load(object sender, EventArgs e)
         {
             txtSoPhieuThu.Enabled = false;
+            txtSoPhieuThu.Enabled = false;
             txtConLai.Enabled = false;
             txtTongNo.Enabled = false;
             dgvPTTP.DataSource = PhieuThuTienPhatBUS.Instance.GetAllPhieuThuTienPhat();

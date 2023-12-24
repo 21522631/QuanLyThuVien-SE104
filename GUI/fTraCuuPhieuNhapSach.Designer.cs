@@ -76,9 +76,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label1.Location = new System.Drawing.Point(230, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 13);
+            this.label1.Size = new System.Drawing.Size(180, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "(Nhập số phiếu nhập, ngày nhập hoặc tổng tiền)";
+            this.label1.Text = "(Nhập số phiếu nhập hoặc tổng tiền)";
             // 
             // txtTraCuu
             // 

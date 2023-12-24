@@ -312,6 +312,7 @@
             // 
             // dgvPhieuMuon
             // 
+            this.dgvPhieuMuon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPhieuMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuMuon.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuMuon.Name = "dgvPhieuMuon";

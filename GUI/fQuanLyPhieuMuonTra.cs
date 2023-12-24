@@ -27,12 +27,24 @@ namespace GUI
             txtMaDocGia.Enabled = false;
             txtNoCu.Enabled = false;
             txtTienPhat.Enabled = false;
-            txtNoCu.Text = "";
+            txtNoCu.Text = "0";
             txtTongNo.Enabled = false;
             dtmNgayMuon.Enabled = false;
             chkTinhTrang.Checked = false;
             dtmNgayPhaiTra.Enabled = false;
+            dgvPhieuMuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPhieuMuon.DataSource = PhieuMuonTraBUS.Instance.GetAllPhieuMuonTra();
+            dgvPhieuMuon.Columns[0].HeaderCell.Value = "Số phiếu mượn";
+            dgvPhieuMuon.Columns[1].HeaderCell.Value = "Mã độc giả";
+            dgvPhieuMuon.Columns[2].HeaderCell.Value = "Mã cuốn sách";
+            dgvPhieuMuon.Columns[3].HeaderCell.Value = "Ngày mượn";
+            dgvPhieuMuon.Columns[4].HeaderCell.Value = "Ngày phải trả";
+            dgvPhieuMuon.Columns[5].HeaderCell.Value = "Ngày trả";
+            dgvPhieuMuon.Columns[6].HeaderCell.Value = "Tiền phạt";
+            dgvPhieuMuon.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvPhieuMuon.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvPhieuMuon.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+
         }
 
         private void btnThemPhieuMuon_Click(object sender, EventArgs e)
