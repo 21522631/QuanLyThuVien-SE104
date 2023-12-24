@@ -205,7 +205,7 @@
             this.groupBox1.Controls.Add(this.dgvPhieuMuonTra);
             this.groupBox1.Location = new System.Drawing.Point(12, 147);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(748, 240);
+            this.groupBox1.Size = new System.Drawing.Size(748, 263);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tra cứu";
@@ -216,18 +216,19 @@
             this.dgvPhieuMuonTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuMuonTra.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuMuonTra.Name = "dgvPhieuMuonTra";
-            this.dgvPhieuMuonTra.Size = new System.Drawing.Size(736, 212);
+            this.dgvPhieuMuonTra.Size = new System.Drawing.Size(736, 238);
             this.dgvPhieuMuonTra.TabIndex = 1;
             // 
             // fTraCuuPhieuMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 392);
+            this.ClientSize = new System.Drawing.Size(773, 422);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
             this.Name = "fTraCuuPhieuMuonTra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra Cứu Phiếu Mượn Trả";
             this.Load += new System.EventHandler(this.fTraCuuPhieuMuonTra_Load);
             this.groupBox2.ResumeLayout(false);

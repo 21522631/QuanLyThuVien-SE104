@@ -82,8 +82,8 @@ namespace DAL
         }
         public int UpdatePhieuMuonTraVoiNull(PhieuMuonTra PMT)
         {
-            string query = "UPDATE PHIEUMUONTRA SET NGAYMUON = '" + PMT.NgayMuon + "', NGAYPHAITRA = '" + PMT.NgayPhaiTra +
-                           "' WHERE SOPMT = '" + PMT.SoPMT + "'";
+            string query = "UPDATE PHIEUMUONTRA SET NGAYMUON = '" + PMT.NgayMuon + "', NGAYPHAITRA = '" + PMT.NgayPhaiTra + "', NGAYTRA = NULL, TIENPHAT = 0" + 
+                           " WHERE SOPMT = '" + PMT.SoPMT + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int DeletePhieuMuonTra(string SoPMT)

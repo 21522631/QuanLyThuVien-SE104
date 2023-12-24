@@ -20,29 +20,45 @@ namespace GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            PhieuMuonTra PMS = new PhieuMuonTra();
-            PMS.IDDocGia = cboMaDocGia.Text.Replace("DG", "00");
-            PMS.IDCuonSach = cboMaCuonSach.Text.Replace("CS", "00");
-            PMS.NgayMuon = dtmNgayMuon.Text;
-            PMS.NgayPhaiTra = dtmNgayPhaiTra.Text;
-            DataTable dt = new DataTable();
-            dt = PhieuMuonTraBUS.Instance.GetSoLuongSachDangMuon(cboMaDocGia.Text.Replace("DG", "00"));
-            int SoLuongSachMuon = 0;
-            if (dt.Rows.Count > 0 )
+            if (cboMaDocGia.SelectedValue == null)
             {
-                SoLuongSachMuon = Convert.ToInt32(dt.Rows[0][1].ToString());
+                MessageBox.Show("Vui lòng chọn mã độc giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboMaDocGia.Focus();
             }
-            if(SoLuongSachMuon < ThamSoBUS.Instance.GetThamSo().SoSachMuonToiDa)
+            else if (cboMaCuonSach.SelectedValue == null)
             {
-                PhieuMuonTraBUS.Instance.InsertPhieuMuonTraBUS(PMS);
-                CuonSachBUS.Instance.UpdateCuonSach(cboMaCuonSach.Text, "0");
+                MessageBox.Show("Vui lòng chọn mã cuốn sách!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboMaDocGia.Focus();
             }
             else
             {
-                MessageBox.Show("Số lượng sách mượn đã vượt quy định", "Không hợp lệ!",MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            cboMaCuonSach.DataSource = CuonSachBUS.Instance.GetAllCuonSachConTrong();
-            cboMaCuonSach.Text = "";
+                PhieuMuonTra PMS = new PhieuMuonTra();
+                PMS.IDDocGia = cboMaDocGia.Text.Replace("DG", "00");
+                PMS.IDCuonSach = cboMaCuonSach.Text.Replace("CS", "00");
+                PMS.NgayMuon = dtmNgayMuon.Text;
+                PMS.NgayPhaiTra = dtmNgayPhaiTra.Text;
+                DataTable dt = new DataTable();
+                dt = PhieuMuonTraBUS.Instance.GetSoLuongSachDangMuon(cboMaDocGia.Text.Replace("DG", "00"));
+                int SoLuongSachMuon = 0;
+                if (dt.Rows.Count > 0)
+                {
+                    SoLuongSachMuon = Convert.ToInt32(dt.Rows[0][1].ToString());
+                }
+                if (SoLuongSachMuon < ThamSoBUS.Instance.GetThamSo().SoSachMuonToiDa)
+                {
+
+                    PhieuMuonTraBUS.Instance.InsertPhieuMuonTraBUS(PMS);
+                    CuonSachBUS.Instance.UpdateCuonSach(cboMaCuonSach.Text, "0");
+                    MessageBox.Show("Thêm phiếu mượn thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboMaCuonSach.DataSource = CuonSachBUS.Instance.GetAllCuonSachConTrong();
+                    cboMaCuonSach.SelectedIndex = -1;
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng sách mượn đã vượt quy định", "Không hợp lệ!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }    
+            
 
         }
 
@@ -55,12 +71,12 @@ namespace GUI
         {
             cboMaDocGia.DataSource = DocGiaBUS.Instance.GetAllDocGia();
             cboMaDocGia.DisplayMember = "MADOCGIA";
-            cboMaDocGia.Text = "";
             cboMaCuonSach.DataSource = CuonSachBUS.Instance.GetAllCuonSachConTrong();
             cboMaCuonSach.DisplayMember = "MACUONSACH";
-            cboMaCuonSach.Text = "";
             dtmNgayPhaiTra.Enabled = false;
             dtmNgayPhaiTra.Text = Convert.ToString(dtmNgayMuon.Value.AddDays(ThamSoBUS.Instance.GetThamSo().SoNgayMuonToiDa));
+            cboMaCuonSach.SelectedIndex = -1;
+            cboMaDocGia.SelectedIndex = -1;
         }
 
         private void dtmNgayMuon_ValueChanged(object sender, EventArgs e)

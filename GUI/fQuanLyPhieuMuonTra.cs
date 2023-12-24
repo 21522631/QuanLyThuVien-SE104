@@ -24,10 +24,14 @@ namespace GUI
             txtMaCuonSach.Enabled = false;
             txtSoPhieuMuonTra.Enabled = false;
             txtMaCuonSach.Enabled = false;
+            txtMaDocGia.Enabled = false;
             txtNoCu.Enabled = false;
             txtTienPhat.Enabled = false;
             txtNoCu.Text = "";
+            txtTongNo.Enabled = false;
+            dtmNgayMuon.Enabled = false;
             chkTinhTrang.Checked = false;
+            dtmNgayPhaiTra.Enabled = false;
             dgvPhieuMuon.DataSource = PhieuMuonTraBUS.Instance.GetAllPhieuMuonTra();
         }
 
@@ -49,78 +53,16 @@ namespace GUI
             dtmNgayPhaiTra.Text = dgvPhieuMuon.Rows[index].Cells[4].Value.ToString();
             dtmNgayTra.Text = dgvPhieuMuon.Rows[index].Cells[5].Value.ToString();
             txtNoCu.Text = DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text).Rows[0]["TONGNO"].ToString();
-            if (chkTinhTrang.Checked == false) 
-            {
-                int SoNgayMuon = dtmNgayTra.Value.Subtract(dtmNgayPhaiTra.Value).Days;
-                if (SoNgayMuon < 0)
-                {
-                    txtTienPhat.Text = "0";
-                    txtTongNo.Text = txtNoCu.Text;
-                }
-                else
-                {
-                    int TienPhat = SoNgayMuon * ThamSoBUS.Instance.GetThamSo().DonGiaPhat;
-                    txtTienPhat.Text = TienPhat.ToString();
-                    txtTongNo.Text = (Convert.ToInt32(txtNoCu.Text.ToString()) + TienPhat).ToString();
-                }
-            }
             string DaTra = CuonSachBUS.Instance.GetAllCuonSachByMaCuonSach(txtMaCuonSach.Text).Rows[0][0].ToString();
             if (DaTra == "0")
             {
                 chkTinhTrang.Checked = false;
-            } 
-            else 
-                chkTinhTrang.Checked = true;
-        }
-
-        private void btnSuaDocGia_Click(object sender, EventArgs e)
-        {
-            PhieuMuonTra PMT = new PhieuMuonTra();
-            PMT.SoPMT = txtSoPhieuMuonTra.Text;
-            PMT.NgayMuon = dtmNgayMuon.Text;
-            PMT.NgayPhaiTra = dtmNgayPhaiTra.Text;
-            if (chkTinhTrang.Checked == false)
-            {
-               PMT.TienPhat = "0";
-               PhieuMuonTraBUS.Instance.UpdatePhieuMuonTraVoiNull(PMT);
             }
             else
             {
-                PMT.TienPhat = txtTienPhat.Text;
-                PMT.NgayTra = dtmNgayTra.Text;
-                PhieuMuonTraBUS.Instance.UpdatePhieuMuonTra(PMT);
-                CuonSachBUS.Instance.UpdateCuonSach(txtMaCuonSach.Text, "1"); 
-                DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, txtTongNo.Text);
+                chkTinhTrang.Checked = true;
             }
-            dgvPhieuMuon.DataSource = PhieuMuonTraBUS.Instance.GetAllPhieuMuonTra();
-            txtNoCu.Text = DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text).Rows[0]["TONGNO"].ToString();
-
-        }
-
-        private void dtmNgayMuon_ValueChanged(object sender, EventArgs e)
-        {
-            dtmNgayPhaiTra.Text = Convert.ToString(dtmNgayMuon.Value.AddDays(ThamSoBUS.Instance.GetThamSo().SoNgayMuonToiDa));
-        }
-
-        private void btnXoaLoaiDocGia_Click(object sender, EventArgs e)
-        {
-            PhieuMuonTraBUS.Instance.DeletePhieuMuonTra(txtSoPhieuMuonTra.Text);
-            dgvPhieuMuon.DataSource = PhieuMuonTraBUS.Instance.GetAllPhieuMuonTra();
-            CuonSachBUS.Instance.UpdateCuonSach(txtMaCuonSach.Text, "1");
-            txtMaCuonSach.Text = "";
-            txtSoPhieuMuonTra.Text = "";
-            txtTienPhat.Text = "";
-            txtMaDocGia.Text = "";
-            dtmNgayMuon.Text = "";
-            dtmNgayPhaiTra.Text = "";
-            dtmNgayTra.Text = "";
-            txtTienPhat.Text = "";
-            txtTongNo.Text = "";
-        }
-
-        private void chkTinhTrang_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkTinhTrang.Checked)
+            if (chkTinhTrang.Checked == true) 
             {
                 int SoNgayMuon = dtmNgayTra.Value.Subtract(dtmNgayPhaiTra.Value).Days;
                 if (SoNgayMuon < 0)
@@ -139,7 +81,134 @@ namespace GUI
             {
                 txtTienPhat.Text = "0";
                 txtTongNo.Text = txtNoCu.Text;
+            }
+        }
+
+        private void dtmNgayMuon_ValueChanged(object sender, EventArgs e)
+        {
+            dtmNgayPhaiTra.Text = Convert.ToString(dtmNgayMuon.Value.AddDays(ThamSoBUS.Instance.GetThamSo().SoNgayMuonToiDa));
+        }
+
+        private void chkTinhTrang_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTinhTrang.Checked)
+            {
+                int SoNgayMuon = dtmNgayTra.Value.Subtract(dtmNgayPhaiTra.Value).Days;
+                if (SoNgayMuon < 0)
+                {
+                    txtTienPhat.Text = "0";
+                    txtTongNo.Text = txtNoCu.Text;
+                }
+                else
+                {
+                    int NoCu;
+                    int TienPhat = SoNgayMuon * ThamSoBUS.Instance.GetThamSo().DonGiaPhat;
+                    txtTienPhat.Text = TienPhat.ToString();
+                    if (Int32.TryParse(txtNoCu.Text.ToString(), out NoCu))
+                    {
+                        txtTongNo.Text = (NoCu + TienPhat).ToString();
+                    }
+                }
+            }
+            else
+            {
+                txtTienPhat.Text = "0";
+                txtTongNo.Text = txtNoCu.Text;
             }    
+        }
+
+        private void btnSuaPhieuMuon_Click(object sender, EventArgs e)
+        {
+            if (txtSoPhieuMuonTra.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                PhieuMuonTra PMT = new PhieuMuonTra();
+                PMT.SoPMT = txtSoPhieuMuonTra.Text;
+                PMT.NgayMuon = dtmNgayMuon.Text;
+                PMT.NgayPhaiTra = dtmNgayPhaiTra.Text;
+                if (chkTinhTrang.Checked == false)
+                {
+                    int TienPhat = Convert.ToInt32(dgvPhieuMuon.Rows[dgvPhieuMuon.CurrentRow.Index].Cells[6].Value.ToString());
+                    if (TienPhat > 0) 
+                    {
+                        txtTongNo.Text = (Convert.ToInt32(txtTongNo.Text) - TienPhat).ToString();
+                        DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, txtTongNo.Text);
+                    }
+                    PMT.TienPhat = "0";
+                    PhieuMuonTraBUS.Instance.UpdatePhieuMuonTraVoiNull(PMT);
+                    CuonSachBUS.Instance.UpdateCuonSach(txtMaCuonSach.Text, "0");
+
+                }
+                else
+                {
+                    PMT.TienPhat = txtTienPhat.Text;
+                    PMT.NgayTra = dtmNgayTra.Text;
+                    PhieuMuonTraBUS.Instance.UpdatePhieuMuonTra(PMT);
+                    CuonSachBUS.Instance.UpdateCuonSach(txtMaCuonSach.Text, "1");
+                    DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, txtTongNo.Text);
+                }
+                MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvPhieuMuon.DataSource = PhieuMuonTraBUS.Instance.GetAllPhieuMuonTra();
+                txtNoCu.Text = DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text).Rows[0]["TONGNO"].ToString();
+            }
+        }
+
+        private void dtmNgayTra_ValueChanged(object sender, EventArgs e)
+        {
+            if (chkTinhTrang.Checked == true)
+            {
+                int SoNgayMuon = dtmNgayTra.Value.Subtract(dtmNgayPhaiTra.Value).Days;
+                if (SoNgayMuon < 0)
+                {
+                    txtTienPhat.Text = "0";
+                    txtTongNo.Text = txtNoCu.Text;
+                }
+                else
+                {
+                    int TienPhat = SoNgayMuon * ThamSoBUS.Instance.GetThamSo().DonGiaPhat;
+                    txtTienPhat.Text = TienPhat.ToString();
+                    txtTongNo.Text = (Convert.ToInt32(txtNoCu.Text.ToString()) + TienPhat).ToString();
+                }
+            }
+            else 
+            {
+
+            } 
+                
+        }
+
+        private void btnXoaPhieuMuon_Click(object sender, EventArgs e)
+        {
+            if (txtSoPhieuMuonTra.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+
+                CuonSachBUS.Instance.UpdateCuonSach(txtMaCuonSach.Text, "1");
+                int TienPhat = Convert.ToInt32(dgvPhieuMuon.Rows[dgvPhieuMuon.CurrentRow.Index].Cells[6].Value.ToString());
+                int TongNo = Convert.ToInt32(DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text).Rows[0]["TONGNO"].ToString());
+                if (TienPhat > 0)
+                {
+                    DocGiaBUS.Instance.UpdateDocGia(txtMaDocGia.Text, (TongNo - TienPhat).ToString());
+                }
+                PhieuMuonTraBUS.Instance.DeletePhieuMuonTra(txtSoPhieuMuonTra.Text);
+                dgvPhieuMuon.DataSource = PhieuMuonTraBUS.Instance.GetAllPhieuMuonTra();
+                txtMaCuonSach.Text = "";
+                txtSoPhieuMuonTra.Text = "";
+                txtMaDocGia.Text = "";
+                txtNoCu.Text = "0";
+                dtmNgayMuon.Text = "";
+                dtmNgayPhaiTra.Text = "";
+                dtmNgayTra.Text = "";
+                txtTienPhat.Text = "0";
+                txtTongNo.Text = "0";
+                MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

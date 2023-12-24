@@ -103,7 +103,7 @@ namespace GUI
                     CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
                     CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
                     CTBC.TiLe = float.Parse(CTBC.SoLuotMuon.ToString()) / BC.TongSoLuotMuon;
-                    CT_BC_TinhHinhMuonSachBUS.Instance.InsertCT_BCTinhHinhMuonSach(CTBC);
+                    CT_BC_TinhHinhMuonSachBUS.Instance.UpdateCT_BCTinhHinhMuonSach(CTBC);
                 }
                 dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(CTBC.IDBCTHMS);
             }

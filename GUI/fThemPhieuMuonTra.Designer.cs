@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtmNgayPhaiTra = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgayMuon = new System.Windows.Forms.DateTimePicker();
+            this.cboMaCuonSach = new System.Windows.Forms.ComboBox();
+            this.cboMaDocGia = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -36,10 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboMaDocGia = new System.Windows.Forms.ComboBox();
-            this.cboMaCuonSach = new System.Windows.Forms.ComboBox();
-            this.dtmNgayMuon = new System.Windows.Forms.DateTimePicker();
-            this.dtmNgayPhaiTra = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(382, 129);
             this.panel1.TabIndex = 0;
+            // 
+            // dtmNgayPhaiTra
+            // 
+            this.dtmNgayPhaiTra.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayPhaiTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayPhaiTra.Location = new System.Drawing.Point(277, 65);
+            this.dtmNgayPhaiTra.Name = "dtmNgayPhaiTra";
+            this.dtmNgayPhaiTra.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayPhaiTra.TabIndex = 66;
+            // 
+            // dtmNgayMuon
+            // 
+            this.dtmNgayMuon.Cursor = System.Windows.Forms.Cursors.No;
+            this.dtmNgayMuon.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayMuon.Location = new System.Drawing.Point(277, 38);
+            this.dtmNgayMuon.Name = "dtmNgayMuon";
+            this.dtmNgayMuon.Size = new System.Drawing.Size(91, 20);
+            this.dtmNgayMuon.TabIndex = 65;
+            this.dtmNgayMuon.ValueChanged += new System.EventHandler(this.dtmNgayMuon_ValueChanged);
+            // 
+            // cboMaCuonSach
+            // 
+            this.cboMaCuonSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboMaCuonSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboMaCuonSach.FormattingEnabled = true;
+            this.cboMaCuonSach.Location = new System.Drawing.Point(94, 64);
+            this.cboMaCuonSach.Name = "cboMaCuonSach";
+            this.cboMaCuonSach.Size = new System.Drawing.Size(91, 21);
+            this.cboMaCuonSach.TabIndex = 64;
+            // 
+            // cboMaDocGia
+            // 
+            this.cboMaDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboMaDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboMaDocGia.FormattingEnabled = true;
+            this.cboMaDocGia.Location = new System.Drawing.Point(94, 38);
+            this.cboMaDocGia.Name = "cboMaDocGia";
+            this.cboMaDocGia.Size = new System.Drawing.Size(91, 21);
+            this.cboMaDocGia.TabIndex = 63;
             // 
             // btnHuy
             // 
@@ -126,46 +166,6 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "THÔNG TIN PHIẾU MƯỢN TRẢ";
             // 
-            // cboMaDocGia
-            // 
-            this.cboMaDocGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboMaDocGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboMaDocGia.FormattingEnabled = true;
-            this.cboMaDocGia.Location = new System.Drawing.Point(94, 38);
-            this.cboMaDocGia.Name = "cboMaDocGia";
-            this.cboMaDocGia.Size = new System.Drawing.Size(91, 21);
-            this.cboMaDocGia.TabIndex = 63;
-            // 
-            // cboMaCuonSach
-            // 
-            this.cboMaCuonSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboMaCuonSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboMaCuonSach.FormattingEnabled = true;
-            this.cboMaCuonSach.Location = new System.Drawing.Point(94, 64);
-            this.cboMaCuonSach.Name = "cboMaCuonSach";
-            this.cboMaCuonSach.Size = new System.Drawing.Size(91, 21);
-            this.cboMaCuonSach.TabIndex = 64;
-            // 
-            // dtmNgayMuon
-            // 
-            this.dtmNgayMuon.Cursor = System.Windows.Forms.Cursors.No;
-            this.dtmNgayMuon.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgayMuon.Location = new System.Drawing.Point(277, 38);
-            this.dtmNgayMuon.Name = "dtmNgayMuon";
-            this.dtmNgayMuon.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgayMuon.TabIndex = 65;
-            this.dtmNgayMuon.ValueChanged += new System.EventHandler(this.dtmNgayMuon_ValueChanged);
-            // 
-            // dtmNgayPhaiTra
-            // 
-            this.dtmNgayPhaiTra.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgayPhaiTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgayPhaiTra.Location = new System.Drawing.Point(277, 65);
-            this.dtmNgayPhaiTra.Name = "dtmNgayPhaiTra";
-            this.dtmNgayPhaiTra.Size = new System.Drawing.Size(91, 20);
-            this.dtmNgayPhaiTra.TabIndex = 66;
-            // 
             // fThemPhieuMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +173,7 @@
             this.ClientSize = new System.Drawing.Size(406, 153);
             this.Controls.Add(this.panel1);
             this.Name = "fThemPhieuMuonTra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Phiếu Mượn Trả";
             this.Load += new System.EventHandler(this.fThemPhieuMuonTra_Load);
             this.panel1.ResumeLayout(false);
