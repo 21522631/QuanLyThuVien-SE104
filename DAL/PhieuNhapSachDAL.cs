@@ -30,11 +30,14 @@ namespace DAL
         }
         public DataTable SearchPhieuNhapSach(string ThongTinTraCuu)
         {
-            //DateTime dt;
-            //DateTime.TryParseExact(ThongTinTraCuu,"dd-MM-yyyy",CultureInfo.InvariantCulture,DateTimeStyles.None,out dt);
-            string Ngay = ThongTinTraCuu.ToString().Replace("\\", "-");
             string query = "SELECT SOPNS, NGAYLAP, TONGTIEN FROM PHIEUNHAPSACH " + 
-                           "WHERE SOPNS LIKE '%" + ThongTinTraCuu + "%' OR NGAYLAP LIKE '%" + Ngay + "%' OR TONGTIEN LIKE '%" + ThongTinTraCuu + "%'";
+                           "WHERE SOPNS LIKE '" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable SearchPhieuNhapSach(string ThongTinTraCuu, string NgayLap)
+        {
+            string query = "SELECT SOPNS, NGAYLAP, TONGTIEN FROM PHIEUNHAPSACH " +
+                           "WHERE SOPNS LIKE '%" + ThongTinTraCuu + "%' AND NGAYLAP = '" + NgayLap + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertPhieuNhapSach(string NgayLap)

@@ -31,6 +31,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuNhapSach = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.chkApDungNgay = new System.Windows.Forms.CheckBox();
+            this.dtmNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTraCuu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,14 +55,18 @@
             // 
             // dgvPhieuNhapSach
             // 
+            this.dgvPhieuNhapSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPhieuNhapSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuNhapSach.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuNhapSach.Name = "dgvPhieuNhapSach";
-            this.dgvPhieuNhapSach.Size = new System.Drawing.Size(752, 249);
+            this.dgvPhieuNhapSach.Size = new System.Drawing.Size(744, 249);
             this.dgvPhieuNhapSach.TabIndex = 1;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.chkApDungNgay);
+            this.groupBox2.Controls.Add(this.dtmNgayLap);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtTraCuu);
             this.groupBox2.Controls.Add(this.label5);
@@ -70,19 +77,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tra cứu";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(569, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Ngày lập";
+            // 
+            // chkApDungNgay
+            // 
+            this.chkApDungNgay.AutoSize = true;
+            this.chkApDungNgay.Location = new System.Drawing.Point(443, 23);
+            this.chkApDungNgay.Name = "chkApDungNgay";
+            this.chkApDungNgay.Size = new System.Drawing.Size(106, 17);
+            this.chkApDungNgay.TabIndex = 93;
+            this.chkApDungNgay.Text = "Kết hợp với ngày";
+            this.chkApDungNgay.UseVisualStyleBackColor = true;
+            this.chkApDungNgay.CheckedChanged += new System.EventHandler(this.chkApDungNgay_CheckedChanged);
+            // 
+            // dtmNgayLap
+            // 
+            this.dtmNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayLap.Location = new System.Drawing.Point(624, 20);
+            this.dtmNgayLap.Name = "dtmNgayLap";
+            this.dtmNgayLap.Size = new System.Drawing.Size(80, 20);
+            this.dtmNgayLap.TabIndex = 94;
+            this.dtmNgayLap.ValueChanged += new System.EventHandler(this.dtmNgayLap_ValueChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(230, 39);
+            this.label1.Location = new System.Drawing.Point(202, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 13);
+            this.label1.Size = new System.Drawing.Size(135, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "(Nhập số phiếu nhập hoặc tổng tiền)";
+            this.label1.Text = "(Nhập số phiếu nhập sách)";
             // 
             // txtTraCuu
             // 
-            this.txtTraCuu.Location = new System.Drawing.Point(233, 16);
+            this.txtTraCuu.Location = new System.Drawing.Point(141, 20);
             this.txtTraCuu.Name = "txtTraCuu";
             this.txtTraCuu.Size = new System.Drawing.Size(296, 20);
             this.txtTraCuu.TabIndex = 1;
@@ -91,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 23);
+            this.label5.Location = new System.Drawing.Point(22, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 0;
@@ -135,5 +172,8 @@
         private System.Windows.Forms.TextBox txtTraCuu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox chkApDungNgay;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtmNgayLap;
     }
 }

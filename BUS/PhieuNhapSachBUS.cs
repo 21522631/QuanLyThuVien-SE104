@@ -30,6 +30,10 @@ namespace BUS
         {
             return PhieuNhapSachDAL.Instance.SearchPhieuNhapSach (ThongTinTraCuu);
         }
+        public DataTable SearchPhieuNhapSach(string ThongTinTraCuu, string NgayLap)
+        {
+            return PhieuNhapSachDAL.Instance.SearchPhieuNhapSach(ThongTinTraCuu, NgayLap);
+        }
         public int InsertPhieuNhapSach(string NgayLap)
         {
             return PhieuNhapSachDAL.Instance.InsertPhieuNhapSach(NgayLap);
