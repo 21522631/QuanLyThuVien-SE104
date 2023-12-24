@@ -16,7 +16,8 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fQuanLyPhieuNhapSach());
+            //Application.Run(new fQuanLyPhieuNhapSach());
+            Application.Run(new fQuanLySach(0));
         }
     }
 }

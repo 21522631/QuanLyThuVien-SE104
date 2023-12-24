@@ -54,7 +54,6 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuNhapSach = new System.Windows.Forms.DataGridView();
             this.btnThemPhieuNhap = new System.Windows.Forms.Button();
-            this.btnThemCT_PhieuNhapSach = new System.Windows.Forms.Button();
             this.groupBox10.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSachNhap)).BeginInit();
@@ -239,10 +238,11 @@
             // 
             // dgvDSSachNhap
             // 
+            this.dgvDSSachNhap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDSSachNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSSachNhap.Location = new System.Drawing.Point(206, 27);
             this.dgvDSSachNhap.Name = "dgvDSSachNhap";
-            this.dgvDSSachNhap.Size = new System.Drawing.Size(357, 100);
+            this.dgvDSSachNhap.Size = new System.Drawing.Size(357, 119);
             this.dgvDSSachNhap.TabIndex = 24;
             this.dgvDSSachNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSSachNhap_CellContentClick);
             // 
@@ -296,6 +296,7 @@
             // 
             // dgvPhieuNhapSach
             // 
+            this.dgvPhieuNhapSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPhieuNhapSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuNhapSach.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuNhapSach.Name = "dgvPhieuNhapSach";
@@ -313,22 +314,11 @@
             this.btnThemPhieuNhap.UseVisualStyleBackColor = true;
             this.btnThemPhieuNhap.Click += new System.EventHandler(this.btnThemPhieuNhap_Click);
             // 
-            // btnThemCT_PhieuNhapSach
-            // 
-            this.btnThemCT_PhieuNhapSach.Location = new System.Drawing.Point(158, 193);
-            this.btnThemCT_PhieuNhapSach.Name = "btnThemCT_PhieuNhapSach";
-            this.btnThemCT_PhieuNhapSach.Size = new System.Drawing.Size(139, 23);
-            this.btnThemCT_PhieuNhapSach.TabIndex = 31;
-            this.btnThemCT_PhieuNhapSach.Text = "Thêm chi tiết phiếu nhập";
-            this.btnThemCT_PhieuNhapSach.UseVisualStyleBackColor = true;
-            this.btnThemCT_PhieuNhapSach.Click += new System.EventHandler(this.btnThemCT_PhieuNhapSach_Click);
-            // 
             // fQuanLyPhieuNhapSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnThemCT_PhieuNhapSach);
             this.Controls.Add(this.btnThemPhieuNhap);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.btnSua);
@@ -336,6 +326,7 @@
             this.Controls.Add(this.label23);
             this.Controls.Add(this.btnXoa);
             this.Name = "fQuanLyPhieuNhapSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Phiếu Nhập Sách";
             this.Load += new System.EventHandler(this.fQuanLyPhieuNhapSach_Load);
             this.groupBox10.ResumeLayout(false);
@@ -374,7 +365,6 @@
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.Button btnThemPhieuNhap;
-        private System.Windows.Forms.Button btnThemCT_PhieuNhapSach;
         private System.Windows.Forms.DateTimePicker dtmNgayLap;
         private System.Windows.Forms.TextBox txtTenSach;
         private System.Windows.Forms.Label label1;

@@ -28,6 +28,11 @@ namespace DAL
             string query = "SELECT SOPNS, NGAYLAP, TONGTIEN FROM PHIEUNHAPSACH";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetLatestPhieuNhapSach()
+        {
+            string query = "SELECT * FROM PHIEUNHAPSACH WHERE ID = (SELECT MAX(ID) FROM PHIEUNHAPSACH) ";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchPhieuNhapSach(string ThongTinTraCuu)
         {
             string query = "SELECT SOPNS, NGAYLAP, TONGTIEN FROM PHIEUNHAPSACH " + 

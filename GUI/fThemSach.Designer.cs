@@ -40,11 +40,15 @@
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtGiaTien);
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.cboTheLoai);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnLuu);
@@ -58,7 +62,7 @@
             this.panel1.Controls.Add(this.label23);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(332, 176);
+            this.panel1.Size = new System.Drawing.Size(332, 198);
             this.panel1.TabIndex = 0;
             // 
             // cboTheLoai
@@ -73,7 +77,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(230, 144);
+            this.btnHuy.Location = new System.Drawing.Point(230, 172);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(67, 23);
             this.btnHuy.TabIndex = 40;
@@ -83,7 +87,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(154, 144);
+            this.btnLuu.Location = new System.Drawing.Point(157, 172);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(67, 23);
             this.btnLuu.TabIndex = 39;
@@ -157,11 +161,27 @@
             this.label23.TabIndex = 25;
             this.label23.Text = "THÔNG TIN SÁCH";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(25, 151);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Giá tiền";
+            // 
+            // txtGiaTien
+            // 
+            this.txtGiaTien.Location = new System.Drawing.Point(100, 144);
+            this.txtGiaTien.Name = "txtGiaTien";
+            this.txtGiaTien.Size = new System.Drawing.Size(64, 20);
+            this.txtGiaTien.TabIndex = 60;
+            // 
             // fThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 197);
+            this.ClientSize = new System.Drawing.Size(355, 222);
             this.Controls.Add(this.panel1);
             this.Name = "fThemSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -187,5 +207,7 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ComboBox cboTheLoai;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtGiaTien;
     }
 }

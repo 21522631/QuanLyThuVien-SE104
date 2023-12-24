@@ -38,7 +38,7 @@ namespace DAL
         }
         public int InsertSach(Sach sach)
         {
-            string query = "INSERT INTO SACH VALUES(N'" + sach.TenSach + "', '" + sach.IDTheLoai + "', '" + sach.NhaXuatBan + "', '" + sach.NamXuatBan + "', '0', '0')";
+            string query = "INSERT INTO SACH VALUES(N'" + sach.TenSach + "', '" + sach.IDTheLoai + "', '" + sach.NhaXuatBan + "', '" + sach.NamXuatBan + "', '0', '" + sach.GiaTien + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int UpdateSach(int SoLuong, string GiaTien, string MaSach)

@@ -38,7 +38,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(42, 9);
+            this.label23.Location = new System.Drawing.Point(80, 9);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(168, 13);
             this.label23.TabIndex = 26;
@@ -48,7 +48,7 @@
             // 
             this.dtmNgayLap.CustomFormat = "dd/MM/yyyy";
             this.dtmNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgayLap.Location = new System.Drawing.Point(108, 37);
+            this.dtmNgayLap.Location = new System.Drawing.Point(135, 38);
             this.dtmNgayLap.Name = "dtmNgayLap";
             this.dtmNgayLap.Size = new System.Drawing.Size(91, 20);
             this.dtmNgayLap.TabIndex = 51;
@@ -56,7 +56,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(53, 44);
+            this.label32.Location = new System.Drawing.Point(80, 44);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(49, 13);
             this.label32.TabIndex = 52;
@@ -64,7 +64,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(164, 72);
+            this.btnHuy.Location = new System.Drawing.Point(221, 73);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 54;
@@ -74,7 +74,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(83, 72);
+            this.btnLuu.Location = new System.Drawing.Point(130, 73);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 53;
@@ -86,13 +86,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 108);
+            this.ClientSize = new System.Drawing.Size(321, 108);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.dtmNgayLap);
             this.Controls.Add(this.label23);
             this.Name = "fThemPhieuNhapSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Phiếu Nhập Sách";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -53,12 +53,18 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập năm xuất bản!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNamXuatBan.Focus();
             }
+            else if (txtGiaTien.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập giá tiền!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtGiaTien.Focus();
+            }
             else
             {
                 Sach sach = new Sach();
                 sach.TenSach = txtTenSach.Text;
                 sach.NhaXuatBan = txtNhaXuatBan.Text;
                 int NamXuatBan;
+                int GiaTien;
                 if (Int32.TryParse(txtNamXuatBan.Text, out NamXuatBan))
                 {
                     if (DateTime.Now.Year - NamXuatBan > ThamSoBUS.Instance.GetThamSo().KhoangCachNamXB)
@@ -66,16 +72,23 @@ namespace GUI
                         MessageBox.Show("Khoảng cách năm xuất bản phải nhỏ hơn " + ThamSoBUS.Instance.GetThamSo().KhoangCachNamXB + "!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtNamXuatBan.Focus();
                     }
-                    else
-                    {
+                    else if (Int32.TryParse(txtGiaTien.Text, out GiaTien) && GiaTien >= 0)
+                    {   
                         sach.NamXuatBan = NamXuatBan;
                         sach.IDTheLoai = cboTheLoai.SelectedValue.ToString().Replace("TL", "00");
+                        sach.GiaTien = GiaTien;
                         SachBUS.Instance.InsertSach(sach);
                         MessageBox.Show("Thêm mới sách thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cboTheLoai.SelectedIndex = -1;
                         txtTenSach.Text = "";
                         txtNamXuatBan.Text = "";
                         txtNhaXuatBan.Text = "";
+                        txtGiaTien.Text = "";
+                    }    
+                    else
+                    {
+                        MessageBox.Show("Vui lòng nhập đúng định dạng giá tiền!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtGiaTien.Focus();
                     }    
                     
                 }

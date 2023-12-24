@@ -21,6 +21,11 @@ namespace GUI
         private void btnLuu_Click(object sender, EventArgs e)
         {
             PhieuNhapSachBUS.Instance.InsertPhieuNhapSach(dtmNgayLap.Text);
+            this.Hide();
+            fThemChiTietPhieuNhapSach f = new fThemChiTietPhieuNhapSach();
+            f.ShowDialog();
+            this.Show();
+
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {

@@ -22,25 +22,27 @@ namespace GUI
 
         private void fThemChiTietPhieuNhapSach_Load(object sender, EventArgs e)
         {
-            cboSoPhieuNhap.DataSource = PhieuNhapSachBUS.Instance.GetAllPhieuNhapSach();
-            cboSoPhieuNhap.DisplayMember = "SOPNS";
-            cboSoPhieuNhap.ValueMember = "SOPNS";
-            cboSoPhieuNhap.Text = "";
+            
             cboMaSach.DataSource = SachBUS.Instance.GetAllSach();
             cboMaSach.DisplayMember = "MASACH";
             cboMaSach.ValueMember = "TENSACH";
-            cboMaSach.Text = "";
+            cboMaSach.SelectedIndex = -1;
             txtTenSach.Enabled = false;
             txtTenSach.Text = "";
             txtDonGia.Text = "0";
+            txtSoPhieuNhap.Enabled = false;
             txtTongTien.Enabled = false;
             txtThanhTien.Enabled = false;
+            txtSoPhieuNhap.Text = PhieuNhapSachBUS.Instance.GetLatestPhieuNhapSach().Rows[0][1].ToString();
+            txtTongTien.Text = "0";
         }
 
         private void cboMaSach_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtTenSach.Text = cboMaSach.SelectedValue.ToString();
-
+            if (cboMaSach.SelectedValue != null)
+            {
+                txtTenSach.Text = cboMaSach.SelectedValue.ToString();
+            }    
         }
 
         private void txtDonGia_TextChanged(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace GUI
         private void btnThemSachNhap_Click(object sender, EventArgs e)
         {
             CT_PhieuNhapSach ct_PNS = new CT_PhieuNhapSach();
-            ct_PNS.IDPNS = Convert.ToInt32(cboSoPhieuNhap.Text.Replace("PNS", "000"));
+            ct_PNS.IDPNS = Convert.ToInt32(txtSoPhieuNhap.Text.Replace("PNS", "000"));
             ct_PNS.IDSach = Convert.ToInt32(cboMaSach.Text.Replace("SA", "00"));
             ct_PNS.DonGia = Convert.ToInt32(txtDonGia.Text);
             ct_PNS.SoLuongNhap = Convert.ToInt32(domSoLuong.Text);
@@ -70,7 +72,7 @@ namespace GUI
         {
             try
             {
-                dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(cboSoPhieuNhap.Text.Replace("PNS", "000"));
+                dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(txtSoPhieuNhap.Text.Replace("PNS", "000"));
                 int TongTien = 0;
                 for (int i = 0; i < dgvDSSachNhap.Rows.Count - 1; i++)
                 {
@@ -94,8 +96,8 @@ namespace GUI
 
         private void btnXoaSachNhap_Click(object sender, EventArgs e)
         {
-            CT_PhieuNhapSachBUS.Instance.DeleteCT_PhieuNhapSach(cboSoPhieuNhap.Text.Replace("PNS", "000"), cboMaSach.Text.Replace("SA", "00"));
-            dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(cboSoPhieuNhap.Text.Replace("PNS", "000"));
+            CT_PhieuNhapSachBUS.Instance.DeleteCT_PhieuNhapSach(txtSoPhieuNhap.Text.Replace("PNS", "000"), cboMaSach.Text.Replace("SA", "00"));
+            dgvDSSachNhap.DataSource = CT_PhieuNhapSachBUS.Instance.GetCT_PhieuNhapSachByIDPNS(txtSoPhieuNhap.Text.Replace("PNS", "000"));
             cboMaSach.Text = "";
             txtTenSach.Text = "";
             txtDonGia.Text = "0";
@@ -112,7 +114,7 @@ namespace GUI
         private void btnLuu_Click(object sender, EventArgs e)
         {
             PhieuNhapSach PNS = new PhieuNhapSach();
-            PNS.SoPNS = cboSoPhieuNhap.Text;
+            PNS.SoPNS = txtSoPhieuNhap.Text;
             PNS.TongTien = Convert.ToInt32(txtTongTien.Text.ToString());
             PhieuNhapSachBUS.Instance.UpdatePhieuNhapSach(PNS);
             CuonSach cuonsach = new CuonSach();
