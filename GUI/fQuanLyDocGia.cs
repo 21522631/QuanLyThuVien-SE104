@@ -121,11 +121,6 @@ namespace GUI
             dtmNgayHetHan.Text = dgvDocGia.Rows[index].Cells[7].Value.ToString();
         }
 
-        private void cboLoaiDocGia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSuaDocGia_Click(object sender, EventArgs e)
         {
             if (txtMaDocGia.Text == "")

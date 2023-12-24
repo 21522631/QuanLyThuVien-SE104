@@ -66,12 +66,25 @@ namespace GUI
 
         private void btnSuaTacGia_Click(object sender, EventArgs e)
         {
-            TacGia tacgia = new TacGia();
-            tacgia.MaTacGia = txtMaTacGia.Text;
-            tacgia.TenTacGia = txtTenTacGia.Text;
-            tacgia.NgaySinh = dtmNgaySinh.Text;
-            TacGiaBUS.Instance.UpdateTacGia(tacgia);
-            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+            if (txtMaTacGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtTenTacGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tác giả!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenTacGia.Focus();
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                TacGia tacgia = new TacGia();
+                tacgia.MaTacGia = txtMaTacGia.Text;
+                tacgia.TenTacGia = txtTenTacGia.Text;
+                tacgia.NgaySinh = dtmNgaySinh.Text;
+                TacGiaBUS.Instance.UpdateTacGia(tacgia);
+                dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+                MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnThemTacGia_Click(object sender, EventArgs e)
@@ -83,16 +96,18 @@ namespace GUI
 
         private void btnXoaTacGia_Click(object sender, EventArgs e)
         {
-            TacGiaBUS.Instance.DeleteTacGia(txtMaTacGia.Text);
-            txtMaTacGia.Text = "";
-            txtTenTacGia.Text = "";
-            dtmNgaySinh.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
-        }
-
-        private void txtMaTacGia_TextChanged(object sender, EventArgs e)
-        {
-
+            if (txtMaTacGia.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                TacGiaBUS.Instance.DeleteTacGia(txtMaTacGia.Text);
+                txtMaTacGia.Text = "";
+                txtTenTacGia.Text = "";
+                dgvTacGia.DataSource = TacGiaBUS.Instance.GetAllTacGia();
+                MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnThemTheLoai_Click(object sender, EventArgs e)
@@ -104,27 +119,47 @@ namespace GUI
 
         private void btnSuaTheLoai_Click(object sender, EventArgs e)
         {
-            TheLoai theloai = new TheLoai();
-            theloai.MaTheLoai = txtMaTheLoai.Text;
-            theloai.TenTheLoai = txtTenTheLoai.Text;
-            TheLoaiBUS.Instance.UpdateTheLoai(theloai);
-            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            if (txtMaTheLoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (TheLoaiBUS.Instance.GetTheLoaiByTenTheLoai(txtTenTheLoai.Text).Rows.Count > 0)
+            {
+                MessageBox.Show("Đã tồn tại thể loại này. Vui lòng nhập tên thể loại khác!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenTheLoai.Focus();
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                TheLoai theloai = new TheLoai();
+                theloai.MaTheLoai = txtMaTheLoai.Text;
+                theloai.TenTheLoai = txtTenTheLoai.Text;
+                TheLoaiBUS.Instance.UpdateTheLoai(theloai);
+                dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+                MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }        
         }
-
         private void dgvTheLoai_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = dgvTheLoai.CurrentRow.Index;
             txtMaTheLoai.Text = dgvTheLoai.Rows[index].Cells[0].Value.ToString();
             txtTenTheLoai.Text = dgvTheLoai.Rows[index].Cells[1].Value.ToString();
-            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
         }
 
         private void btnXoaTheLoai_Click(object sender, EventArgs e)
         {
-            TheLoaiBUS.Instance.DeleteTheLoai(txtMaTheLoai.Text);
-            txtMaTheLoai.Text = "";
-            txtTenTheLoai.Text = "";
-            dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+            if (txtTenTheLoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên thể loại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenTheLoai.Focus();
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                TheLoaiBUS.Instance.DeleteTheLoai(txtMaTheLoai.Text);
+                txtMaTheLoai.Text = "";
+                txtTenTheLoai.Text = "";
+                dgvTheLoai.DataSource = TheLoaiBUS.Instance.GetAllTheLoai();
+                MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void dgvSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -206,7 +241,6 @@ namespace GUI
                         MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cboMaTacGia.SelectedIndex = -1;
                     }
-
                 }
                 else
                 {
@@ -218,28 +252,81 @@ namespace GUI
 
         private void btnSuaSach_Click(object sender, EventArgs e)
         {
-            Sach sach = new Sach();
-            sach.MaSach = txtMaSach.Text;
-            sach.TenSach = txtTenSach.Text;
-            sach.IDTheLoai = cboTheLoai.SelectedValue.ToString().Replace("TL", "00");
-            sach.NhaXuatBan = txtNhaXuatBan.Text;
-            sach.NamXuatBan = Convert.ToInt32(txtNamXuatBan.Text);
-            SachBUS.Instance.UpdateSach(sach);
-            dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+            if (txtMaSach.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cboTheLoai.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn thể loại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboTheLoai.Focus();
+            }
+            else if (txtTenSach.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên sách!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenSach.Focus();
+            }
+            else if (txtNhaXuatBan.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập nhà xuất bản!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNhaXuatBan.Focus();
+            }
+            else if (txtNamXuatBan.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập năm xuất bản!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNamXuatBan.Focus();
+            }
+            else
+            {
+                Sach sach = new Sach();
+                sach.MaSach = txtMaSach.Text;
+                sach.TenSach = txtTenSach.Text;
+                sach.IDTheLoai = cboTheLoai.SelectedValue.ToString().Replace("TL", "00");
+                sach.NhaXuatBan = txtNhaXuatBan.Text;
+                sach.NamXuatBan = Convert.ToInt32(txtNamXuatBan.Text);
+                int NamXuatBan;
+                if (Int32.TryParse(txtNamXuatBan.Text, out NamXuatBan))
+                {
+                    if (DateTime.Now.Year - NamXuatBan > ThamSoBUS.Instance.GetThamSo().KhoangCachNamXB)
+                    {
+                        MessageBox.Show("Khoảng cách năm xuất bản phải nhỏ hơn " + ThamSoBUS.Instance.GetThamSo().KhoangCachNamXB + "!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtNamXuatBan.Focus();
+                    }
+                    else if (MessageBox.Show("Bạn thực sự có muốn thay đổi thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        SachBUS.Instance.UpdateSach(sach);
+                        dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+                        MessageBox.Show("Sửa thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng năm xuất bản!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtNamXuatBan.Focus();
+                }
+            }
         }
 
         private void btnXoaSach_Click(object sender, EventArgs e)
         {
-            SachBUS.Instance.DeleteSach(txtMaSach.Text);
-            dgvSach.DataSource = SachBUS.Instance.GetAllSach();
-            txtMaSach.Text = "";
-            txtTenSach.Text = "";
-            cboTheLoai.Text = "";
-            txtNhaXuatBan.Text = "";
-            txtNamXuatBan.Text = "";
-            domSoLuong.Text = "";
-            txtGiaTien.Text = "";
-            dgvCT_TacGia.DataSource = CT_TacGiaBUS.Instance.GetCT_TacGiaByIDSach(txtMaSach.Text.Replace("SA", "00"));
+            if (txtMaSach.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (MessageBox.Show("Bạn thực sự có muốn xoá thông tin!", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                SachBUS.Instance.DeleteSach(txtMaSach.Text);
+                dgvSach.DataSource = SachBUS.Instance.GetAllSach();
+                txtMaSach.Text = "";
+                txtTenSach.Text = "";
+                cboTheLoai.Text = "";
+                txtNhaXuatBan.Text = "";
+                txtNamXuatBan.Text = "";
+                domSoLuong.Text = "";
+                txtGiaTien.Text = "";
+                dgvCT_TacGia.DataSource = null;
+                MessageBox.Show("Xoá thông tin thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnThemSach_Click(object sender, EventArgs e)

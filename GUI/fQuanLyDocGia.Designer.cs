@@ -310,7 +310,6 @@
             this.cboLoaiDocGia.Name = "cboLoaiDocGia";
             this.cboLoaiDocGia.Size = new System.Drawing.Size(121, 21);
             this.cboLoaiDocGia.TabIndex = 55;
-            this.cboLoaiDocGia.SelectedIndexChanged += new System.EventHandler(this.cboLoaiDocGia_SelectedIndexChanged);
             // 
             // label5
             // 

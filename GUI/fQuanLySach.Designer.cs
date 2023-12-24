@@ -196,7 +196,6 @@
             this.txtMaTacGia.Name = "txtMaTacGia";
             this.txtMaTacGia.Size = new System.Drawing.Size(84, 20);
             this.txtMaTacGia.TabIndex = 49;
-            this.txtMaTacGia.TextChanged += new System.EventHandler(this.txtMaTacGia_TextChanged);
             // 
             // label17
             // 
