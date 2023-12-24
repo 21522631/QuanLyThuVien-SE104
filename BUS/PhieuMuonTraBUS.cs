@@ -42,6 +42,10 @@ namespace BUS
         {
             return PhieuMuonTraDAL.Instance.SearchPhieuMuonTra(ThongTinTraCuu);
         }
+        public DataTable SearchPhieuMuonTra(string ThongTinTraCuu, string NgayMuon, string NgayTra)
+        {
+            return PhieuMuonTraDAL.Instance.SearchPhieuMuonTra(ThongTinTraCuu, NgayMuon, NgayTra);
+        }
         public int InsertPhieuMuonTraBUS(PhieuMuonTra PMT)
         {
             return PhieuMuonTraDAL.Instance.InsertPhieuMuonTra(PMT);

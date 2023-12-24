@@ -55,11 +55,17 @@ namespace DAL
         }
         public DataTable SearchPhieuMuonTra(string ThongTinTraCuu)
         {
-            string query = "SELECT SOPMT, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, " +
-                           "CAST('CS' + RIGHT('0000' + CAST(IDCUONSACH AS VARCHAR(4)), 4) AS CHAR(6)) AS MACUONSACH, " +
-                           "NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA " +
-                           "WHERE SOPMT LIKE '%" + ThongTinTraCuu + "%' OR NGAYMUON LIKE '%" + ThongTinTraCuu + "%' OR NGAYPHAITRA LIKE '%" + ThongTinTraCuu + "%' OR NGAYTRA LIKE '%" + ThongTinTraCuu +
-                           "%' OR IDDOCGIA LIKE '%" + ThongTinTraCuu + "%' OR IDCUONSACH LIKE '%" + ThongTinTraCuu + "'";
+            string query = "SELECT SOPMT, MADOCGIA, MACUONSACH, NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT " +
+                           "FROM PHIEUMUONTRA JOIN DOCGIA ON PHIEUMUONTRA.IDDOCGIA = DOCGIA.ID " +
+                           "JOIN CUONSACH ON PHIEUMUONTRA.IDCUONSACH = CUONSACH.ID " +
+                           "WHERE SOPMT LIKE '" + ThongTinTraCuu + "%' OR MADOCGIA LIKE '" + ThongTinTraCuu + "%' OR MACUONSACH LIKE '" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable SearchPhieuMuonTra(string ThongTinTraCuu, string NgayMuon, string NgayTra)
+        {
+            string query = "SELECT * " +
+                         " FROM(SELECT SOPMT, MADOCGIA, MACUONSACH, NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA JOIN DOCGIA ON PHIEUMUONTRA.IDDOCGIA = DOCGIA.ID JOIN CUONSACH ON PHIEUMUONTRA.IDCUONSACH = CUONSACH.ID WHERE SOPMT LIKE '%' OR MADOCGIA LIKE '%' OR MACUONSACH LIKE '') AS TEMP " +
+                         " WHERE " + NgayMuon + NgayTra;
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertPhieuMuonTra(PhieuMuonTra PMT)
