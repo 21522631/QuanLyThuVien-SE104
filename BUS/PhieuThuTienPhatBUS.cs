@@ -30,6 +30,10 @@ namespace BUS
         {
             return PhieuThuTienPhatDAL.Instance.SearchPhieuThuTienPhat(ThongTinTraCuu);
         }
+        public DataTable SearchPhieuThuTienPhat(string ThongTinTraCuu, string NgayThu)
+        {
+            return PhieuThuTienPhatDAL.Instance.SearchPhieuThuTienPhat(ThongTinTraCuu, NgayThu);
+        }
         public int InsertPhieuThuTienPhat(PhieuThuTienPhat PTTP)
         {
             return PhieuThuTienPhatDAL.Instance.InsertPhieuThuTienPhat(PTTP);

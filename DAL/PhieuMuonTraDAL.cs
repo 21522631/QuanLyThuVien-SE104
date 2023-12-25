@@ -64,7 +64,7 @@ namespace DAL
         public DataTable SearchPhieuMuonTra(string ThongTinTraCuu, string NgayMuon, string NgayTra)
         {
             string query = "SELECT * " +
-                         " FROM(SELECT SOPMT, MADOCGIA, MACUONSACH, NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA JOIN DOCGIA ON PHIEUMUONTRA.IDDOCGIA = DOCGIA.ID JOIN CUONSACH ON PHIEUMUONTRA.IDCUONSACH = CUONSACH.ID WHERE SOPMT LIKE '%' OR MADOCGIA LIKE '%' OR MACUONSACH LIKE '') AS TEMP " +
+                         " FROM(SELECT SOPMT, MADOCGIA, MACUONSACH, NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA JOIN DOCGIA ON PHIEUMUONTRA.IDDOCGIA = DOCGIA.ID JOIN CUONSACH ON PHIEUMUONTRA.IDCUONSACH = CUONSACH.ID WHERE SOPMT LIKE '" + ThongTinTraCuu + "%' OR MADOCGIA LIKE '" + ThongTinTraCuu + "%' OR MACUONSACH LIKE '" + ThongTinTraCuu + "%') AS TEMP " +
                          " WHERE " + NgayMuon + NgayTra;
             return DataProvider.Instance.ExecuteQuery(query);
         }

@@ -35,6 +35,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgvPhieuThuTien = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkApDungNgay = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThuTien)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -42,6 +45,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.dtmNgayThu);
+            this.groupBox2.Controls.Add(this.chkApDungNgay);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtTraCuu);
             this.groupBox2.Controls.Add(this.label5);
@@ -56,15 +62,15 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(230, 39);
+            this.label1.Location = new System.Drawing.Point(173, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 13);
+            this.label1.Size = new System.Drawing.Size(183, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "(Nhập số phiếu nhập, ngày nhập hoặc tổng tiền)";
+            this.label1.Text = "(Nhập số phiếu thu hoặc mã độc giả)";
             // 
             // txtTraCuu
             // 
-            this.txtTraCuu.Location = new System.Drawing.Point(233, 16);
+            this.txtTraCuu.Location = new System.Drawing.Point(147, 22);
             this.txtTraCuu.Name = "txtTraCuu";
             this.txtTraCuu.Size = new System.Drawing.Size(296, 20);
             this.txtTraCuu.TabIndex = 1;
@@ -73,7 +79,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 23);
+            this.label5.Location = new System.Drawing.Point(28, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 0;
@@ -94,7 +100,7 @@
             this.dgvPhieuThuTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuThuTien.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuThuTien.Name = "dgvPhieuThuTien";
-            this.dgvPhieuThuTien.Size = new System.Drawing.Size(744, 249);
+            this.dgvPhieuThuTien.Size = new System.Drawing.Size(744, 253);
             this.dgvPhieuThuTien.TabIndex = 1;
             // 
             // groupBox1
@@ -102,10 +108,40 @@
             this.groupBox1.Controls.Add(this.dgvPhieuThuTien);
             this.groupBox1.Location = new System.Drawing.Point(12, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(756, 274);
+            this.groupBox1.Size = new System.Drawing.Size(756, 278);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tra cứu";
+            // 
+            // chkApDungNgay
+            // 
+            this.chkApDungNgay.AutoSize = true;
+            this.chkApDungNgay.Location = new System.Drawing.Point(449, 23);
+            this.chkApDungNgay.Name = "chkApDungNgay";
+            this.chkApDungNgay.Size = new System.Drawing.Size(106, 17);
+            this.chkApDungNgay.TabIndex = 94;
+            this.chkApDungNgay.Text = "Kết hợp với ngày";
+            this.chkApDungNgay.UseVisualStyleBackColor = true;
+            this.chkApDungNgay.CheckedChanged += new System.EventHandler(this.chkApDungNgay_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(578, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 97;
+            this.label3.Text = "Ngày thu";
+            // 
+            // dtmNgayThu
+            // 
+            this.dtmNgayThu.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayThu.Location = new System.Drawing.Point(633, 22);
+            this.dtmNgayThu.Name = "dtmNgayThu";
+            this.dtmNgayThu.Size = new System.Drawing.Size(80, 20);
+            this.dtmNgayThu.TabIndex = 96;
+            this.dtmNgayThu.ValueChanged += new System.EventHandler(this.dtmNgayThu_ValueChanged);
             // 
             // fTraCuuPhieuThuTienPhat
             // 
@@ -136,5 +172,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvPhieuThuTien;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkApDungNgay;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtmNgayThu;
     }
 }

@@ -29,12 +29,19 @@ namespace DAL
         }
         public DataTable SearchPhieuThuTienPhat(string ThongTinTraCuu)
         {
-            //DateTime dt;
-            //DateTime.TryParseExact(ThongTinTraCuu,"dd-MM-yyyy",CultureInfo.InvariantCulture,DateTimeStyles.None,out dt);
-            string Ngay = ThongTinTraCuu.ToString().Replace("\\", "-");
-            string query = "SELECT SOPTTP, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, NGAYTHU, TONGNO, SOTIENTHU, CONLAI " +
-                           "FROM PHIEUTHUTIENPHAT " +
-                           "WHERE SOPTTP LIKE '%" + ThongTinTraCuu + "%' OR NGAYTHU LIKE '%" + Ngay + "%' OR IDDOCGIA LIKE '%" + ThongTinTraCuu + "%'";
+            string query = "SELECT SOPTTP, MADOCGIA, NGAYTHU, PHIEUTHUTIENPHAT.TONGNO, SOTIENTHU, CONLAI " +
+                           "FROM PHIEUTHUTIENPHAT JOIN DOCGIA ON PHIEUTHUTIENPHAT.IDDOCGIA = DOCGIA.ID " +
+                           "WHERE SOPTTP LIKE '" + ThongTinTraCuu + "%' OR MADOCGIA LIKE '" + ThongTinTraCuu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable SearchPhieuThuTienPhat(string ThongTinTraCuu, string NgayThu)
+        {
+            string query = "SELECT SOPTTP, MADOCGIA, NGAYTHU, TONGNO, SOTIENTHU, CONLAI " +
+                           "FROM (SELECT SOPTTP, MADOCGIA, NGAYTHU, PHIEUTHUTIENPHAT.TONGNO, SOTIENTHU, CONLAI " +
+                           "FROM PHIEUTHUTIENPHAT JOIN DOCGIA ON PHIEUTHUTIENPHAT.IDDOCGIA = DOCGIA.ID " +
+                           "WHERE SOPTTP LIKE '" + ThongTinTraCuu + "%' OR MADOCGIA LIKE '" + ThongTinTraCuu + "%') AS TEMP " +
+                           "WHERE NGAYTHU = '" + NgayThu + "'";
+                           
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertPhieuThuTienPhat(PhieuThuTienPhat PTTP)
