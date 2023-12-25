@@ -38,8 +38,8 @@ namespace DAL
         {
             string query = "SELECT MASACH, TENSACH, MATHELOAI, TENTHELOAI, NHAXUATBAN, NAMXUATBAN, SOLUONG, GIATIEN " +
                            "FROM SACH JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID " +
-                           "WHERE MASACH LIKE '%" + ThongTinTraCuu + "%' OR TENSACH LIKE N'%" + ThongTinTraCuu + "%' OR MATHELOAI LIKE '%" + ThongTinTraCuu + "%' OR TENTHELOAI LIKE N'%" + ThongTinTraCuu +
-                           "%' OR NHAXUATBAN LIKE '%" + ThongTinTraCuu + "%' OR NAMXUATBAN LIKE '%" + ThongTinTraCuu + "%'";
+                           "WHERE MASACH LIKE '" + ThongTinTraCuu + "%' OR TENSACH LIKE N'%" + ThongTinTraCuu + "%' OR MATHELOAI LIKE '" + ThongTinTraCuu + "%' OR TENTHELOAI LIKE N'%" + ThongTinTraCuu +
+                           "%' OR NHAXUATBAN LIKE N'%" + ThongTinTraCuu + "%' OR NAMXUATBAN LIKE '" + ThongTinTraCuu + "%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertSach(Sach sach)

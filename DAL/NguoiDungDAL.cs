@@ -46,7 +46,7 @@ namespace DAL
         {
             string query = "SELECT MANGUOIDUNG, TENNGUOIDUNG, TENDANGNHAP, TENNHOM " +
                 "FROM NGUOIDUNG JOIN NHOMNGUOIDUNG ON NGUOIDUNG.IDNHOMNGUOIDUNG = NHOMNGUOIDUNG.ID " +
-                "WHERE MANGUOIDUNG LIKE '%" + ThongTinTraCuu + "%' OR TENNGUOIDUNG LIKE N'%" + ThongTinTraCuu + "%' OR MANHOM LIKE '%" + ThongTinTraCuu + "%' OR TENNHOM LIKE N'%" + ThongTinTraCuu + "%'";
+                "WHERE MANGUOIDUNG LIKE '" + ThongTinTraCuu + "%' OR TENNGUOIDUNG LIKE N'%" + ThongTinTraCuu + "%' OR MANHOM LIKE '" + ThongTinTraCuu + "%' OR TENNHOM LIKE N'%" + ThongTinTraCuu + "%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertNguoiDungDocGia(string TenNguoiDung, string TenDangNhap, string MatKhau)

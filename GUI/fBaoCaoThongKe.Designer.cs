@@ -45,6 +45,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabBaoCaoThongKe = new System.Windows.Forms.TabControl();
+            this.btnXuatExcelBCTraTre = new System.Windows.Forms.Button();
             this.tabpgBCTKSachTraTre.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBCSachTraTre)).BeginInit();
@@ -89,6 +90,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnXuatExcelBCTraTre);
             this.groupBox1.Controls.Add(this.dtmTGBCSachTraTre);
             this.groupBox1.Controls.Add(this.btnTKSachTraTre);
             this.groupBox1.Controls.Add(this.label1);
@@ -164,7 +166,7 @@
             this.dgvBCTinhHinhMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBCTinhHinhMuon.Location = new System.Drawing.Point(6, 19);
             this.dgvBCTinhHinhMuon.Name = "dgvBCTinhHinhMuon";
-            this.dgvBCTinhHinhMuon.Size = new System.Drawing.Size(763, 378);
+            this.dgvBCTinhHinhMuon.Size = new System.Drawing.Size(763, 372);
             this.dgvBCTinhHinhMuon.TabIndex = 0;
             // 
             // groupBox6
@@ -226,6 +228,16 @@
             this.tabBaoCaoThongKe.Size = new System.Drawing.Size(799, 521);
             this.tabBaoCaoThongKe.TabIndex = 1;
             // 
+            // btnXuatExcelBCTraTre
+            // 
+            this.btnXuatExcelBCTraTre.Location = new System.Drawing.Point(618, 24);
+            this.btnXuatExcelBCTraTre.Name = "btnXuatExcelBCTraTre";
+            this.btnXuatExcelBCTraTre.Size = new System.Drawing.Size(75, 23);
+            this.btnXuatExcelBCTraTre.TabIndex = 51;
+            this.btnXuatExcelBCTraTre.Text = "Xuất Excel";
+            this.btnXuatExcelBCTraTre.UseVisualStyleBackColor = true;
+            this.btnXuatExcelBCTraTre.Click += new System.EventHandler(this.btnXuatExcelBCTraTre_Click);
+            // 
             // fBaoCaoThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +245,7 @@
             this.ClientSize = new System.Drawing.Size(822, 542);
             this.Controls.Add(this.tabBaoCaoThongKe);
             this.Name = "fBaoCaoThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo Cáo Thống Kê";
             this.Load += new System.EventHandler(this.fBaoCaoThongKe_Load);
             this.tabpgBCTKSachTraTre.ResumeLayout(false);
@@ -278,5 +291,6 @@
         private System.Windows.Forms.DataGridView dgvBCTinhHinhMuon;
         private System.Windows.Forms.DateTimePicker dtmTGBCTinhHinhMuon;
         private System.Windows.Forms.Button btnTKTinhHinhMuon;
+        private System.Windows.Forms.Button btnXuatExcelBCTraTre;
     }
 }

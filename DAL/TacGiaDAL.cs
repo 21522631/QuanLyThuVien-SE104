@@ -29,7 +29,7 @@ namespace DAL
         public DataTable SearchTacGia(string ThongTinTraCuu)
         {
             string query = "SELECT MATACGIA, TENTACGIA, NGAYSINH FROM TACGIA " +
-                           "WHERE MATACGIA LIKE '%" + ThongTinTraCuu + "%' OR TENTACGIA LIKE N'%" + ThongTinTraCuu + "%'";
+                           "WHERE MATACGIA LIKE '" + ThongTinTraCuu + "%' OR TENTACGIA LIKE N'%" + ThongTinTraCuu + "%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertTacGia(TacGia tacgia)

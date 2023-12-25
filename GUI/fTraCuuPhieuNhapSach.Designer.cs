@@ -152,6 +152,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
             this.Name = "fTraCuuPhieuNhapSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra Cứu Thông Tin Phiếu Nhập Sách";
             this.Load += new System.EventHandler(this.fTraCuuPhieuNhapSach_Load);
             this.groupBox1.ResumeLayout(false);

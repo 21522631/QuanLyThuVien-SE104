@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace GUI
 {
@@ -25,6 +26,8 @@ namespace GUI
         {
             int Thang = dtmTGBCTinhHinhMuon.Value.Month;
             int Nam = dtmTGBCTinhHinhMuon.Value.Year;
+            dgvBCSachTraTre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBCTinhHinhMuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataTable data1 = BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam);
             if(data1.Rows.Count > 0)
             {
@@ -81,6 +84,15 @@ namespace GUI
                     }
                 dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             }
+            dgvBCTinhHinhMuon.Columns[0].HeaderCell.Value = "Tên thể loại";
+            dgvBCTinhHinhMuon.Columns[1].HeaderCell.Value = "Số lượt mượn";
+            dgvBCTinhHinhMuon.Columns[2].HeaderCell.Value = "Tỉ lệ";
+            dgvBCSachTraTre.Columns[0].HeaderCell.Value = "Ngày";
+            dgvBCSachTraTre.Columns[1].HeaderCell.Value = "ID Cuốn Sách";
+            dgvBCSachTraTre.Columns[2].HeaderCell.Value = "Ngày mượn";
+            dgvBCSachTraTre.Columns[3].HeaderCell.Value = "Số ngày trả trễ";
+            dgvBCSachTraTre.Columns[0].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvBCSachTraTre.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)
@@ -142,6 +154,27 @@ namespace GUI
                     }
                 dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             }
+        }
+
+        private void btnXuatExcelBCTraTre_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            ExcelApp.Application.Workbooks.Add(Type.Missing);
+
+            for (int i = 1; i < dgvBCSachTraTre.Columns.Count + 1; i++)
+            {
+                ExcelApp.Cells[1, i] = dgvBCSachTraTre.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < dgvBCSachTraTre.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvBCSachTraTre.Columns.Count; j++)
+                {
+                    ExcelApp.Cells[i + 2, j + 1] = dgvBCSachTraTre.Rows[i].Cells[j].Value?.ToString();
+                }
+            }
+            ExcelApp.Columns.AutoFit();
+            ExcelApp.Visible = true;
         }
     }
 }

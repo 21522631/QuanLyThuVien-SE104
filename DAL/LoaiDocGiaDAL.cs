@@ -47,7 +47,7 @@ namespace DAL
         public DataTable SearchLoaiDocGia(string ThongTinTraCuu)
         {
             string query = "SELECT MALOAIDOCGIA, TENLOAIDOCGIA FROM LOAIDOCGIA " +
-                           "WHERE MALOAIDOCGIA LIKE '%" + ThongTinTraCuu + "%' OR TENLOAIDOCGIA LIKE N'%" + ThongTinTraCuu + "%'";
+                           "WHERE MALOAIDOCGIA LIKE '" + ThongTinTraCuu + "%' OR TENLOAIDOCGIA LIKE N'%" + ThongTinTraCuu + "%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int InsertLoaiDocGia(string TenLoaiDocGia)

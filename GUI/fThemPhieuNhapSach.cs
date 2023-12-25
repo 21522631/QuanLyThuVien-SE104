@@ -22,7 +22,6 @@ namespace GUI
         {
             PhieuNhapSachBUS.Instance.InsertPhieuNhapSach(dtmNgayLap.Text);
             MessageBox.Show("Tạo thành công phiếu sách!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
             fThemChiTietPhieuNhapSach f = new fThemChiTietPhieuNhapSach();
             f.ShowDialog();
             this.Show();

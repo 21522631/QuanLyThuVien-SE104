@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
+            this.chkApDungNgay = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTraCuu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvPhieuThuTien = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkApDungNgay = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtmNgayThu = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThuTien)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,6 +57,36 @@
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tra cứu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(578, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 97;
+            this.label3.Text = "Ngày thu";
+            // 
+            // dtmNgayThu
+            // 
+            this.dtmNgayThu.CustomFormat = "dd/MM/yyyy";
+            this.dtmNgayThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmNgayThu.Location = new System.Drawing.Point(633, 22);
+            this.dtmNgayThu.Name = "dtmNgayThu";
+            this.dtmNgayThu.Size = new System.Drawing.Size(80, 20);
+            this.dtmNgayThu.TabIndex = 96;
+            this.dtmNgayThu.ValueChanged += new System.EventHandler(this.dtmNgayThu_ValueChanged);
+            // 
+            // chkApDungNgay
+            // 
+            this.chkApDungNgay.AutoSize = true;
+            this.chkApDungNgay.Location = new System.Drawing.Point(449, 23);
+            this.chkApDungNgay.Name = "chkApDungNgay";
+            this.chkApDungNgay.Size = new System.Drawing.Size(106, 17);
+            this.chkApDungNgay.TabIndex = 94;
+            this.chkApDungNgay.Text = "Kết hợp với ngày";
+            this.chkApDungNgay.UseVisualStyleBackColor = true;
+            this.chkApDungNgay.CheckedChanged += new System.EventHandler(this.chkApDungNgay_CheckedChanged);
             // 
             // label1
             // 
@@ -113,36 +143,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tra cứu";
             // 
-            // chkApDungNgay
-            // 
-            this.chkApDungNgay.AutoSize = true;
-            this.chkApDungNgay.Location = new System.Drawing.Point(449, 23);
-            this.chkApDungNgay.Name = "chkApDungNgay";
-            this.chkApDungNgay.Size = new System.Drawing.Size(106, 17);
-            this.chkApDungNgay.TabIndex = 94;
-            this.chkApDungNgay.Text = "Kết hợp với ngày";
-            this.chkApDungNgay.UseVisualStyleBackColor = true;
-            this.chkApDungNgay.CheckedChanged += new System.EventHandler(this.chkApDungNgay_CheckedChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(578, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 97;
-            this.label3.Text = "Ngày thu";
-            // 
-            // dtmNgayThu
-            // 
-            this.dtmNgayThu.CustomFormat = "dd/MM/yyyy";
-            this.dtmNgayThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgayThu.Location = new System.Drawing.Point(633, 22);
-            this.dtmNgayThu.Name = "dtmNgayThu";
-            this.dtmNgayThu.Size = new System.Drawing.Size(80, 20);
-            this.dtmNgayThu.TabIndex = 96;
-            this.dtmNgayThu.ValueChanged += new System.EventHandler(this.dtmNgayThu_ValueChanged);
-            // 
             // fTraCuuPhieuThuTienPhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +152,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Name = "fTraCuuPhieuThuTienPhat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra Cứu Phiếu Thu Tiền Phạt";
             this.Load += new System.EventHandler(this.fTraCuuPhieuThuTienPhat_Load);
             this.groupBox2.ResumeLayout(false);
