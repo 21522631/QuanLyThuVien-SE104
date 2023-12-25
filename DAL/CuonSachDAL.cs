@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -58,6 +59,11 @@ namespace DAL
         public int UpdateCuonSach(string MaCuonSach, string TinhTrang)
         {
             string query = "UPDATE CUONSACH SET TINHTRANG = '" +TinhTrang + "' WHERE MACUONSACH = '" + MaCuonSach + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteCuonSach(string IDSach, string SoLuong)
+        {
+            string query = "DELETE TOP("+ SoLuong + ") FROM CUONSACH WHERE IDSACH = " + IDSach;
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }

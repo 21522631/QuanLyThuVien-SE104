@@ -46,5 +46,9 @@ namespace BUS
         {
             return CuonSachDAL.Instance.UpdateCuonSach(MaCuonSach, TinhTrang);
         }
+        public int DeleteCuonSach(string IDSach, string SoLuong)
+        {
+            return CuonSachDAL.Instance.DeleteCuonSach(IDSach, SoLuong);
+        }
     }
 }

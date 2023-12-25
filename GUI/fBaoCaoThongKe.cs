@@ -38,7 +38,14 @@ namespace GUI
                 BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
                 BC.Thang = Thang;
                 BC.Nam = Nam;
-                BC.TongSoLuotMuon = Convert.ToInt32(dt.Compute("SUM(SOLUOTMUON)", string.Empty));
+                if (dt.Rows.Count > 0)
+                {
+                    BC.TongSoLuotMuon = Convert.ToInt32(dt.Compute("SUM(SOLUOTMUON)", string.Empty));
+                }
+                else
+                {
+                    BC.TongSoLuotMuon = 0;
+                }    
                 BC_TinhHinhMuonSachBUS.Instance.InsertBC_TinhHinhMuonSach(BC);
                 CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
                 CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
