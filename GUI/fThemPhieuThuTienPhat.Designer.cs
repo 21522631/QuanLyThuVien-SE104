@@ -83,6 +83,7 @@
             this.txtSoTienThu.Name = "txtSoTienThu";
             this.txtSoTienThu.Size = new System.Drawing.Size(102, 20);
             this.txtSoTienThu.TabIndex = 94;
+            this.txtSoTienThu.Text = "0";
             this.txtSoTienThu.TextChanged += new System.EventHandler(this.txtSoTienThu_TextChanged);
             // 
             // txtTienConLai
@@ -92,6 +93,7 @@
             this.txtTienConLai.Name = "txtTienConLai";
             this.txtTienConLai.Size = new System.Drawing.Size(102, 20);
             this.txtTienConLai.TabIndex = 93;
+            this.txtTienConLai.Text = "0";
             // 
             // txtTongNo
             // 
@@ -100,6 +102,7 @@
             this.txtTongNo.Name = "txtTongNo";
             this.txtTongNo.Size = new System.Drawing.Size(102, 20);
             this.txtTongNo.TabIndex = 92;
+            this.txtTongNo.Text = "0";
             // 
             // dtmNgayThu
             // 
