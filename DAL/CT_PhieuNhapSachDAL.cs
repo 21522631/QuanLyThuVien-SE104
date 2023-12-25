@@ -30,6 +30,11 @@ namespace DAL
                            "WHERE IDPNS = " + IDPNS;
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetCT_PhieuNhapSachByIDPNSAndIDSach(string IDPNS, string IDSach)
+        {
+            string query = "SELECT * FROM CT_PHIEUNHAPSACH WHERE IDPNS = " + IDPNS + " AND IDSACH = " + IDSach;
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public int InsertCT_PhieuNhapSach(CT_PhieuNhapSach ct_PNS)
         {
             string query = "INSERT INTO CT_PHIEUNHAPSACH VALUES('" + ct_PNS.IDPNS + "', '" + ct_PNS.IDSach + "', '" + ct_PNS.SoLuongNhap + "', '" + ct_PNS.DonGia + "', '"  + ct_PNS.ThanhTien + "')";

@@ -28,6 +28,12 @@ namespace DAL
                            "FROM SACH JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetAllSachByMaSach(string MaSach)
+        {
+            string query = "SELECT MASACH, TENSACH, IDTHELOAI, NHAXUATBAN, NAMXUATBAN, SOLUONG, GIATIEN " +
+                           "FROM SACH WHERE MASACH = '" + MaSach + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchSach(string ThongTinTraCuu)
         {
             string query = "SELECT MASACH, TENSACH, MATHELOAI, TENTHELOAI, NHAXUATBAN, NAMXUATBAN, SOLUONG, GIATIEN " +

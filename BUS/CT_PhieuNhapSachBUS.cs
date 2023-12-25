@@ -27,6 +27,10 @@ namespace BUS
         {
             return CT_PhieuNhapSachDAL.Instance.GetCT_PhieuNhapSachByIDPNS(IDPNS);
         }
+        public DataTable GetCT_PhieuNhapSachByIDPNSAndIDSach(string IDPNS, string IDSach)
+        {
+            return CT_PhieuNhapSachDAL.Instance.GetCT_PhieuNhapSachByIDPNSAndIDSach(IDPNS, IDSach);
+        }
         public int InsertCT_PhieuNhapSach(CT_PhieuNhapSach ct_PNS)
         {
             return CT_PhieuNhapSachDAL.Instance.InsertCT_PhieuNhapSach(ct_PNS);
