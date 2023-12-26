@@ -360,6 +360,10 @@ namespace GUI
                     dgvPhieuMuonTra.DataSource = PhieuMuonTraBUS.Instance.SearchPhieuMuonTra(txtTraCuu.Text, NgayMuon, NgayTra);
                 }
             }
+            else
+            {
+                dgvPhieuMuonTra.DataSource = PhieuMuonTraBUS.Instance.SearchPhieuMuonTra(txtTraCuu.Text);
+            }    
         }
     }
 }
