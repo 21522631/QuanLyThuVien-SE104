@@ -84,6 +84,12 @@
     <Compile Include="fDocGia.Designer.cs">
       <DependentUpon>fDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDocGiaPhieuMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDocGiaPhieuMuonTra.Designer.cs">
+      <DependentUpon>fDocGiaPhieuMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +126,11 @@
     <Compile Include="fQuyDinh.Designer.cs">
       <DependentUpon>fQuyDinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="fSachDaMuon.cs">
+    <Compile Include="fDocGiaSachDaMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fSachDaMuon.Designer.cs">
-      <DependentUpon>fSachDaMuon.cs</DependentUpon>
+    <Compile Include="fDocGiaSachDaMuon.Designer.cs">
+      <DependentUpon>fDocGiaSachDaMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="fThemChucNang.cs">
       <SubType>Form</SubType>
@@ -287,6 +293,9 @@
     <EmbeddedResource Include="fDocGia.resx">
       <DependentUpon>fDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fDocGiaPhieuMuonTra.resx">
+      <DependentUpon>fDocGiaPhieuMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDoiMatKhau.resx">
       <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,8 +314,8 @@
     <EmbeddedResource Include="fQuyDinh.resx">
       <DependentUpon>fQuyDinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fSachDaMuon.resx">
-      <DependentUpon>fSachDaMuon.cs</DependentUpon>
+    <EmbeddedResource Include="fDocGiaSachDaMuon.resx">
+      <DependentUpon>fDocGiaSachDaMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemChucNang.resx">
       <DependentUpon>fThemChucNang.cs</DependentUpon>

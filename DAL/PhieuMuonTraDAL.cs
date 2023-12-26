@@ -29,6 +29,14 @@ namespace DAL
                            "NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetPhieuMuonTraByIDDocGia(string IDDocGia)
+        {
+            string query = "SELECT SOPMT, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, " +
+                           "CAST('CS' + RIGHT('0000' + CAST(IDCUONSACH AS VARCHAR(4)), 4) AS CHAR(6)) AS MACUONSACH, " +
+                           "NGAYMUON, NGAYPHAITRA, NGAYTRA, TIENPHAT FROM PHIEUMUONTRA " +
+                           "WHERE IDDOCGIA = '" + IDDocGia + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable GetSoLuongSachDangMuon(string IDdocGia)
         {
             string query = "SELECT IDDOCGIA, COUNT(IDCUONSACH) AS SOLUONGSACHMUON " +

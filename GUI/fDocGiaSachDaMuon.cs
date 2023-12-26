@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class fSachDaMuon : Form
+    public partial class fDocGiaSachDaMuon : Form
     {
         private string MaDocGia;
-        public fSachDaMuon(string MaDocGia)
+        public fDocGiaSachDaMuon(string MaDocGia)
         {
             InitializeComponent();
             this.MaDocGia = MaDocGia;

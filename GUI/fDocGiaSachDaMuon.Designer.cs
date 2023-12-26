@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class fSachDaMuon
+    partial class fDocGiaSachDaMuon
     {
         /// <summary>
         /// Required designer variable.
