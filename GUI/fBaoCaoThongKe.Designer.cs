@@ -32,6 +32,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvBCSachTraTre = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnXuatExcelBCTraTre = new System.Windows.Forms.Button();
             this.dtmTGBCSachTraTre = new System.Windows.Forms.DateTimePicker();
             this.btnTKSachTraTre = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabBaoCaoThongKe = new System.Windows.Forms.TabControl();
-            this.btnXuatExcelBCTraTre = new System.Windows.Forms.Button();
             this.tabpgBCTKSachTraTre.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBCSachTraTre)).BeginInit();
@@ -101,6 +101,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tuỳ Chọn";
             // 
+            // btnXuatExcelBCTraTre
+            // 
+            this.btnXuatExcelBCTraTre.Location = new System.Drawing.Point(688, 19);
+            this.btnXuatExcelBCTraTre.Name = "btnXuatExcelBCTraTre";
+            this.btnXuatExcelBCTraTre.Size = new System.Drawing.Size(75, 23);
+            this.btnXuatExcelBCTraTre.TabIndex = 51;
+            this.btnXuatExcelBCTraTre.Text = "Xuất Excel";
+            this.btnXuatExcelBCTraTre.UseVisualStyleBackColor = true;
+            this.btnXuatExcelBCTraTre.Click += new System.EventHandler(this.btnXuatExcelBCTraTre_Click);
+            // 
             // dtmTGBCSachTraTre
             // 
             this.dtmTGBCSachTraTre.CustomFormat = "dd/MM/yyyy";
@@ -109,6 +119,7 @@
             this.dtmTGBCSachTraTre.Name = "dtmTGBCSachTraTre";
             this.dtmTGBCSachTraTre.Size = new System.Drawing.Size(91, 20);
             this.dtmTGBCSachTraTre.TabIndex = 50;
+            this.dtmTGBCSachTraTre.ValueChanged += new System.EventHandler(this.dtmTGBCSachTraTre_ValueChanged);
             // 
             // btnTKSachTraTre
             // 
@@ -189,6 +200,7 @@
             this.dtmTGBCTinhHinhMuon.Name = "dtmTGBCTinhHinhMuon";
             this.dtmTGBCTinhHinhMuon.Size = new System.Drawing.Size(91, 20);
             this.dtmTGBCTinhHinhMuon.TabIndex = 49;
+            this.dtmTGBCTinhHinhMuon.ValueChanged += new System.EventHandler(this.dtmTGBCTinhHinhMuon_ValueChanged);
             // 
             // btnTKTinhHinhMuon
             // 
@@ -227,16 +239,6 @@
             this.tabBaoCaoThongKe.SelectedIndex = 0;
             this.tabBaoCaoThongKe.Size = new System.Drawing.Size(799, 521);
             this.tabBaoCaoThongKe.TabIndex = 1;
-            // 
-            // btnXuatExcelBCTraTre
-            // 
-            this.btnXuatExcelBCTraTre.Location = new System.Drawing.Point(688, 19);
-            this.btnXuatExcelBCTraTre.Name = "btnXuatExcelBCTraTre";
-            this.btnXuatExcelBCTraTre.Size = new System.Drawing.Size(75, 23);
-            this.btnXuatExcelBCTraTre.TabIndex = 51;
-            this.btnXuatExcelBCTraTre.Text = "Xuất Excel";
-            this.btnXuatExcelBCTraTre.UseVisualStyleBackColor = true;
-            this.btnXuatExcelBCTraTre.Click += new System.EventHandler(this.btnXuatExcelBCTraTre_Click);
             // 
             // fBaoCaoThongKe
             // 
