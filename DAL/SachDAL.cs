@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -32,6 +33,15 @@ namespace DAL
         {
             string query = "SELECT MASACH, TENSACH, IDTHELOAI, NHAXUATBAN, NAMXUATBAN, SOLUONG, GIATIEN " +
                            "FROM SACH WHERE MASACH = '" + MaSach + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetAllSachDaMuonByIDDocGia(string IDDocGia)
+        {
+            string query = "SELECT DISTINCT MASACH, TENSACH, MATHELOAI, TENTHELOAI, NHAXUATBAN, NAMXUATBAN, GIATIEN " +
+                           "FROM PHIEUMUONTRA JOIN CUONSACH ON PHIEUMUONTRA.IDCUONSACH = CUONSACH.ID " +
+                           "JOIN SACH ON CUONSACH.IDSACH = SACH.ID " +
+                           "JOIN THELOAI ON SACH.IDTHELOAI = THELOAI.ID " +
+                           "WHERE IDDOCGIA = '" + IDDocGia + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable SearchSach(string ThongTinTraCuu)

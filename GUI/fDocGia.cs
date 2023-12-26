@@ -1,4 +1,5 @@
 ﻿using DTO;
+using BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace GUI
 {
     public partial class fDocGia : Form
     {
-        NguoiDung nguoidung;
+        private NguoiDung nguoidung;
         public fDocGia(NguoiDung nguoidung)
         {
             InitializeComponent();
@@ -60,6 +61,13 @@ namespace GUI
         private void quảnLýNgườiDùngToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             fThongTinDocGia f = new fThongTinDocGia(ref nguoidung);
+            f.ShowDialog();
+        }
+
+        private void quảnLýMượnTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string MaDocGia = DocGiaBUS.Instance.GetDocGiaByIDNguoiDung(nguoidung.ID.ToString()).Rows[0][0].ToString();
+            fSachDaMuon f = new fSachDaMuon(MaDocGia);
             f.ShowDialog();
         }
     }

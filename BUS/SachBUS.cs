@@ -30,6 +30,10 @@ namespace BUS
         {
             return SachDAL.Instance.GetAllSachByMaSach(MaSach);
         }
+        public DataTable GetAllSachDaMuonByIDDocGia(string IDDocGia)
+        {
+            return SachDAL.Instance.GetAllSachDaMuonByIDDocGia(IDDocGia);
+        }
         public DataTable SearchSach(string ThongTinTraCuu)
         {
             return SachDAL.Instance.SearchSach(ThongTinTraCuu);
