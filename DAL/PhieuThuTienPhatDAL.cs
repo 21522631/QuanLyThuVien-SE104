@@ -27,6 +27,12 @@ namespace DAL
                            "FROM PHIEUTHUTIENPHAT";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetPhieuThuTienPhatByIDDocGia(string IDDocGia)
+        {
+            string query = "SELECT SOPTTP, CAST('DG' + RIGHT('0000' + CAST(IDDOCGIA AS VARCHAR(4)), 4) AS CHAR(6)) AS MADOCGIA, NGAYTHU, TONGNO, SOTIENTHU, CONLAI " +
+                           "FROM PHIEUTHUTIENPHAT WHERE IDDOCGIA = '" + IDDocGia + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchPhieuThuTienPhat(string ThongTinTraCuu)
         {
             string query = "SELECT SOPTTP, MADOCGIA, NGAYTHU, PHIEUTHUTIENPHAT.TONGNO, SOTIENTHU, CONLAI " +

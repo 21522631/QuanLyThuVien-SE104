@@ -63,8 +63,8 @@
             this.thayĐổiMậtKhẩuToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.quảnLýNgườiDùngToolStripMenuItem1.Name = "quảnLýNgườiDùngToolStripMenuItem1";
-            this.quảnLýNgườiDùngToolStripMenuItem1.Size = new System.Drawing.Size(135, 20);
-            this.quảnLýNgườiDùngToolStripMenuItem1.Text = "Thông tin người dùng";
+            this.quảnLýNgườiDùngToolStripMenuItem1.Size = new System.Drawing.Size(112, 20);
+            this.quảnLýNgườiDùngToolStripMenuItem1.Text = "Thông tin độc giả";
             this.quảnLýNgườiDùngToolStripMenuItem1.Click += new System.EventHandler(this.quảnLýNgườiDùngToolStripMenuItem1_Click);
             // 
             // thôngTinNgườiDùngToolStripMenuItem
@@ -121,6 +121,7 @@
             this.phiếuThuTiềnPhạtToolStripMenuItem.Name = "phiếuThuTiềnPhạtToolStripMenuItem";
             this.phiếuThuTiềnPhạtToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
             this.phiếuThuTiềnPhạtToolStripMenuItem.Text = "Phiếu Thu Tiền Phạt";
+            this.phiếuThuTiềnPhạtToolStripMenuItem.Click += new System.EventHandler(this.phiếuThuTiềnPhạtToolStripMenuItem_Click);
             // 
             // fDocGia
             // 

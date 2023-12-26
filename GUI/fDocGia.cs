@@ -77,5 +77,12 @@ namespace GUI
             fDocGiaPhieuMuonTra f = new fDocGiaPhieuMuonTra(MaDocGia);
             f.ShowDialog();
         }
+
+        private void phiếuThuTiềnPhạtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string MaDocGia = DocGiaBUS.Instance.GetDocGiaByIDNguoiDung(nguoidung.ID.ToString()).Rows[0][0].ToString();
+            fDocGiaPhieuThuTienPhat f = new fDocGiaPhieuThuTienPhat(MaDocGia);
+            f.ShowDialog();
+        }
     }
 }
