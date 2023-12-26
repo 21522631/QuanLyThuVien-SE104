@@ -38,7 +38,7 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập mật khẩu lại mật khẩu mới!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNhapLaiMatKhau .Focus();
             }    
-            else if (nguoidung.MatKhau == txtMatKhauHienTai.Text)
+            else if (DangNhapBUS.Instance.CheckDangNhap(nguoidung.TenDangNhap, txtMatKhauHienTai.Text) != null)
             {
                 if (txtMatKhauMoi.Text == txtNhapLaiMatKhau.Text)
                 {

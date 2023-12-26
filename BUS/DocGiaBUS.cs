@@ -30,6 +30,10 @@ namespace BUS
         {
             return DocGiaDAL.Instance.GetDocGiaByMaDocGia(MaDocGia);
         }
+        public DataTable GetDocGiaByIDNguoiDung(string IDNguoiDung)
+        {
+            return DocGiaDAL.Instance.GetDocGiaByIDNguoiDung(IDNguoiDung);
+        }
         public DataTable SearchDocGia(string ThongTinTimKiem)
         {
             return DocGiaDAL.Instance.SearchDocGia(ThongTinTimKiem);

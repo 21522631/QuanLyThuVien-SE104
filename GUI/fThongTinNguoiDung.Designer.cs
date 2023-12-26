@@ -223,7 +223,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fThongTinNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thông Tin";
+            this.Text = "Thông Tin Người Dùng";
             this.Load += new System.EventHandler(this.fThongTin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

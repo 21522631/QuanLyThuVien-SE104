@@ -71,7 +71,7 @@ namespace GUI
                             this.Show();
                             break;
                         case 3:
-                            fDocGia fDG = new fDocGia();
+                            fDocGia fDG = new fDocGia(nguoidung);
                             this.Hide();
                             fDG.ShowDialog();
                             this.Show();

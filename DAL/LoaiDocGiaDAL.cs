@@ -44,6 +44,12 @@ namespace DAL
                            "WHERE TENLOAIDOCGIA = N'" + TenLoaiDocGia + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetLoaiDocGiaByID(string ID)
+        {
+            string query = "SELECT TENLOAIDOCGIA FROM LOAIDOCGIA " +
+                           "WHERE ID = '" + ID + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchLoaiDocGia(string ThongTinTraCuu)
         {
             string query = "SELECT MALOAIDOCGIA, TENLOAIDOCGIA FROM LOAIDOCGIA " +

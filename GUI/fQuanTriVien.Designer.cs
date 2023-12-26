@@ -560,6 +560,7 @@
             this.Name = "fQuanTriVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần Mềm Quản Lý Thư Viện";
+            this.Load += new System.EventHandler(this.fQuanTriVien_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

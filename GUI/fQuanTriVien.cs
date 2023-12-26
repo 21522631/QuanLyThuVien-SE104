@@ -242,7 +242,10 @@ namespace GUI
         }
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn thực sự có muốn đăng xuất?", "Thông tin!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void cậpNhậpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -320,6 +323,11 @@ namespace GUI
         {
             fTraCuuNguoiDung f = new fTraCuuNguoiDung();
             f.ShowDialog();
+        }
+
+        private void fQuanTriVien_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

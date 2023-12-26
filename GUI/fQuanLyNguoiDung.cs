@@ -50,6 +50,9 @@ namespace GUI
             dgvChucNang.Columns[3].HeaderCell.Value = "Tên màn hình được load";
             dgvChucNang.Columns["ID"].Visible = false;
             dgvPhanQuyen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            txtTenNhomNguoiDungPQ.Enabled = false;  
+            txtTenManHinhDuocLoadPQ.Enabled = false;
+            txtTenChucNangPQ.Enabled = false;
             cboMaNhomNguoiDungPQ.DataSource = NhomNguoiDungBUS.Instance.GetAllNhomNguoiDung();
             cboMaNhomNguoiDungPQ.DisplayMember = "MANHOM";
             cboMaNhomNguoiDungPQ.ValueMember = "ID";

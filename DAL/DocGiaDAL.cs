@@ -34,6 +34,12 @@ namespace DAL
                            "FROM DOCGIA WHERE MADOCGIA = '" + MaDocGia + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetDocGiaByIDNguoiDung(string IDNguoiDung)
+        {
+            string query = "SELECT MADOCGIA, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, IDLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN, TONGNO, IDNGUOIDUNG " +
+                           "FROM DOCGIA WHERE IDNGUOIDUNG = '" + IDNguoiDung + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable SearchDocGia(string ThongTinTraCuu)
         {
             string query = "SELECT MADOCGIA, TENDOCGIA, NGAYSINH, DIACHI, EMAIL, TENLOAIDOCGIA, NGAYLAPTHE, NGAYHETHAN, TONGNO, MANGUOIDUNG " +

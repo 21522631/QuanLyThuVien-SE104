@@ -210,6 +210,12 @@
     <Compile Include="fThemTheLoai.Designer.cs">
       <DependentUpon>fThemTheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThongTinDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTinDocGia.Designer.cs">
+      <DependentUpon>fThongTinDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThongTinNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fThemTheLoai.resx">
       <DependentUpon>fThemTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongTinDocGia.resx">
+      <DependentUpon>fThongTinDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThongTinNguoiDung.resx">
       <DependentUpon>fThongTinNguoiDung.cs</DependentUpon>
