@@ -159,8 +159,7 @@ namespace GUI
         private void btnXuatExcelBCTraTre_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
-            ExcelApp.Application.Workbooks.Add(Type.Missing);
-
+            ExcelApp.Application.Workbooks.Add(Type.Missing);;
             for (int i = 1; i < dgvBCSachTraTre.Columns.Count + 1; i++)
             {
                 ExcelApp.Cells[1, i] = dgvBCSachTraTre.Columns[i - 1].HeaderText;

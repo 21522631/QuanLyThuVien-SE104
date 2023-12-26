@@ -230,7 +230,7 @@
             // 
             // btnXuatExcelBCTraTre
             // 
-            this.btnXuatExcelBCTraTre.Location = new System.Drawing.Point(618, 24);
+            this.btnXuatExcelBCTraTre.Location = new System.Drawing.Point(688, 19);
             this.btnXuatExcelBCTraTre.Name = "btnXuatExcelBCTraTre";
             this.btnXuatExcelBCTraTre.Size = new System.Drawing.Size(75, 23);
             this.btnXuatExcelBCTraTre.TabIndex = 51;

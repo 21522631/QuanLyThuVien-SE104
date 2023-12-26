@@ -123,6 +123,11 @@ namespace GUI
             {
                 MessageBox.Show("Vui lòng chọn thông tin trong datagridview để thực hiện!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (txtTenTheLoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên thể loại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenTheLoai.Focus();
+            }    
             else if (TheLoaiBUS.Instance.GetTheLoaiByTenTheLoai(txtTenTheLoai.Text).Rows.Count > 0)
             {
                 MessageBox.Show("Đã tồn tại thể loại này. Vui lòng nhập tên thể loại khác!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -69,6 +69,11 @@ namespace GUI
             {
                 MessageBox.Show("Tài khoản đã tồn tại vui lòng nhập tài khoản khác !", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTenDangNhap.Focus();
+            }
+            else if (txtMatKhau.Text != txtNhapLaiMatKhau.Text)
+            {
+                MessageBox.Show("Mật khẩu không khớp. Vui lòng nhập lại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNhapLaiMatKhau.Focus();
             }    
             else
             {

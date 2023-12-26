@@ -54,7 +54,7 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập lại mật khẩu!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNhapLaiMatKhau.Focus();
             }
-            if (txtMatKhau.Text == txtNhapLaiMatKhau.Text) 
+            else if (txtMatKhau.Text == txtNhapLaiMatKhau.Text) 
             {
                 NguoiDung nguoidung = new NguoiDung();
                 nguoidung.TenNguoiDung = txtTenNguoiDung.Text;
