@@ -32,5 +32,10 @@ namespace DAL
             string query = "INSERT BC_SACHTRATRE VALUES('" + BC.Ngay + "', '" + BC.IDCuonSach + "', '" + BC.NgayMuon + "', '" + BC.SoNgayTraTre + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int DeleteBC_SachTraTre(string Ngay)
+        {
+            string query = "DELETE BC_SACHTRATRE WHERE NGAY = '" + Ngay + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

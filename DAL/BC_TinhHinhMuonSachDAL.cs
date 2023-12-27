@@ -44,5 +44,10 @@ namespace DAL
                            "' WHERE THANG = '" + BC.Thang + "' AND NAM = '" + BC.Nam + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int DeleteBC_TinhHinhMuonSach(BC_TinhHinhMuonSach BC)
+        {
+            string query = "DELETE BC_TINHHINHMUONSACH WHERE THANG = '" + BC.Thang + "' AND NAM = '" + BC.Nam + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

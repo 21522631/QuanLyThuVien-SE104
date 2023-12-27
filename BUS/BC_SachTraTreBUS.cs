@@ -31,5 +31,9 @@ namespace BUS
         {
             return BC_SachTraTreDAL.Instance.InsertBC_SachTraTre(BC);
         }
+        public int DeleteBC_SachTraTre(string Ngay)
+        {
+            return BC_SachTraTreDAL.Instance.DeleteBC_SachTraTre(Ngay);
+        }
     }
 }

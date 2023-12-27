@@ -46,6 +46,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabBaoCaoThongKe = new System.Windows.Forms.TabControl();
+            this.btnXuatExcelBCTTHMT = new System.Windows.Forms.Button();
             this.tabpgBCTKSachTraTre.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBCSachTraTre)).BeginInit();
@@ -123,11 +124,11 @@
             // 
             // btnTKSachTraTre
             // 
-            this.btnTKSachTraTre.Location = new System.Drawing.Point(470, 20);
+            this.btnTKSachTraTre.Location = new System.Drawing.Point(476, 21);
             this.btnTKSachTraTre.Name = "btnTKSachTraTre";
             this.btnTKSachTraTre.Size = new System.Drawing.Size(75, 23);
             this.btnTKSachTraTre.TabIndex = 2;
-            this.btnTKSachTraTre.Text = "Thống Kê";
+            this.btnTKSachTraTre.Text = "Cập nhập";
             this.btnTKSachTraTre.UseVisualStyleBackColor = true;
             this.btnTKSachTraTre.Click += new System.EventHandler(this.btnTKSachTraTre_Click);
             // 
@@ -182,6 +183,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnXuatExcelBCTTHMT);
             this.groupBox6.Controls.Add(this.dtmTGBCTinhHinhMuon);
             this.groupBox6.Controls.Add(this.btnTKTinhHinhMuon);
             this.groupBox6.Controls.Add(this.label19);
@@ -204,11 +206,11 @@
             // 
             // btnTKTinhHinhMuon
             // 
-            this.btnTKTinhHinhMuon.Location = new System.Drawing.Point(435, 20);
+            this.btnTKTinhHinhMuon.Location = new System.Drawing.Point(451, 20);
             this.btnTKTinhHinhMuon.Name = "btnTKTinhHinhMuon";
             this.btnTKTinhHinhMuon.Size = new System.Drawing.Size(75, 23);
             this.btnTKTinhHinhMuon.TabIndex = 2;
-            this.btnTKTinhHinhMuon.Text = "Thống Kê";
+            this.btnTKTinhHinhMuon.Text = "Cập nhập";
             this.btnTKTinhHinhMuon.UseVisualStyleBackColor = true;
             this.btnTKTinhHinhMuon.Click += new System.EventHandler(this.btnTKTinhHinhMuon_Click);
             // 
@@ -239,6 +241,16 @@
             this.tabBaoCaoThongKe.SelectedIndex = 0;
             this.tabBaoCaoThongKe.Size = new System.Drawing.Size(799, 521);
             this.tabBaoCaoThongKe.TabIndex = 1;
+            // 
+            // btnXuatExcelBCTTHMT
+            // 
+            this.btnXuatExcelBCTTHMT.Location = new System.Drawing.Point(688, 20);
+            this.btnXuatExcelBCTTHMT.Name = "btnXuatExcelBCTTHMT";
+            this.btnXuatExcelBCTTHMT.Size = new System.Drawing.Size(75, 23);
+            this.btnXuatExcelBCTTHMT.TabIndex = 52;
+            this.btnXuatExcelBCTTHMT.Text = "Xuất Excel";
+            this.btnXuatExcelBCTTHMT.UseVisualStyleBackColor = true;
+            this.btnXuatExcelBCTTHMT.Click += new System.EventHandler(this.btnXuatExcelBCTTHMT_Click);
             // 
             // fBaoCaoThongKe
             // 
@@ -294,5 +306,6 @@
         private System.Windows.Forms.DateTimePicker dtmTGBCTinhHinhMuon;
         private System.Windows.Forms.Button btnTKTinhHinhMuon;
         private System.Windows.Forms.Button btnXuatExcelBCTraTre;
+        private System.Windows.Forms.Button btnXuatExcelBCTTHMT;
     }
 }

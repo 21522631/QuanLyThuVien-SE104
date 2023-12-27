@@ -36,7 +36,6 @@ namespace GUI
             }
             else
             {
-                //Check trh chưa có phiếu mượn nào
                 DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);
                 BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
                 BC.Thang = Thang;
@@ -95,67 +94,6 @@ namespace GUI
             dgvBCSachTraTre.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
-        private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)
-        {
-            int Nam = dtmTGBCTinhHinhMuon.Value.Year;
-            int Thang = dtmTGBCTinhHinhMuon.Value.Month;
-            DataTable data1 = BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam);
-            if (data1.Rows.Count > 0)
-            {
-                int IDBC = Convert.ToInt32(data1.Rows[0][0].ToString());
-                dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(IDBC);
-            }
-            else
-            {
-                DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);
-                BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
-                BC.Thang = Thang;
-                BC.Nam = Nam;
-                int TongSoLuotMuon;
-                Int32.TryParse(dt.Compute("SUM(SOLUOTMUON)", string.Empty).ToString(),out TongSoLuotMuon);
-                BC.TongSoLuotMuon = TongSoLuotMuon;
-                BC_TinhHinhMuonSachBUS.Instance.InsertBC_TinhHinhMuonSach(BC);
-                CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
-                CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
-                    CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
-                    CTBC.TiLe = float.Parse(CTBC.SoLuotMuon.ToString()) / BC.TongSoLuotMuon;
-                    CT_BC_TinhHinhMuonSachBUS.Instance.UpdateCT_BCTinhHinhMuonSach(CTBC);
-                }
-                dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(CTBC.IDBCTHMS);
-            }
-        }
-        private void btnTKSachTraTre_Click(object sender, EventArgs e)
-        {
-            string[] formats = { "dd/MM/yyyy" };
-            string Ngay = DateTime.ParseExact(dtmTGBCSachTraTre.Text.ToString(), formats, new CultureInfo("en-US"), DateTimeStyles.None).ToString();
-            DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
-            int SoLuongSachTraTre = data.Rows.Count;
-            if (SoLuongSachTraTre > 0)
-            {
-                dgvBCSachTraTre.DataSource = data;
-            }
-            else
-            {
-
-                BC_SachTraTre BC = new BC_SachTraTre();
-                BC.Ngay = dtmTGBCSachTraTre.Text.ToString();
-                DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
-                if (SachTraTre.Rows.Count > 0)
-                    for (int i = 0; i < SachTraTre.Rows.Count; i++)
-                    {
-                        BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
-                        BC.NgayMuon = Convert.ToDateTime(SachTraTre.Rows[i][1]).ToString("dd/MM/yyyy");
-                        string NgayTra = SachTraTre.Rows[i][2].ToString();
-                        BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
-                        BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
-                    }
-                dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
-            }
-        }
-
         private void dtmTGBCTinhHinhMuon_ValueChanged(object sender, EventArgs e)
         {
             int Thang = dtmTGBCTinhHinhMuon.Value.Month;
@@ -198,8 +136,7 @@ namespace GUI
 
         private void dtmTGBCSachTraTre_ValueChanged(object sender, EventArgs e)
         {
-            string[] formats = { "dd/MM/yyyy" };
-            string Ngay = DateTime.ParseExact(dtmTGBCSachTraTre.Text.ToString(), formats, new CultureInfo("en-US"), DateTimeStyles.None).ToString();
+            string Ngay = dtmTGBCSachTraTre.Value.ToString("MM/dd/yyyy");
             DataTable data = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             int SoLuongSachTraTre = data.Rows.Count;
             if (SoLuongSachTraTre > 0)
@@ -223,6 +160,69 @@ namespace GUI
                     }
                 dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             }
+        }
+
+        private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)
+        {
+            BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
+            int Thang = dtmTGBCTinhHinhMuon.Value.Month;
+            int Nam = dtmTGBCTinhHinhMuon.Value.Year;
+            BC_TinhHinhMuonSachBUS.Instance.DeleteBC_TinhHinhMuonSach(BC);
+            DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);    
+            int TongSoLuotMuon;
+            Int32.TryParse(dt.Compute("SUM(SOLUOTMUON)", string.Empty).ToString(), out TongSoLuotMuon);
+            BC.TongSoLuotMuon = TongSoLuotMuon;
+            BC_TinhHinhMuonSachBUS.Instance.InsertBC_TinhHinhMuonSach(BC);
+            CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
+            CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
+                CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
+                CTBC.TiLe = float.Parse(CTBC.SoLuotMuon.ToString()) / BC.TongSoLuotMuon;
+                CT_BC_TinhHinhMuonSachBUS.Instance.UpdateCT_BCTinhHinhMuonSach(CTBC);
+            }
+            dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(CTBC.IDBCTHMS);
+        }
+
+        private void btnTKSachTraTre_Click(object sender, EventArgs e)
+        {
+            string Ngay = dtmTGBCSachTraTre.Value.ToString("MM/dd/yyyy");
+            BC_SachTraTre BC = new BC_SachTraTre();
+            BC.Ngay = dtmTGBCSachTraTre.Text.ToString();
+            //Ngay = BC.Ngay;
+            BC_SachTraTreBUS.Instance.DeleteBC_SachTraTre(BC.Ngay);
+            DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
+            if (SachTraTre.Rows.Count > 0)
+                for (int i = 0; i < SachTraTre.Rows.Count; i++)
+                {
+                    BC.IDCuonSach = Convert.ToInt32(SachTraTre.Rows[i][0].ToString());
+                    BC.NgayMuon = Convert.ToDateTime(SachTraTre.Rows[i][1]).ToString("dd/MM/yyyy");
+                    string NgayTra = SachTraTre.Rows[i][2].ToString();
+                    BC.SoNgayTraTre = Convert.ToDateTime(Ngay).Subtract(Convert.ToDateTime(NgayTra)).Days;
+                    BC_SachTraTreBUS.Instance.InsertBC_SachTraTre(BC);
+                }
+            dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
+        }
+
+        private void btnXuatExcelBCTTHMT_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            ExcelApp.Application.Workbooks.Add(Type.Missing); ;
+            for (int i = 1; i < dgvBCTinhHinhMuon.Columns.Count + 1; i++)
+            {
+                ExcelApp.Cells[1, i] = dgvBCTinhHinhMuon.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < dgvBCTinhHinhMuon.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvBCTinhHinhMuon.Columns.Count; j++)
+                {
+                    ExcelApp.Cells[i + 2, j + 1] = dgvBCTinhHinhMuon.Rows[i].Cells[j].Value?.ToString();
+                }
+            }
+            ExcelApp.Columns.AutoFit();
+            ExcelApp.Visible = true;
         }
         private void btnXuatExcelBCTraTre_Click(object sender, EventArgs e)
         {

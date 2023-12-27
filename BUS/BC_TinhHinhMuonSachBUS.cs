@@ -39,5 +39,9 @@ namespace BUS
         {
             return BC_TinhHinhMuonSachDAL.Instance.UpdateBC_TinhHinhMuonSach(BC);
         }
+        public int DeleteBC_TinhHinhMuonSach(BC_TinhHinhMuonSach BC)
+        {
+            return BC_TinhHinhMuonSachDAL.Instance.DeleteBC_TinhHinhMuonSach(BC);
+        }
     }
 }
