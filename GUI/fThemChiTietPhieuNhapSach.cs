@@ -114,11 +114,14 @@ namespace GUI
 
         private void dgvDSSachNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = dgvDSSachNhap.CurrentRow.Index;
-            cboMaSach.Text = dgvDSSachNhap.Rows[index].Cells[0].Value.ToString();
-            domSoLuong.Text = dgvDSSachNhap.Rows[index].Cells[2].Value.ToString();
-            txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[3].Value.ToString();
-            txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[4].Value.ToString();
+            if (dgvDSSachNhap.Rows.Count > 1)
+            {
+                int index = dgvDSSachNhap.CurrentRow.Index;
+                cboMaSach.Text = dgvDSSachNhap.Rows[index].Cells[0].Value.ToString();
+                domSoLuong.Text = dgvDSSachNhap.Rows[index].Cells[2].Value.ToString();
+                txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[3].Value.ToString();
+                txtDonGia.Text = dgvDSSachNhap.Rows[index].Cells[4].Value.ToString();
+            }    
         }
 
         private void btnXoaSachNhap_Click(object sender, EventArgs e)
@@ -171,6 +174,7 @@ namespace GUI
             {
                 MessageBox.Show("Không tồn tại sách nhập. Vui lòng kiếm tra lại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboMaSach.Focus();
+                DaLuu = 0;
             } 
                 
             

@@ -156,26 +156,6 @@ namespace GUI
             }
         }
 
-        private void btnXuatExcelBCTraTre_Click(object sender, EventArgs e)
-        {
-            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
-            ExcelApp.Application.Workbooks.Add(Type.Missing);;
-            for (int i = 1; i < dgvBCSachTraTre.Columns.Count + 1; i++)
-            {
-                ExcelApp.Cells[1, i] = dgvBCSachTraTre.Columns[i - 1].HeaderText;
-            }
-
-            for (int i = 0; i < dgvBCSachTraTre.Rows.Count; i++)
-            {
-                for (int j = 0; j < dgvBCSachTraTre.Columns.Count; j++)
-                {   
-                    ExcelApp.Cells[i + 2, j + 1] = dgvBCSachTraTre.Rows[i].Cells[j].Value?.ToString();
-                }
-            }
-            ExcelApp.Columns.AutoFit();
-            ExcelApp.Visible = true;
-        }
-
         private void dtmTGBCTinhHinhMuon_ValueChanged(object sender, EventArgs e)
         {
             int Thang = dtmTGBCTinhHinhMuon.Value.Month;
@@ -243,6 +223,25 @@ namespace GUI
                     }
                 dgvBCSachTraTre.DataSource = BC_SachTraTreBUS.Instance.GetBC_SachTraTre(Ngay);
             }
+        }
+        private void btnXuatExcelBCTraTre_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            ExcelApp.Application.Workbooks.Add(Type.Missing); ;
+            for (int i = 1; i < dgvBCSachTraTre.Columns.Count + 1; i++)
+            {
+                ExcelApp.Cells[1, i] = dgvBCSachTraTre.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < dgvBCSachTraTre.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvBCSachTraTre.Columns.Count; j++)
+                {
+                    ExcelApp.Cells[i + 2, j + 1] = dgvBCSachTraTre.Rows[i].Cells[j].Value?.ToString();
+                }
+            }
+            ExcelApp.Columns.AutoFit();
+            ExcelApp.Visible = true;
         }
     }
 }
