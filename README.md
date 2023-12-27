@@ -4,12 +4,12 @@
   </a>
 </p>
 
-# Phần mềm Quản lý Thư Viện
+# Phần mềm Quản Lý Thư Viện
 
 ## Giới thiệu
 
 * Đây là ứng dụng được sử dụng làm đồ án cuối kì cho môn nhập môn công nghệ phần mềm.
-* Ứng dụng được xây dựng theo mô hình 3 lớp cài đặt giao diện bằng C# Winforms.
+* Ứng dụng được xây dựng theo mô hình 3 lớp và cài đặt giao diện bằng C# Winforms.
 
 ### Giảng viên hướng dẫn
 
