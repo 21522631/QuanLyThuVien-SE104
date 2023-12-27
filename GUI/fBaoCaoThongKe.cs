@@ -98,7 +98,6 @@ namespace GUI
         {
             int Thang = dtmTGBCTinhHinhMuon.Value.Month;
             int Nam = dtmTGBCTinhHinhMuon.Value.Year;
-            dgvBCSachTraTre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBCTinhHinhMuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataTable data1 = BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam);
             if (data1.Rows.Count > 0)
@@ -165,22 +164,27 @@ namespace GUI
         private void btnTKTinhHinhMuon_Click(object sender, EventArgs e)
         {
             BC_TinhHinhMuonSach BC = new BC_TinhHinhMuonSach();
-            int Thang = dtmTGBCTinhHinhMuon.Value.Month;
-            int Nam = dtmTGBCTinhHinhMuon.Value.Year;
+            BC.Thang = dtmTGBCTinhHinhMuon.Value.Month;
+            BC.Nam = dtmTGBCTinhHinhMuon.Value.Year;
             BC_TinhHinhMuonSachBUS.Instance.DeleteBC_TinhHinhMuonSach(BC);
-            DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(Thang, Nam);    
-            int TongSoLuotMuon;
-            Int32.TryParse(dt.Compute("SUM(SOLUOTMUON)", string.Empty).ToString(), out TongSoLuotMuon);
-            BC.TongSoLuotMuon = TongSoLuotMuon;
+            DataTable dt = PhieuMuonTraBUS.Instance.GetTongSoLuotMuonTheoTheLoaiByNgay(BC.Thang, BC.Nam);    
+            if (dt.Rows.Count > 0)
+            {
+                BC.TongSoLuotMuon = Convert.ToInt32(dt.Compute("SUM(SOLUOTMUON)", string.Empty));
+            }
+            else
+            {
+                BC.TongSoLuotMuon = 0;
+            }
             BC_TinhHinhMuonSachBUS.Instance.InsertBC_TinhHinhMuonSach(BC);
             CT_BC_TinhHinhMuonSach CTBC = new CT_BC_TinhHinhMuonSach();
-            CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(Thang, Nam).Rows[0][0].ToString());
+            CTBC.IDBCTHMS = Convert.ToInt32(BC_TinhHinhMuonSachBUS.Instance.GetBC_TinhHinhMuonSachByNgay(BC.Thang, BC.Nam).Rows[0][0].ToString());
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 CTBC.IDTheLoai = Convert.ToInt32(dt.Rows[i][0].ToString());
                 CTBC.SoLuotMuon = Convert.ToInt32(dt.Rows[i][2].ToString());
                 CTBC.TiLe = float.Parse(CTBC.SoLuotMuon.ToString()) / BC.TongSoLuotMuon;
-                CT_BC_TinhHinhMuonSachBUS.Instance.UpdateCT_BCTinhHinhMuonSach(CTBC);
+                CT_BC_TinhHinhMuonSachBUS.Instance.InsertCT_BCTinhHinhMuonSach(CTBC);
             }
             dgvBCTinhHinhMuon.DataSource = CT_BC_TinhHinhMuonSachBUS.Instance.GetAllCT_BCTinhHinhMuonSachByIDBC(CTBC.IDBCTHMS);
         }
@@ -190,7 +194,6 @@ namespace GUI
             string Ngay = dtmTGBCSachTraTre.Value.ToString("MM/dd/yyyy");
             BC_SachTraTre BC = new BC_SachTraTre();
             BC.Ngay = dtmTGBCSachTraTre.Text.ToString();
-            //Ngay = BC.Ngay;
             BC_SachTraTreBUS.Instance.DeleteBC_SachTraTre(BC.Ngay);
             DataTable SachTraTre = PhieuMuonTraBUS.Instance.GetCuonSachTraTre(Ngay);
             if (SachTraTre.Rows.Count > 0)
