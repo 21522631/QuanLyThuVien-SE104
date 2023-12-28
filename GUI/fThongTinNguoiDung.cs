@@ -25,7 +25,7 @@ namespace GUI
         {
             txtMaNguoiDung.Enabled = false;
             txtNhomNguoiDung.Enabled = false;
-            txtTenDangNhap.Enabled = false;
+            txtTenDangNhap.Enabled = false; 
             txtChucNang.Enabled = false;
             txtMaNguoiDung.Text = nguoidung.MaNguoiDung.ToString();
             txtTenNguoiDung.Text = nguoidung.TenNguoiDung.ToString();
@@ -35,6 +35,7 @@ namespace GUI
             data = PhanQuyenBUS.Instance.GetAllPhanQuyenByIDNhomNguoiDung(nguoidung.IDNhomNguoiDung);
             for(int i = 0; i < data.Rows.Count; i++) 
             {
+                string test = data.Rows[i][1].ToString();
                 txtChucNang.Text = txtChucNang.Text + Environment.NewLine + data.Rows[i][1].ToString() ;
             }
         }
@@ -66,5 +67,6 @@ namespace GUI
             fDoiMatKhau f = new fDoiMatKhau(ref nguoidung);
             f.ShowDialog();
         }
+
     }
 }

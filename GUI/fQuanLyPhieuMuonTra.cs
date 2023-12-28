@@ -64,35 +64,19 @@ namespace GUI
             dtmNgayMuon.Text = dgvPhieuMuon.Rows[index].Cells[3].Value.ToString();
             dtmNgayPhaiTra.Text = dgvPhieuMuon.Rows[index].Cells[4].Value.ToString();
             dtmNgayTra.Text = dgvPhieuMuon.Rows[index].Cells[5].Value.ToString();
-            txtNoCu.Text = DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text).Rows[0]["TONGNO"].ToString();
-            string DaTra = CuonSachBUS.Instance.GetAllCuonSachByMaCuonSach(txtMaCuonSach.Text).Rows[0][0].ToString();
-            if (DaTra == "0")
+            if (index != 0)
+            {
+                txtNoCu.Text = DocGiaBUS.Instance.GetDocGiaByMaDocGia(txtMaDocGia.Text).Rows[0]["TONGNO"].ToString();
+            }
+            if (dgvPhieuMuon.Rows[index].Cells[5].Value.ToString() == "")
             {
                 chkTinhTrang.Checked = false;
+                txtTienPhat.Text = "0";
+                txtTongNo.Text = txtNoCu.Text;
             }
             else
             {
                 chkTinhTrang.Checked = true;
-            }
-            if (chkTinhTrang.Checked == true) 
-            {
-                int SoNgayMuon = dtmNgayTra.Value.Subtract(dtmNgayPhaiTra.Value).Days;
-                if (SoNgayMuon < 0)
-                {
-                    txtTienPhat.Text = "0";
-                    txtTongNo.Text = txtNoCu.Text;
-                }
-                else
-                {
-                    int TienPhat = SoNgayMuon * ThamSoBUS.Instance.GetThamSo().DonGiaPhat;
-                    txtTienPhat.Text = TienPhat.ToString();
-                    txtTongNo.Text = (Convert.ToInt32(txtNoCu.Text.ToString()) + TienPhat).ToString();
-                }
-            }
-            else
-            {
-                txtTienPhat.Text = "0";
-                txtTongNo.Text = txtNoCu.Text;
             }
         }
 

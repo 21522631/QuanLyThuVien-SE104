@@ -56,8 +56,7 @@ namespace GUI
                 dtmNgayPhaiTra.Text = dgvPhieuMuon.Rows[index].Cells[4].Value.ToString();
                 dtmNgayTra.Text = dgvPhieuMuon.Rows[index].Cells[5].Value.ToString();
                 txtTienPhat.Text = dgvPhieuMuon.Rows[index].Cells[6].Value.ToString();
-                string DaTra = CuonSachBUS.Instance.GetAllCuonSachByMaCuonSach(txtMaCuonSach.Text).Rows[0][0].ToString();
-                if (DaTra == "0")
+                if (dgvPhieuMuon.Rows[index].Cells[5].Value.ToString() == "")
                 {
                     chkTinhTrang.Checked = false;
                 }
