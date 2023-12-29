@@ -232,5 +232,42 @@ namespace GUI
             fBaoCaoThongKe f = new fBaoCaoThongKe(1);
             f.ShowDialog();
         }
+
+        private void quảnLýNgườiDùngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fThongTinNguoiDung f = new fThongTinNguoiDung(ref nguoidung);
+            f.ShowDialog();
+
+        }
+
+        private void quảnLýĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyDocGia f = new fQuanLyDocGia(0);
+            f.ShowDialog();
+        }
+
+        private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLySach f = new fQuanLySach(0);
+            f.ShowDialog();
+        }
+
+        private void quảnLýMượnTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuMuonTra f = new fQuanLyPhieuMuonTra();
+            f.ShowDialog();
+        }
+
+        private void quảnLýPhiếuNhậpSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuNhapSach f = new fQuanLyPhieuNhapSach();
+            f.ShowDialog();
+        }
+
+        private void quảnLýPhiếuThuTiềnPhạtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQuanLyPhieuThuTienPhat f = new fQuanLyPhieuThuTienPhat();
+            f.ShowDialog();
+        }
     }
 }

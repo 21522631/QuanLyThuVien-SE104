@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCT_TacGia)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -74,6 +74,14 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết sách";
+            // 
+            // txtTheLoai
+            // 
+            this.txtTheLoai.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtTheLoai.Location = new System.Drawing.Point(83, 75);
+            this.txtTheLoai.Name = "txtTheLoai";
+            this.txtTheLoai.Size = new System.Drawing.Size(169, 20);
+            this.txtTheLoai.TabIndex = 52;
             // 
             // txtMaSach
             // 
@@ -210,21 +218,14 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(236, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.Size = new System.Drawing.Size(111, 15);
             this.label6.TabIndex = 26;
             this.label6.Text = "THÔNG TIN SÁCH";
             // 
-            // txtTheLoai
-            // 
-            this.txtTheLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtTheLoai.Location = new System.Drawing.Point(83, 75);
-            this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.Size = new System.Drawing.Size(169, 20);
-            this.txtTheLoai.TabIndex = 52;
-            // 
-            // fSachDaMuon
+            // fDocGiaSachDaMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,7 +233,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label6);
-            this.Name = "fSachDaMuon";
+            this.Name = "fDocGiaSachDaMuon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sách Đã Mượn";
             this.Load += new System.EventHandler(this.fSachDaMuon_Load);

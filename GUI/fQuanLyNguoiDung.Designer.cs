@@ -112,9 +112,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(297, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 13);
+            this.label6.Size = new System.Drawing.Size(221, 15);
             this.label6.TabIndex = 20;
             this.label6.Text = "CẬP NHẬP THÔNG TIN NGƯỜI DÙNG";
             // 
@@ -351,9 +352,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 12);
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(285, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(233, 13);
+            this.label10.Size = new System.Drawing.Size(263, 15);
             this.label10.TabIndex = 20;
             this.label10.Text = "CẬP NHẬP THÔNG TIN NHÓM NGƯỜI DÙNG";
             // 
@@ -536,9 +538,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(307, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 13);
+            this.label4.Size = new System.Drawing.Size(217, 15);
             this.label4.TabIndex = 21;
             this.label4.Text = "CẬP NHẬP THÔNG TIN CHỨC NĂNG";
             // 
@@ -720,9 +723,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(260, 10);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(198, 13);
+            this.label16.Size = new System.Drawing.Size(223, 15);
             this.label16.TabIndex = 31;
             this.label16.Text = "CẬP NHẬP THÔNG TIN PHÂN QUYỀN";
             // 

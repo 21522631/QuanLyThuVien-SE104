@@ -224,9 +224,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(289, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 13);
+            this.label6.Size = new System.Drawing.Size(210, 15);
             this.label6.TabIndex = 22;
             this.label6.Text = "THÔNG TIN PHIẾU THU TIỀN PHẠT";
             // 

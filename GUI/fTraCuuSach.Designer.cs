@@ -128,9 +128,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(297, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 13);
+            this.label6.Size = new System.Drawing.Size(169, 15);
             this.label6.TabIndex = 22;
             this.label6.Text = "TRA CỨU THÔNG TIN SÁCH";
             // 
@@ -248,9 +249,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(275, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 13);
+            this.label2.Size = new System.Drawing.Size(192, 15);
             this.label2.TabIndex = 23;
             this.label2.Text = "TRA CỨU THÔNG TIN THỂ LOẠI";
             // 
@@ -328,9 +330,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(277, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 13);
+            this.label7.Size = new System.Drawing.Size(186, 15);
             this.label7.TabIndex = 24;
             this.label7.Text = "TRA CỨU THÔNG TIN TÁC GIẢ";
             // 
@@ -419,9 +422,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(282, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(184, 13);
+            this.label12.Size = new System.Drawing.Size(207, 15);
             this.label12.TabIndex = 27;
             this.label12.Text = "TRA CỨU THÔNG TIN CUỐN SÁCH";
             // 

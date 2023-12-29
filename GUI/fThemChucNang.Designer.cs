@@ -50,12 +50,12 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 148);
+            this.panel1.Size = new System.Drawing.Size(268, 132);
             this.panel1.TabIndex = 1;
             // 
             // txtTenManHinhDuocLoad
             // 
-            this.txtTenManHinhDuocLoad.Location = new System.Drawing.Point(135, 77);
+            this.txtTenManHinhDuocLoad.Location = new System.Drawing.Point(135, 67);
             this.txtTenManHinhDuocLoad.Name = "txtTenManHinhDuocLoad";
             this.txtTenManHinhDuocLoad.Size = new System.Drawing.Size(122, 20);
             this.txtTenManHinhDuocLoad.TabIndex = 77;
@@ -63,7 +63,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 84);
+            this.label9.Location = new System.Drawing.Point(6, 74);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 13);
             this.label9.TabIndex = 76;
@@ -71,7 +71,7 @@
             // 
             // txtTenChucNang
             // 
-            this.txtTenChucNang.Location = new System.Drawing.Point(135, 51);
+            this.txtTenChucNang.Location = new System.Drawing.Point(135, 41);
             this.txtTenChucNang.Name = "txtTenChucNang";
             this.txtTenChucNang.Size = new System.Drawing.Size(122, 20);
             this.txtTenChucNang.TabIndex = 75;
@@ -79,7 +79,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 58);
+            this.label8.Location = new System.Drawing.Point(6, 48);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 74;
@@ -87,7 +87,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(182, 113);
+            this.btnHuy.Location = new System.Drawing.Point(182, 101);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 73;
@@ -97,7 +97,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(101, 113);
+            this.btnLuu.Location = new System.Drawing.Point(101, 101);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 72;
@@ -108,9 +108,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(69, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 13);
+            this.label6.Size = new System.Drawing.Size(151, 15);
             this.label6.TabIndex = 66;
             this.label6.Text = "THÔNG TIN CHỨC NĂNG";
             // 
@@ -118,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 170);
+            this.ClientSize = new System.Drawing.Size(293, 151);
             this.Controls.Add(this.panel1);
             this.Name = "fThemChucNang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

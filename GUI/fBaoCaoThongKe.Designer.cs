@@ -41,12 +41,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvBCTinhHinhMuon = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnXuatExcelBCTTHMT = new System.Windows.Forms.Button();
             this.dtmTGBCTinhHinhMuon = new System.Windows.Forms.DateTimePicker();
             this.btnTKTinhHinhMuon = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabBaoCaoThongKe = new System.Windows.Forms.TabControl();
-            this.btnXuatExcelBCTTHMT = new System.Windows.Forms.Button();
             this.tabpgBCTKSachTraTre.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBCSachTraTre)).BeginInit();
@@ -144,9 +144,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(323, 12);
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(314, 10);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(195, 13);
+            this.label16.Size = new System.Drawing.Size(221, 15);
             this.label16.TabIndex = 23;
             this.label16.Text = "BÁO CÁO THỐNG KÊ SÁCH TRẢ TRỄ";
             // 
@@ -194,6 +195,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Tuỳ Chọn";
             // 
+            // btnXuatExcelBCTTHMT
+            // 
+            this.btnXuatExcelBCTTHMT.Location = new System.Drawing.Point(688, 20);
+            this.btnXuatExcelBCTTHMT.Name = "btnXuatExcelBCTTHMT";
+            this.btnXuatExcelBCTTHMT.Size = new System.Drawing.Size(75, 23);
+            this.btnXuatExcelBCTTHMT.TabIndex = 52;
+            this.btnXuatExcelBCTTHMT.Text = "Xuất Excel";
+            this.btnXuatExcelBCTTHMT.UseVisualStyleBackColor = true;
+            this.btnXuatExcelBCTTHMT.Click += new System.EventHandler(this.btnXuatExcelBCTTHMT_Click);
+            // 
             // dtmTGBCTinhHinhMuon
             // 
             this.dtmTGBCTinhHinhMuon.CustomFormat = "MM/yyyy";
@@ -226,9 +237,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(267, 15);
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(260, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(293, 13);
+            this.label12.Size = new System.Drawing.Size(335, 15);
             this.label12.TabIndex = 22;
             this.label12.Text = "BÁO CÁO THỐNG KÊ TÌNH HÌNH MƯỢN THEO THỂ LOẠI";
             // 
@@ -241,16 +253,6 @@
             this.tabBaoCaoThongKe.SelectedIndex = 0;
             this.tabBaoCaoThongKe.Size = new System.Drawing.Size(799, 521);
             this.tabBaoCaoThongKe.TabIndex = 1;
-            // 
-            // btnXuatExcelBCTTHMT
-            // 
-            this.btnXuatExcelBCTTHMT.Location = new System.Drawing.Point(688, 20);
-            this.btnXuatExcelBCTTHMT.Name = "btnXuatExcelBCTTHMT";
-            this.btnXuatExcelBCTTHMT.Size = new System.Drawing.Size(75, 23);
-            this.btnXuatExcelBCTTHMT.TabIndex = 52;
-            this.btnXuatExcelBCTTHMT.Text = "Xuất Excel";
-            this.btnXuatExcelBCTTHMT.UseVisualStyleBackColor = true;
-            this.btnXuatExcelBCTTHMT.Click += new System.EventHandler(this.btnXuatExcelBCTTHMT_Click);
             // 
             // fBaoCaoThongKe
             // 

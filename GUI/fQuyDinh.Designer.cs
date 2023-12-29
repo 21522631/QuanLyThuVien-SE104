@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.domTuoiToiThieu = new System.Windows.Forms.NumericUpDown();
+            this.domTuoiToiDa = new System.Windows.Forms.NumericUpDown();
+            this.domThoiHanTheDocGia = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,29 +40,26 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.domKhoangCachNamXuatBan = new System.Windows.Forms.NumericUpDown();
+            this.domSoTienPhatTraTre = new System.Windows.Forms.NumericUpDown();
+            this.domSoSachMuonToiDa = new System.Windows.Forms.NumericUpDown();
+            this.domSoNgayMuonToiDa = new System.Windows.Forms.NumericUpDown();
             this.chkApDungQDTienThu = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.domThoiHanTheDocGia = new System.Windows.Forms.NumericUpDown();
-            this.domTuoiToiDa = new System.Windows.Forms.NumericUpDown();
-            this.domTuoiToiThieu = new System.Windows.Forms.NumericUpDown();
-            this.domSoNgayMuonToiDa = new System.Windows.Forms.NumericUpDown();
-            this.domSoSachMuonToiDa = new System.Windows.Forms.NumericUpDown();
-            this.domSoTienPhatTraTre = new System.Windows.Forms.NumericUpDown();
-            this.domKhoangCachNamXuatBan = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiThieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiDa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domThoiHanTheDocGia)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.domThoiHanTheDocGia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiDa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiThieu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domSoNgayMuonToiDa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domSoSachMuonToiDa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domSoTienPhatTraTre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.domKhoangCachNamXuatBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoTienPhatTraTre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoSachMuonToiDa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoNgayMuonToiDa)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,6 +76,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy Định Độc Giả";
+            // 
+            // domTuoiToiThieu
+            // 
+            this.domTuoiToiThieu.Location = new System.Drawing.Point(194, 75);
+            this.domTuoiToiThieu.Name = "domTuoiToiThieu";
+            this.domTuoiToiThieu.Size = new System.Drawing.Size(57, 20);
+            this.domTuoiToiThieu.TabIndex = 34;
+            // 
+            // domTuoiToiDa
+            // 
+            this.domTuoiToiDa.Location = new System.Drawing.Point(194, 49);
+            this.domTuoiToiDa.Name = "domTuoiToiDa";
+            this.domTuoiToiDa.Size = new System.Drawing.Size(57, 20);
+            this.domTuoiToiDa.TabIndex = 33;
+            // 
+            // domThoiHanTheDocGia
+            // 
+            this.domThoiHanTheDocGia.Location = new System.Drawing.Point(194, 23);
+            this.domThoiHanTheDocGia.Name = "domThoiHanTheDocGia";
+            this.domThoiHanTheDocGia.Size = new System.Drawing.Size(57, 20);
+            this.domThoiHanTheDocGia.TabIndex = 32;
             // 
             // label3
             // 
@@ -107,9 +128,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(82, 12);
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(56, 10);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 13);
+            this.label16.Size = new System.Drawing.Size(137, 15);
             this.label16.TabIndex = 24;
             this.label16.Text = "THÔNG TIN QUY ĐỊNH";
             // 
@@ -163,6 +185,44 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quy Định Mượn Trả  Và Nhập Sách";
+            // 
+            // domKhoangCachNamXuatBan
+            // 
+            this.domKhoangCachNamXuatBan.Location = new System.Drawing.Point(194, 97);
+            this.domKhoangCachNamXuatBan.Name = "domKhoangCachNamXuatBan";
+            this.domKhoangCachNamXuatBan.Size = new System.Drawing.Size(57, 20);
+            this.domKhoangCachNamXuatBan.TabIndex = 40;
+            // 
+            // domSoTienPhatTraTre
+            // 
+            this.domSoTienPhatTraTre.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.domSoTienPhatTraTre.Location = new System.Drawing.Point(194, 71);
+            this.domSoTienPhatTraTre.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.domSoTienPhatTraTre.Name = "domSoTienPhatTraTre";
+            this.domSoTienPhatTraTre.Size = new System.Drawing.Size(57, 20);
+            this.domSoTienPhatTraTre.TabIndex = 39;
+            // 
+            // domSoSachMuonToiDa
+            // 
+            this.domSoSachMuonToiDa.Location = new System.Drawing.Point(194, 45);
+            this.domSoSachMuonToiDa.Name = "domSoSachMuonToiDa";
+            this.domSoSachMuonToiDa.Size = new System.Drawing.Size(57, 20);
+            this.domSoSachMuonToiDa.TabIndex = 38;
+            // 
+            // domSoNgayMuonToiDa
+            // 
+            this.domSoNgayMuonToiDa.Location = new System.Drawing.Point(194, 19);
+            this.domSoNgayMuonToiDa.Name = "domSoNgayMuonToiDa";
+            this.domSoNgayMuonToiDa.Size = new System.Drawing.Size(57, 20);
+            this.domSoNgayMuonToiDa.TabIndex = 35;
             // 
             // chkApDungQDTienThu
             // 
@@ -218,65 +278,6 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Số ngày mượn tối đa";
             // 
-            // domThoiHanTheDocGia
-            // 
-            this.domThoiHanTheDocGia.Location = new System.Drawing.Point(194, 23);
-            this.domThoiHanTheDocGia.Name = "domThoiHanTheDocGia";
-            this.domThoiHanTheDocGia.Size = new System.Drawing.Size(57, 20);
-            this.domThoiHanTheDocGia.TabIndex = 32;
-            // 
-            // domTuoiToiDa
-            // 
-            this.domTuoiToiDa.Location = new System.Drawing.Point(194, 49);
-            this.domTuoiToiDa.Name = "domTuoiToiDa";
-            this.domTuoiToiDa.Size = new System.Drawing.Size(57, 20);
-            this.domTuoiToiDa.TabIndex = 33;
-            // 
-            // domTuoiToiThieu
-            // 
-            this.domTuoiToiThieu.Location = new System.Drawing.Point(194, 75);
-            this.domTuoiToiThieu.Name = "domTuoiToiThieu";
-            this.domTuoiToiThieu.Size = new System.Drawing.Size(57, 20);
-            this.domTuoiToiThieu.TabIndex = 34;
-            // 
-            // domSoNgayMuonToiDa
-            // 
-            this.domSoNgayMuonToiDa.Location = new System.Drawing.Point(194, 19);
-            this.domSoNgayMuonToiDa.Name = "domSoNgayMuonToiDa";
-            this.domSoNgayMuonToiDa.Size = new System.Drawing.Size(57, 20);
-            this.domSoNgayMuonToiDa.TabIndex = 35;
-            // 
-            // domSoSachMuonToiDa
-            // 
-            this.domSoSachMuonToiDa.Location = new System.Drawing.Point(194, 45);
-            this.domSoSachMuonToiDa.Name = "domSoSachMuonToiDa";
-            this.domSoSachMuonToiDa.Size = new System.Drawing.Size(57, 20);
-            this.domSoSachMuonToiDa.TabIndex = 38;
-            // 
-            // domSoTienPhatTraTre
-            // 
-            this.domSoTienPhatTraTre.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.domSoTienPhatTraTre.Location = new System.Drawing.Point(194, 71);
-            this.domSoTienPhatTraTre.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.domSoTienPhatTraTre.Name = "domSoTienPhatTraTre";
-            this.domSoTienPhatTraTre.Size = new System.Drawing.Size(57, 20);
-            this.domSoTienPhatTraTre.TabIndex = 39;
-            // 
-            // domKhoangCachNamXuatBan
-            // 
-            this.domKhoangCachNamXuatBan.Location = new System.Drawing.Point(194, 97);
-            this.domKhoangCachNamXuatBan.Name = "domKhoangCachNamXuatBan";
-            this.domKhoangCachNamXuatBan.Size = new System.Drawing.Size(57, 20);
-            this.domKhoangCachNamXuatBan.TabIndex = 40;
-            // 
             // fQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,17 +290,17 @@
             this.Load += new System.EventHandler(this.fQuyDinh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiThieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiDa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domThoiHanTheDocGia)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.domThoiHanTheDocGia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiDa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domTuoiToiThieu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domSoNgayMuonToiDa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domSoSachMuonToiDa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domSoTienPhatTraTre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.domKhoangCachNamXuatBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoTienPhatTraTre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoSachMuonToiDa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.domSoNgayMuonToiDa)).EndInit();
             this.ResumeLayout(false);
 
         }

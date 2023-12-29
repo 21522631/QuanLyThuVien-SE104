@@ -54,9 +54,9 @@
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.dgvPhieuMuon);
-            this.groupBox12.Location = new System.Drawing.Point(12, 199);
+            this.groupBox12.Location = new System.Drawing.Point(12, 187);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(540, 246);
+            this.groupBox12.Size = new System.Drawing.Size(540, 254);
             this.groupBox12.TabIndex = 32;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Thông tin chung phiếu mượn";
@@ -89,7 +89,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(12, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(540, 159);
+            this.groupBox1.Size = new System.Drawing.Size(540, 147);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết phiếu mượn";
@@ -221,9 +221,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(144, 9);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(186, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 13);
+            this.label6.Size = new System.Drawing.Size(185, 15);
             this.label6.TabIndex = 30;
             this.label6.Text = "THÔNG TIN PHIẾU MƯỢN TRẢ";
             // 

@@ -329,5 +329,11 @@ namespace GUI
         {
 
         }
+
+        private void quảnLýNgườiDùngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fQuanLyNguoiDung f = new fQuanLyNguoiDung(0);
+            f.ShowDialog();
+        }
     }
 }

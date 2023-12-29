@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkHienThiMatKhau = new System.Windows.Forms.CheckBox();
+            this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cboLoaiDocGia = new System.Windows.Forms.ComboBox();
             this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.dtmNgayLapThe = new System.Windows.Forms.DateTimePicker();
@@ -50,9 +53,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
-            this.chkHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(302, 356);
             this.panel1.TabIndex = 0;
+            // 
+            // chkHienThiMatKhau
+            // 
+            this.chkHienThiMatKhau.AutoSize = true;
+            this.chkHienThiMatKhau.Location = new System.Drawing.Point(106, 299);
+            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
+            this.chkHienThiMatKhau.Size = new System.Drawing.Size(109, 17);
+            this.chkHienThiMatKhau.TabIndex = 10;
+            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
+            // 
+            // txtNhapLaiMatKhau
+            // 
+            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(107, 116);
+            this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
+            this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(138, 20);
+            this.txtNhapLaiMatKhau.TabIndex = 3;
+            this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Nhập lại mật khẩu";
             // 
             // cboLoaiDocGia
             // 
@@ -190,9 +218,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 11);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(87, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.Size = new System.Drawing.Size(128, 15);
             this.label5.TabIndex = 34;
             this.label5.Text = "THÔNG TIN ĐỘC GIẢ";
             // 
@@ -270,34 +299,6 @@
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Họ và tên";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Nhập lại mật khẩu";
-            // 
-            // txtNhapLaiMatKhau
-            // 
-            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(107, 116);
-            this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
-            this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(138, 20);
-            this.txtNhapLaiMatKhau.TabIndex = 3;
-            this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
-            // 
-            // chkHienThiMatKhau
-            // 
-            this.chkHienThiMatKhau.AutoSize = true;
-            this.chkHienThiMatKhau.Location = new System.Drawing.Point(106, 299);
-            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
-            this.chkHienThiMatKhau.Size = new System.Drawing.Size(109, 17);
-            this.chkHienThiMatKhau.TabIndex = 10;
-            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
-            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
-            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
             // 
             // fThemDocGia
             // 

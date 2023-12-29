@@ -102,11 +102,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(297, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 13);
+            this.label6.Size = new System.Drawing.Size(169, 14);
             this.label6.TabIndex = 22;
-            this.label6.Text = "TRA CỨU THÔNG TIN ĐỘC GỈA";
+            this.label6.Text = "TRA CỨU THÔNG TIN ĐỘC GIẢ";
             // 
             // groupBox2
             // 
@@ -195,11 +196,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(221, 39);
+            this.label3.Location = new System.Drawing.Point(279, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(318, 13);
+            this.label3.Size = new System.Drawing.Size(199, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "(Nhập mã độc giả, tên độc giả, mã loại độc giả hoặc loại độc giả)";
+            this.label3.Text = "(Nhập mã loại độc giả hoặc loại độc giả)";
             // 
             // txtTraCuuLoaiDocGia
             // 
@@ -221,11 +222,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(275, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 13);
+            this.label2.Size = new System.Drawing.Size(199, 14);
             this.label2.TabIndex = 23;
-            this.label2.Text = "TRA CỨU THÔNG TIN LOẠI ĐỘC GỈA";
+            this.label2.Text = "TRA CỨU THÔNG TIN LOẠI ĐỘC GIẢ";
             // 
             // fTraCuuDocGia
             // 

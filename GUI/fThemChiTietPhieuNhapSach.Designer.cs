@@ -317,9 +317,10 @@
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(181, 3);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(216, 13);
+            this.label23.Size = new System.Drawing.Size(242, 15);
             this.label23.TabIndex = 25;
             this.label23.Text = "THÔNG TIN CHI TIẾT PHIẾU NHẬP SÁCH";
             // 

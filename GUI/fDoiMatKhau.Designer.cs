@@ -143,9 +143,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(82, 9);
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(77, 9);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(85, 13);
+            this.label16.Size = new System.Drawing.Size(102, 15);
             this.label16.TabIndex = 41;
             this.label16.Text = "ĐỔI MẬT KHẨU";
             // 

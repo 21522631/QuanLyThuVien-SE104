@@ -61,8 +61,10 @@
             this.cboTheLoai = new System.Windows.Forms.ComboBox();
             this.cboMaTacGia = new System.Windows.Forms.ComboBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
+            this.domSoLuong = new System.Windows.Forms.DomainUpDown();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.XoaDSTG = new System.Windows.Forms.Button();
             this.btnThemDSTG = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,8 +83,6 @@
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.tabQuanLySach = new System.Windows.Forms.TabControl();
-            this.label9 = new System.Windows.Forms.Label();
-            this.domSoLuong = new System.Windows.Forms.DomainUpDown();
             this.tabPage3.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
@@ -234,9 +234,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(308, 12);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(169, 13);
+            this.label16.Size = new System.Drawing.Size(194, 15);
             this.label16.TabIndex = 23;
             this.label16.Text = "CẬP NHẬP THÔNG TIN TÁC GIẢ";
             // 
@@ -355,9 +356,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(301, 14);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 13);
+            this.label12.Size = new System.Drawing.Size(199, 15);
             this.label12.TabIndex = 22;
             this.label12.Text = "CẬP THÔNG TIN THỂ LOẠI SÁCH";
             // 
@@ -454,6 +456,15 @@
             this.txtMaSach.Size = new System.Drawing.Size(84, 20);
             this.txtMaSach.TabIndex = 51;
             // 
+            // domSoLuong
+            // 
+            this.domSoLuong.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.domSoLuong.Location = new System.Drawing.Point(259, 101);
+            this.domSoLuong.Name = "domSoLuong";
+            this.domSoLuong.Size = new System.Drawing.Size(43, 20);
+            this.domSoLuong.TabIndex = 35;
+            this.domSoLuong.Text = "0";
+            // 
             // txtGiaTien
             // 
             this.txtGiaTien.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -470,6 +481,15 @@
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 32;
             this.label11.Text = "Giá tiền";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(204, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Số lượng";
             // 
             // XoaDSTG
             // 
@@ -618,9 +638,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(340, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.Size = new System.Drawing.Size(111, 15);
             this.label6.TabIndex = 21;
             this.label6.Text = "THÔNG TIN SÁCH";
             // 
@@ -634,24 +655,6 @@
             this.tabQuanLySach.SelectedIndex = 0;
             this.tabQuanLySach.Size = new System.Drawing.Size(800, 501);
             this.tabQuanLySach.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(204, 104);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Số lượng";
-            // 
-            // domSoLuong
-            // 
-            this.domSoLuong.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.domSoLuong.Location = new System.Drawing.Point(259, 101);
-            this.domSoLuong.Name = "domSoLuong";
-            this.domSoLuong.Size = new System.Drawing.Size(43, 20);
-            this.domSoLuong.TabIndex = 35;
-            this.domSoLuong.Text = "0";
             // 
             // fQuanLySach
             // 

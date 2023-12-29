@@ -56,9 +56,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(90, 0);
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(122, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.Size = new System.Drawing.Size(81, 15);
             this.label16.TabIndex = 24;
             this.label16.Text = "ĐĂNG NHẬP";
             // 

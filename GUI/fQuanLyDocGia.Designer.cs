@@ -41,6 +41,7 @@
             this.txtTenLoaiDocGia = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabpgDocGia = new System.Windows.Forms.TabPage();
+            this.btnGiaHanThe = new System.Windows.Forms.Button();
             this.btnXoaDocGia = new System.Windows.Forms.Button();
             this.btnSuaDocGia = new System.Windows.Forms.Button();
             this.btnThemDocGia = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.txtHoVaTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabQuanLyDocGia = new System.Windows.Forms.TabControl();
-            this.btnGiaHanThe = new System.Windows.Forms.Button();
             this.tabpgLoaiDocGia.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
@@ -147,9 +147,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(296, 12);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(198, 13);
+            this.label10.Size = new System.Drawing.Size(227, 15);
             this.label10.TabIndex = 20;
             this.label10.Text = "CẬP NHẬP THÔNG TIN LOẠI ĐỘC GIẢ";
             // 
@@ -217,6 +218,16 @@
             this.tabpgDocGia.UseVisualStyleBackColor = true;
             this.tabpgDocGia.Click += new System.EventHandler(this.tabpgDocGia_Click);
             // 
+            // btnGiaHanThe
+            // 
+            this.btnGiaHanThe.Location = new System.Drawing.Point(114, 174);
+            this.btnGiaHanThe.Name = "btnGiaHanThe";
+            this.btnGiaHanThe.Size = new System.Drawing.Size(92, 23);
+            this.btnGiaHanThe.TabIndex = 28;
+            this.btnGiaHanThe.Text = "Gia hạn thẻ";
+            this.btnGiaHanThe.UseVisualStyleBackColor = true;
+            this.btnGiaHanThe.Click += new System.EventHandler(this.btnGiaHanThe_Click);
+            // 
             // btnXoaDocGia
             // 
             this.btnXoaDocGia.Location = new System.Drawing.Point(711, 175);
@@ -270,9 +281,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(297, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 13);
+            this.label6.Size = new System.Drawing.Size(194, 15);
             this.label6.TabIndex = 20;
             this.label6.Text = "CẬP NHẬP THÔNG TIN ĐỘC GIẢ";
             // 
@@ -448,16 +460,6 @@
             this.tabQuanLyDocGia.SelectedIndex = 0;
             this.tabQuanLyDocGia.Size = new System.Drawing.Size(804, 486);
             this.tabQuanLyDocGia.TabIndex = 6;
-            // 
-            // btnGiaHanThe
-            // 
-            this.btnGiaHanThe.Location = new System.Drawing.Point(114, 174);
-            this.btnGiaHanThe.Name = "btnGiaHanThe";
-            this.btnGiaHanThe.Size = new System.Drawing.Size(92, 23);
-            this.btnGiaHanThe.TabIndex = 28;
-            this.btnGiaHanThe.Text = "Gia hạn thẻ";
-            this.btnGiaHanThe.UseVisualStyleBackColor = true;
-            this.btnGiaHanThe.Click += new System.EventHandler(this.btnGiaHanThe_Click);
             // 
             // fQuanLyDocGia
             // 

@@ -68,9 +68,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(51, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 13);
+            this.label6.Size = new System.Drawing.Size(197, 15);
             this.label6.TabIndex = 76;
             this.label6.Text = "THÔNG TIN NHÓM NGƯỜI DÙNG";
             // 
